@@ -332,10 +332,10 @@ label ch1_end:
     n 1y "Oh? I didn't realize you were so invested in impressing our new member, Yuuri!"
     show natsuko at t22
     show yuuri at f21
-    play music t7
     y 7n "---!  I-I..."
     "Yuuri suddenly stands up."
     "Oh boy, things are gettin' real..."
+    play music t7
     y 6r "Perhaps you're just jealous that [player] appreciated the advice of a mature individual more than she appreciated the views of a child."
     show yuuri at t21
     show natsuko at f22
