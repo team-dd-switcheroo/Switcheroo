@@ -286,332 +286,357 @@ label yuri_exclusive_2:
     play music t6 fadeout 1.0
     scene bg club_day
     with wipeleft_scene
-    mc "Hey, Yuri."
-    show yuri 2f at t11 zorder 2
-    y "Eh?"
-    mc "Ah..."
-    "I suddenly notice that Yuri is reading a different book from the one we've been reading together."
-    mc "Sorry! I didn't mean to interrupt..."
-    y 2m "Ah, no..."
-    y "I was kind of just waiting for you..."
-    show yuri 2a
-    mc "Ah, if that's the case..."
-label yuri_exclusive_2_ch3:
-    mc "Why don't we go ahead and get started?"
-    y 2c "Yes, let's!"
-    y 3a "Actually, I have a request..."
-    y "...Do you mind if I make some tea first?"
-    mc "Not at all."
-    y 1c "Thanks very much."
-    y 1a "If there's one thing that can make my reading time here any better, it's a nice cup of tea."
-    y "Not to mention for yourself, as well."
-    show yuri at thide zorder 1
-    hide yuri
-    "Yuri stands up and makes her way to the closet."
-    "I follow and watch as she retrieves a small water pitcher from the shelf - the kind with a filter inside."
-    show yuri 1f at t11 zorder 2
-    y "Can you hold this for a second?"
-    mc "Sure..."
-    "Yuri hands me the water pitcher and also fetches an electric kettle."
-    y "I'm going to plug this in at the teacher's desk, and then we'll go get some water."
-    show yuri at thide zorder 1
-    hide yuri
-    "She walks past me and sets the kettle down on the teacher's desk."
-    "I simply watch her movements."
-    "To my surprise, the way she moves really contrasts her speaking mannerisms."
-    "Especially because of her long legs, Yuri appears elegant and methodical."
-    show yuri 1f at t11 zorder 2
-    y "Okay, may I have the water pitcher?"
-    y 1a "Thanks. I'll be right back."
-    mc "Ah, I might as well walk with you..."
-    y 1s "Yeah...why not?"
-    y "Shall we go, then?"
-    mc "Yeah..."
-    show monika 2a at l31
-    m "Hm? Where are you two off to?"
-    show yuri 2e
-    mc "Eh?"
-    mc "We're just...Yuri was going to make some tea, so..."
-    "I suddenly realize how weird it sounds to explain this to Monika."
-    mc "We're just filling the water pitcher..."
-    show monika at f31 zorder 3
-    m "Ah, okay!"
-    m 4j "Sorry, I was just a bit curious..."
-    m "That's kind of a one-person job, isn't it?"
-    show monika 4a at t31 zorder 2
-    mc "That's--"
-    show yuri at f11 zorder 3
-    y 1k "Monika, please mind your own business for once."
-    y "Or do you want to tell me there's something wrong with helping involve [player] in club activities?"
-    show yuri at t11 zorder 2
-    show monika at f31 zorder 3
-    m 1g "E-Eh...?"
-    show monika at t31 zorder 2
-    mc "--!"
-    "My mouth gapes."
-    show monika at f31 zorder 3
-    m 5a "I..."
-    m "I suppose there's nothing wrong with that..."
-    show monika at t31 zorder 2
-    show yuri at f11 zorder 3
-    y 2l "Hmph..."
-    y "Then let's go, [player]."
-    show yuri at t11 zorder 2
-    mc "Ah..."
-    "Yuri quickly exits the room, and I follow."
-    stop music fadeout 1.0
-    scene bg corridor
-    show yuri 4c at t11 zorder 2
-    with wipeleft_scene
-    "Once in the hallway, she suddenly puts her forehead against the wall."
-    y "I spoke without thinking..."
-    y "How could I say something like that...?"
-    mc "Yuri..."
-    y 4b "I just..."
-    y "Something about the way she said that..."
-    y "It made me feel so...irritated."
-    y "What's wrong with me...?"
-    mc "No, Yuri."
-    mc "I think...you did the right thing!"
-    mc "I wasn't expecting it, but..."
-    mc "It's also not right for Monika to judge people like that."
-    play music t9
-    y 4a "[player]..."
-    y "How come even when I do something bad..."
-    y "You're being nice to me?"
-    mc "Because."
-    mc "Nothing that you do is as bad as you make it seem in your head."
-    mc "Nobody's perfect."
-    mc "We have emotions, and we can't always hide them away."
-    mc "But you always amplify things in your head..."
-    mc "Your mind turns a light rain shower into a hurricane."
-    y 3q "Ah..."
-    y "N-No..."
-    y "Wouldn't you hate me for something as terrible as that...?"
-    mc "Why would I hate you?"
-    mc "I can't hate someone for having emotions..."
-    mc "What kind of friend would do that?"
-    y 4c "Friend...you say?"
-    y "Ah...um..."
-    "Yuri lifts her head."
-    y 3w "[player]..."
-    y 3t "I really like...being friends with you!"
-    mc "Ahaha..."
-    mc "Thanks, Yuri."
-    mc "I like being friends with you too..."
-    "I feel kind of awkward saying something like that..."
-    "But I'm doing my best to help Yuri feel better."
-    mc "Anyway...!"
-    y 3u "Ah-- Yeah..."
-    y "Shall we go?"
+    mc "Hey, Yuuri."
+    show yuuri 1e at t11
+    y "...?"
+    "I suddenly notice Yuuri is reading a different book from the one we've been reading together."
+    "This one is titled \"Portrait of Markov.\""
+    mc "Another horror book?" 
+    y 1j "Yes. It's um..."
+    y 1i "It's a bit strange, even for my tastes."
+    y 1f "I don't think it would be something you'd enjoy."
+    "I scan the ominous looking eye on the cover."
     mc "Yeah."
-    show yuri at thide zorder 1
-    hide yuri
-    "Yuri and I walk to the nearest water fountain."
+    mc "Probably best we stay out of that territory."
+    mc "Anyway, I didn't mean to interrupt."
+    y 1c "Ah, it's fine." 
+    y "I was kind of waiting for you..."
+label yuri_exclusive_2_ch3:
+    mc "Well, if that's the case, why don't we get started?"
+    y 1a "Yes, let's!" 
+    y "Actually, I have a request." 
+    y 3b "Do you mind if I make some tea first?"
+    "Again with the tea..."
+    mc "Not at all."
+    y 1d "Thanks very much!" 
+    y "If there's one thing that can make my reading time here any better, it's a nice cup of tea." 
+    y 1b "Not to mention for yourself as well."
+    show yuuri at thide
+    hide yuuri
+    "Yuuri stands up and walks to the closet." 
+    "I follow and watch as he retrieves a pitcher from the shelf-- the kind with a filter inside."
+    show yuuri 1f at t11
+    y "Could you hold this for a second?"
+    "Yuuri hands me the pitcher and fetches an electric kettle." 
+    y "I'm going to plug this in at the teacher's desk and then we'll go get some water."
+    show yuuri at thide
+    hide yuuri
+    "He walks past me and sets the kettle on the teacher's desk." 
+    "I simply watch his movements." 
+    "His broad shoulders and long torso make Yuuri appear elegant, yet masculine and methodical."
+    show yuuri 1b at t11
+    y "Okay, now we can get the water." 
+    y 4b "Would you care to join me?"
+    mc "Yeah. Why not?"
+    y 1d "Excellent. Let's go, then."
+    show mateo 1d at f22
+    show yuuri at t21
+    m "Where are you off to?"
+    show mateo at t22
+    mc "Yuuri's making tea." 
+    mc "So we're going to get some water."
+    show mateo at f22
+    m 1c "I see." 
+    m 1h "This water...is it uncharacteristically heavy?"
+    show mateo at t22
+    mc "... No..."
+    show mateo at f22
+    m 1y "Will you be retrieving it in a large bucket, perhaps?"
+    show mateo at t22
+    mc "Of course not..."
+    show mateo at f22
+    m 1h "Then tell me, why does this task require both of you?" 
+    m 3r "Seems like one person can handle it, don't you think?"
+    show mateo at t22
+    mc "Well, I figured..."
+    show yuuri 6d at f21
+    "Yuuri suddenly gives an unbelievably fake-sounding laugh."
+    y 4aa "Mateo, please." 
+    y "You're the President of the club, not our mother!"
+    y 4y "We don't need your permission."
+    "He finishes with another condescending chuckle."
+    show yuuri at t21
+    show mateo 1d at t22
+    m "..."
+    "My mouth gapes." 
+    "Did Yuuri just out-snob Mateo?"
+    "That...was awesome."
+    "I bite my lip to try and hide my smile."
+    show mateo at f22
+    m 7p "Well. I suppose you've got a point."
+    show mateo at t22
+    show yuuri at f21
+    y 6aa "I'm glad we can agree." 
+    y "Let's go, [player]."
+    show yuuri at t21
+    "Yuuri exits the room. I follow, mesmerized."
+
+    scene bg corridor_day
+    with dissolve_scene_half
+    "Once in the hallway, Yuuri freezes, then buries his face in his hands and groans."
+    show yuuri 7v at t11
+    y "I...I spoke without thinking." 
+    y "How could I say something like that?"
+    mc "Like what?"
+    mc "You didn't say anything wrong." 
+    y 6v "It's not what I said."
+    y "It's how I said it." 
+    y 6t "You must..." 
+    y "You must think I'm nothing but a stuck-up snob." 
+    y 6w "I promise I'm not like that." 
+    y "I'm so sorry, [player]."
+    mc "Hey, Mateo's lucky a big guy like you didn't pick him up and toss him through the wall."
+    mc "I mean, sure...I wasn't expecting your reaction..." 
+    mc "But really, it just put him in his place." 
+    mc "Mateo should mind his own business." 
+    mc "Being club President doesn't mean he can run other people's lives."
+    mc "And he's always such a snob to everyone else, it was cool to see him get a taste of his own medicine."
+    y 1v "[player]..." 
+    y "Why do you insist on being so kind and understanding, even when I'm the one who's wrong?"
+    mc "Well, the 'bad' things you think you do are child's play compared to some of the crap I've done."
+    mc "It's not like you got confrontational or anything."
+    y 1t "He did make me angry, though."
+    mc "Eh, so you got a little emotional." 
+    mc "I can't hate you for reacting to Mateo being a jerk." 
+    mc "What kind of friend would I be if I judged you for that?"
+    y 6t "Friend...you say?"
+    mc "That's right." 
+    mc "And as your friend, I'll stick up for you." 
+    mc "Even if you get a little sassy with our club President."
+    y 6v "[player]... I..." 
+    y 6u "I really like being friends with you."
+    mc "Likewise. Anyway..."
+    y 1c "Right...Let's go."
+    show yuuri at thide
+    hide yuuri
+    "Yuuri and I walk to the nearest water fountain." 
     "Once we fill up the water pitcher, we return to the classroom."
-    play music t6 fadeout 1.0
+
     scene bg club_day
-    show yuri 1a at t11 zorder 2
-    with wipeleft_scene
+    with dissolve_scene_half
+    show yuuri 1b at t11
     y "[player], do you like oolong tea?"
-    mc "Ah, yeah."
-    mc "Anything is fine."
-    y "Very well."
-    "Yuri sets the temperature on the kettle to 200 degrees."
-    y 1f "Now it's time to get the teapot."
-    mc "You really do this properly, don't you?"
-    y 1u "Of course..."
-    y "I shouldn't do any less when I'm making tea for others."
-    mc "Even if I'm not an expert on tea or anything...?"
-    y 2m "Huhu."
-    y 2a "In that case, you'll only be even more impressed."
-    mc "Ah...perhaps I will!"
-    show yuri at thide zorder 1
-    hide yuri
-    "Yuri fetches the teapot and begins measuring the tea leaves."
-    "To my surprise, she even starts humming a little to herself."
-    show yuri 1c at t11 zorder 2
-    mc "You must be in a good mood now..."
-    y 1a "Is that so?"
-    y "I was letting it show..."
-    y "And you noticed."
-    y 2u "I was doing a bit of thinking..."
-    y "And I decided that I would try expressing myself a little bit more."
-    y "It turns out it's not very hard for me to do..."
-    y 1c "When it's you who's around, anyway."
-    mc "Ah..."
-    mc "That's great, Yuri!"
-    mc "Just don't push yourself too much."
-    y 3u "You're always worrying about me, [player]..."
-    y "It's very endearing."
-    mc "That's..."
-    "Yuri wasn't kidding..."
-    "I don't even know if I can keep up with this...!"
-    "I watch Yuri pour a cup of tea for each of us."
-    y 1a "[player], I have another request."
-    y "Do you mind if we sit on the floor today?"
-    mc "Eh? Why's that?"
-    y 1h "It's a little bit easier on my back..."
-    y "I can read with my back against the wall rather than bending over at my desk."
-    mc "Ah, sorry, I didn't realize."
-    y 1a "No worries."
-    y "I just have back pain fairly regularly, so I do my best to manage it."
-    mc "Is that so?"
-    mc "I wonder why that is..."
-    y 1f "It's most likely because my--"
-    y 1n "Ah--"
-    y 1o "M-My..."
-    mc "Your posture, right?"
-    mc "Always hunched over like that while reading..."
-    y 2p "Yes!"
-    y 2q "I have terrible reading posture!"
-    y "So that's why we should sit on the floor."
-    mc "Fair enough."
-    mc "I'll go ahead and get the book."
-    show yuri at thide zorder 1
-    hide yuri
-    "I retrieve the book from my bag."
-    mc "Ah, I have some chocolate as well..."
-    "It's a bag of small chocolate candies that I kept hidden from Sayori's candy radar."
-    "I take it, since it'll go well with the tea."
-    "Yuri and I then sit against the wall, teacups at our sides."
-    "As if in sync, we assume the same reading position as last time, each holding one half of the book."
-    "Except this time..."
-    "Our bodies are even closer to each other."
-    show yuri 2h at t11 zorder 2
-    y "I can't see too well..."
-    mc "--!"
-    show yuri 2e at d11
-    "Yuri slides closer until our shoulders are touching."
-    "How am I supposed to focus on reading like this...?!"
-    "Yuri was always kind of cute, but..."
-    "When she's being less apprehensive, it's almost more than I can handle!"
-    y 2f "Your teacup..."
-    "Yuri hands me my teacup."
-    "Holding it with my hand that's not holding the book, I end up in a position that makes it even harder to focus."
-    "Because now I need to worry about making sure I don't accidentally touch her chest...!"
-    "Meanwhile, Yuri hasn't noticed a single thing."
-    "She wears her intense reading expression, and I can only presume the world around her has faded away."
-    "I use all of my willpower to focus on reading."
-    "..."
-    "After a few minutes, I finally manage to relax a little."
-    "I put the teacup between my legs and fumble with the chocolate wrapper."
-    mc "Ah, sorry..."
-    "I briefly let go of the book to finish opening the wrapper."
-    mc "You can have as much as you want."
-    y 2s "Ah, that's..."
-    y "That's okay, I won't take any..."
-    mc "Eh? Are you sure?"
-    y 2v "Well..."
-    y "If I touch it, then it might get smudges on the pages..."
-    mc "Ah, you're right..."
-    mc "I didn't even think about that."
-    mc "My bad..."
-    y 2a "No need to apologize."
-    y "I'll hold the book, okay?"
-    mc "Are you sure...?"
-    y "Of course."
-    $ persistent.clear[3] = True
-    scene y_cg2_bg
-    show y_cg2_base
-    show y_cg2_details
-    show y_cg2_nochoc
-    show y_cg2_dust1
-    show y_cg2_dust2
-    show y_cg2_dust3
-    show y_cg2_dust4
-    with dissolve_cg
-    "Yuri opens the book with both hands."
-    "She holds it so that I don't have any harder of a time reading from it."
-    "But as a result, her left arm is practically resting on top of my leg."
-    mc "Well, in that case..."
-    "Yuri is already totally focused on reading again."
-    "I take a chocolate candy and pop it into my mouth."
-    "Then, I take another chocolate..."
-    "And I hold it up to Yuri."
-    "She doesn't even look away from the book."
-    "She simply parts her lips, as if this situation was completely natural."
-    "But that means I can't stop here!"
-    hide y_cg2_nochoc
-    "I apprehensively place the chocolate in her mouth."
-    "Just like that, Yuri closes her lips over it."
-    y "Eh...?"
-    show y_cg2_exp2
-    "Yuri's expression suddenly breaks."
-    y "Did..."
-    y "Did I just..."
-    "Yuri looks at me like she needs to confirm what just happened."
-    show y_cg2_exp3
-    show y_cg2_nochoc:
-        alpha 0
-        linear 0.5 alpha 1
-    hide y_cg2_exp2
-    y "U-Um..."
-    y "[player]..."
-    mc "S-Sorry!"
-    mc "I guess I shouldn't have done that..."
-    y "Ah, that's..."
+    mc "Ah...yeah." 
+    mc "My favorite."
+    y 1e "..."
+    y 1d "You've never had it, have you?"
+    mc "Never heard of it before in my life." 
+    mc "But I'll drink it."
+    show yuuri 1c
+    "Yuuri chuckles to himself."
+    y "Well, I think you'll enjoy it."
+    show yuuri at thide
+    hide yuuri
+    "Yuuri sets the temperature on the kettle to 200 degrees." 
+    "He fetches the teapot and begins measuring the tea leaves." 
+    "To my surprise, he even starts humming a little to himself."
+    mc "Good to see you in such a happy mood."
+    show yuuri 1b at t11
+    y "Is it?" 
+    y 1u "I was letting it show." 
+    y "And you noticed." 
+    y 3q "I was doing a bit of thinking and decided I'd try expressing myself a little more." 
+    y "It turns out it's not very hard for me to do." 
+    y 1s "When I'm around you, at least."
+    mc "That's great, Yuuri!" 
+    mc "I like being able to make you happy."
+    y 6u "You worry for my happiness." 
+    y 6a "That's so endearing."
+    show yuuri at thide
+    hide yuuri
+    "It's strange, but also relieving to see Yuuri in such a good mood." 
+    "He's been very quiet and shy since I joined..." 
+    "But it's obvious he has the potential to be a very outgoing person once he feels comfortable." 
+    "I watch as Yuuri pours a cup of tea for each of us."
+    show yuuri 4b at t11
+    y "[player], I have an idea." 
+    y "How about we sit on the floor today?"
+    mc "Ah, sure."
+    mc "Any particular reason why?"
+    y 1i "Well...I think it might be easier for both of us to see the pages if we sat on the floor instead of at a desk." 
+    y "It may work out better, considering your..." 
+    y 1o "Um... Your..."
+    mc "Uh...my figure, right?"
+    y 1p "...!" 
+    y "Um..." 
+    y 1q "I was going to say...your posture..."
+    mc "...What's wrong with my posture?"
+    y 1n "Ah!..."
+    y 6o "Well..."
+    y 4o "It's just you...seem to slump over, or to the side a bit, when you read..."
+    y 7p "N-not that it's your fault or anything!"
+    y 7q "I guess...I guess it's just your...your..."
+    mc "My figure??"
+    mc "Ya know...the thing I {i}just{/i} said?"
+    y 6v "..."
+    mc "You can say it too, Yuuri."
+    mc "It's not that kind of 'F' word..."
+    show yuuri 6u
+    "Yuuri blushes even more as he struggles to hide a smirk of amusement."
+    "As if taking tremendous effort, he finally faces me again."
+    y 6q "Alright..."
+    y 4u "I think sitting on the ground with your back against the wall will help straighten your reading posture..."
+    y 1q "Which could use that kind of support considering your...*sigh*...your figure."
+    "I smile in triumph."
+    mc "Thank you, Yuuri."
+    mc "I appreciate your concern over my comfort."
+    show yuuri 1s
+    "He relaxes even more."
+    y "I'm glad."
+    show yuuri at thide
+    hide yuuri
+    "I take the book out of my bag and hand it to Yuuri." 
+    "We then take our seats against the wall." 
+    "Once again, I find Yuuri's impressive build impedes my ability to see the book properly." 
+    "I just can't see anything over that mighty fine upper body of his."
+    mc "..." 
+    mc "I still can't see a thing..."
+    show yuuri 1f at t11
     y "Well..."
-    y "Y-You were just helping..."
-    y "That's something that...friends do..."
-    y "...Right?"
-    mc "I mean..."
-    "Not really in this kind of context, but..."
-    mc "Yeah..."
-    mc "...That's all it was."
-    y "Yeah..."
-    y "Then..."
-    y "You don't need to stop or anything..."
-    mc "I-I see..."
-    hide y_cg2_exp3
-    "The situation has gotten really tense..."
-    "Yuri tries to return to the book."
-    "But I can tell just by her expression that even she can't focus now."
-    "My heart is pounding..."
-    "I nervously take another chocolate between my fingers."
-    "But this time, Yuri's eyes meet mine."
+    y 1b "Let's try this..."
+    "Yuuri scoots a little closer and rests his hand on the ground behind me." 
+    "I find myself now practically pressed against his tapered torso, but at least I can see the book way better than I could at the desk." 
+    "This position isn't particularly a bad thing for me either."
+    y 3b "There we go. You should be able to see now." 
+    y "Is this okay with you?"
+    mc "Um...yeah. This is fine."
+    "My eyes suddenly light up as a sweet scent fills my nostrils."
+    "This time, it's not coming from Natsuko."
+    "It's coming from Yuuri."
+    "Specifically, his pocket."
+    "He must've caught me sniffing the air, because he smiles devilishly."
+    y 1c "That nose of yours truly is impressive."
+    y 1j "I...I know you like sweets, so..."
+    "Yuuri pulls out a bag of chocolates from his pocket."
+    y 3d "I brought these. I think they will compliment the tea as well."
+    "Part of me wants to attack that bag of chocolates."
+    "But a bigger part of me doesn't really want Yuuri to see me turn into a ravenous beast again."
+    "Well...not yet, anyway."
+    "I put on a timid smile."
+    mc "Thank you, Yuuri! I think I'll wait a little while on that, though."
+    mc "You understand, right?"
+    "He did witness me consume half of a tin of cookies, after all."
+    "Surely he'll realize even I need at least 20 minutes between snacks..."
+    "Yuuri thinks for a moment, then nods."
+    y 1a "I understand completely." 
+    y 4b "In that case..."
+    "He suddenly gives the book to me."
+    y "You hold the book today."
+    mc "Um...alright."
+    show yuuri at thide
+    hide yuuri
+    "Confused, I take the book."
+    "Yuuri then hands me my teacup while I flip to the correct chapter." 
+    "I awkwardly take it and set it next to me while I struggle to keep the right page open." 
+    "I suddenly realize that in this position I need to take extra special care not to accidentally slump to my left, lest I end up in his lap." 
+    "I'm hoping that sitting against the wall will help with that and that my slumping/leaning is really due to my chest and not to my laziness."
+    "I also hope that me holding the book doesn't make it too awkward for Yuuri to read now." 
+    "I immediately begin reading."
+    "The story is getting more interesting and I'm slowly becoming invested in the characters."
+    "It doesn't take me long to become immersed once again." 
+    "This must be what it's like for Yuuri all the time..." 
+    "Having the world around him fade away as he becomes engrossed in the story." 
+    "After a few minutes, I feel him relax a bit too." 
+    "My concentration is suddenly broken when I hear the crinkling sound of the chocolate bag."
+    show yuuri 6q at t11
+    y "Ah...sorry..."
+    mc "No worries. It's your chocolate."
+    y 6s "Still. I'll try not to interrupt too much."
+    mc "You're fine!"
+    "I continue reading."
+
+    show y_cg2_base
+    show y_cg2_dust1
+    "I watch Yuuri pop a chocolate in his mouth from my peripherals." 
+    "I feel myself starting to lean and quickly correct my posture." 
+    "But it's hard to concentrate when my arm is practically resting on Yuuri's thigh." 
+    "I can hear him go for another chocolate." 
+    show y_cg2_exp1
+    "I keep my eyes on the book, but I can see him hold the candy up in the corner of my vision." 
+    "What's he doing?" 
+    show y_cg2_dust2
+    "Without taking my eyes off the book, I part my lips slightly, preparing to ask him what he wants." 
+    "Suddenly, Yuuri places the chocolate in my mouth." 
+    show y_cg2_exp2
+    "I clamp my lips over it automatically." 
+    "My concentration breaks."
+    mc "Ack!" 
+    mc "What the..."
+    mc "Did... Did you just..."
+    "I look over at Yuuri, desperate to confirm what just happened." 
+    mc "Yuuri ..."
     show y_cg2_exp3
+    show y_cg2_dust3
+    "Yuuri's face turns bright red." 
+    show y_cg2_exp4
+    y "I'm sorry!" 
+    show y_cg2_exp5
+    y "I guess..." 
+    y "I must have misinterpreted...why you didn't want to touch the chocolate..."
+    y "I-I thought...you didn't want to smudge the pages..."
+    "Perhaps I shouldn't show him the cheese-puff stains on the previous pages..."
+    show y_cg2_exp6
+    hide y_cg2_dust1
+    y "I'm so sorry...I shouldn't have done that..."
+    mc "Ah...well..."
+    mc "I definitely wasn't expecting you to..."
+    "The chocolate has melted on my tongue at this point."
+    mc "Oh my God! This is delicious..."
+    mc "What is this? Hazelnut cream?" 
+    "I wasn't expecting to have chocolate stuffed in my face." 
+    "It kinda took me by surprise."
+    hide y_cg2_dust2
+    "But damn, how can I get mad when it tastes so good?"
+    y "It's...well, it's imported from Germany..."
+    mc "This is probably the best thing I've ever had in my mouth..."
+    y "It...it is very decadent, isn't it?"
+    y "I'm...glad you're not angry with me."
     y "..."
-    "How did it even come to this...?"
-    "Yuri doesn't avert her gaze."
-    "I notice her chest rising and falling to the rhythm of her breaths."
-    "I raise my arm..."
-    y "Ah..."
-    "Like before, Yuri parts her lips."
-    "But...it's different this time."
-    hide y_cg2_nochoc
-    "I take the chocolate and place it in her mouth."
-    "I feel her hot breath on my fingers."
+    show y_cg2_exp7
+    y "Would you...like another one?" 
+    hide y_cg2_dust3
+    "My first instinct is to reach for the bag..."
+    "But the way he's looking at me makes me think he has something else in mind."
+    "I look up at him curiously."
+    "My heart is pounding."
+    "I watch as he reaches into the bag and pulls out another chocolate." 
+    show y_cg2_exp8
+    "He holds it between his fingers."  
+    "Our eyes meet. Neither of us averts our gaze."
+    show y_cg2_dust4
+    "I...can't believe we're doing this."
+    "He gently offers the chocolate." 
+    "Like before, I part my lips." 
+    "But it's different this time." 
+    "He takes the chocolate and places it gently on my tongue."
+    "The tip of my tongue lightly grazes his finger as I curl it over the sweet truffle." 
     stop music
     window hide(None)
     scene bg club_day
     window show(None)
     window auto
-    show monika 4b at l31 zorder 2
-    m "Okay, everyone!"
-    mc "Uwa--"
-    show yuri 3p at t11 zorder 2
-    y "A-Ah!"
-    play music t3
-    "Yuri jolts back."
-    show yuri 3n
-    show monika at f31 zorder 3
-    m "It's time to share poems!"
-    m "[player], you can help Yuri put away the tea stuff, right?"
-    show monika at t31 zorder 2
-    mc "Y-Yeah...of course."
-    show monika at f31 zorder 3
-    m "Okay, thanks!"
-    show monika at thide zorder 1
-    hide monika
-    "The spell is abruptly broken."
-    y 4c "I'll..."
-    y "I'll take care of the cups..."
+    show mateo 4b at f21
+    show yuuri 6p at t22
+    m "Alright, guys!"
+    show mateo at t21
+    "Yuuri quickly jolts back."
+    "I nearly choke on the chocolate."
+    show mateo at f21
+    m 6b "It's time to share our poems!" 
+    m 6v "The tea party is over, you two."
+    m 4t "Put the teapot and cups away and get your poems ready."
+    show mateo at thide
+    hide mateo
+    show yuuri 6v
+    mc "...!"
+    "The spell is abruptly broken." 
+    "God, Mateo has the worst timing."
+    y 6t "I'll... I'll take care of the cups."
     mc "Yeah..."
-    show yuri at thide zorder 1
-    hide yuri
-    "Yuri picks up the teacups from the floor."
-    "I pick up the bag of chocolates."
-    "In the end, we hastily clean up without so much as a word between us."
-    "I get the feeling this is something neither of us will have the courage to bring up..."
+    hide yuuri
+    "Yuuri picks up the teacups while I take the teapot." 
+    "In the end, we hastily clean up without so much as a word between us." 
+    "I get the feeling this is something neither of us will have the courage to bring up any time soon..."
+    "I thrust my hand into the bag and pull out 4 more chocolates, stuffing them into my mouth in sheer frustration..."
+    "...and also because I have no self control."
     return

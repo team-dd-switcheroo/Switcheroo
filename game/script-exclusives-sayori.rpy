@@ -211,336 +211,391 @@ label sayori_exclusive_2:
     with wipeleft_scene
     if not renpy.music.get_playing(channel='music') == audio.t2:
         play music t2
-    s "[player], [player]!"
-    "Sayori suddenly comes up to me."
-    show sayori 1x at t11 zorder 2
-    s "I'm gonna go get some supplies from another classroom."
-    s "Want to come with me?"
-    mc "Supplies?"
-    mc "What for?"
-    s 2a "Well, you know how the festival is coming up?"
-    s "Me and Monika were gonna make some posters and stuff."
-    s "So I need to go find some crayons, and markers, and glue sticks..."
-    mc "Ah, I see."
-    mc "Sure, I'll go with you."
-    s 4q "Yaay~"
-    s 4x "Okay Monika, we'll be back soon!"
-    show sayori at t22 zorder 2
-    show monika 1a at f21 zorder 3
-    m "Ah, are you going with [player] to get the supplies?"
-    m "There's no need to trouble yourself."
-    m "I'd be happy to go with him."
-    show monika at t21 zorder 2
-    show sayori 1h at s22
-    s "Aw, but I wanted to go!"
-    s "It's so much fun exploring empty classrooms and stuff!"
-    show monika at f21 zorder 3
-    m 2j "Hehe, okay, okay."
-    m 2a "It was just a suggestion."
-    m "See if you can find poster paper too, okay?"
-    show monika at t21 zorder 2
-    show sayori at f22 zorder 3
-    s 1r "Okaay~!"
-    s 1a "Ready, [player]?"
-    mc "Yep, let's go."
-    scene bg corridor
-    show sayori 4a at t11 zorder 2
-    with wipeleft_scene
-    "Sayori and I exit the clubroom."
-    "I follow behind as Sayori hums and skips around the hallway."
-    "Honestly..."
-    "It feels like I'm taking a kid to the mall or something."
-    "Sayori finds pleasure in the simplest things sometimes."
-    mc "Hey, Sayori..."
-    mc "What exactly are we doing for the festival, anyway?"
-    mc "I'm not sure how you would make an event out of literature..."
-    s 1q "Ehehe!"
-    s 1x "Me and Monika have it all planned out!"
-    s "Don't you worry~"
-    mc "Is that so...?"
-    s "Yup!"
-    s "We're gonna do a poetry performance!"
-    mc "A performance...?"
-    mc "Of what kind?"
-    s 1c "Well..."
-    s "Everyone is gonna take turns on stage..."
-    s 1x "And recite their favorite poems!"
-    mc "Ah..."
-    mc "That sounds..."
-    "...Kind of dull?"
-    s 1h "[player]!"
-    s "You're not thinking about it the right way at all!"
-    s "It's not just about reading poems..."
-    s 1x "It's about performing them!"
-    s "Like, you say the lines of the poem like..."
-    s 2j "{i}Between my feet...{/i}"
-    s "{i}The last remaining flower beckons to me.{/i}"
-    s 1c "{i}I twist the stem, freeing it from its clinging roots...{/i}"
-    s "{i}Caressing the final joyous moment between my fingers.{/i}"
-    s 3g "{i}But to what ends have I summoned this joy?{/i}"
-    s "{i}For now when I look in every direction...{/i}"
-    s 1j "{i}The once-prosperous field before me...{/i}"
-    show sayori at h11
-    s 4m "{i}Is but a barren wasteland!{/i}"
-    s "..."
-    s 1r "Like that!!"
-    mc "Sayori..."
-    "How do I put this..."
-    mc "I'm sure it's just me, but it's impossible for me to take you seriously when you talk like that..."
-    show sayori 5c at s11
-    s "Ehhh?"
-    s "You meanie!"
-    s "I'm working super hard on this, you know!"
-    mc "Ah, I know, I know!"
-    mc "I just meant that it's a pretty unordinary contrast to your cute self."
-    show sayori 4s at t11 zorder 2
-    s "Ahaha! Don't say that, it's embarrassing!"
-    s 4y "But I guess that means I'm doing a good job~"
-    mc "Yeah, I guess so..."
-    show sayori at h11
-    s 4r "Aaah, I'm so excited!"
-    s "The festival is going to be so much fun~"
-    "Sayori spins herself around in the hallway again."
-    s 1x "Hey, [player], this classroom over here is empty!"
-    s "Let's begin the mission!"
-    show sayori at thide zorder 1
-    hide sayori
-    mc "The mission, eh...?"
-    "It's been a long time since I've spent time with Sayori like this."
-    "But in the end, she hasn't changed one bit."
-    "She's nothing but a ball of sunshine, drawing happy vibes from the world around her."
-    "It's a pretty nostalgic feeling for me."
-    "As the years went by, I began to hole myself up in my room more and more."
-    "So going adventuring with Sayori brings about a special sort of feeling I forgot I had in me."
-    scene bg class_day
-    with wipeleft_scene
-    "The two of us enter the classroom."
-    "Sayori heads straight to the closet, and I follow."
-    show sayori 1b at t11 zorder 2
-    s "Let's see what we have in here..."
-    s 4x "...Crayons!!"
-    "Sayori pulls a box full of crayons off the shelf."
-    s "They're the best brand, too!"
-    s 1b "They're kind of dirty, though..."
-    "Sayori starts pulling various crayons out of the box, reading the color names."
-    mc "Alright, that's one down."
-    mc "Don't get distracted, we still need to find--"
-    s 1a "Wait, I'm looking for my favorite color..."
-    mc "Fine, fine..."
-    mc "Then at least move aside so I can look for the poster paper."
-    s 1b "Ah, I dropped one by accident--"
-    play sound "sfx/smack.ogg"
-    show white zorder 4:
-        alpha 0.6
-        linear 0.25 alpha 0.0
-    show sayori 2p at h11
-    "{i}Smack!{/i}"
-    hide white
-    s "Kya--!"
-    "Sayori bends over and smacks her forehead right into the shelf."
-    "She falls to the floor, and the crayons spill all over her lap."
-    show sayori 4p at s11
-    s "Owowowowow..."
-    mc "You okay?"
-    s "My forehead..."
-    "Sayori clutches her forehead."
-    mc "Jeez, Sayori..."
-    mc "That's just like you, isn't it?"
-    mc "C'mon, let me see."
-    "Since Sayori is sitting on the floor, I grab her by the waist and pull her out of the closet."
-    mc "You have to move your hands, Sayori..."
-    s 4g "But it hurts..."
-    mc "Just do it for a second."
-    $ persistent.clear[7] = True
-    scene s_cg2_base1
-    show s_cg2_exp2
-    with dissolve_cg
-    "Sayori slowly releases her hands from her forehead."
-    "I gently brush her bangs to the side."
-    show s_cg2_exp1 at cgfade
-    show s_cg2_exp3 at cgfade
-    s "Ow--!"
-    mc "Sorry..."
-    "There's a huge red mark on the center of her forehead."
-    "A bump is starting to form, as well."
-    mc "Man, that's gonna swell up."
-    mc "I should find you some ice..."
-    hide s_cg2_exp3
-    hide s_cg2_exp1
-    s "[player]..."
-    mc "Where would I even find ice around this time...?"
-    mc "Ah, I guess a cold drink would do..."
-    s "You don't have to--!"
-    show s_cg2_exp2 at cgfade
-    hide s_cg2_exp2
-    s "I'm fine with--looking like a unicorn--"
-    "Even wincing from the pain, Sayori makes a silly joke."
-    mc "Ahaha, what are you saying?"
-    mc "I'll be right back, okay?"
-    s "O-Okay..."
-    stop music fadeout 1.0
-    scene bg corridor with wipeleft_scene
-    "I pat Sayori on the shoulder and run out into the hallway."
-    "I locate the nearest vending machine."
-    mc "What should I get...?"
-    "It doesn't really matter, since it will be used as an ice pack, rather than to drink."
-    "But I know Sayori likes apple juice, so I purchase that one."
-    "In just a moment, I'm already returning to the classroom where I left Sayori."
-    scene s_cg2_base1
-    show s_cg2_exp2
-    with wipeleft_scene
-    play music t9
-    "She has one palm on her forehead and is using the other hand to clumsily scoop crayons back into the box."
-    s "At least they were already in the wrong spots before I spilled them..."
-    mc "Sayori, here."
-    show s_cg2_base2 at cgfade behind s_cg2_exp2
-    "I hand Sayori the bottle of apple juice."
-    show s_cg2_exp2 at cgfade
-    hide s_cg2_exp2
-    s "It's nice and cold..."
-    "Sayori opens the cap and starts drinking from it."
-    mc "Sayori, what are you doing?!"
-    mc "It's for your forehead, idiot!"
-    show s_cg2_exp3 at cgfade
-    s "Ah--"
-    s "Sorry, I forgot~"
-    s "Ahahaha!"
-    mc "How hard did you hit your head...?"
-    "Sayori places the bottle against the bump on her head."
-    show s_cg2_exp1 at cgfade
-    s "It stings..."
-    mc "Just bear with it, it'll feel better soon."
-    mc "Looks like you cleaned up most of the crayons, so that's good."
-    hide s_cg2_exp1
-    hide s_cg2_exp3
-    s "Hey, [player]..."
-    s "This kind of reminds you of growing up, doesn't it...?"
-    mc "Eh? What do you mean?"
-    s "You know how we used to play outside all the time..."
-    s "I would always try to keep up with you."
-    s "You were kind of oblivious in some ways..."
-    s "Like I usually fell behind or had trouble climbing on the things you did..."
-    s "But sometimes when I tried to do things I couldn't, I would get myself hurt."
-    s "I'd fall and scrape myself, or get a bump..."
-    s "And I would start crying really hard."
-    show s_cg2_exp3 at cgfade
-    s "Ahaha!"
-    s "And you would rush over as quick as you could."
-    hide s_cg2_exp3
-    s "You would try really hard to get me to stop crying."
-    s "It was almost like you blamed yourself and were afraid of getting in trouble if someone found out..."
-    s "Even though it really wasn't your fault at all, you know?"
-    mc "Did I really do that...?"
-    s "Yeah...you don't remember?"
-    mc "Come to think of it, maybe I do remember a bit..."
-    mc "I guess I was always so focused on my games that I didn't pay enough attention to you."
-    mc "So in a way, it was my fault."
-    mc "Kind of like this time, too..."
-    mc "If I wasn't rushing you out of the closet, you probably wouldn't have hit your head."
-    s "[player]..."
-    s "I don't think you realize it, but you're always thinking about other people."
-    s "Even after all these years..."
-    s "You're rushing to help me, even though I'm just being clumsy."
-    show s_cg2_exp3 at cgfade
-    s "You're really a sweetheart..."
-    mc "D-Don't call me that!"
-    mc "And I don't really do this kind of thing all the time..."
-    mc "I guess when it comes to you, it just feels natural."
-    mc "Before I even know it, I'm treating you like that."
-    mc "I guess that's what happens when you've been friends for so long."
-    hide s_cg2_exp3
-    s "Really...?"
-    s "Maybe you're right..."
-    s "[player]..."
-    s "I'm so glad that nothing's changed between us."
-    s "Do you think it'll be like this forever?"
-    mc "Forever...?"
-    "If I'm honest to myself..."
-    "There's no telling where we'll each end up for college, or after that."
-    "So it wouldn't be fair for me to make any promises."
-    "But..."
-    mc "Well, I hope so."
-    mc "It's been this long already, right?"
-    mc "I can't imagine you ever changing, so my hopes are up."
-    s "I'm so happy..."
-    "Sayori has a whimsical expression in her eyes."
-    "We remain silent for a moment."
-    "She's so silly and clumsy on the outside that when I see her deep in thought like this..."
-    "It makes me not want to disturb her."
-    s "I guess we should go back..."
-    s "I don't want to worry Monika, you know?"
-    mc "Good luck with that."
-    mc "She's gonna see your forehead either way."
-    s "Not if I hide it under my bangs~"
-    play music t8 fadeout 1.0
-    scene bg class_day
-    show sayori 1a at i11 zorder 2
-    with dissolve_cg
-    "Sayori hops to her feet."
-    show sayori 4p at s11
-    s "A-Aaahh--!"
-    "She clutches her forehead again."
-    mc "Don't stand up so fast after hurting yourself!"
-    s "Uuuu..."
-    mc "Well, I guess it's too late now..."
-    mc "Anyway, let's go."
-    scene bg corridor
-    with wipeleft_scene
-    "I follow Sayori out of the classroom."
-    "Sayori plays with her bangs to try to hide the bump, but without much success."
-    "In a moment, we make it back to the clubroom."
-    scene bg club_day
-    show sayori 1a at t21 zorder 2
-    show monika 1b at t22 zorder 2
-    with wipeleft_scene
-    show monika at f22 zorder 3
-    m "Ah, you're back!"
-    m "Good timing, I was just about ready to start with sharing our poems."
-    m 1d "Eh? Sayori, your forehead..."
-    show monika at t22 zorder 2
-    mc "She's fine, don't worry about--"
-    show sayori 4r at f21 zorder 3
-    s "I was playing with the crayons and smacked my forehead into the shelf!"
-    show sayori at t21 zorder 2
+    show satori 2x at t11 zorder 2
+    s "Hey, [player]!"
+    s "I'm gonna go grab some supplies from another classroom."
+    s 3a "Come with me."
+    mc "What're the supplies for?"
+    s 1a "To make posters and stuff for the festival."
+    s 7a "We're looking for crayons, markers, glue sticks..."
+    mc "Crayons and glue sticks?"
+    mc "Are we trying to target creative 7 year olds for our event?"
+    mc "We gonna throw together some macaroni pictures, too?"
+    s 1j "Smarty pants."
+    s 1a "You coming with me or not?"
+    mc "Yeah, yeah. I'm coming."
+    s 5z "Great. Hey, Mateo!"
+    s 5x "We'll be back soon."
+    show mateo 1d at f21
+    show satori at t22
+    m "Is that so?"
+    m "Hm."
+    m 3b "Don't you think [player] would benefit from spending some time in here reading instead?"
+    show satori 5b
+    m "I'm sure I can find her something productive to do."
+    m 1w "In fact..."
+    "Mateo grins at me."
+    m "Maybe she'd like to help me with some things today."
+    show satori 5i
+    m 1s "I think that would be best."
+    "What the..."
+    "Mateo wants to..."
+    "Spend time with me?"
+    "I can feel my stomach tighten again."
+    "I don't know what's gotten into him today."
+    "Maybe he finally sees that I'm taking this club seriously?"
+    "Whatever the case may be, I'm pretty curious to see where this is going."
+    "I glance over pleadingly at Satori."
+    "C'mon, man. Let me see what this jerk has planned for me."
+    show satori 1ab
+    "But his expression changes."
+    "He narrows his eyes as he steps closer to Mateo."
+    show satori at f22
+    show mateo at t21
+    s 1ad "Well... with all due respect, Mister President..."
+    s 1ae "I wasn't exactly asking your permission."
+    show satori at t22
+    show mateo 6h
+    "I stare wide-eyed at Satori."
+    "Where did this come from all of a sudden?"
+    "Testosterone seems to fill the air as the two of them face-off."
+    "Satori maintains his cold stare."
+    show mateo 7aa
+    "To my surprise, Mateo is the first to timidly look away."
+    show mateo at f21
+    m "...Alright. Fair enough."
+    m 7ab "It was only a suggestion, anyway..."
+    show mateo at t21
+    show satori at f22
+    s 1ab "C'mon, [player]. Let's go."
+    show satori at thide
+    hide satori
+    show mateo at f21
+    m 7z "Don't forget the poster paper."
+    show mateo at t21
+    "Mateo hisses that as Satori walks out of the room."
+    "I follow quietly."
+
+    scene bg corridor_day
+    with dissolve_scene_half
+
+    show satori 10k at t11 zorder 2
+    "Once outside, Satori walks several feet before stopping and covering his face with his hand."
+    "I quickly trot to his side."
+    mc "Hey, Satori!"
+    mc "You wanna maybe tell me what that was about?"
+    show satori 1f
+    "He shakes his head."
+    "I start to worry."
+    s 1h "I'm so sorry I had to do that."
+    mc "Wh-what do you mean?"
+    s 10g "I could tell you wanted to spend time with Mateo."
+    s "I'm really sorry I had to ruin that for you."
+    s 7g "But... I need your help."
+    mc "...Oh!"
+    mc "Well, hey, if you need help, I'm always here for you."
+    mc "Forget about Mateo."
+    mc "What do you need from me, buddy?"
+    s 10d "You...you're the best, [player]."
+    s 7g "The thing is..."
+    "Satori looks around suspiciously."
+    "Is he trying to make sure no one is listening?"
+    "He leans in and whispers."
+    s 1h "I forgot to write a poem last night!"
+    mc "What, again?"
+    mc "Oh, for goodness sake, Satori..."
+    s 7i "Hey, I was kinda preoccupied playing video games with YOU last night!"
+    s "And what about your poem?"
+    s "I know you didn't do it last night either."
+    mc "True, but I, at least, had the foresight to do it during lunch."
+    mc "Why didn't you?"
+    s 10e "Well... I... Um..."
+    s 10l "I guess I didn't think of it..."
+    mc "Well, that's just great."
+    mc "So, while you're busy throwing together a poem, I'll be the one looking for supplies?"
+    s 1l "Ehehe... That's the plan!"
+    s 1f "You're not mad at me, are you?"
+    mc "Sigh. Of course not."
+    mc "I'm just glad you're okay."
+    mc "Your freak-out back there had me a little concerned."
+    s 1k "I'm sorry."
+    s "That... That did get a little more intense than it should have."
+    s 1g "I'm... I'm not sure why, but..."
+    s "Something about how he said that..."
+    s 4ao "It..."
+    s "It made me want to punch him in the face."
     mc "..."
-    show monika 3m at f22 zorder 3
-    m "..."
-    m 3l "...Well, anyway!"
-    m 1a "Were you able to find everything we needed?"
-    show monika at t22 zorder 2
-    show sayori 1x at f21 zorder 3
-    s "Uh-huh! I have it right--"
-    s 1n "...Eh?"
-    "Sayori frantically glances around herself."
-    show sayori 4m at hf21 zorder 3
-    s "I...forgot all of the stuff!!"
-    show sayori at t21 zorder 2
-    mc "Calm down, Sayori."
-    mc "I have it all right here."
-    mc "I found the poster paper, too."
-    show sayori 4b
-    show monika 5a at f22 zorder 3
-    m "Ahaha!"
-    m "Sounds like you ended up doing all the work, [player]."
-    show monika at t22 zorder 2
-    mc "Ah, well, Sayori--"
-    "I fail to come up with an excuse for Sayori."
-    show sayori 1q at f21 zorder 3
-    s "I made it an adventure!"
-    show sayori 1a at t21 zorder 2
-    mc "...Yeah, that."
-    show monika 1j at f22 zorder 3
-    m "Ahaha, okay, okay."
-    m 1a "In any case, good work!"
-    m "I'll start working on the posters tonight."
-    show monika at t22 zorder 2
-    show sayori 4x at f21 zorder 3
-    s "Me too!"
-    show monika at t11 zorder 2
-    show sayori at thide behind monika
-    hide sayori
-    m 4b "...Okay, everyone!"
-    m "Are you ready to share your poems?"
-    mc "Guess I should grab mine..."
-    "After making sure the crayon box is closed tightly, I return to my seat."
+    "I'm little relieved to hear that I wasn't imagining the high tension between Satori and Mateo a few minutes ago."
+    "There definitely seemed to be more to that than just the excuse to get me out of the room to help him."
+    "That sudden spike of aggression, though..."
+    mc "It's okay, Satori. I wanna punch him in the face, too."
+    show satori 1a
+    "He gives me a little smirk."
+    "Curious as I may be, I decide it's best to let it go."
+    "Whatever happened back there was probably just a guy-thing."
+    mc "What're we even doing for the festival anyway?"
+    mc "I mean...how do you make an event for literature?"
+    s 7r "Oh, don't worry."
+    s 7x "Mateo and I have everything planned out."
+    s "We're doing a poetry performance."
+    mc "A performance?"
+    mc "Like...reciting poetry in front of people?"
+    s 5z "Exactly!"
+    s 8x "We're all gonna take turns on stage reading our favorite poems to everyone."
+    "Wow, that sounds mind-numbingly boring."
+    mc "Whoa, partner!"
+    mc "That kind of excitement sounds like too much for people to handle."
+    mc "I mean..."
+    mc "We don't want to distract from the other events at the festival, you know."
+    s 7j "Okay... First of all, no one thinks you're funny."
+    s 7g "And secondly, you're not looking at this the right way at all!"
+    s "We're not just reading the poems."
+    s "We're performing them."
+    s 7c "So, you gotta read the lines like,---"
+    s 4d "Above my head, the last remaining star beckons to me."
+    s 4q "I reach up and pluck it from from the curtain of night."
+    s "I hold the glowing gem to my chest, absorbing its brilliant light."
+    s 7k "The consequences of my selfish act soon become clear to me."
+    s "For now, the sky has lost all of its dazzling stones."
+    s "The moon, once surrounded by her children, now floats all alone."
+    s 1e "And the world is shrouded in darkness, because of me."
+    s 1ar "...Like that!"
+    mc "... Wow. You've swayed me, Shakespeare."
+    mc "When you perform it that way, it's guaranteed to only put half our audience to sleep."
+    s 1ap "Oh, shut up."
+    s "You're so uncultured."
+    mc "C'mon, man."
+    mc "I can't take you seriously when you talk like that."
+    mc "I mean... It's awesome that you've got so much passion for this."
+    mc "It just feels weird because I'm not used to seeing this side of you."
+    mc "I didn't even know you liked poetry."
+    mc "So hearing you sound so...articulate..."
+    mc "Well..."
+    mc "It's kind of attractive."
+    show satori 1m
+    s 10l "D-don't say things like that."
+    s "It's embarrassing."
+    s 10y "But...I guess it means I'm doing a good job."
+    mc "You are."
+    mc "And you're right."
+    mc "I am uncultured."
+    mc "But, who knows. Maybe the festival will change that."
+    s 5s "Yeah! I'll make sure the festival changes us both for the better!"
+    s 7aq "Hey, look. One of your favorite rooms!"
+    "Satori stops in front of one of the empty detention rooms."
+    "I look away with a scowl."
+    "He chuckles in amusement as he peeks through the window."
+    s 1aa "Well...it doesn't look like your blazer is in here..."
+    mc "Eh? Of course not!"
+    mc "I have it right..."
+    mc "CRAP!"
+    "Once again, my blazer is absent from my waist."
+    s 7ap "Maybe you should learn to tie a proper knot."
+    mc "Maybe you should learn to shut up."
+    "Satori giggles once again."
+    s 4z "Wow. So mature of you."
+    s 7aa "C'mon, dummy. Let's go."
+    "The two of us enter the classroom."
+
+    scene bg classroom_day
+    with dissolve_scene_half 
+
+    "Satori wastes no time grabbing a blank sheet of paper from the closet and a pen from his pocket."
+    show satori 1c at t11 zorder 2
+    s "Alright. I'm gonna get started on my poem."
+    s 7c "You ransack the closet."
+    mc "Aye-aye, captain."
+    hide satori
+    with wipeleft
+    "I start poking around in the closet."
+    "I spot a full box of crayons and pull them down from the shelf."
+    "The box is a little heavier than I anticipated."
+    "Once the shelf is not longer supporting it, the box slips through my fingers."
+    "I fumble, attempting to catch it with my other hand."
+    "My fingers grip too late and the box bounces off my open palm."
+    "A poor attempt to catch it again with my other hand just knocks it further from me."
+    "The box loudly crashes to the ground and the crayons roll in all directions."
+    mc "Shi..."
+    show satori 7j at t11 zorder 2
+    s "Hey! What're you doing?"
+    "I quickly look up at Satori, trying to be cool."
+    mc "What? Nothing."
+    mc "What're you doing?"
+    s 1o "What am I--..."
+    s 5p "You KNOW I'm trying to write this poem!"
+    mc "So, write your poem."
+    mc "No one's stopping you."
+    mc "Don't worry about what I'm doing. Worry about what you're doing."
+    mc "Do your thing and I'll do mine."
+    mc "Quit making things weird. Jeez."
+    "Smooth."
+    show satori 5i
+    "Satori looks at me suspiciously for a few moments before slowly bringing his attention back to his poem."
+    hide satori
+    with wipeleft
+    "As soon as his head is down, I drop to my knees and begin quickly scooping up the crayons, dumping them haphazardly into the box."
+    "The fall caused some of the crayons to break."
+    "By the time I'm finished, the box is bursting from the seams and the top no longer closes."
+    "Crayons poke out of the top and sides."
+    "I place the overflowing box on a desk."
+    mc "There we go. Good as new."
+    "I go back in the closet and start searching for the rest of the supplies."
+    "Alright. I'm pretty sure I found everything."
+    "Crayons, markers, glue sticks, poster paper..."
+    "I even found some little bottles of glitter."
+    "I can imagine the festive posters that can be made with this stuff."
+    "I'm sure the local 2nd graders will be very impressed."
+    mc "Hey, Satori."
+    mc "I got all the stuff. You done yet?"
+    show satori 5r at t11 zorder 2
+    s "Just one second...there!"
+    "Satori holds up his poem, looking it over with a whimsical smile."
+    s 5z "Perfect. The best poem ever, just like I said it would be."
+    mc "Sweet. Let's see it..."
+    "I walk over and reach for the poem, but Satori quickly pulls it away."
+    show satori 7i
+    "He holds it high above his head."
+    mc "H-Hey! What's the deal?"
+    s 7j "You can't see it yet!"
+    s 7ac "You have to wait until we share our poems in the club."
+    mc "Are you serious?"
+    s 1i "I sure am."
+    s 3i "It wouldn't be fair to the others."
+    mc "Ugh. Fine."
+    mc "You're such a goodie-goodie. Here."
+    "I take the supplies-- markers, crayons, glue sticks and glitter bottles folded in the poster paper-- put them into a box and thrust it into Satori's torso."
+    "He quickly supports it with both arms."
+    show satori 1b
+    "His fingers clutch his poem beneath the load."
+    mc "Now...when we get to the clubroom, I'll distract everyone while you take this stuff to your desk."
+    mc "Slip the poem into your bag while they're not looking. Okay?"
+    s 1s "Ah--! Good idea, [player]!"
+    mc "It's the only kind I have!"
+    s 1ap "Hmm...debatable." 
+    mc "Oh, what do you know? Let's just go before they come looking for us."
+    show satori at thide
+    hide satori
+    "We exit the classroom."
+    
+    show satori_cg
+    with dissolve_scene_half
+
+    show s_cg2_base
+    s "Hey, [player]..."
+    mc "Yeah?"
+    s "You know... This kinda takes me back to when we were kids."
+    s "Remember?"
+    s "I followed you everywhere and did everything you said."
+    s "You'd get us into all kinds of trouble."
+    s "But... You always seemed to be able to talk your way out of it."
+    show s_cg2_exp1
+    s "You're so clever and quick-witted."
+    s "I...I've always admired that about you."
+    s "I used to wish I could be just like you."
+    s "And to be honest...I still kinda do."
+    s "You're the most clever person I've ever known."
+    s "And even now, all these years later..."
+    s "You're still coming up with plans to get me out of the trouble you got me into in the first place."
+    "I blush a little at the sentiment and the memories."
+    mc "Satori..."
+    hide s_cg2_exp1
+    show s_cg2_exp2
+    s "I know it's sappy, but...I'm really glad we're still best friends."
+    s "I hope nothing ever changes that, you know?"
+    s "I don't want anything about our friendship to change."
+    mc "Really? I'm the exact opposite."
+    mc "I look forward to change."
+    hide s_cg2_exp2
+    show s_cg2_exp3
+    s "Huh? But, why?"
+    mc "Because everything grows, Satori."
+    mc "Just like us."
+    mc "Every day, I feel like our bond grows stronger."
+    mc "Our loyalty to each other grows stronger."
+    mc "Our trust."
+    mc "Don't you think?"
+    mc "Are we not even closer now than ever?"
+    s "I...I guess so. Yeah."
+    mc "So, you see, our friendship is constantly changing."
+    mc "It only gets deeper and deeper with each passing season."
+    mc "With each rotation of the earth and with each trip around the sun."
+    mc "In fact, the only thing I wouldn't change is the inevitability that everything will change."
+    s "[player]...that's so poetic!"
+    s "Maybe you should write it down and share it with the club!"
+    mc "...No."
+    mc "It's not for them."
+    mc "Some poems..."
+    mc "Are just for you and me."
+    hide s_cg2_exp3
+    show s_cg2_exp4
+    "Satori suddenly looks at me in a way he never has before."
+    "I smile and look away, but I can still feel his gaze linger."
+    "I wonder if something changed just now?"
+    "We walk back to the clubroom the rest of the way in silence."
+    
+    scene bg club_day
+    with dissolve_scene_half
+
+    show satori 1a at t11 zorder 2
+    mc "We're back!"
+    show satori at t22
+    show mateo 6d at f21 zorder 2
+    m "That took longer than anticipated."
+    m "I hope you found everything we'll need."
+    mc "Sure did."
+    mc "Sorry it took so long."
+    mc "These teachers really need to learn to organize the stuff in their closets!"
+    show satori 1b
+    "I quickly make eye contact with Satori and shift my gaze to the back of the room."
+    "He picks up on my cue instantly."
+    s 1c "I'm gonna go set this stuff in the back."
+    m 1t "Don't trouble yourself, Satori."
+    m "I'll take it from here."
+    "Mateo suddenly reaches for the supplies."
+    show satori 1g
+    "Satori gives me a worried look."
+    "Time for me to step in."
+    mc "I'll help too!"
+    "I grab the flimsy crayon box."
+    "It's barely holding together."
+    "I give it a little squeeze."
+    show satori 1n
+    show mateo 1g
+    "The box bursts at the seams and the crayons explode everywhere."
+    mc "Oops...I'm so sorry!"
+    mc "Ugh...I'm such a clumsy idiot..."
+    "I look at Satori and gesture for him to continue heading to the back of the room."
+    show satori 1a
+    "He nods."
+    s 1x "You help her clean those up, Mateo. I have this."
+    hide satori
+    m 1ab "Right."
+    hide mateo
+    "Mateo sinks to his knees and starts picking up the crayons."
+    "I do the same."
+    "To my surprise, Natsuko and Yuuri lay their books down and come help us."
+    "As the 3 of them busily scoop up crayons, I look over at Satori."
+    show satori 1b
+    "He sets the supplies on his desk and inconspicuously slips his poem into his bag."
+    show satori 1a
+    "He gives me another nod."
+    "Mission complete."
+    hide satori
+    "I smile and continue helping the others collect the crayons."
+    show mateo 1d
+    mc "So, Mateo... I know you didn't ask for it, but I also grabbed some bottles of glitter."
+    mc "I figure most people are attracted to shiny things anyway, so it should draw their attention to the posters."
+    mc "That might work, right?" 
+    m "Hm... that's true."
+    m 1b "Good idea, [player]."
+    show satori 7z
+    s "Those are the only kind she has!"
+    hide mateo
+    show satori 1aq
+    "Satori and I grin at each other knowingly."
+    "I guess we do make quite a team."
+    hide satori
+    show mateo 6b
+    m "Alright, guys! Are you ready to share your poems?"
+    mc "Guess I should go grab mine."
     return
