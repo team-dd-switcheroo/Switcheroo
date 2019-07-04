@@ -11,4 +11,4 @@ label ch4_main:
     mc 5j "And I'm not just saying that because I like to flirt with them!"
     mc 2f "Okay, maybe a little, haha!"
     mc 4h "Thanks for playing! We'll see you again soon!"
-return
+    return

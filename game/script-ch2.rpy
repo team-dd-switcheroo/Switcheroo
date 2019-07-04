@@ -353,7 +353,6 @@ label ch2_main:
     "Yuuri's back to his book and Natsuko wanders back into the closet."
     $ nextscene = poemwinner[1] + "_exclusive_" + str(eval(poemwinner[1][0] + "_appeal"))
     call expression nextscene
-
     return
 
 label ch2_end:

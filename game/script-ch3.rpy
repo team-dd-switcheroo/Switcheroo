@@ -552,7 +552,7 @@ label ch3_end:
     "I mean, I kid around, but we really aren't a couple or anything." 
     "Besides, like Mateo said, this is all about the club." 
     "I have nothing to worry about."
-    stop music fadeout 2.0
+    return
 
 label ch3_end_natsuki:
     return

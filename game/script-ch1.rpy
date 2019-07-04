@@ -221,7 +221,6 @@ label ch1_main:
     "Yuuri's face is already buried in a book."
     "I can't help but notice his intense expression, like he was waiting for this chance."
     "Meanwhile, Natsuko is rummaging around in the closet."
-
     $ nextscene = poemwinner[0] + "_exclusive_" + str(eval(poemwinner[0][0] + "_appeal"))
     call expression nextscene
 
