@@ -373,6 +373,7 @@ label yuri_exclusive_2_ch3:
 
     scene bg corridor_day
     with dissolve_scene_half
+    stop music fadeout 2.0
     "Once in the hallway, Yuuri freezes, then buries his face in his hands and groans."
     show yuuri 7v at t11
     y "I...I spoke without thinking." 
@@ -392,6 +393,7 @@ label yuri_exclusive_2_ch3:
     mc "Being club President doesn't mean he can run other people's lives."
     mc "And he's always such a snob to everyone else, it was cool to see him get a taste of his own medicine."
     y 1v "[player]..." 
+    play music t9
     y "Why do you insist on being so kind and understanding, even when I'm the one who's wrong?"
     mc "Well, the 'bad' things you think you do are child's play compared to some of the crap I've done."
     mc "It's not like you got confrontational or anything."
@@ -411,9 +413,10 @@ label yuri_exclusive_2_ch3:
     hide yuuri
     "Yuuri and I walk to the nearest water fountain." 
     "Once we fill up the water pitcher, we return to the classroom."
-
+    stop music fadeout 2.0
     scene bg club_day
     with dissolve_scene_half
+    play music t6 
     show yuuri 1b at t11
     y "[player], do you like oolong tea?"
     mc "Ah...yeah." 

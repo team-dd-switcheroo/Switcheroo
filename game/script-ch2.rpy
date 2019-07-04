@@ -1,6 +1,8 @@
 label ch2_main:
+    stop music fadeout 2.0
     scene bg club_day
     with dissolve_scene_half 
+    play music t8
     "Another day passes and it's time for the club meeting already."
     "I've gotten a little more comfortable here over the past couple of days."
     "I enter the clubroom drowsily."
@@ -355,6 +357,8 @@ label ch2_main:
     return
 
 label ch2_end:
+    stop music fadeout 2.0
+    play music t3
     show mateo 6b at t11
     m "Alright, guys!"
     m "We're all done reading each other's poems, right?"
@@ -701,6 +705,8 @@ label ch2_end:
     show yuuri at thide
     hide yuuri
     show mateo at t11
+    stop music fadeout 2.0
+    play music t8
     m 6b "Well, I'm proud of all of you for doing this."
     m "You did very well."
     m "It might be hard..."

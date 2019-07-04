@@ -1,7 +1,6 @@
 label sayori_exclusive_1:
     scene bg club_day
     with wipeleft_scene
-
     "Man. Seems like no one wants to be bothered today."
     "I slump down into the nearest desk."
     "How am I supposed to occupy myself with something literature-related when I'm alone like this?"
@@ -205,12 +204,8 @@ label sayori_exclusive_1:
     return
 
 label sayori_exclusive_2:
-    if not renpy.music.get_playing(channel='music') == audio.t2:
-        stop music fadeout 1.0
     scene bg club_day
     with wipeleft_scene
-    if not renpy.music.get_playing(channel='music') == audio.t2:
-        play music t2
     show satori 2x at t11 zorder 2
     s "Hey, [player]!"
     s "I'm gonna go grab some supplies from another classroom."
@@ -248,6 +243,7 @@ label sayori_exclusive_2:
     "I glance over pleadingly at Satori."
     "C'mon, man. Let me see what this jerk has planned for me."
     show satori 1ab
+    stop music fadeout 2.0
     "But his expression changes."
     "He narrows his eyes as he steps closer to Mateo."
     show satori at f22
@@ -278,7 +274,7 @@ label sayori_exclusive_2:
 
     scene bg corridor_day
     with dissolve_scene_half
-
+    play music t8
     show satori 10k at t11 zorder 2
     "Once outside, Satori walks several feet before stopping and covering his face with his hand."
     "I quickly trot to his side."
@@ -477,9 +473,10 @@ label sayori_exclusive_2:
     hide satori
     "We exit the classroom."
     
+    stop music fadeout 2.0
     show satori_cg
     with dissolve_scene_half
-
+    play music t9
     show s_cg2_base
     s "Hey, [player]..."
     mc "Yeah?"
@@ -532,10 +529,10 @@ label sayori_exclusive_2:
     "I smile and look away, but I can still feel his gaze linger."
     "I wonder if something changed just now?"
     "We walk back to the clubroom the rest of the way in silence."
-    
+    stop music fadeout 2.0
     scene bg club_day
     with dissolve_scene_half
-
+    play t3
     show satori 1a at t11 zorder 2
     mc "We're back!"
     show satori at t22
