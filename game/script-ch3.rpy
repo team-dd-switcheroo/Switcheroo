@@ -30,7 +30,6 @@ label ch3_main:
     show mateo at t31
     mc "Um...enough to warrant a trip to the principal's office and get 25 minutes of detention."
     show satori 1ae at t44
-    stop music fadeout 0.2
     s "Quit beating around the bush and tell them what you did!!!"
     show yuuri 6o at t42
     show mateo 1o at t41
@@ -56,7 +55,6 @@ label ch3_main:
     mc "Not really..."
     n 3l "I saw doodles on her notebook. She's actually not bad."
     m 3k "A hidden talent? Impressive yet again."
-    stop music fadeout 0.5
     s 5ah "IDIOTS! Stop encouraging her!"
     show mateo 7p at t41
     show yuuri 7v at t42
@@ -72,7 +70,6 @@ label ch3_main:
     "I walk over to Satori and sit at the desk in front of his."
     show satori 1ae at t11
     "He gives me another scowl."
-    play music t8
     mc "What's your problem?"
     s 4ah "You're my problem!"
     s 7ad "I can't believe you, [player]!"
@@ -104,9 +101,7 @@ label ch3_main:
     s 5ai "YOU WANNA BET?!"
     show mateo 6aj at f22
     show satori at t21
-    stop music fadeout 0.3
     m "Hey, hey, HEY!"
-    play music t7
     m 6ak "Both of you need to stop this right now!"
     m 6al "Don't make me separate the two of you!"
     show mateo at t22
@@ -137,7 +132,6 @@ label ch3_main:
     "I must be visibly flustered as I suddenly notice Mateo timidly approach me."
     "He kneels down at my desk, smiling gently."
     "He seems surprisingly humble today."
-    play music t6
     m 1e "Hi [player]."
     m "You okay?"
     mc "Um...yeah."
@@ -233,7 +227,6 @@ label ch3_start_yuri:
     with dissolve_scene_half
     "Why does it feel like I'm being watched?" 
     "I glance around the room."
-    play music t3
     show yuuri 1v at t33
     "Suddenly, I notice Yuuri peering at me from over his book." 
     show yuuri at thide
@@ -243,6 +236,7 @@ label ch3_start_yuri:
     "I impatiently decide to approach him myself." 
     "I stand up from my desk and sit in the one next to his."
     show yuuri 1s at t11
+    play music t3
     y "I...I didn't mean to bother you or anything." 
     y "I could tell you wanted to be left alone."
     mc "Oh yeah? How could you tell that?"
@@ -687,7 +681,9 @@ label ch3_end_yuri:
     hide yuuri
     "Everyone packs up their things." 
     "I start to follow Natsuko and Mateo out the door."
+    stop music fadeout 2.0
     show yuuri 1v at t11
+    play music t6
     y "Um..."
     mc "...?"
     y 1q "Sorry. I hate to bother you, but..." 

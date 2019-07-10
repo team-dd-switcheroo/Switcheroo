@@ -1653,6 +1653,7 @@ label ch3_s_good:
     s 1d "Don't be silly. I'm fine."
     s "Stop worrying so much."
     mc "Well, I'll try."
+    stop music fadeout 2.0
     s 1k "...You know, I'm a little surprised..."
     s 7k "I really thought you'd start writing your poems like the way Yuuri does."
     s 3k "Or even Nat."
@@ -1660,6 +1661,7 @@ label ch3_s_good:
     mc "It shouldn't be all that surprising."
     mc "I spend most of my time with you."
     mc "Even in the club."
+    play music t9
     s 4h "But..why?..."
     s "Don't you want to get closer to everyone else?"
     s "Wasn't that the plan?"
@@ -1697,6 +1699,7 @@ label ch3_s_good:
     s 5v "Please...I need to be left alone right now, okay?"
     s 1aw "Just...just tell Mateo I wasn't feeling well."
     s 1u "I'll see you...whenever."
+    show satori at thide
     hide satori
     "Before I can say anything else, Satori turns and walks out the door, mumbling to himself."
     "I watch him go, helplessly clutching my wrinkled poem."
