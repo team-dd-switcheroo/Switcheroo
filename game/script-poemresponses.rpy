@@ -829,144 +829,216 @@ label ch2_n_good:
         return
     #Likes both poems a lot
     else:
-        label ch2_n_good_sharedwithch3:
-            n 1n "..."
-            "Natsuki reads my poem."
-            "She keeps glancing at me, then back at the poem."
-            "By now, she must have read it more than once."
-            n 1u "Rrgh..."
-            mc "...?"
-            mc "Is it that bad?"
-            n 1r "No! No, it's not!"
-            n "It's good. It's really good, okay?!"
-            n 5w "There, I said it!"
-            n "Ugh, this wasn't supposed to happen at all...!"
-            n 5s "Why can't you just be bad at this?"
-            n "My poems are supposed to impress {i}you{/i}, not the other way around!"
-            mc "You're trying to impress me?"
-            n 12c "Obviously! You think I'd let you enjoy Yuri's writing more than mine?"
-            n "Give me a break."
-            mc "Well..."
-            mc "In that case, what's the problem with me trying to impress you?"
-            n 1e "I'll tell you! You--"
-            n 1p "--"
-            "Natsuki's face freezes, like she just realized something."
-            n "Y-Y-You..."
-            n "You're trying to...impress {i}me?{/i}"
-            show natsuki 1q
-            "Natsuki vigorously scans her eyes over my poem one more time."
-            "Then, the poem slips out of her hands and flutters to the floor."
-            n 1p "I...have to use the bathroom!"
-            show natsuki at lhide
-            hide natsuki
-            "Red-faced, Natsuki quickly walks out of the room."
-            show monika 1d at t11 zorder 2
-            m "Hey, [player]..."
-            m "Did you do something to Natsuki?"
-            m "I just saw her rush out like that..."
-            m 2g "You didn't do anything terrible, did you?"
-            mc "N-No!"
-            mc "I just told her that--"
-            "My voice gets caught in my throat."
-            "There's no way I could tell Monika that I'm trying to impress Natsuki."
-            m 2d "Hmm?"
-            "Monika sees the poem lying on the floor and swiftly picks it up."
-            if m_readpoem:
-                "She skims over it a second time, her smile not fading from her face."
-                m 2a "I see."
-                m "At first I just thought you liked her writing style..."
-                m "But you wrote this {i}for{/i} Natsuki, didn't you?"
-            else:
-                "She reads through it, her smile not fading from her face."
-                m 2a "I see."
-                m "You wrote this for Natsuki, didn't you?"
-            mc "I-I mean..."
-            mc "Not really..."
-            m 2d "In fact, didn't she like your poem a lot the other day, too?"
-            m "I'm surprised you know her taste so well already."
-            m 4a "Are you sure you're not cheating, [player]?"
-            mc "Cheating...?"
-            mc "What do you mean by that?"
-            m 5a "Never mind, I'm just kidding. Ahaha!"
-            "I didn't understand Monika's joke at all."
-            m "Anyway..."
-            m 1a "How do you think Natsuki feels about you?"
-            m "Oh, you don't need to answer that."
-            m "It was just something for you to think about."
-            show monika at t22 zorder 2
-            show natsuki 4e at l21
-            n "Hey!"
-            "Natsuki comes up and snatches the poem out of Monika's hands."
-            "Neither of us had noticed her reenter the classroom."
-            show natsuki at f21 zorder 3
-            n "Did you read this, Monika?"
-            show natsuki at t21 zorder 2
-            show monika at f22 zorder 3
-            m 1j "Of course! I liked it!"
-            show monika 1a at t22 zorder 2
-            show natsuki at f21 zorder 3
-            n 1r "Ugh..."
-            n "You should really stop reading things that aren't for you, you know."
-            n "You have a bad habit of doing that."
-            show natsuki at t21 zorder 2
-            show monika at f22 zorder 3
-            m 1d "Eh?"
-            m "But [player] wrote this poem."
-            m 1a "And we're supposed to share with everyone, right?"
-            show monika at t22 zorder 2
-            show natsuki at f21 zorder 3
-            n 1x "Uu--"
-            "Natsuki freezes."
-            "She apparently forgot that my poem is technically for everyone to read."
-            n 42c "Okay, well, I think [player] is done sharing this poem with everyone."
-            n "It's not like anyone would want to read this anyway."
-            n 4h "In fact, I'm just going to hold onto this."
-            show natsuki at t21 zorder 2
-            show monika at f22 zorder 3
-            m 5 "If you insist~"
-            show monika at t22 zorder 2
-            show natsuki at f21 zorder 3
-            n 1i "What?"
-            n "Why are you looking at me like that??"
-            show natsuki at t21 zorder 2
-            show monika at f22 zorder 3
-            m "Like what?"
-            show monika at t22 zorder 2
-            show natsuki at f21 zorder 3
-            n 12b "Ugh..."
-            n "Never mind."
-            if not m_readpoem:
-                $ poemsread += 1
-                $ m_readpoem = True
-            if poemsread >= 3:
-                "Well, I guess Natsuki has my poem now."
-                "Not that I really planned on keeping it."
-            else:
-                $ unfairto = "Sayori"
-                if s_readpoem:
-                    $ unfairto = "Yuri"
-                show natsuki at t21 zorder 2
-                mc "Ah, Natsuki..."
-                mc "I'll give you the poem, but that's still not very fair to [unfairto]..."
-                mc "...She hasn't gotten to read it yet."
-                show natsuki at f21 zorder 3
-                n 2q "So what?"
-                show natsuki at t21 zorder 2
-                show monika at f22 zorder 3
-                m 2a "Well... I guess [player] is right, Natsuki..."
-                m "It's not fair if you don't let everyone finish reading it."
-                show monika at t22 zorder 2
-                show natsuki at f21 zorder 3
-                n "..."
-                n 2h "...Fine."
-                "Natsuki returns my poem."
-                n "It's not like she's going to like it, though."
-            show monika at thide zorder 1
-            show natsuki at t11 zorder 2
-            hide monika
-            n 2h "Anyway, read my poem now."
-            n 4h "And no, I won't let you keep it."
-            n "This is my only copy."
+        show natsuko 1c at t11
+        "Natsuko reads my poem."
+        "He keeps looking at me, then back at the poem."
+        "By now, he must've read it more than once."
+        mc "Is it that bad?"
+        show natsuko 1b at f11
+        n "Bad?"
+        n 2t "Haha...this is actually really good."
+        n "So much for beginner's luck."
+        n 3u "Sigh."
+        n 4b "Why can't you be bad at this?"
+        n "My poems are supposed to impress you, not the other way around."
+        show natsuko 1g at t11
+        mc "You're trying to impress me?"
+        show natsuko 2ai at f11
+        n "Ah...that depends."
+        n 1d "Is it working?"
+        show natsuko 1d at t11
+        mc "Hm...A little bit."
+        show natsuko 4e at f11
+        n "Just a little bit?"
+        show natsuko 4g at t11
+        mc "Hehe...alright..."
+        mc "Maybe I think you're more than just a little charming."
+        show natsuko 3k at t11
+        "Natsuko blushes a bit."
+        mc "And besides..."
+        mc "Is there a problem with me trying to impress you?"
+        show natsuko 3q at f11
+        n "..."
+        n "You...want to impress me?"
+        show natsuko 3s at t11
+        mc "Well...that depends..."
+        "I bite my lower lip a bit."
+        mc "Is it working?"
+        show natsuko 3h at t11
+        "Natsuko's blush intensifies."
+        "He clutches my poem tightly."
+        show natsuko 3p at f11
+        n "I...I..."
+        "He suddenly releases his grip on my poem, letting it flutter to the ground."
+        n 3v "I-I'll be right back!"
+        hide natsuko at lhide
+        "Red faced, Natsuko scurries out of the room."
+        show mateo 1d at f11
+        m "Hey [player]...what's going on over here?"
+        m "Natsuko sure left in a hurry."
+        m 2y "What'd you do to him?"
+        show mateo 1y at t11
+        mc "Do? I didn't do anything."
+        show mateo 2r at f11
+        m "Are you sure you didn't do anything terrible?"
+        show mateo 2q at t11
+        mc "Pfft...what?"
+        mc "What're you talking about?"
+        mc "What do you think I could have possibly done to him?"
+        show mateo 1p at f11
+        m "I don't know."
+        m 2m "That's why I'm asking you."
+        m 2n "I just want to make sure you didn't do anything...bad."
+        show mateo 1m at t11
+        mc "Bad? Are you..."
+        mc "You know what?"
+        mc "Yes."
+        mc "Ya caught me."
+        mc "I admit it."
+        show mateo 1i at t11
+        mc "Couldn't keep my hands off him."
+        mc "Better turn me in to the authorities."
+        mc "No telling who my next victim will be!"
+        show mateo 1l at t11
+        "Mateo chuckles a bit."
+        show mateo 2x at f11
+        m "You know, they say sarcasm is a sign of a weak mind."
+        show mateo 1w at t11
+        mc "Well, tell me who 'they' are and I'll molest them too."
+        show mateo 1u at t11
+        "Mateo laughs again."
+        show mateo 2v at f11
+        m "So touchy."
+        m "Pun not intended."
+        m 2r "Tell me, am I safe in your presence?"
+        m "Or do you simply not have control over your own hands?"
+        show mateo 2q at t11
+        "My eyes widen when I spot my poem near Mateo's feet."
+        "The last thing I need is for him to read it, especially right now."
+        "I try to think of something fast."
+        mc "No control whatsoever."
+        mc "In fact, you should probably go away before it's too late."
+        show mateo 1g at t11
+        "My stomach knots up."
+        "He must've seen me briefly look down at the poem."
+        "Much to my embarrassment, Mateo indeed spots the poem on the floor and snatches it up."
+        show mateo 1a at t11
+        "He reads through it, a smug grin creeping across his face."
+        show mateo 2k at f11
+        m "How sweet."
+        m "Wrote this for Natsuko, did you?"
+        m 2l "Perhaps I should call the authorities, after all..."
+        show mateo 1j at t11
+        mc "Hey, he's of age!"
+        mc "I-I mean..."
+        "Oh, this is just fantastic."
+        "Of all the things I could have said..."
+        "Mateo just looks at me with that pretentious grin of his."
+        show mateo 2k at f11
+        m "Well, well, well..."
+        m "Looks like someone's got a thing for strawberry shortcake..."
+        show mateo 1j at t11
+        "Something about his mocking tone makes me feel bad about it for some reason."
+        "I turn away, my cheeks blazing."
+        show mateo 2t at f11
+        m "So...how do you think the little fella feels about you?"
+        show mateo 1w at t11
+        mc "..."
+        show mateo 2x at f11
+        m "Oh, don't bother answering."
+        m "It's just something for you to think about."
+        n "Hey!"
+        show natsuko 4f at l21
+        show mateo 1o at t22
+        "Natsuko stomps over and grabs the poem from Mateo's hands."
+        "Funny, I didn't even notice him re-enter the classroom."
+        show natsuko 2w at f21
+        n "You've got a bad habit of touching things and reading things that don't belong to you, you know that?"
+        show natsuko 2x at t21
+        show mateo 4ab at f22
+        m "And what, pray tell, did I read that belongs to you, Natsuko?"
+        m "This is a literature club, remember?"
+        m "We all read each other's poems."
+        show natsuko 4o at t21
+        show mateo 4aa at t22
+        "Natsuko freezes."
+        "Apparently, he forgot my poem is for everyone to read."
+        "But I can't let Mateo humiliate him like that."
+        mc "Uh, technically, I gave him the poem to keep."
+        show natsuko 3h at h21
+        show mateo 3d at f22
+        m "So... It does belong to him."
+        m "Is that so?"
+        "He looks just as surprised as Natsuko does."
+        show mateo 3c at t22
+        mc "Yeah."
+        mc "I mean, I'm gonna let everyone else read it first, of course."
+        mc "But afterward, he's taking it home."
+        show mateo 1l at f22
+        m "I see."
+        m 1n "How...sweet."
+        hide mateo
+        show natsuko 1d at f11
+        n "Thanks, [player]!"
+        n 1l "I...I'm really happy you're letting me keep this."
+        n 2ap "You can keep mine too, if you want."
+
+        call showpoem(poem_n2)
+
+        n 3l "Not bad, right?"
+        show natsuko 3j at t11
+        "I re-read the poem a couple times, nodding to myself."
+        mc "Can I be 100% honest with you?"
+        show natsuko 1m at f11
+        n "...uh, sure, I guess..."
+        show natsuko 1n at t11
+        mc "Alright...well, when I read your poem yesterday, I thought, 'oh my gosh, this is the dumbest thing I've ever seen in my life.'"
+        show natsuko 3p at hf11
+        n "--!!"
+        show natsuko 3p at t11
+        mc "But then after you described your writing style, I read it again and suddenly, I understood."
+        mc "It made me realize that it wasn't a dumb poem after all."
+        show natsuko 3o at t11
+        mc "It was a powerful message disguised as something seemingly irrelevant."
+        mc "It's the same with this poem."
+        show natsuko 4m at t11
+        mc "At first glance, I didn't think much of it."
+        mc "But now that I'm familiar with your style, I was able to read deeper into it."
+        mc "I get it."
+        mc "The message in this poem is, don't be a jerk and judge someone for their weird hobbies."
+        mc "Am I right?"
+        show natsuko 4t at f11
+        n "...Well, yeah, that's right."
+        n "I mean...the message was pretty straightforward after all."
+        n 1z "I'm glad I didn't need to explain it."
+        n "You can tackle complicated issues using simple analogies."
+        show natsuko 1j at t11
+        mc "So, in this analogy...you're Trevor, and the dolls are your comic books?"
+        show natsuko 3v at hf11
+        n "Gah!"
+        show natsuko 3r at f11
+        n "I...well...it doesn't matter!"
+        n 1q "It can be about anything."
+        n "I wrote it to be easy for anyone to relate to."
+        n "I mean, everyone has some kind of weird hobby or guilty pleasure."
+        n "Something that you're afraid if people find out, they'll make fun of you or think less of you."
+        n "But that just makes people stupid!"
+        n "Who cares what someone is into as long as their not hurting anyone and it makes them happy?"
+        n "I think people need to learn to respect others for liking weird things."
+        show natsuko 3n at t11
+        mc "Well, I can definitely relate, and I'm sure everyone else can too."
+        show natsuko 1k at f11
+        n "You know..."
+        n 1l "I'm glad you can appreciate this kind of writing."
+        n 3ap "I've enjoyed sharing it with you so far."
+        show natsuko 3aa at t11
+        mc "I'm glad you're enjoying yourself."
+        mc "I'm enjoying myself too."
+        show natsuko 1d at f11
+        n "Well...I hope you look forward to tomorrow's poem."
+        show natsuko 1a at t11
+        mc "I do."
+        mc "I can't wait to see what you come up with."
             return
 
 label ch3_n_bad:
