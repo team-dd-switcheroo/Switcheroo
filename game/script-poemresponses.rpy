@@ -1249,11 +1249,9 @@ label ch2_s_med:
     #This one is the same as the last one
     elif s_poemappeal[0] == 0:
         s "..."
-        s 4x "Ooh!"
-        s "I like this one, [player]!"
-        s "It has some nice feelings in it~"
-        mc "Ah, I'm glad."
-        mc "Does that mean it's better than yesterday's?"
+        s "Ooh...I like this one, [player]!" 
+        s "It has some nice feelings in it."
+        mc "Ah. So you're saying it's better than yesterday's?"
         s 4b "Mmm, lemme think..."
         s 1q "I dunno!"
         s "I guess I like them both!"
