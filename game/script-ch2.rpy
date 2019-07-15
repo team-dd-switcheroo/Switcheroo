@@ -801,10 +801,11 @@ label ch2_end:
     s 10ar "We gotta go, see you guys tomorrow, bye!"
     show satori at t42
     "I offer a muffled 'bye' and wave to the guys as Satori drags me out of the room."
-
     scene bg residential_day
-    show satori 
     with wipeleft_scene
+    $ ch2_winner = poemwinner[1].capitalize()
+    if ch2_winner == "Satori":
+        $ ch2_winner = "Yuuri"
     "I walk home with Satori once more."
     "Even though it's only been a few days, a lot has already changed."
     show satori 1k at t11
@@ -827,42 +828,11 @@ label ch2_end:
     show satori 1d
     menu:
         s "I'm just curious."
-        "Walk home with Yuuri.":
-            mc "Walking home with Yuuri, huh?"
-            "Why does the mere thought of that make my heart pound?"
-            mc "I mean...he seems to have trouble socializing and I'd feel awful turning him down, so..."
-            s 10d "He's...pretty charming, isn't he?"
-            mc "...Well, that too..."
-            mc "Good to know you find him as dreamy as I do..."
-            s 1i "Jeez, you know that's not what I mean."
-            mc "Why even speculate about something that's never going to happen?"
-            s 1e "Eh? What do you mean?"
-            s "Wasn't that our goal from day one?"
-            s "You pick your favorite member, and I help you win him over."
-            s "Remember?"
-            mc "Well...yeah..."
-            s 7d "Then, stop worrying."
-            s "We'll get him to start walking you home."
-            s 4k "It'll only be a matter of time until..."
-            mc "...Until what?"
-            s 1k "You know..."
-            s "Until you won't..."
-            s 1f "Need me anymore."
-            mc "Need you...?"
-            mc "Satori, that wasn't part of the plan!"
-            mc "You're just trying to hook me up with one of your friends."
-            mc "They're not meant to be a replacement for you."
-            mc "No one could possibly take your place."
-            s 10y "Hehe...yeah."
-            s 7y "If you say so..."
-            "We split off at our junction."
-            "I watch him leave and I'm left feeling awkward and concerned."
-            "Why does it feel like Satori is starting to regret helping me?"
-            "I hope it doesn't occupy his mind too much."
-            "I'd hate for him to make himself sad over it."
-            "The festival is only a few days away."
-            "Who knows what will happen in that time."
-            return
+        "Walk home with [ch2_winner].":
+            if ch2_winner == "Natsuko":
+                call ch2_end_natsuki
+            else:
+                call ch2_end_yuri
         "Walk home with Satori.":
             mc "Satori...I wouldn't ditch you for anyone."
             s 1h "But...he's so charming."
@@ -886,4 +856,79 @@ label ch2_end:
             "The festival is only a few days away."
             "Who knows what will happen in that time."
             return
+    return
+
+label ch2_end_yuri:
+    mc "Walking home with Yuuri, huh?"
+    "Why does the mere thought of that make my heart pound?"
+    mc "I mean...he seems to have trouble socializing and I'd feel awful turning him down, so..."
+    s 10d "He's...pretty charming, isn't he?"
+    mc "...Well, that too..."
+    mc "Good to know you find him as dreamy as I do..."
+    s 1i "Jeez, you know that's not what I mean."
+    mc "Why even speculate about something that's never going to happen?"
+    s 1e "Eh? What do you mean?"
+    s "Wasn't that our goal from day one?"
+    s "You pick your favorite member, and I help you win him over."
+    s "Remember?"
+    mc "Well...yeah..."
+    s 7d "Then, stop worrying."
+    s "We'll get him to start walking you home."
+    s 4k "It'll only be a matter of time until..."
+    mc "...Until what?"
+    s 1k "You know..."
+    s "Until you won't..."
+    s 1f "Need me anymore."
+    mc "Need you...?"
+    mc "Satori, that wasn't part of the plan!"
+    mc "You're just trying to hook me up with one of your friends."
+    mc "They're not meant to be a replacement for you."
+    mc "No one could possibly take your place."
+    s 10y "Hehe...yeah."
+    s 7y "If you say so..."
+    "We split off at our junction."
+    "I watch him leave and I'm left feeling awkward and concerned."
+    "Why does it feel like Satori is starting to regret helping me?"
+    "I hope it doesn't occupy his mind too much."
+    "I'd hate for him to make himself sad over it."
+    "The festival is only a few days away."
+    "Who knows what will happen in that time."
+    return
+
+label ch2_end_natsuki:
+    mc "Walking home with Natsu, huh..."
+    "Why does the mere thought of that make my heart pound?"
+    mc "I mean...it sounds like it'd be a lot of fun." 
+    mc "And he is cute."
+    s 10d "He's pretty fun to be around, isn't he?"
+    mc "Yes, very much so." 
+    mc "Did you want a crack at him first?"
+    s 1i "Jeez, you know that's not what I mean."
+    mc "Why even speculate about something that's never going to happen?"
+    s 1e "Eh? What do you mean?"
+    s "Wasn't that our goal from day one?"
+    s "You pick your favorite member, and I help you win him over."
+    s "Remember?"
+    mc "Well...yeah..."
+    s 7d "Then, stop worrying."
+    s "We'll get him to start walking you home."
+    s 4k "It'll only be a matter of time until..."
+    mc "...Until what?"
+    s 1k "You know..."
+    s "Until you won't..."
+    s 1f "Need me anymore."
+    mc "Need you...?"
+    mc "Satori, that wasn't part of the plan!"
+    mc "You're just trying to hook me up with one of your friends."
+    mc "They're not meant to be a replacement for you."
+    mc "No one could possibly take your place."
+    s 10y "Hehe...yeah."
+    s 7y "If you say so..."
+    "We split off at our junction."
+    "I watch him leave and I'm left feeling awkward and concerned."
+    "Why does it feel like Satori is starting to regret helping me?"
+    "I hope it doesn't occupy his mind too much."
+    "I'd hate for him to make himself sad over it."
+    "The festival is only a few days away."
+    "Who knows what will happen in that time."
     return
