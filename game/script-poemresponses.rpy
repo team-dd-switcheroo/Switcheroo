@@ -2127,7 +2127,7 @@ label ch3_y_bad:
         "Yuuri turns away from me."
         y 6n "You should go. Please. I want to do some thinking."
         mc "Are you sure?"
-        show yuuri at 6v
+        show yuuri 6v
         "Yuuri nods."
         mc "Alright."
         hide yuuri
@@ -2162,7 +2162,7 @@ label ch3_y_bad:
         "Yuuri turns away from me."
         y 6n "You should go. Please. I want to do some thinking."
         mc "Are you sure?"
-        show yuuri at 6v
+        show yuuri 6v
         "Yuuri nods."
         mc "Alright."
         hide yuuri
@@ -2225,7 +2225,7 @@ label ch3_y_med:
         "Yuuri turns away from me."
         y 6n "You should go. Please. I want to do some thinking."
         mc "Are you sure?"
-        show yuuri at 6v
+        show yuuri 6v
         "Yuuri nods."
         mc "Alright."
         hide yuuri
