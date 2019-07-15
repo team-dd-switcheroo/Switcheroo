@@ -293,7 +293,6 @@ label natsuki_exclusive_2:
     scene bg club_day
     with dissolve_scene_half
     play music t6 fadeout 1
-
     show natsuko 1e at f11
     n "Hey!"
     n "Did you finish that manga last night?"
@@ -362,7 +361,8 @@ label natsuki_exclusive_2:
     m "Oh, stop whining."
     m "All of your crap is still there."
     m "Just get it."
-    # hide_mateo
+    show mateo at thide
+    hide mateo
     n 1v "Ugh..."
     "I look up."
     "The top shelf is far above Natsuko's head."
@@ -427,8 +427,9 @@ label natsuki_exclusive_2:
     n "You're gonna get hurt."
     mc "Not if you hold it steady."
     mc "C'mere."
-    hide natsuko
-    show natsuko_bg_cgbase2
+
+    scene natsuko_bg_cgbase2
+    with dissolve_cg
     "Natsuko comes over and grabs the back part of the chair, bracing it with his body weight."
     "I climb up on the seat and slowly stand, trying to keep my balance."
     "The chair only moves once under my weight, but Natsuko steadies it instantly."
@@ -436,7 +437,7 @@ label natsuki_exclusive_2:
     mc "Great!"
     mc "We'll be able to do this in no time!"
     n "...Y-yeah..."
-    show n_cg2_bg
+    show n_cg2_bg at cgfade
     "I reach up and grab the first box of comics."
     "It's not very heavy, so I'm able to bend down and slide it onto the lower shelf."
     "I wrap my arms around the bigger box."
@@ -457,7 +458,9 @@ label natsuki_exclusive_2:
     mc "Hey, Natsu!"
     "I turn my head around a bit and look down."
     mc "...!"
-    show natsuko_bg_cg2_exp1
+    stop music fadeout 2.0
+    hide n_cg2_bg
+    show natsuko_bg_cg2_exp1 at cgfade
     "I see Natsuko - eyes wide, cheeks red, and mouth agape - looking right up my skirt!"
     mc "Guh!"
     "Crap!"
@@ -468,11 +471,13 @@ label natsuki_exclusive_2:
     mc "Hey, hey, hey!!!"
     mc "What do you think you're doing down there!?!"
     mc "Stop it!"
+    play music t7
     "Finally snapping out of it, Natsuko suddenly realizes what he's just been caught doing."
     n "Ack!"
     n "I'm sorry! I'm sorry! I'm sorry!"
     n "I won't look!"
-    show natsuko_bg_cg2_exp2
+    hide natsuko_bg_cg2_exp1
+    show natsuko_bg_cg2_exp2 at cgfade
     "Natsuko turns away and covers his face with both hands, letting go of the chair."
     "It instantly starts to swivel and roll."
     mc "KYA!"
@@ -482,7 +487,8 @@ label natsuki_exclusive_2:
     mc "Dude, just grab the chair!"
     n "I'm sorry!"
     n "I wanna help..."
-    show natsuko_bg_cg2_exp3
+    hide natsuko_bg_cg2_exp2
+    show natsuko_bg_cg2_exp3 at cgfade
     "He must've uncovered his eyes for a split second, because I hear him exclaim again."
     n "Oh, God!"
     n "I'm sorry!"
@@ -506,7 +512,9 @@ label natsuki_exclusive_2:
     stop music
     play sound "mod_assets/audio/fall3.wav"
     "I slowly come to my senses."
-    show bg closet
+    scene bg closet
+    with dissolve_cg
+    play music t8
     "I sit up, pressing my arm down into what I think at first to be the floor beneath me."
     n "Ghk!"
     "I hear an exasperated grunt."
@@ -557,6 +565,7 @@ label natsuki_exclusive_2:
     mc "Yeah, well..."
     mc "You're lucky I didn't say anything."
     mc "You try to pull that crap again and I'll..."
+    stop music fadeout 2.0
     mc "Oh no!!"
     "I quickly reach over and pick up one of the books that's scattered on the floor."
     "There's a long diagonal crease on one of the pages."
@@ -566,6 +575,7 @@ label natsuki_exclusive_2:
     show natsuko 1a at f11
     "Suddenly, Natsuko reaches over and takes my wrist gently."
     n 1aa "Hey..."
+    play music t9
     n "It's okay."
     n "Don't worry about it."
     "His voice is calm and quiet."
@@ -626,7 +636,10 @@ label natsuki_exclusive_2:
     "He smiles a little."
     "Looks like he's starting to cheer up already."
     mc "Alright, I'm ready."
-    hide natsuko
+    scene bg club_day
+    with wipeleft_scene
+    stop music fadeout 2.0
+    play music t8
     "We sit in the same spot as last time, and I open the second volume."
     "Natsuko's mood continues to improve as he laughs and points things out to me."
     "He's surprisingly sharp, making note of a lot of subtle repeated jokes and background elements."

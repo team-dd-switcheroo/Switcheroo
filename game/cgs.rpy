@@ -10,19 +10,19 @@
 # Feeding Yuri Chocolate
 # This is the slowly fading background
 image y_cg2_bg:
-    "images/cg/y_cg2_bg1.png"
+    "mod_assets/images/cg/y_cg2_bg1.png"
     6.0
-    "images/cg/y_cg2_bg2.png" with Dissolve(1)
+    "mod_assets/images/cg/y_cg2_bg2.png" with Dissolve(1)
     2
-    "images/cg/y_cg2_bg1.png" with Dissolve(1)
+    "mod_assets/images/cg/y_cg2_bg1.png" with Dissolve(1)
     1
     repeat
 
 #Yuri's Face
 image y_cg2_base:
-    "images/cg/y_cg2_base.png"
+    "mod_assets/images/cg/y_cg2_base.png"
 image y_cg2_nochoc:
-    "images/cg/y_cg2_nochoc.png"
+    "mod_assets/images/cg/y_cg2_exp2.png"
     on hide:
         linear 0.5 alpha 0
 
@@ -39,8 +39,15 @@ image y_cg2_details:
 # Expressions
 
 # Surprised Yuri
+image y_cg2_exp1:
+    "mod_assets/images/cg/y_cg2_exp1.png"
+    alpha 0
+    linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
 image y_cg2_exp2:
-    "images/cg/y_cg2_exp2.png"
+    "mod_assets/images/cg/y_cg2_exp2.png"
     alpha 0
     linear 0.5 alpha 1
     on hide:
@@ -48,7 +55,42 @@ image y_cg2_exp2:
 
 # Embarrassed Yuri
 image y_cg2_exp3:
-    "images/cg/y_cg2_exp3.png"
+    "mod_assets/images/cg/y_cg2_exp3.png"
+    alpha 0
+    linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
+image y_cg2_exp4:
+    "mod_assets/images/cg/y_cg2_exp4.png"
+    alpha 0
+    linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
+image y_cg2_exp5:
+    "mod_assets/images/cg/y_cg2_exp5.png"
+    alpha 0
+    linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
+image y_cg2_exp6:
+    "mod_assets/images/cg/y_cg2_exp6.png"
+    alpha 0
+    linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
+image y_cg2_exp7:
+    "mod_assets/images/cg/y_cg2_exp7.png"
+    alpha 0
+    linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
+image y_cg2_exp8:
+    "mod_assets/images/cg/y_cg2_exp8.png"
     alpha 0
     linear 0.5 alpha 1
     on hide:
@@ -56,7 +98,7 @@ image y_cg2_exp3:
 
 # Particles during Yuri CG
 image y_cg2_dust1:
-    "images/cg/y_cg2_dust1.png"
+    "mod_assets/images/cg/y_cg2_dust1.png"
     subpixel True
     parallel:
         alpha 1.00
@@ -76,7 +118,7 @@ image y_cg2_dust1:
         linear 14.0 xoffset -100 yoffset 100
         repeat
 image y_cg2_dust2:
-    "images/cg/y_cg2_dust2.png"
+    "mod_assets/images/cg/y_cg2_dust2.png"
     subpixel True
     parallel:
         alpha 1.00
@@ -96,7 +138,7 @@ image y_cg2_dust2:
         linear 32.0 xoffset -100 yoffset 100
         repeat
 image y_cg2_dust3:
-    "images/cg/y_cg2_dust3.png"
+    "mod_assets/images/cg/y_cg2_dust3.png"
     subpixel True
     parallel:
         alpha 1.00
@@ -117,7 +159,7 @@ image y_cg2_dust3:
         repeat
 
 image y_cg2_dust4:
-    "images/cg/y_cg2_dust4.png"
+    "mod_assets/images/cg/y_cg2_dust4.png"
     subpixel True
     parallel:
         alpha 1.00
@@ -179,17 +221,18 @@ image n_rects3:
 
 # Closet Background
 image n_cg2_bg:
-    "images/cg/n_cg2_bg.png"
-
+    "mod_assets/images/cg/n_cg2_bg.png"
 # Natsuki herself
-image n_cg2_base:
-    "images/cg/n_cg2_base.png"
+image natsuko_bg_cgbase2:
+    "mod_assets/images/cg/natsuko_bg_cgbase2.png"
 # Surprised Natsuki
-image n_cg2_exp1:
-    "images/cg/n_cg2_exp1.png"
+image natsuko_bg_cg2_exp1:
+    "mod_assets/images/cg/natsuko_bg_cg2_exp1.png"
 # Shouting Natsuki
-image n_cg2_exp2:
-    "images/cg/n_cg2_exp2.png"
+image natsuko_bg_cg2_exp2:
+    "mod_assets/images/cg/natsuko_bg_cg2_exp2.png"
+image natsuko_bg_cg2_exp3:
+    "mod_assets/images/cg/natsuko_bg_cg2_exp3.png"
 
 # Natsuki Wall CG
 # Base Image with Background and Natsuki
@@ -268,26 +311,16 @@ image s_cg1_exp4:
 image s_cg1_exp5:
     "mod_assets/images/cg/satori_cg5.png"
 
-# Hurt Sayori CG
-
-# Without Apple Juice
-image s_cg2_base1:
-    "images/cg/s_cg2_base1.png"
-# With Apple Juice
-image s_cg2_base2:
-    "images/cg/s_cg2_base2.png"
-
-# Expressions
-
-# Grimace Sayori
+image s_cg2_base:
+    "mod_assets/images/cg/s_cg2_base.png"
 image s_cg2_exp1:
-    "images/cg/s_cg2_exp1.png"
-# Mouth Closed Sayori
+    "mod_assets/images/cg/s_cg2_exp1.png"
 image s_cg2_exp2:
-    "images/cg/s_cg2_exp2.png"
-# Eye Closed Sayori
+    "mod_assets/images/cg/s_cg2_exp2.png"
 image s_cg2_exp3:
-    "images/cg/s_cg2_exp3.png"
+    "mod_assets/images/cg/s_cg2_exp3.png"
+image s_cg2_exp4:
+    "mod_assets/images/cg/s_cg2_exp4.png"
 
 # Sayori Hug CG
 image s_cg3:

@@ -548,37 +548,43 @@ label yuri_exclusive_2_ch3:
     mc "You're fine!"
     "I continue reading."
 
-    show y_cg2_base
-    show y_cg2_dust1
+    scene y_cg2_base
+    with dissolve_cg
+    show y_cg2_dust1 at cgfade
     "I watch Yuuri pop a chocolate in his mouth from my peripherals." 
     "I feel myself starting to lean and quickly correct my posture." 
     "But it's hard to concentrate when my arm is practically resting on Yuuri's thigh." 
     "I can hear him go for another chocolate." 
-    show y_cg2_exp1
+    show y_cg2_exp1 at cgfade
     "I keep my eyes on the book, but I can see him hold the candy up in the corner of my vision." 
     "What's he doing?" 
-    show y_cg2_dust2
+    show y_cg2_dust2 at cgfade
     "Without taking my eyes off the book, I part my lips slightly, preparing to ask him what he wants." 
     "Suddenly, Yuuri places the chocolate in my mouth." 
-    show y_cg2_exp2
+    hide y_cg2_exp1
+    show y_cg2_exp2 at cgfade
     "I clamp my lips over it automatically." 
     "My concentration breaks."
     mc "Ack!" 
     mc "What the..."
     mc "Did... Did you just..."
     "I look over at Yuuri, desperate to confirm what just happened." 
-    mc "Yuuri ..."
-    show y_cg2_exp3
-    show y_cg2_dust3
-    "Yuuri's face turns bright red." 
-    show y_cg2_exp4
-    y "I'm sorry!" 
-    show y_cg2_exp5
+    mc "Yuuri..."
+    hide y_cg2_exp2
+    show y_cg2_exp3 at cgfade
+    show y_cg2_dust3 at cgfade
+    "Yuuri's face turns bright red."
+    hide y_cg2_exp3
+    show y_cg2_exp4 at cgfade
+    y "I'm sorry!"
+    hide y_cg2_exp4 
+    show y_cg2_exp5 at cgfade
     y "I guess..." 
     y "I must have misinterpreted...why you didn't want to touch the chocolate..."
     y "I-I thought...you didn't want to smudge the pages..."
     "Perhaps I shouldn't show him the cheese-puff stains on the previous pages..."
-    show y_cg2_exp6
+    hide y_cg2_exp5
+    show y_cg2_exp6 at cgfade
     hide y_cg2_dust1
     y "I'm so sorry...I shouldn't have done that..."
     mc "Ah...well..."
@@ -595,18 +601,20 @@ label yuri_exclusive_2_ch3:
     y "It...it is very decadent, isn't it?"
     y "I'm...glad you're not angry with me."
     y "..."
-    show y_cg2_exp7
+    hide y_cg2_exp6
+    show y_cg2_exp7 at cgfade
     y "Would you...like another one?" 
     hide y_cg2_dust3
     "My first instinct is to reach for the bag..."
     "But the way he's looking at me makes me think he has something else in mind."
     "I look up at him curiously."
     "My heart is pounding."
-    "I watch as he reaches into the bag and pulls out another chocolate." 
-    show y_cg2_exp8
+    "I watch as he reaches into the bag and pulls out another chocolate."
+    hide y_cg2_exp7 
+    show y_cg2_exp8 at cgfade
     "He holds it between his fingers."  
     "Our eyes meet. Neither of us averts our gaze."
-    show y_cg2_dust4
+    show y_cg2_dust4 at cgfade
     "I...can't believe we're doing this."
     "He gently offers the chocolate." 
     "Like before, I part my lips." 
@@ -625,6 +633,7 @@ label yuri_exclusive_2_ch3:
     "Yuuri quickly jolts back."
     "I nearly choke on the chocolate."
     show mateo at f21
+    play music t3
     m 6b "It's time to share our poems!" 
     m 6v "The tea party is over, you two."
     m 4t "Put the teapot and cups away and get your poems ready."

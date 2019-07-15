@@ -474,10 +474,9 @@ label sayori_exclusive_2:
     "We exit the classroom."
     
     stop music fadeout 2.0
-    show satori_cg
-    with dissolve_scene_half
+    scene s_cg2_base
+    with dissolve_cg
     play music t9
-    show s_cg2_base
     s "Hey, [player]..."
     mc "Yeah?"
     s "You know... This kinda takes me back to when we were kids."
@@ -485,7 +484,7 @@ label sayori_exclusive_2:
     s "I followed you everywhere and did everything you said."
     s "You'd get us into all kinds of trouble."
     s "But... You always seemed to be able to talk your way out of it."
-    show s_cg2_exp1
+    show s_cg2_exp1 at cgfade
     s "You're so clever and quick-witted."
     s "I...I've always admired that about you."
     s "I used to wish I could be just like you."
@@ -496,14 +495,14 @@ label sayori_exclusive_2:
     "I blush a little at the sentiment and the memories."
     mc "Satori..."
     hide s_cg2_exp1
-    show s_cg2_exp2
+    show s_cg2_exp2 at cgfade
     s "I know it's sappy, but...I'm really glad we're still best friends."
     s "I hope nothing ever changes that, you know?"
     s "I don't want anything about our friendship to change."
     mc "Really? I'm the exact opposite."
     mc "I look forward to change."
     hide s_cg2_exp2
-    show s_cg2_exp3
+    show s_cg2_exp3 at cgfade
     s "Huh? But, why?"
     mc "Because everything grows, Satori."
     mc "Just like us."
@@ -524,7 +523,7 @@ label sayori_exclusive_2:
     mc "Some poems..."
     mc "Are just for you and me."
     hide s_cg2_exp3
-    show s_cg2_exp4
+    show s_cg2_exp4 at cgfade
     "Satori suddenly looks at me in a way he never has before."
     "I smile and look away, but I can still feel his gaze linger."
     "I wonder if something changed just now?"
