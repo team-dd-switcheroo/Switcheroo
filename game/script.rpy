@@ -51,8 +51,22 @@ label start:
         call poemresponse_start
         call ch1_end
 
+        call poem
+
         $ chapter = 2
         call ch2_main
+        call poemresponse_start
+        call ch2_end
+
+        call poem
+
+        $ chapter = 3
+        call ch3_main
+        call poemresponse_start
+        call ch3_end
+
+        $ chapter = 4
+        call ch4_main
 
         call endgame
         
