@@ -124,7 +124,10 @@ label ch2_main:
     s 5h "Nat...feed us..."
     show natsuko 6v at f44
     scene bg club_day
-    with vpunch
+    play sound "sfx/slap.ogg"
+    show white zorder 4:
+        alpha 0.6
+        linear 0.25 alpha 0.0
     "Finally, Natsuko stomps his foot in defeat."
     show natsuko at f44
     n "You two are bullies, you know that!?"
@@ -170,33 +173,33 @@ label ch2_main:
     "Mateo isn't here."
     show natsuko at f22
     n 5k "What the--...where is he?"
-    show satori at t42
-    show natsuko at t43
-    show yuuri 1f at f44
+    show satori at t31
+    show natsuko at t32
+    show yuuri 1f at f33
     y "I've been wondering that as well."
     y "Do you two know anything about where he might be?"
     s 9c "I haven't heard anything. [player]?"
     "I cease picking cookies out of my teeth for a moment and look over at Satori."
     mc "What?"
-    show satori at f42
+    show satori at f31
     s 1i "..."
     s 9j "Have you seen Mateo today?"
-    show satori at t42
+    show satori at t31
     mc "Fortunately for me, I have not."
-    show yuuri at f44
+    show yuuri at f33
     y 1g "Hm. It's not like him to be late."
     y "He's usually quite punctual."
-    show yuuri at t44
-    show natsuko at f43
+    show yuuri at t33
+    show natsuko at f32
     n 7u "Oh, calm down. He probably just had something to do today."
     n 7y "... Or someone..."
     show satori 1z
-    show natsuko 1z at t43
+    show natsuko 1z at t32
     "Satori and Natsuko chuckle a little."
     "I have already checked out of the conversation and gone back to licking cookie crumbs off my teeth."
-    show satori at f42
+    show satori at f31
     s 7aq "Maybe Mateo has a...you know."
-    show satori at t42
+    show satori at t31
     "Satori winks and nudges me."
     "Mateo has something and apparently I'm to guess what it is."
     "Maybe I should have been paying attention to the conversation."
@@ -206,26 +209,26 @@ label ch2_main:
     show natsuko 1c
     "Satori gives me a blank stare."
     "Clearly, that wasn't the answer he was looking for."
-    show satori at f42
+    show satori at f31
     s 7ap "Yes. That's exactly what I meant."
     s "Wow. Your ability to flawlessly read social cues is astounding."
-    show satori at t42
+    show satori at t31
     mc "..."
     mc "Shut up."
-    show satori at f42
+    show satori at f31
     s 7j "I meant, maybe he has a girlfriend."
-    show satori at t42
-    show natsuko at f43
+    show satori at t31
+    show natsuko at f32
     n 7y "Well...he is pretty popular, after all..."
-    show natsuko at t43
-    show yuuri at f44
+    show natsuko at t32
+    show yuuri at f33
     y 1u "I wouldn't be surprised."
     y "Mateo's probably more desirable than all of us combined."
-    show yuuri at t44
-    show satori at f42
+    show yuuri at t33
+    show satori at f31
     s 10q "That's true."
-    show satori at t42
-    show natsuko at f43
+    show satori at t31
+    show natsuko at f32
     n 5b "Eh? Speak for yourself!"
     "Suddenly, the door swings open and Mateo rushes inside."
     show satori at thide
