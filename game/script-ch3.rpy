@@ -30,6 +30,9 @@ label ch3_main:
     show mateo at t31
     mc "Um...enough to warrant a trip to the principal's office and get 25 minutes of detention."
     show satori 1ae at t44
+    show yuuri at t42
+    show mateo at t41
+    show natsuko at t43
     s "Quit beating around the bush and tell them what you did!!!"
     show yuuri 6o at t42
     show mateo 1o at t41
@@ -935,9 +938,9 @@ label ch3_end_yuri:
 
 label ch3_end_monika:
     $ help_monika = True
-    show natsuko 1k at t11
-    show yuuri 6e at t11
-    show mateo 1d at t11
+    show natsuko 1k
+    show yuuri 6e
+    show mateo 1d
     "This might be my only opportunity to hang out with Mateo."
     "Especially since he's been a little nicer lately."
     mc "Well, I guess I should probably be helping Mateo..."
@@ -979,9 +982,9 @@ label ch3_end_monika:
     return
 
 label ch3_end_sayori:
-    show natsuko 1k at t11
-    show yuuri 6e at t11
-    show mateo 1d at t11
+    show natsuko 1k
+    show yuuri 6e
+    show mateo 1d
     "Satori might benefit from spending the weekend with me after today's fight."
     "He'll likely be wanting to apologize 20 times while we work."
     "It'll be good for him and maybe even put him in a better mood."

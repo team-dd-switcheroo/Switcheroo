@@ -272,7 +272,7 @@ label sayori_exclusive_2:
     "Mateo hisses that as Satori walks out of the room."
     "I follow quietly."
 
-    scene bg corridor_day
+    scene bg corridor
     with dissolve_scene_half
     play music t8
     show satori 10k at t11 zorder 2
@@ -571,27 +571,27 @@ label sayori_exclusive_2:
     "I do the same."
     "To my surprise, Natsuko and Yuuri lay their books down and come help us."
     "As the 3 of them busily scoop up crayons, I look over at Satori."
-    show satori 1b
+    show satori 1b at t11 zorder 2
     "He sets the supplies on his desk and inconspicuously slips his poem into his bag."
     show satori 1a
     "He gives me another nod."
     "Mission complete."
     hide satori
     "I smile and continue helping the others collect the crayons."
-    show mateo 1d
+    show mateo 1d at t11 zorder 2
     mc "So, Mateo... I know you didn't ask for it, but I also grabbed some bottles of glitter."
     mc "I figure most people are attracted to shiny things anyway, so it should draw their attention to the posters."
     mc "That might work, right?" 
     m "Hm... that's true."
     m 1b "Good idea, [player]."
-    show satori 7z
+    show satori 7z at t11 zorder 2
     s "Those are the only kind she has!"
     hide mateo
     show satori 1aq
     "Satori and I grin at each other knowingly."
     "I guess we do make quite a team."
     hide satori
-    show mateo 6b
+    show mateo 6b at t11 zorder 2
     m "Alright, guys! Are you ready to share your poems?"
     mc "Guess I should go grab mine."
     return

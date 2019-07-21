@@ -371,7 +371,7 @@ label yuri_exclusive_2_ch3:
     show yuuri at t21
     "Yuuri exits the room. I follow, mesmerized."
 
-    scene bg corridor_day
+    scene bg corridor
     with dissolve_scene_half
     stop music fadeout 2.0
     "Once in the hallway, Yuuri freezes, then buries his face in his hands and groans."
