@@ -128,6 +128,7 @@ label ch2_main:
     show white zorder 4:
         alpha 0.6
         linear 0.25 alpha 0.0
+    show natsuko 6v at f44
     "Finally, Natsuko stomps his foot in defeat."
     show natsuko at f44
     n "You two are bullies, you know that!?"
