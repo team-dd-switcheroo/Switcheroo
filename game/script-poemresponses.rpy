@@ -1049,63 +1049,7 @@ label ch2_n_good:
             n "Thanks, [player]!"
             n 1l "I...I'm really happy you're letting me keep this."
             n 2ap "You can keep mine, too, if you want."
-
-            call showpoem(poem_n2)
-
-            n 3l "Not bad, right?"
-            show natsuko 3j at t11
-            "I re-read the poem a couple times, nodding to myself."
-            mc "Can I be 100% honest with you?"
-            show natsuko 1m at f11
-            n "...uh, sure, I guess..."
-            show natsuko 1n at t11
-            mc "Alright...well, when I read your poem yesterday, I thought, 'oh my gosh, this is the dumbest thing I've ever seen in my life.'"
-            show natsuko 3p at hf11
-            n "--!!"
-            show natsuko 3p at t11
-            mc "But then after you described your writing style, I read it again and suddenly, I understood."
-            mc "It made me realize that it wasn't a dumb poem after all."
-            show natsuko 3o at t11
-            mc "It was a powerful message disguised as something seemingly irrelevant."
-            mc "It's the same with this poem."
-            show natsuko 4m at t11
-            mc "At first glance, I didn't think much of it."
-            mc "But now that I'm familiar with your style, I was able to read deeper into it."
-            mc "I get it."
-            mc "The message in this poem is, don't be a jerk and judge someone for their weird hobbies."
-            mc "Am I right?"
-            show natsuko 4t at f11
-            n "...Well, yeah, that's right."
-            n "I mean...the message was pretty straightforward after all."
-            n 1z "I'm glad I didn't need to explain it."
-            n "You can tackle complicated issues using simple analogies."
-            show natsuko 1j at t11
-            mc "So, in this analogy...you're Trevor, and the dolls are your comic books?"
-            show natsuko 3v at hf11
-            n "Gah!"
-            show natsuko 3r at f11
-            n "I...well...it doesn't matter!"
-            n 1q "It can be about anything."
-            n "I wrote it to be easy for anyone to relate to."
-            n "I mean, everyone has some kind of weird hobby or guilty pleasure."
-            n "Something that you're afraid if people find out, they'll make fun of you or think less of you."
-            n "But that just makes people stupid!"
-            n "Who cares what someone is into as long as their not hurting anyone and it makes them happy?"
-            n "I think people need to learn to respect others for liking weird things."
-            show natsuko 3n at t11
-            mc "Well, I can definitely relate, and I'm sure everyone else can too."
-            show natsuko 1k at f11
-            n "You know..."
-            n 1l "I'm glad you can appreciate this kind of writing."
-            n 3ap "I've enjoyed sharing it with you so far."
-            show natsuko 3aa at t11
-            mc "I'm glad you're enjoying yourself."
-            mc "I'm enjoying myself too."
-            show natsuko 1d at f11
-            n "Well...I hope you look forward to tomorrow's poem."
-            show natsuko 1a at t11
-            mc "I do."
-            mc "I can't wait to see what you come up with."
+            return   
         return
 
 label ch3_n_bad:

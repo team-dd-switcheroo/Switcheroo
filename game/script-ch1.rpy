@@ -29,7 +29,7 @@ label ch1_main:
     "Aha! Shorty's got the sugar."
     show yuuri at thide
     hide yuuri
-    show natsuki at t11
+    show natsuko at t11
     "I approach him and sniff the air around him."
     show natsuko 5h
     mc "You smell like cupcakes or something."

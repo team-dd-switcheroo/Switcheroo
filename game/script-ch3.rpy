@@ -801,13 +801,13 @@ label ch3_end_yuri:
     show mateo at t32
     show yuuri at f33
     y 6r "Natsuko!"
-    show natsuki at f31
+    show natsuko at f31
     show yuuri at t33
     n 6x "What!?" 
     n 5r "What do you want from me?" 
     n 5b "Want me to do somersaults and clap like a trained seal?" 
     n 7q "Jeez! Get off my back..."
-    show natsuki at t31
+    show natsuko at t31
     show yuuri at f33
     y 6n "What? N-no." 
     y 6o "That's not what I meant at all. I..."
@@ -827,12 +827,12 @@ label ch3_end_yuri:
     y 4f "You should be proud." 
     y 6t "Nothing I do for the event can compare with them." 
     y 4v "So...Um..."
-    show natsuki at f31
+    show natsuko at f31
     show yuuri at t33
     n 7w "I get it, I get it..." 
     n 7q "Thanks, Yuuri." 
     n 7u "I know I'm the one being immature, yet you're still trying to cheer me up."
-    show natsuki at t31
+    show natsuko at t31
     show yuuri at f33
     y 1v "I'm sorry I'm not very good at it..."
     show yuuri at t33
@@ -845,20 +845,20 @@ label ch3_end_yuri:
     "Yuuri was trying to sound like Satori." 
     "Even if it didn't come out perfect, I could still tell Yuuri was trying to say something he thought Satori would say in a situation like this." 
     "Because Satori always helps everyone smile and feel good about themselves."
-    show natsuki at f31
+    show natsuko at f31
     n 7q "Well, you're better at it than you think." 
     n 7h "I appreciate it." 
     n "I'm sorry for making a big deal out of nothing." 
     n 3w "But I have to say this..." 
     n 3y "You bet your asses that my donuts are gonna be the best part of the whole event!"
-    show natsuki at t31
+    show natsuko at t31
     show yuuri at f33
     y 1c "I'm positive they will."
     show yuuri at t33
     show mateo at f32
     m 4k "Well, with that, there's nothing more for us today." 
     m 6b "So I guess it's time to head out."
-    show natsuki at f31
+    show natsuko at f31
     n 5ac "Awesome. Let's get out of here!"
     show mateo at thide
     hide mateo
