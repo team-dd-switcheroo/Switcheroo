@@ -2625,7 +2625,7 @@ label m_yuri_2:
     mc "I noticed that too."
     m 1x "It's always the quiet, mysterious ones who are the most appealing, aren't they?"
     mc "Um..."
-    "I'm not 100% sure what Mateo is getting at right now."
+    "I'm not 100\% sure what Mateo is getting at right now."
     m 1t "Are you hoping to solve the mystery, [player]?" 
     m 1ag "Perhaps if you write the way into his heart, he'll let you into his dark little world..."
     mc "Gah!" 
