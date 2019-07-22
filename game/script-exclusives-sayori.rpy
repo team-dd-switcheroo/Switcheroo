@@ -393,7 +393,7 @@ label sayori_exclusive_2:
     s 7aa "C'mon, dummy. Let's go."
     "The two of us enter the classroom."
 
-    scene bg classroom_day
+    scene bg class_day
     with dissolve_scene_half 
 
     "Satori wastes no time grabbing a blank sheet of paper from the closet and a pen from his pocket."
@@ -564,9 +564,11 @@ label sayori_exclusive_2:
     show satori 1a
     "He nods."
     s 1x "You help her clean those up, Mateo. I have this."
+    show satori at thide
     hide satori
     m 1ab "Right."
     hide mateo
+    with wipeleft
     "Mateo sinks to his knees and starts picking up the crayons."
     "I do the same."
     "To my surprise, Natsuko and Yuuri lay their books down and come help us."
@@ -577,6 +579,7 @@ label sayori_exclusive_2:
     "He gives me another nod."
     "Mission complete."
     hide satori
+    with wipeleft
     "I smile and continue helping the others collect the crayons."
     show mateo 1d at t11 zorder 2
     mc "So, Mateo... I know you didn't ask for it, but I also grabbed some bottles of glitter."
@@ -584,13 +587,16 @@ label sayori_exclusive_2:
     mc "That might work, right?" 
     m "Hm... that's true."
     m 1b "Good idea, [player]."
-    show satori 7z at t11 zorder 2
+    show mateo at t21
+    show satori 7z at f22 zorder 2
     s "Those are the only kind she has!"
+    show mateo at thide
     hide mateo
     show satori 1aq
     "Satori and I grin at each other knowingly."
     "I guess we do make quite a team."
     hide satori
+    with wipeleft
     show mateo 6b at t11 zorder 2
     m "Alright, guys! Are you ready to share your poems?"
     mc "Guess I should go grab mine."

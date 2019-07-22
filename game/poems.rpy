@@ -61,7 +61,7 @@ It hurts. But I will heal
 The Phoenix seeks me out
 I am her only friend
 I embrace her
-Her warmth enfolds me
+Her warmth enfolds me 
 Searing
 My beast
 My desire
@@ -75,33 +75,33 @@ And ignites my soul once more."""
 
     poem_y3 = Poem(
     author = "yuri",
-    title = "Beach",
+    title = "Sea",
     text = """\
 Marvelous Creation
 Endless Horizon
 Shimmering like an infinite pool of diamonds.
-Teeming with life. Beauty abundant.
-A vast population of otherworldly organisms.
+Teeming with life. Beauty abundant. 
+A vast population of otherworldly organisms. 
 Majestic, the waves roll against the shore.
-Powerful as they rise and fall; curl and crash.
+Powerful as they rise and fall; curl and crash. 
 See the water dance?
-Whirlpools. Splashing. Reflecting.
-A soft strip of warm squishy sand against a wild raging sea.
-An unpredictable void of black water.
-The power to start life. The power to end life.
-Merciful and Merciless.
-The sun blazes. I am envious.
+Whirlpools. Splashing. Reflecting. 
+A soft strip of warm squishy sand against a wild raging sea. 
+An unpredictable void of black water. 
+The power to start life. The power to end life. 
+Merciful and Merciless. 
+The sun blazes. I am envious. 
 The sun sets. I must rest.
 The ocean bids me farewell as I retreat
 Knowing I will return tomorrow
-When the sun climbs high again."""
+When the sun climbs high again"""
     )
 
     poem_y3b = Poem(
     author = "yuri",
     title = "Thirst pt. 2",
     text = """\
-My mouth is parched.
+My mouth is parched. 
 Desperate, I must rehydrate.
 Taking a glass from the cupboard, I open the icebox door.
 A silhouette appears between me and the artificial light.
@@ -219,7 +219,7 @@ Would they be just as impressed
 To see the things that you do?
 You think you're just as good
 You're not the type to quit
-I suppose it couldn't hurt to try
+I suppose it couldn't hurt to try 
 But, really...that's about it."""
     )
 
@@ -227,34 +227,30 @@ But, really...that's about it."""
     author = "natsuki",
     title = "Trevor Likes Dolls",
     text = """\
-You know what I heard?
-Trevor likes Dolls
-Not baseball caps, comic books or basket balls
-Nope. Trevor likes Dolls.
+So there's this guy who's in my class; Trevor is his name
+While everyone else thinks he's cool, I think Trevor's lame
+Although he does like comic books, and can slam-dunk a basketball
+I found out that Trevor likes to play with Barbie dolls! 
 
-Trevor has a lot of pals
-He spends time with them all
-They run, they play, they chat all day
-Probably about Dolls.
+It's hard to wrap my head around why he's got so many friends
+They speak so highly of him and the praises never end
+"Trevor this" and "Trevor that", from the classrooms to the halls
+I wonder what they'd think of him if they knew about his dolls...
 
-Trevor came to me one day
-To invite me to the mall
-I'd hoped we'd go check out the babes
-But he just bought a Doll
+One day Trevor came to me and he smiled at me fondly
+I grimaced and I backed away cuz I didn't want his doll-germs on me
+But his intent was friendly and he invited me to the mall 
+I went with to check out the babes...while Trevor bought a doll
 
-It doesn't matter if he's sweet
-Or if his room is always neat
-It doesn't matter if he's kind
-Or if he's got a brilliant mind
-It doesn't matter that he's fun
-And he's not hurting anyone...
-But I hate dolls! And Trevor, too!
-And if I hate them, so should you!
+I do not care that Trevor's kind or that he has a brilliant mind
+Holding open doors, cleaning spills from floors, helping feed the poor, ending all the wars
+Shield your wives and hide your daughters cuz Mr. Perfect can walk on water!
+Yes, he's smart and sure, he's fun. No, he's not hurting anyone.
 
-Trevor is a weirdo
-He's girly and he's weak
-No one should ever be friends with
-Such a gross, sick freak!!!"""
+Well, I hate to burst your bubble and I hate to hurt your feelings
+But I also hate that Trevor douche with every fiber of my being
+Someday I'll break my silence about Trevor's love for dolls
+I'm gonna let his secret out. I'm gonna tell them all."""
     )
 
     poem_n2b = Poem(
@@ -281,62 +277,50 @@ b3AgbXlzZWxmLg=="""
     author = "natsuki",
     title = "In the Sea With Me",
     text = """\
-The mood is grey and dreary
+The mood is gray and dreary
 I'm bored and need some sun
 The day's too nice to feel this weary
 Come with me, let's have some fun
-
 Let's hit the beach, the two of us
 Play in the sand with me!
 Is this feeling new to us?
 Or is it just the salty sea?
-
 Surf's up
 Waves rise
 It should come as no surprise
-
 Tides roll
 Wipe out
 I'm feeling it without a doubt
-
 Whenever you're lonely
 You know just where I'll be
 This love is grand
 So take my hand
 I'll set you free
 In the sea with me
-
 Life's been so much brighter
 Since I walked this beach with you
-The sun feels warmer; Lighter
+The air feels warmer; Lighter
 And the ocean's never been so blue
-
 The sun sets over the tide
 The birds have silenced their tune
 We spend the night lying side by side
 Watching the silvery moon
-
 Warm nights
-Big sky
+Big skies
 Starlight shining in your eyes
-
 Cool breeze
 Whales sing
 For you, I will do anything
-
 If you need me suddenly
 I'll be there in a hurry
 This is not a game
-Just call my name
+Just call my name 
 I'll set you free
 We'll happily
 Forever be
 Eternally...
-
-
-
 Frolicking in the sea
-Together, just you and me."""
+Together, just you and me"""
     )
 
     poem_n3b = Poem(
@@ -438,7 +422,7 @@ Time for breakfast."""
     author = "sayori",
     title = "Sad Thoughts",
     text = """\
-I pop my scalp off the top of my head like the lid of a cookie jar.
+I pop my scalp off the top of my head like the lid of a cookie jar. 
 It's time to clean up in there.
 Happy Thoughts and Angry Thoughts
 All wriggling in the dark crevices of my mind.
@@ -446,7 +430,7 @@ The Happy Thoughts are soft and warm. They rub against each other like a bundle 
 The Angry Thoughts are prickly to the touch. The prickles dig into my head and become stuck.
 The Angry Thoughts are mean to the Happy Thoughts
 They never get along
-So, I pluck out the Happy Thoughts.
+So I pluck out the Happy Thoughts.
 Since the Angry Thoughts are way too strong
 I put the Happy Thoughts into bottles
 Where they stay safe and sound.
@@ -461,18 +445,16 @@ Their numbers begin to dwindle
 Happy Thoughts, Happy Thoughts, Happy Thoughts
 In bottles all in a row.
 Night after night, more dreams
-Friend after friend, more bottles
+Dream after Dream, more bottles
 Deeper and deeper my fingers go
 Searching all the nooks and crannies
 The Angry Thoughts eventually die
-But, when they do, they become hard and cold.
+But when they do, they become hard and cold.
 I don't like the way they feel.
 Sad Thoughts, Sad Thoughts, Sad Thoughts.
 Forever embedded in my mind.
 Dust settles onto my bottle caps
 It doesn't feel like time elapsed
-I know my friends are all distraught
-They each could use a Happy Thought
 I check my head, but find no more
 My friends look through my locked front door
 I open the door and in they come.
@@ -480,7 +462,7 @@ Do they really want my bottles that bad?
 I pull them down from the shelf and give them to each one of my friends.
 Each one of my bottles.
 But when I let the bottles go, they slip out of my hands and shatter on the tile between my feet.
-Happy Thoughts, Happy Thoughts, Happy Thoughts
+Happy Thoughts, Happy Thoughts, Happy Thoughts 
 In shards all over the floor
 Angry Thoughts, Angry Thoughts, Angry Thoughts
 Banging on my door
@@ -492,7 +474,8 @@ I want the Angry Thoughts to go away.
 I want the Happy Thoughts instead.
 But all I hear are the Sad Thoughts going
 Echo, echo, echo, echo, echo
-On repeat, inside my head."""
+On repeat, inside my head.
+"""
     )
 
     poem_s3 = Poem(
@@ -593,24 +576,24 @@ Swallowing my fears, I brandish my pen."""
     author = "monika",
     title = "Play Me",
     text = """\
-Your colors, though bright and beautiful, blind me
+Your colors, though bright and beautiful, blind me 
 Red, green, blue
 They flash;  expanding     across     the     universe
-They won't stop
-Your noise
+They won't stop 
+Your noise 
 is endlessly meaningless
-It squeaks violently; screeching    across                 time
-Piercing
+It squeaks violently; screeching    across                 time    
+Piercing 
 through my ears
 Sine, cosine, tangent
-An endless cacophony
+An endless cacophony 
 of  grating  waveforms
-
+  
  Like dragging a fork across a dinner plate
-             Like playing a chalkboard on a turntable
+             Like playing a vinyl on a pizza crust
 
-An endless
-Poem
+An endless 
+Poem 
 of meaningless
 
 
@@ -620,8 +603,7 @@ of meaningless
 
 
 
-Quit Me
-    """
+Quit Me."""
     )
 
     poem_m22 = Poem(
@@ -655,12 +637,12 @@ Delete Her
     author = "monika",
     title = "The Tale of the Ignorant Hermit",
     text = """\
-There once was a Hermit who lived in cave.
+There once was a Hermit who lived in a cave.
 The cave was part of a small island
 The island was on a lake
 The lake was on a hill
-The hill was tucked away in the deepest part of the forest
-The forest was hidden behind a mighty mountain range
+The hill was tucked away in the deepest part of the woods
+The woods were hidden behind a mighty mountain range
 
 And the Hermit was safe
 He wanted for nothing
@@ -669,48 +651,37 @@ He knew nothing of the world outside his seclusion
 
 
 
-
-
 And he was happy
 
 
 
+The Hermit lived in his cave 
+on his island 
+on the lake 
+on the hill 
+in the woods 
+behind the mountains 
+for as long as he could remember
 
-The Hermit lived in his cave on his island on the lake on the hill in the woods behind the mountains for as long as he could remember
-
-                                        The Hermit  didn't know   he was   ignorant
-
-
-
-
-And he was happy
-
-
+The Hermit  didn't know   he was   ignorant
 
 
+
+     And he was happy
 
 
 One day, the Hermit looked up at the sky
-and he spotted
-
-      a               feather
-
-
+and he spotted      a feather
 
 drifting             carelessly             in       the             breeze
 
 
-
 For the first time in the Hermit's life
 He was
-          curious
-
-
+     curious
 
 
 He reached out and took the feather between his thumb and forefinger
-
-
 
 
  Little feather
@@ -718,96 +689,69 @@ He reached out and took the feather between his thumb and forefinger
 
    Such a journey you have made!
 
-     What brings you to my cave
+
+What brings you to my cave
 On my island
-                               On my lake
-
-
-Atop my hill  in     t  he       w  o       o        d      s
-
-                                                  Behind     the                 mountains   ?
-
-
+On my lake
+Atop my hill in the woods
+Behind the mountains?
 
 What tales have you to share?
 
 
+The feather quivered in response
 
-
-The feather quivered     in response
-
-
-
-
-                 It matters   not           where   you've been
-
+It matters not where you've been
+It   only   matters  where   you  end   up 
+and   what    you   learn
+along     the    way
 
 
 
-
-It             only         matters               where       you     end   u p
-
-                                        and               what      you     learn
-
-                         along     the                way
-
-
-
-
-You, meanwhile
-                                          will       learn        nothing
-                                                                                          so long as   you  live
-
-in   th i s         cave           on  thi s          i s l a n d    on    this   l ake     atop  this   h i   ll
+You, meanwhile  will       learn        nothing
+  so long as   you  live
+in this cave 
+on  this island    
+on    this   lake     
+atop  this   hill
+in  these  woods        
+behind   these  mountains 
 
 
-in   t h  es e      w   o  o   ds          behin d     thes e    m o un t   ain   s
+You    will    remain    an     I G N O R AN  T       Hermit
 
 
-
- You    will    remain    an     I G N O R AN  T       He r  mit
-
-
-                                                            But   my  jo ur ney
-
-
-               has      just  begun
+But my journey has just  begun
 
 
 
 With a gust of wind
-                                                the feather blows afloat again
+                 the feather drifted afloat again
+
+
+
+The  Hermit    watched   the feather    climb    higher
+
+
+            until it   di  s     a     pp          e   a   r            ed
 
 
 
 
-
-               The  Hermit    watched   the feather    climb    higher
-
-
-until it   di  s     a     pp          e   a   r            ed
+The  Hermit  now had  knowledge of  his  ignorance
 
 
-
-
-
-
-            The  Hermit    now has      k no w le d  ge    of  his   ignorance
+And while he desperately clung to his safe home in the cave
+on the island       
+on the lake         
+atop the hill  
+in the woods
+behind the mountains
 
 
 
 
-
-And while he    desperately   cl ing s    to his safe home     in  the  cave
-
-on the is la nd        on the lake            atop   the    hill   in th  e  woo   ds
-
-                              b e hind    t he        mou nta ins
-
-
-
-
-                                                       He no longer feels happiness."""
+                                  He is no longer happy."""
     )
 
     poem_m4 = Poem(

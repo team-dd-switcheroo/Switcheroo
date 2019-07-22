@@ -169,71 +169,90 @@ label ch2_y_end:
     y 1u "Um...I was a little more daring with this one than yesterday's."
     mc "I can see that."
     mc "It's a lot more...uh...metaphorical."
-    y 1b "That's right."
-    y 4b "It's a bit closer to my preferred writing style."
-    y 4k "Using the poem as a canvas to express vivid imagery and conveying emotions through them."
-    mc "So...what's this poem about?"
-    y 4u "Ah...well...I wanted to express the way it feels for me to indulge in my more unusual hobbies..."
-    y 4v "The sorts of things I'm usually forced to keep to myself."
-    y 1s "So, I sometimes enjoy writing about them."
-    mc "Like, what kind of hobbies?"
-    show yuuri 7p
-    "I ask without thinking."
-    "Yuuri is visibly shaken."
-    y 7o "Ah--! Well, that...that's not important at the moment."
-    y 1q "Perhaps we'll discuss it another time."
-    mc "It's fine."
-    mc "I'm sorry for prying."
-    mc "I was just curious."
-    mc "I understand how it can be embarrassing to talk about what many might consider an unusual interest."
-    y 1f "Do you have any of your own, [player]?"
-    mc "Well...it depends on what the definition of 'unusual' is."
-    mc "What's normal for me might be considered weird for someone else, you know?"
-    y 1a "That's true." 
-    y 4b "That's why people should respect each other's individuality rather than make fun of them for it, even if it's difficult." 
-    y 4h "After all, if I hadn't learned to embrace my own weirdness, I'd probably hate myself." 
-    y 1u "Sorry...I'm just ranting a bit now." 
-    y 1s "But I'm glad you're a good listener." 
-    y 1c "In fact...you're good at a lot of things." 
-    y 1a "Writing...listening...even breaking up fights..."
-    y 1u "There really aren't a lot of people like you, [player]..."
-    mc "Yuuri ..."
-    y 6t "Sorry...It's just how I feel." 
-    y 4u "I never thought I would be so comfortable sharing my writing." 
-    y 1s "But now, I look forward to it." 
-    y "It's a nice feeling and I thank you for that."
-    "Yuuri smiles at me sincerely."
-    return
+    if n_readpoem:
+        mc "In fact...I got that same message out of Natsu's poem today."
+        show yuuri 1e
+        mc "About being ridiculed for having strange hobbies."
+        mc "Well, that's what I got out of it anyway."
+        mc "He said it was about something else..."
+        y 1r "Is that so?"
+        mc "I can kind of see the message he said he was actually going for...but there's no denying that the second underlying message was about not judging people for having strange hobbies."
+        mc "Especially if the person indulges in things that's not hurting anyone."
+        y 1h "It's true."
+        y "Strange to hear that Natsuko may think that way, too."
+        mc "I guess you two actually have something in common."
+        y 1i "How interesting."
+        y 1j "I'll have to take a look at his poem for myself."
+        y 3f "I'm sorry, it's just hard to believe that he'd feel that way."
+        y 1h "He seems like the type to make fun of my hobbies."
+        y 1g "But...I suppose I'm judging him falsely, aren't I?"
+        y 7n "Please don't tell him I said that."
+        mc "Haha! Don't worry!"
+        mc "I have no interest in being in the middle of another squabble."
+        mc "Your secret is safe with me."
+        y 6s "Thank you, [player]."
+        mc "No problem, big guy."
+        mc "Also, I really liked today's poem."
+        mc "Even if I don't always understand them, I do like reading them."
+        y 6u "You're too kind to me."
+        y 4s "But, I greatly appreciate it."
+        y 1u "I hope you enjoy tomorrow's as well."
+        y 1s "I look forward to sharing it with you."
+        return
+    else:
+        y 1b "That's right."
+        y 4b "It's a bit closer to my preferred writing style."
+        y 4k "Using the poem as a canvas to express vivid imagery and conveying emotions through them."
+        mc "So...what's this poem about?"
+        y 4u "Ah...well...I wanted to express the way it feels for me to indulge in my more unusual hobbies..."
+        y 4v "The sorts of things I'm usually forced to keep to myself."
+        y 1s "So, I sometimes enjoy writing about them."
+        mc "Like, what kind of hobbies?"
+        show yuuri 7p
+        "I ask without thinking."
+        "Yuuri is visibly shaken."
+        y 7o "Ah--! Well, that...that's not important at the moment."
+        y 1q "Perhaps we'll discuss it another time."
+        mc "It's fine."
+        mc "I'm sorry for prying."
+        mc "I was just curious."
+        mc "I understand how it can be embarrassing to talk about what many might consider an unusual interest."
+        y 1f "Do you have any of your own, [player]?"
+        mc "Well...it depends on what the definition of 'unusual' is."
+        mc "What's normal for me might be considered weird for someone else, you know?"
+        y 1a "That's true." 
+        y 4b "That's why people should respect each other's individuality rather than make fun of them for it, even if it's difficult." 
+        y 4h "After all, if I hadn't learned to embrace my own weirdness, I'd probably hate myself." 
+        y 1u "Sorry...I'm just ranting a bit now." 
+        y 1s "But I'm glad you're a good listener." 
+        y 1c "In fact...you're good at a lot of things." 
+        y 1a "Writing...listening...even breaking up fights..."
+        y 1u "There really aren't a lot of people like you, [player]..."
+        mc "Yuuri ..."
+        y 6t "Sorry...It's just how I feel." 
+        y 4u "I never thought I would be so comfortable sharing my writing." 
+        y 1s "But now, I look forward to it." 
+        y "It's a nice feeling and I thank you for that."
+        "Yuuri smiles at me sincerely."
+        return
 label ch3_y_end:
+    $ y_read3 = True
     if y_appeal >= 3:
         jump ch3_y_end_special
     call showpoem(poem_y3, img="yuuri 2v")
     show yuuri 1u at t11
     y "Now, I know the sea is a pretty inane thing to write about..."
     y 1a "But I did my best to take a metaphorical approach to it."
-    if not n_read3 or n_appeal >= 3:
-        mc "It's beautiful, Yuuri!"
-        mc "What inspired you to write about the sea?"
-        y 4f "Well...actually...it's because of the poems Natsuko and I wrote yesterday."
-        y "They ended up being very similar to each other."
-        y 6a "So I wanted us to write about the same topic again."
-        y "1l To better compare the differences in our writing styles and thought processes, you know?"
-        if n_readpoem:
-            if not n_read3:
-                mc "I see..."
-                "I don't have much to contribute here since I didn't get to read Natsuko's poem."
-        y 1ad "Anyway...it was my idea."
-        y 1ae "Of course, it's no surprise he'd agree to it."
-        y "He probably just wanted to show off his simplistic technique."
-        y 3h "But I suppose it's not so bad to write about something simple on occasion."
-        y 1j "It's quite refreshing and allows me to calm my thoughts once in a while."
-        y 1d "Perhaps we'll do it again one day."
-    else:
-        mc "Yeah, Natsu already told me about that."
-        y 6e "H-he did?"
-        y 6r "He didn't say anything weird, did he?"
-        y 4r "I just wanted us to write about the same topic again."
-    y "To better compare the differences in our writing styles and thought processes, you know?"
+    mc "It's beautiful, Yuuri!"
+    mc "What inspired you to write about the sea?"
+    y 4f "Well...actually...it's because of the poems Natsuko and I wrote yesterday."
+    y "They ended up being very similar to each other."
+    y 6a "So I wanted us to write about the same topic again."
+    y "1l To better compare the differences in our writing styles and thought processes, you know?"
+    if n_readpoem:
+        if not n_read3:
+            mc "I see..."
+            "I don't have much to contribute here since I didn't get to read Natsuko's poem."
     y 1ad "Anyway...it was my idea."
     "Pfft... Okay then."
     "It doesn't really matter to me whose idea it was."
@@ -354,35 +373,66 @@ label ch2_n_end:
     n "Right?"
     "I'm a little taken aback by Natsuko's message."
     "It's a lot deeper than I thought."
-    "But after giving the poem one more look, I finally catch on."
-    mc "Oh, I see!"
-    mc "So *you're* the subject of the poem...and Yuuri is the Trevor metaphor."
-    n 6p "Gah! I...well...that's not...!"
-    n 7w "Whatever!"
-    n "It can be about anything."
-    n 7b "I wrote it to be easy for anyone to relate to."
-    mc "Well, if you really think about it, it can also be interpreted as not judging people for their weird hobbies or guilty pleasures."
-    mc "Like collecting dolls. Or comic books."
-    "I mutter that last part to myself."
-    n 7q "There's really nothing to interpret. I already told you exactly what it's about."
-    mc "Well, yesterday Yuuri taught me that writing can be interpreted in any way the reader likes, even if there is a straight forward message."
-    n 7r "Oh, Yuuri's an idiot! What does *he* know?!"
-    n 7s "Just because he uses big complicated words doesn't mean he's a literary genius..."
-    mc "I knew it! He *is* the Trevor metaphor!"
-    n 7x "...!"
-    "I smile as I hand Natsuko his poem."
-    mc "You can learn from your own messages, Natsu."
-    mc "In any case, I can definitely relate to both messages in this poem, and I'm sure everyone else can too."
-    mc "If it makes you feel better, I really like this poem more than yesterday's. I like the sass and flow of it."
-    show natsuko 7k
-    mc "You did a very good job with this one." 
-    n 7ac "Hm. I figured you would like it." 
-    n 7t "My writing always has good messages to take away."
-    n 3y "My poems don't just make you feel emotions, it helps you learn what those emotions are in a simple and fun way."
-    n 3d "Remember that."
-    n 1a "Tomorrow's poem is gonna be even better, so look forward to it."
-    return
+    if y_readpoem:
+        "But after giving the poem one more look, I finally catch on."
+        "It's actually a pretty good poem."
+        n 7u "Hey [player], I do agree with you on one thing..."
+        n 7q "...I think people need to learn to respect others for liking weird things."
+        mc "Right? I think so, too."  
+        mc "Yuuri actually wrote something about that today."
+        n 5k "Did you say Yuuri?"
+        mc "Yeah. He said his poem was about an unusual hobby of his." 
+        mc "He said people shouldn't make each other feel insecure about those kinds of things."
+        n 5c "Really?" 
+        n 7q "Well...I mean, Yuuri is pretty weird." 
+        n "So, it's not surprising that he has weird hobbies." 
+        n 7k "Not that there's anything wrong with that." 
+        n 7s "I wouldn't judge him or anything."
+        "Natsuko thinks to himself for a moment."
+        n 5u "Maybe I should try to take it easy on him." 
+        n "Since he's insecure about his odd behaviors and everything..." 
+        n 7q "I mean, I hate it when people make me feel insecure." 
+        n 7u "And while Yuuri did make me feel insecure yesterday, the way you put it makes it sound like he's learned his lesson."
+        mc "I think so." 
+        mc "And even though his writing style is very different, I'm sure he'll appreciate the message in your poem."
+        n 3y "Well, I don't write unless there's a good message to take away from it." 
+        n "It is what I do best, after all." 
+        n "My poems don't just make you feel emotions, it helps you learn what those emotions are in a simple and fun way."
+        n 3d "Maybe I can teach Yuuri a thing or two from today's poem!"
+        mc "It definitely taught me something."
+        n 1z "Haha! Good! Because tomorrow's poem is gonna be even better, so look forward to it."
+        return
+    else:
+        "But after giving the poem one more look, I finally catch on."
+        mc "Oh, I see!"
+        mc "So *you're* the subject of the poem...and Yuuri is the Trevor metaphor."
+        n 6p "Gah! I...well...that's not...!"
+        n 7w "Whatever!"
+        n "It can be about anything."
+        n 7b "I wrote it to be easy for anyone to relate to."
+        mc "Well, if you really think about it, it can also be interpreted as not judging people for their weird hobbies or guilty pleasures."
+        mc "Like collecting dolls. Or comic books."
+        "I mutter that last part to myself."
+        n 7q "There's really nothing to interpret. I already told you exactly what it's about."
+        mc "Well, yesterday Yuuri taught me that writing can be interpreted in any way the reader likes, even if there is a straight forward message."
+        n 7r "Oh, Yuuri's an idiot! What does *he* know?!"
+        n 7s "Just because he uses big complicated words doesn't mean he's a literary genius..."
+        mc "I knew it! He *is* the Trevor metaphor!"
+        n 7x "...!"
+        "I smile as I hand Natsuko his poem."
+        mc "You can learn from your own messages, Natsu."
+        mc "In any case, I can definitely relate to both messages in this poem, and I'm sure everyone else can too."
+        mc "If it makes you feel better, I really like this poem more than yesterday's. I like the sass and flow of it."
+        show natsuko 7k
+        mc "You did a very good job with this one." 
+        n 7ac "Hm. I figured you would like it." 
+        n 7t "My writing always has good messages to take away."
+        n 3y "My poems don't just make you feel emotions, it helps you learn what those emotions are in a simple and fun way."
+        n 3d "Remember that."
+        n 1a "Tomorrow's poem is gonna be even better, so look forward to it."
+        return
 label ch3_n_end:
+    $ n_read3 = True
     if n_appeal >= 3:
         jump ch3_n_end_special
     call showpoem(poem_n3)
@@ -390,17 +440,16 @@ label ch3_n_end:
     n "Yeah...I felt like I kept writing about negative things, so I thought I'd writing about something nice for once."
     n 1ap "Besides, the ocean is awesome!"
     n 1d "Kinda hard to write about anything negative about that."
-    if not y_read3 or y_appeal >= 3:
-        mc "Haha! I liked it a lot!"
-        mc "It sounds like it could be a song."
-        n 3d "Yeah, I decided I wanted to write something with a positive message, and then I learned it had to be about the sea, but I was able to make them work together anyway."
-        mc "Why'd it have to be about the sea?"
-        n 3k "Well, Yuuri and I realized we wrote about the same thing yesterday, and I wanted to pick a topic and have us both write about it."
-        n 1k "I thought it'd be fun to compare our writing styles."
-        if y_readpoem:
-            if not y_read3:
-                mc "I see..."
-                "I don't have much to contribute here since I didn't get to read Yuuri's poem."
+    mc "Haha! I liked it a lot!"
+    mc "It sounds like it could be a song."
+    n 3d "Yeah, I decided I wanted to write something with a positive message, and then I learned it had to be about the sea, but I was able to make them work together anyway."
+    mc "Why'd it have to be about the sea?"
+    n 3k "Well, Yuuri and I realized we wrote about the same thing yesterday, and I wanted to pick a topic and have us both write about it."
+    n 1k "I thought it'd be fun to compare our writing styles."
+    if y_readpoem:
+        if not y_read3:
+            mc "I see..."
+            "I don't have much to contribute here since I didn't get to read Yuuri's poem."
     n 1s "I mean...I guess mine ended up being kinda metaphorical by accident."
     n 5t "But, there's nothing wrong with using metaphors once in a while."
     n 1j "It was an interesting experiment, that's for sure!"
@@ -438,7 +487,6 @@ label ch3_n_end_special:
     n "It was for you, after all."
     n 5at "I'm really glad that you like it..."
     "Natsuko beams to himself." 
-    show natsuko at thide
     hide natsuko
     "I return to my seat and slip the poem into my bag." 
     "My heart is filled with joy at making Natsuko so happy."
@@ -798,45 +846,47 @@ label ch2_n_bad:
 
     #Liked the last poem but not this one
     else:
-        n 1k "...Hm."
-        n "I liked your last one better."
-        mc "Eh? Really?"
-        n 2c "Well yeah. I can tell you were a little more daring with this one."
-        n "But you're really not good enough for that yet. It fell flat."
-        mc "That may be true, but I just wanted to try something different."
-        mc "I'm still figuring this all out."
-        n 2k "I mean, I always like poems that aren't trying too hard."
-        n 2q "I hate when people try to sound fancy or add more meaning just by using annoying and complicated language."
-        n 4b "Just make it simple, cute, and to the point!"
-        n 4y "Yuri's head over heels for all this cryptic nonsense, but I see right through that BS. Hah!"
-        n 42a "Making your reader look so hard for all this deep meaning is just an excuse to have no meaning at all."
-        mc "I guess that's one way to look at it."
-        n 2d "Well, everyone has their own opinion."
-        n "But my opinion is the best opinion. I'm sure you've figured that out already."
-        mc "Er..."
-        n 2a "Anyway, here's my poem. Maybe you'll learn something."
+        show natsuko 1c at t11 zorder 2
+        n "Hm. To be honest, I liked your last one better."
+        mc "Oh yeah?"
+        n 1k "Mhm. I can tell you were trying to be more daring with this one."
+        mc "Well, I just wanted to try something different. I'm still new to this."
+        n 7w "I personally prefer poems that don't feel like they're trying so hard." 
+        n "It's so annoying when people try to sound fancy or think they can add more meaning just by using big complicated words." 
+        n 7b "Just make it short, sweet and to the point."
+        n " Yuuri gets off on all that metaphorical garbage, but I can see right through it!" 
+        n 3w "Making your reader work so hard to find the deep meaning is just an excuse to have no meaning at all."
+        mc "Well...that's one way to look at it. But everyone has their own opinion."
+        n 3y "Well...there's my opinion...and there's the wrong opinion." 
+        n 3d "I'm sure you've figured that out by now." 
+        n "Anyway, here's my poem. Be prepared for another lesson in how to be a good writer!"
         return
 
 label ch2_n_med:
     #Likes this one better than the last one
     if n_poemappeal[0] < 0:
-        n "Say...this one's actually better than your last one." 
-        n "It's nice to see you putting in some effort!"
-        mc "Oh...that's good."
-        label ch2_n_med_shared:
-            n 1l "Actually...you know what?"
-            n 1d "This kinda reminds me of Satori's poem from yesterday."
-            mc "Oh yeah?"
-            n 7j "Yep! But, it's to be expected."
-            n "You've been friends for so long that you're probably on the same wavelength."
-            n 7l "You're a lot alike, the two of you."
-            n 7z "Just a couple of dorks!"
-            mc "..."
-            mc "That's a fair assessment."
-            "I actually have no argument. He's right."
-            n 7t "Well...I don't get it, but if it works for you, whatever!"
-            n 1a "Anyway, here's my poem."
-            return
+        show natsuko 7c at t11 zorder 2
+        n "This one's alright."
+        mc "Alright?"
+        n "Well, yeah." 
+        n "It didn't blow me away, but there's nothing I really hate about it." 
+        n 1k "It's just not really my style." 
+        n "I mean, that's fine." 
+        n 3l "Come to think of it, it kinda reminds me of Satori's poem from yesterday."
+        mc "Ya think so?"
+        n 1l "Yeah. You've been friends for so long, you're probably on the same wavelength." 
+        n 1k "You don't really strike me as his type, though." 
+        mc "Satori has a 'type?'" 
+        n 5w "Of course he does!" 
+        n "Everyone does." 
+        n 5q "I may not know what his type is exactly...but it would probably be someone more grounded and responsible than you."
+        mc "Hey, I'm responsible!"
+        "Not to mention, I've been grounded PLENTY of times!"
+        n 7y "Oh, please." 
+        n "If it weren't for him, you'd probably fly away, like letting go of a balloon." 
+        n "You two are weird." 
+        n 7d "Anyway, here's my poem."
+        return 
 
     #Likes this one the same amount
     elif n_poemappeal[0] == 0:
@@ -851,22 +901,42 @@ label ch2_n_med:
         n 3d "Listen to my advice and maybe one day you'll be as good as I am!"
         "Did he just take my critique of him as a compliment?"
         "Man, I just can't win with this kid."
-        jump ch2_n_med_shared
+        n 1l "Actually...you know what?"
+        n 1d "This kinda reminds me of Satori's poem from yesterday."
+        mc "Oh yeah?"
+        n 7j "Yep! But, it's to be expected."
+        n "You've been friends for so long that you're probably on the same wavelength."
+        n 7l "You're a lot alike, the two of you."
+        n 7z "Just a couple of dorks!"
+        mc "..."
+        mc "That's a fair assessment."
+        "I actually have no argument. He's right."
+        n 7t "Well...I don't get it, but if it works for you, whatever!"
+        n 1a "Anyway, here's my poem."
+        return
 
     #Likes the last one better
     else:
-        n "...Hm."
-        n 2c "Well, it's not terrible."
-        n "But it's pretty disappointing after your last one."
-        n 2s "Then again, if this one was as good as your last one, I would be completely pissed."
-        mc "Well, I guess I wanted to try something a little different this time."
-        n 2c "Fair enough. You're still new to this, so I wouldn't expect you to find your style right away."
-        jump ch2_n_med_shared
+        show natsuko 1c at t11 zorder 2
+        n "Hm. To be honest, I liked your last one better."
+        mc "Oh yeah?"
+        n 1k "Mhm. I can tell you were trying to be more daring with this one."
+        mc "Well, I just wanted to try something different. I'm still new to this."
+        n 7w "I personally prefer poems that don't feel like they're trying so hard." 
+        n "It's so annoying when people try to sound fancy or think they can add more meaning just by using big complicated words." 
+        n 7b "Just make it short, sweet and to the point."
+        n " Yuuri gets off on all that metaphorical garbage, but I can see right through it!" 
+        n 3w "Making your reader work so hard to find the deep meaning is just an excuse to have no meaning at all."
+        mc "Well...that's one way to look at it. But everyone has their own opinion."
+        n 3y "Well...there's my opinion...and there's the wrong opinion." 
+        n 3d "I'm sure you've figured that out by now." 
+        n "Anyway, here's my poem. Be prepared for another lesson in how to be a good writer!"
+        return
 
 label ch2_n_good:
     #Likes this poem better than the last one
     if n_poemappeal[0] != 1:
-        show natsuko 1s
+        show natsuko 1s at t11 zorder 2
         "Natsuko reads my poem. He keeps glancing at me, then back at the poem. By now, he must've read it more than once."
         n 1q "I thought you were supposed to be bad at this."
         mc "Is that a compliment, or...?"
@@ -1053,56 +1123,27 @@ label ch2_n_good:
         return
 
 label ch3_n_bad:
-    n "Ehehe...yeah, no thanks, babe." 
-    n "I think I'd feel more emotion by reading an instruction manual for a toaster."
-    mc "...You didn't even..."
-    n 7y "Begone, thot!"
-    $ skip_poem = True
-    return
 
-label ch3_n_med:
-    show natsuko 1k at t11
-    n "...This one's alright."
-    mc "Alright?"
-    n "Yeah. About as good as yesterday's, anyway."
-    n 5c "I see what you're going for, but it's not exactly my style."
-    n 1j "It's fine, though!"
-    n "You're trying, and that's what counts."
-    mc "Of course I'm trying."
-    mc "And I'll consider that as another compliment."
-    mc "I appreciate you being this emotionally invested in my poems."
-    n 1z "Haha! Well, someone in this club has to make sure you're not slacking off!"
-    n 5c "Shame on you for being late today, though."
-    mc "Take it easy."
-    mc "I don't plan on making it a habit."
-    n 1j "I'm glad to hear that!"
-    n 3d "I'd hate to think my critique on your writing might be scaring you off!"
-    mc "Like I'd actually do that."
-    mc "I like it here, even if I have to put up with you."
-    n 1g "Put up with me, eh?"
-    n 7y "I guess that means I'll need to take my cookies and donuts elsewhere..."
-    mc "Guh--!"
-    mc "I'm sorry, I'm sorry!"
-    mc "I was just joking!"
-    n 7ag "Oh, I know!"
-    n 7z "Don't worry, I was too! Hahaha!"
-    "Shorty better not be joking around when it comes to those cookies and donuts..."
-    n 1z "Anyway..."
-    "He holds his poem out to me."
-    n 1d "I think you're gonna really love this one!"
-    return
-
-label ch3_n_good:
-    #Didn't like the last two poems
     if n_poemappeal[0] < 0 and n_poemappeal[1] < 0:
-        n "Ehehe...yeah, no thanks, babe." 
-        n "I think I'd feel more emotion by reading an instruction manual for a toaster."
-        mc "...You didn't even..."
-        n 7y "Begone, thot!"
-        $ skip_poem = True
-        return
-    #Loved the last two
-    elif n_poemappeal[0] > 0 and n_poemappeal[1] > 0:
+        label ch3_n_bad12_shared:
+            show natsuko 5w at t11
+            n "Ehehe...yeah, no thanks, babe." 
+            n "I think I'd feel more emotion by reading an instruction manual for a toaster."
+            mc "...You didn't even..."
+            n 7y "Begone, thot!"
+            $ skip_poem = True
+            return
+
+    elif n_poemappeal[0] < 0 or n_poemappeal[1] < 0:
+        n "..."
+        n 2c "...Meh."
+        n "I guess you really haven't learned anything after all."
+        n "Honestly, I don't know why I got my hopes up in the first place."
+        mc "What? I didn't think this one was that bad..."
+        mc "What did I do wrong?"
+        jump ch2_n_bad_sharedwithch3
+    else:
+
         show natsuko 1a at t11
         n 7s "...Oh, man... This is a serious step backwards."
         mc "Eh?"
@@ -1130,6 +1171,135 @@ label ch3_n_good:
         n 1z "Anyway..."
         "He holds his poem out to me."
         n 1d "I think you're gonna really love this one!"
+        return
+
+label ch3_n_med:
+    if n_poemappeal[0] < 0 and n_poemappeal[1] < 0:
+        jump ch3_n_bad12_shared
+    else:
+        show natsuko 1k at t11
+        n "...This one's alright."
+        mc "Alright?"
+        n "Yeah. About as good as yesterday's, anyway."
+        n 5c "I see what you're going for, but it's not exactly my style."
+        n 1j "It's fine, though!"
+        n "You're trying, and that's what counts."
+        mc "Of course I'm trying."
+        mc "And I'll consider that as another compliment."
+        mc "I appreciate you being this emotionally invested in my poems."
+        n 1z "Haha! Well, someone in this club has to make sure you're not slacking off!"
+        n 5c "Shame on you for being late today, though."
+        mc "Take it easy."
+        mc "I don't plan on making it a habit."
+        n 1j "I'm glad to hear that!"
+        n 3d "I'd hate to think my critique on your writing might be scaring you off!"
+        mc "Like I'd actually do that."
+        mc "I like it here, even if I have to put up with you."
+        n 1g "Put up with me, eh?"
+        n 7y "I guess that means I'll need to take my cookies and donuts elsewhere..."
+        mc "Guh--!"
+        mc "I'm sorry, I'm sorry!"
+        mc "I was just joking!"
+        n 7ag "Oh, I know!"
+        n 7z "Don't worry, I was too! Hahaha!"
+        "Shorty better not be joking around when it comes to those cookies and donuts..."
+        n 1z "Anyway..."
+        "He holds his poem out to me."
+        n 1d "I think you're gonna really love this one!"
+        return
+
+label ch3_n_good:
+    #Didn't like the last two poems
+    if n_poemappeal[0] < 0 and n_poemappeal[1] < 0:
+        jump ch3_n_bad12_shared
+    #Loved the last two
+    elif n_poemappeal[0] > 0 and n_poemappeal[1] > 0:
+        show natsuko 5z at t11 
+        n "Lemme see, lemme see!"
+        mc "Someone's enthusiastic today."
+        n 3l "Of course! I know your writing isn't a fluke, now."
+        mc "I'm glad you're a fan."
+        n 1j "I'm willing to admit I was a little jealous at first because you happen to be a good writer." 
+        n 1ac "Isn't that a dumb thing to be jealous about?" 
+        n 1aa "Your natural talent really put me in my place."
+        mc "You're really sweet, Natsu."
+        mc "But I'm pretty sure you're the only one who thinks that I have any talent."
+        show natsuko 7at at t11
+        "Natsuko looks over my poem, a sad smile growing across his face." 
+        n "Well...I guess that means I'm the only one in this club who has any taste."
+        n 1as "Because once again, your writing just amazes me."
+        mc "That's a pretty awesome compliment coming from a pro."
+        n 7u "...A pro..."
+        n 7au "Right..."
+        "He barely mutters that last part." 
+        n 7u "You...you do like my poems, don't you, [player]?" 
+        "I'm taken aback by the question at first."
+        "Natsuko's usual arrogance seems to have given way to the insecurities he's been harboring."
+        mc "Of course I do." 
+        n 7s "But...why?" 
+        n "Yuuri's writing is so much more mature than mine." 
+        n "Satori's writing is always so full of feeling."
+        n 7u "And Mateo..." 
+        n 7q "God only knows what his poems are about..." 
+        n 7u "But they're still interesting."
+        n 7s "What's so good about mine?"
+        mc "Natsu..."
+        n 7av "What's so good about me?!"
+        "His voice shakes as he shouts that last part."
+        n 7u "Why are you the only one who takes me seriously?" 
+        n "Not just my writing...but everything about me." 
+        n "Everyone else always laughs at at me." 
+        n "They make fun of me for liking comics."
+        n "They make fun of the way my mom makes me keep my hair." 
+        n 7r "They make fun of me for having a..." 
+        n "A girl's name..." 
+        n 6r "And they make fun of me for being a puny little shrimp." 
+        n "I hate it." 
+        n 6n "No one realizes how...hard it is for me." 
+        n 5at "And then one day, you show up..." 
+        n "And you...You've just been so..." 
+        n 5as "...Nice to me..." 
+        n 6m "Why would you..."
+        "Natsuko trails off." 
+        "I look down." 
+        "His fists are tightly clenched." 
+        "I never realized how much everything about himself affected him and his writing." 
+        mc "Easy there."
+        mc "You're gonna rip your poem."
+        "I gently take it from his hands and place it on a desk." 
+        "I begin to smooth out the wrinkles."
+        n 7u "[player]..."
+        n "Don't..."
+        mc "Huh? Don't what?" 
+        n 7s "Don't...be nice to me..." 
+        n "If you're just doing it...because..."
+        n 7q "Because you feel...sorry for me."
+        mc "Natsu, don't say that." 
+        mc "I'm nice to you because I like you for you."
+        show natsuko 7m at t11
+        mc "I like your poems." 
+        mc "And I like your style."  
+        mc "Look..." 
+        mc "It's true, when I first read your poetry..." 
+        mc "I didn't think much of it." 
+        mc "But now that I know you, I understand it." 
+        mc "You're not just some amateur." 
+        mc "And...I'm sorry if I was one of the people who made you think less of yourself." 
+        mc "I get it now." 
+        mc "There's so much more to you than meets the eye." 
+        mc "I like everything about you." 
+        mc "I like your hair and I like your name." 
+        mc "You may not be the tallest one in the club, but you've definitely got more in you than the rest of us combined."
+        show natsuko 7au at t11
+        "Natsuko keeps his head down, clenching his fists." 
+        "This is obviously very difficult for him to accept." 
+        "But finally, he forces himself to look me in the eyes again."
+        n 5q "This...this poem..."
+        n "I...I wrote it for you."
+        n "But even so...if-if you don't like it..."
+        n "You gotta tell me, okay?"
+        n "Just be honest about it."
+        mc "Of course."
         return
     elif n_poemappeal[0] > 0 or n_poemappeal[1] > 0:
         jump ch2_n_good_sharedwithch3
@@ -1264,60 +1434,36 @@ label ch1_s_good:
     return
 
 label ch2_s_bad:
-    show satori 4q
-    s "Ooh, I like this one, [player]!" 
-    s "It has some nice feelings in it."
-    mc "That's good to hear." 
-    mc "Is it better than yesterday's?"
-    s 9r "I dunno." 
-    s "I forgot what yesterday's was about."
-    mc "Well, that's super helpful." 
-    mc "At least I know my poetry leaves an everlasting impression."
-    s 10y "I'm not the best when it comes to figuring out if a poem is good or bad." 
-    s 7a "But that's why I go by my feelings." 
-    s "If it makes me feel things, than it must be a good poem."
-    mc "What kind of writing do you even like?"
-    s 9z "I dunno."
-    mc "Ah, okay." 
-    mc "Glad we cleared that up."
-    mc "You just have all the answers today, dontcha?"
-    s 1i "Why do you care all of a sudden?" 
-    s 1aq "You wanna write me a poem tomorrow?" 
-    s 1z "You're so sweet."
-    mc "Yes, that's exactly what I was getting at." 
-    mc "Hell, I'll write you a poem right now."
-    mc "Check this out.."
-    mc "'There once was a man named Enos...'"
-    s 7ac "Please don't finish that."
-    mc "Aw, c'mon."
-    mc "Are you telling me you already don't like it?"
-    s 1ab "You're so immature."
-    mc "See, this is why I don't write things for you."
-    mc "The next line was gonna be so epic..."
-    mc "Spoiler alert: I was gonna rhyme Enos with..."
-    s 5m "If I tell you what kind of poems I like, will you stop!?"
-    mc "...That's a fair trade."
-    s 1k "Well, let's see..." 
-    s 7x "I guess I like happy poems." 
-    s 4k "And sad poems." 
-    s 8a "A little bit of both." 
-    s 1b "There's a word for that. What was it..." 
-    s 4r "Bittersweet!" 
-    s 7x "Yeah. I like happy and sad." 
-    s 1q "Maybe a little rage thrown in for balance."
-    mc "That's cool." 
-    mc "Though, I can't really see you liking anything sad."
-    s 7c "Don't get me wrong." 
-    s "I prefer happy poems." 
-    s 7d "But, every so often, it's alright to feel sad." 
-    s 7q "It's almost cathartic." 
-    s 1x "I think it's important to be in touch with all of your feelings, including the negative ones." 
-    s "We need to be balanced, you know?"
-    mc "That's true." 
-    mc "And it's also kinda poetic."
-    s 1z "You think so?" 
-    s 10r "Haha, maybe I should write that down!" 
-    s 1d "You can read my poem now, okay?"
+    show satori 1s at t11 zorder 2
+    s "... Hahahaha!"
+    s "[player]..."
+    s 7l "You know I love you..."
+    s 10z "But this poem is really bad!"
+    mc "...!"
+    mc "What the actual hell, man?!"
+    mc "I mean...I love you too...but damn..."
+    s 1r "Haha! It's fine, it's fine." 
+    s 7x "It's your first time after all." 
+    s 10r "To be honest, I'm just happy that you actually wrote one." 
+    s 1d "It shows that you're taking this seriously."
+    mc "Of course."
+    mc "I may not be totally into it yet, but I'm still gonna put in some effort."
+    s 1q "Well it definitely shows."
+    s 1d "You didn't have to do this, you know."
+    s 1l "I mean...we both know why you decided to join."
+    s 7x "But it seems like you're really putting effort into writing..."
+    s 7d "And I appreciate that."
+    "It's true that I initially joined this club in the hopes of getting to know the others."
+    "But, I'd be lying if I said Satori had nothing to do with it."
+    "This club does mean a lot to him after all."
+    s 1d "And don't worry."
+    s 1y "I'll keep my word to help you impress whoever you're interested in."
+    s 1d "It'll be my way of thanking you."
+    mc "I'm gonna hold you to that."
+    s 1z "Haha, deal!"
+    s 1x "Anyway-- wanna read my poem now?"
+    s 10l "I'm, umm... not very good at this."
+    mc "I'll be the judge of that."
     return
 
 label ch2_s_med:
@@ -1380,67 +1526,67 @@ label ch2_s_med:
         s 10r "Haha, maybe I should write that down!" 
         s 1d "You can read my poem now, okay?"
         return
-    #This one is the same as the last one
-    elif s_poemappeal[0] == 0:
-        show satori 4q
-        s "Ooh, I like this one, [player]!" 
-        s "It has some nice feelings in it."
-        mc "That's good to hear." 
-        mc "Is it better than yesterday's?"
-        s 9r "I dunno." 
-        s "I forgot what yesterday's was about."
-        mc "Well, that's super helpful." 
-        mc "At least I know my poetry leaves an everlasting impression."
-        s 10y "I'm not the best when it comes to figuring out if a poem is good or bad." 
-        s 7a "But that's why I go by my feelings." 
-        s "If it makes me feel things, than it must be a good poem."
-        mc "What kind of writing do you even like?"
-        s 9z "I dunno."
-        mc "Ah, okay." 
-        mc "Glad we cleared that up."
-        mc "You just have all the answers today, dontcha?"
-        s 1i "Why do you care all of a sudden?" 
-        s 1aq "You wanna write me a poem tomorrow?" 
-        s 1z "You're so sweet."
-        mc "Yes, that's exactly what I was getting at." 
-        mc "Hell, I'll write you a poem right now."
-        mc "Check this out.."
-        mc "'There once was a man named Enos...'"
-        s 7ac "Please don't finish that."
-        mc "Aw, c'mon."
-        mc "Are you telling me you already don't like it?"
-        s 1ab "You're so immature."
-        mc "See, this is why I don't write things for you."
-        mc "The next line was gonna be so epic..."
-        mc "Spoiler alert: I was gonna rhyme Enos with..."
-        s 5m "If I tell you what kind of poems I like, will you stop!?"
-        mc "...That's a fair trade."
-        s 1k "Well, let's see..." 
-        s 7x "I guess I like happy poems." 
-        s 4k "And sad poems." 
-        s 8a "A little bit of both." 
-        s 1b "There's a word for that. What was it..." 
-        s 4r "Bittersweet!" 
-        s 7x "Yeah. I like happy and sad." 
-        s 1q "Maybe a little rage thrown in for balance."
-        mc "That's cool." 
-        mc "Though, I can't really see you liking anything sad."
-        s 7c "Don't get me wrong." 
-        s "I prefer happy poems." 
-        s 7d "But, every so often, it's alright to feel sad." 
-        s 7q "It's almost cathartic." 
-        s 1x "I think it's important to be in touch with all of your feelings, including the negative ones." 
-        s "We need to be balanced, you know?"
-        mc "That's true." 
-        mc "And it's also kinda poetic."
-        s 1z "You think so?" 
-        s 10r "Haha, maybe I should write that down!" 
-        s 1d "You can read my poem now, okay?"
-        return
-    #This one is not as good as the last one
+    ## This one is the same as the last one
+    # elif s_poemappeal[0] == 0:
+    #     show satori 4q
+    #     s "Ooh, I like this one, [player]!" 
+    #     s "It has some nice feelings in it."
+    #     mc "That's good to hear." 
+    #     mc "Is it better than yesterday's?"
+    #     s 9r "I dunno." 
+    #     s "I forgot what yesterday's was about."
+    #     mc "Well, that's super helpful." 
+    #     mc "At least I know my poetry leaves an everlasting impression."
+    #     s 10y "I'm not the best when it comes to figuring out if a poem is good or bad." 
+    #     s 7a "But that's why I go by my feelings." 
+    #     s "If it makes me feel things, than it must be a good poem."
+    #     mc "What kind of writing do you even like?"
+    #     s 9z "I dunno."
+    #     mc "Ah, okay." 
+    #     mc "Glad we cleared that up."
+    #     mc "You just have all the answers today, dontcha?"
+    #     s 1i "Why do you care all of a sudden?" 
+    #     s 1aq "You wanna write me a poem tomorrow?" 
+    #     s 1z "You're so sweet."
+    #     mc "Yes, that's exactly what I was getting at." 
+    #     mc "Hell, I'll write you a poem right now."
+    #     mc "Check this out.."
+    #     mc "'There once was a man named Enos...'"
+    #     s 7ac "Please don't finish that."
+    #     mc "Aw, c'mon."
+    #     mc "Are you telling me you already don't like it?"
+    #     s 1ab "You're so immature."
+    #     mc "See, this is why I don't write things for you."
+    #     mc "The next line was gonna be so epic..."
+    #     mc "Spoiler alert: I was gonna rhyme Enos with..."
+    #     s 5m "If I tell you what kind of poems I like, will you stop!?"
+    #     mc "...That's a fair trade."
+    #     s 1k "Well, let's see..." 
+    #     s 7x "I guess I like happy poems." 
+    #     s 4k "And sad poems." 
+    #     s 8a "A little bit of both." 
+    #     s 1b "There's a word for that. What was it..." 
+    #     s 4r "Bittersweet!" 
+    #     s 7x "Yeah. I like happy and sad." 
+    #     s 1q "Maybe a little rage thrown in for balance."
+    #     mc "That's cool." 
+    #     mc "Though, I can't really see you liking anything sad."
+    #     s 7c "Don't get me wrong." 
+    #     s "I prefer happy poems." 
+    #     s 7d "But, every so often, it's alright to feel sad." 
+    #     s 7q "It's almost cathartic." 
+    #     s 1x "I think it's important to be in touch with all of your feelings, including the negative ones." 
+    #     s "We need to be balanced, you know?"
+    #     mc "That's true." 
+    #     mc "And it's also kinda poetic."
+    #     s 1z "You think so?" 
+    #     s 10r "Haha, maybe I should write that down!" 
+    #     s 1d "You can read my poem now, okay?"
+    #     return
+    ## This one is not as good as the last one
     else:
         show satori 4q
-        s "Ooh, I like this one, [player!]" 
+        s "Ooh, I like this one, [player]!" 
         s "It has some nice feelings in it."
         mc "That's good to hear." 
         mc "Is it better than yesterday's?"
@@ -1498,23 +1644,25 @@ label ch2_s_med:
 label ch2_s_good:
     #This one is better than the last one
     if s_poemappeal[0] < 1:
-        show satori 4q
-        s "Ooh, I like this one, [player!]" 
+        show satori 4q at t11 zorder 2
+        s "Ooh...I like this one, [player]!" 
         s "It has some nice feelings in it."
-        mc "That's good to hear." 
-        mc "Is it better than yesterday's?"
-        s 9r "I dunno." 
-        s "I forgot what yesterday's was about."
-        mc "Well, that's super helpful." 
-        mc "At least I know my poetry leaves an everlasting impression."
-        s 10y "I'm not the best when it comes to figuring out if a poem is good or bad." 
-        s 7a "But that's why I go by my feelings." 
-        s "If it makes me feel things, than it must be a good poem."
+        mc "Ah. So you're saying it's better than yesterday's?"
+        s 4x "Way better!"
+        mc "I'm glad for that." 
+        mc "Maybe my writing isn't terrible after all."
+        s 7a "Well, writing is about expressing yourself."
+        s "So, technically, there's no such thing as a 'bad' poem."
+        s 4aq "Except yesterday." 
+        s 4z "Yesterday's poem sucked out loud."
+        mc "..."
+        mc "Thank you for reminding me."
+        s 7d "But that's why I go by my feelings." 
+        s "If it makes me feel things, then it must be good."
         mc "What kind of writing do you even like?"
-        s 9z "I dunno."
+        s 9r "I dunno!"
         mc "Ah, okay." 
         mc "Glad we cleared that up."
-        mc "You just have all the answers today, dontcha?"
         s 1i "Why do you care all of a sudden?" 
         s 1aq "You wanna write me a poem tomorrow?" 
         s 1z "You're so sweet."
@@ -1641,7 +1789,6 @@ label ch3_s_bad:
     "I watch him go, helplessly clutching my wrinkled poem."
     $ skip_poem = True
     return
-
 
 label ch3_s_med:
     jump ch3_s_bad
@@ -1797,7 +1944,7 @@ label ch1_y_good:
     y 6o "I...didn't mean for that to come off as creepy or anything..."
     mc "No, no! I'm super happy that you like it!"
     y 6q "Well...in that case..."
-    y 3b "I'm very impressed, [player!]"
+    y 3b "I'm very impressed, [player]!"
     y 1b "What kind of experience do you have?"
     y 1c "Your use of metaphors and imagery indicate you've done a lot of writing before."
     mc "That's a really huge compliment coming from you."
@@ -1846,8 +1993,8 @@ label ch1_y_good:
 label ch2_y_bad:
     #Dislikes both poems
     if y_poemappeal[0] < 0:
-        show yuuri 7v
-        y "... Um...are you still upset with me?"
+        show yuuri 7v at t11 zorder 2
+        y "...Um...are you still upset with me?"
         mc "Upset?"
         mc "Upset over what?"
         y 7t "For disrespecting Natsuko yesterday." 
@@ -1869,6 +2016,7 @@ label ch2_y_bad:
         mc "I really..."
         y 1t "No need to express any concern." 
         y 1u "I always have my books."
+        show yuuri at thide
         hide yuuri
         "Yuuri bows politely and returns to his desk." 
         "Well, crap."
@@ -1881,7 +2029,7 @@ label ch2_y_bad:
         return
     #Liked the last one more
     else:
-        show yuuri 1a
+        show yuuri 1a at t11 zorder 2
         y "Ah, is it my turn? Let's see how it compares to yesterday's..." 
         y 1u "Hm. I see." 
         y 1s "It's a bit different. I respect you for trying different things, [player]." 
@@ -1918,7 +2066,7 @@ label ch2_y_med:
     #likes this one more than yesterday's, or the same amount
     if y_poemappeal[0] <= 0:
         show yuuri 1a at t11 zorder 2
-        y "Let's see what you've written for today."
+        y 1a "Let's see what you've written for today."
         y 1d "Hmm...well done, [player]. Your skills are already improving."
         mc "You really think so?"
         mc "Wow, thanks, Yuuri!"
@@ -1947,7 +2095,7 @@ label ch2_y_med:
 
     #likes this one less
     else:
-        show yuuri 1a
+        show yuuri 1a at t11 zorder 2
         y "Ah, is it my turn? Let's see how it compares to yesterday's..." 
         y 1u "Hm. I see." 
         y 1s "It's a bit different. I respect you for trying different things, [player]." 
@@ -2046,41 +2194,6 @@ label ch3_y_bad:
             "Maybe he'll approach me when he's feeling more confident."
             $ skip_poem = True
             return
-    elif y_poemappeal[1] < 0 or y_poemappeal[0] < 0:
-        y 6h "...I see." 
-        y "I think you're improving at writing in general, [player]." 
-        y "But I can't help but feel a little bit foolish."
-        mc "Huh? What for?"
-        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
-        mc "Yuuri, that's a little..."
-        y 6r "Please. You don't understand." 
-        y 4h "I've spent so much time worrying about what's better and what's worse..."
-        y "Not just with you." 
-        y "But with Natsuko and Satori."
-        y 6v "It's obvious now why no one has fun when talking to me." 
-        y 6h "And because of that...I'll just keep my mouth shut about your poem."
-        "He walks back to his desk. That's not the first time I've seen him do that."
-        mc "It's never as bad as you make it sound in your head." 
-        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
-        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
-        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
-        mc "Gotten used to what? Reading deeply into things?"
-        y 6w "Being disliked."
-        mc "Yuuri..."
-        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
-        "Yuuri turns away from me."
-        y 6n "You should go. Please. I want to do some thinking."
-        mc "Are you sure?"
-        show yuuri 6v
-        "Yuuri nods."
-        mc "Alright."
-        hide yuuri
-        "I leave Yuuri be." 
-        "Comforting or reassuring him is nearly impossible as it is." 
-        "So when he wants to be left alone, I think anything I say will only make things worse." 
-        "I feel bad, but I'll wait until he's feeling a bit better."
-        $ skip_poem = True
-        return
     else:
         y 6h "...I see." 
         y "I think you're improving at writing in general, [player]." 
@@ -2117,11 +2230,45 @@ label ch3_y_bad:
         $ skip_poem = True
         return
 
-
 label ch3_y_med:
     if y_poemappeal[0] < 0 and y_poemappeal[1] < 0:
         jump ch3_y_bad12_shared
     elif y_poemappeal[0] < 1 or y_poemappeal[1] < 1:
+        y 6h "...I see." 
+        y "I think you're improving at writing in general, [player]." 
+        y "But I can't help but feel a little bit foolish."
+        mc "Huh? What for?"
+        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
+        mc "Yuuri, that's a little..."
+        y 6r "Please. You don't understand." 
+        y 4h "I've spent so much time worrying about what's better and what's worse..."
+        y "Not just with you." 
+        y "But with Natsuko and Satori."
+        y 6v "It's obvious now why no one has fun when talking to me." 
+        y 6h "And because of that...I'll just keep my mouth shut about your poem."
+        "He walks back to his desk. That's not the first time I've seen him do that."
+        mc "It's never as bad as you make it sound in your head." 
+        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
+        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
+        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
+        mc "Gotten used to what? Reading deeply into things?"
+        y 6w "Being disliked."
+        mc "Yuuri..."
+        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
+        "Yuuri turns away from me."
+        y 6n "You should go. Please. I want to do some thinking."
+        mc "Are you sure?"
+        show yuuri 6v
+        "Yuuri nods."
+        mc "Alright."
+        hide yuuri
+        "I leave Yuuri be." 
+        "Comforting or reassuring him is nearly impossible as it is." 
+        "So when he wants to be left alone, I think anything I say will only make things worse." 
+        "I feel bad, but I'll wait until he's feeling a bit better."
+        $ skip_poem = True
+        return
+    else:
         show yuuri 1b at t11
         y 1a "Let's see what you've written for today."
         y 1d "Hmm...well done, [player]. Your skills are already improving."
@@ -2148,40 +2295,6 @@ label ch3_y_med:
         mc "Of course."
         mc "Is this the poem you wrote for today?"
         "Yuuri nods and hands me his poem."
-    else:
-        y 6h "...I see." 
-        y "I think you're improving at writing in general, [player]." 
-        y "But I can't help but feel a little bit foolish."
-        mc "Huh? What for?"
-        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
-        mc "Yuuri, that's a little..."
-        y 6r "Please. You don't understand." 
-        y 4h "I've spent so much time worrying about what's better and what's worse..."
-        y "Not just with you." 
-        y "But with Natsuko and Satori."
-        y 6v "It's obvious now why no one has fun when talking to me." 
-        y 6h "And because of that...I'll just keep my mouth shut about your poem."
-        "He walks back to his desk. That's not the first time I've seen him do that."
-        mc "It's never as bad as you make it sound in your head." 
-        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
-        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
-        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
-        mc "Gotten used to what? Reading deeply into things?"
-        y 6w "Being disliked."
-        mc "Yuuri..."
-        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
-        "Yuuri turns away from me."
-        y 6n "You should go. Please. I want to do some thinking."
-        mc "Are you sure?"
-        show yuuri 6v
-        "Yuuri nods."
-        mc "Alright."
-        hide yuuri
-        "I leave Yuuri be." 
-        "Comforting or reassuring him is nearly impossible as it is." 
-        "So when he wants to be left alone, I think anything I say will only make things worse." 
-        "I feel bad, but I'll wait until he's feeling a bit better."
-        $ skip_poem = True
         return
 
 label ch3_y_good:
@@ -2252,7 +2365,7 @@ label ch3_y_good:
     "I don't think I've ever seen him this happy."
     mc "You wanna show me your poem now?"
     y 1a "I do. Let me go get it."
-    jump ch3_y_good_shared
+    return
 
 
 label ch1_m_start:
@@ -2491,7 +2604,7 @@ label m_sayori_1:
     mc "But we do have our differences too."
     m 6ab "If you say so."
     mc "What do you know about Satori's writing style anyway?"
-    mc "I thought this was out first time sharing poems."
+    mc "I thought this was our first time sharing poems."
     m 6i "That may be true, but it doesn't take a genius to know what style each of us are bound to like if you just pay attention."
     m 3t "Assuming you're even capable of that."
     m 3r "Take Satori for example..."

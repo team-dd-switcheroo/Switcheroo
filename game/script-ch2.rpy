@@ -86,22 +86,22 @@ label ch2_main:
     "We both get up and swiftly make our way towards Natsuko."
     show satori at thide
     hide satori
-    show natsuko 1l at t33
+    show natsuko 1l at t32
     n "Hey guys! How's it go..."
-    show natsuko 1c at t44
+    show natsuko 1c at t42
     "He trails off."
-    show satori 1ap at t31
+    show satori 1ap at t43
     "Satori takes a seat on one side of him and I take the seat on the other side."
     "Our unblinking gazes are locked on Natsuko's confused face."
     "He fidgets nervously."
-    show natsuko at f44
+    show natsuko at f42
     n 6b "Wha-what're you guys staring at?"
-    show natsuko at t44
+    show natsuko at t42
     mc "You smell like cupcakes again."
     show natsuko 6k
     "Natsuko becomes increasingly nervous."
     "He looks at Satori for mercy."
-    show satori 7f at f42
+    show satori 7f at f43
     s "We're starving, Nat. Where are they?"
     show satori at t42
     show natsuko 6m
@@ -109,11 +109,11 @@ label ch2_main:
     mc "Come on, dude. We're languishing here."
     show natsuko 6p
     "In sheer panic, Natsuko finally peers at Yuuri."
-    show natsuko at f44
+    show natsuko at f42
     n "Y-Yuuri...?"
-    show yuuri 3k at f11
-    show natsuko at t44
-    show satori 1b at t41
+    show yuuri 3k at f44
+    show natsuko at t42
+    show satori 1b at t43
     y "It would be best for you to relinquish the sweets, unless you wish for them to feast on you instead."
     show yuuri at thide
     hide yuuri
@@ -122,15 +122,16 @@ label ch2_main:
     "Satori and I lean in closer, trapping Natsuko even more."
     show satori at t43
     s 5h "Nat...feed us..."
-    show natsuko 6v at f44
+    show natsuko 6v at f42
     scene bg club_day
-    play sound "sfx/slap.ogg"
+    play sound "mod_assets/audio/stomp.mp3"
     show white zorder 4:
         alpha 0.6
         linear 0.25 alpha 0.0
-    show natsuko 6v at f44
+    show natsuko 6v at f42
+    show satori 5h at t43
     "Finally, Natsuko stomps his foot in defeat."
-    show natsuko at f44
+    show natsuko at f42
     n "You two are bullies, you know that!?"
     n 6o "Ugh! FINE! Here, you pair of ravenous wolves!"
     n "I was gonna share 'em anyway!"
@@ -165,7 +166,6 @@ label ch2_main:
     show satori at t21
     show natsuko 5r at f22
     n "One? One!?"
-    show natsuko with hpunch
     n 4x "You owe me an entire batch, you bottomless pit!"
     n 7b "Jeez, Mateo, can you please tell these two..."
     n 7c "Eh?"
@@ -290,33 +290,33 @@ label ch2_main:
     show natsuko at t31
     m 1i "Mm... If you must know, I didn't hear it because I was practicing guitar."
     "Everyone in the room looks a bit surprised by this information."
-    show mateo at t43
-    show yuuri 6f at f44
-    show satori at t42
-    show natsuko at t41
+    show mateo at t44
+    show yuuri 6f at f41
+    show satori at t43
+    show natsuko at t42
     y "Guitar?"
     y 4f "I wasn't aware you played music as well, Mateo."
-    show yuuri at t44
-    show natsuko at f41
+    show yuuri at t41
+    show natsuko at f42
     n 5k "Yeah, but...guitar?"
     n "That's weird."
     n 3c "I'd expect someone like you to play a fancy instrument."
     n "Like piano, or violin, or something."
-    show natsuko at t41
+    show natsuko at t42
     "Mateo rolls his eyes in annoyance."
-    show mateo at f43
+    show mateo at f44
     m 1ab "Of course I play piano."
     m 1s "I've been playing piano since I was 4 years old."
     m "I just wanted to try something different."
-    show mateo at t43
-    show satori at f42
+    show mateo at t44
+    show satori at f43
     s 4a "That's pretty cool!"
     s 4q "You should play for all of us sometime." 
-    show mateo at f43
-    show satori at t42
+    show mateo at f41
+    show satori at t43
     m 1w "..."
-    show mateo at t43
-    show satori at t42
+    show mateo at t44
+    show satori at t43
     "Mateo suddenly looks at me."
     show yuuri at thide
     hide yuuri
@@ -808,7 +808,11 @@ label ch2_end:
     scene bg residential_day
     with wipeleft_scene
     $ ch2_winner = poemwinner[1].capitalize()
-    if ch2_winner == "Satori":
+    if ch2_winner == "Sayori":
+        $ ch2_winner = "Yuuri"
+    elif ch2_winner == "Natsuki":
+        $ ch2_winner = "Natsuko"
+    else:
         $ ch2_winner = "Yuuri"
     "I walk home with Satori once more."
     "Even though it's only been a few days, a lot has already changed."
