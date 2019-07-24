@@ -1712,10 +1712,10 @@ default chapter = 0
 default currentpos = 0
 default faint_effect = None
 
-default s_name = "Sayori"
-default m_name = "Monika"
-default n_name = "Natsuki"
-default y_name = "Yuri"
+default s_name = "Satori"
+default m_name = "Mateo"
+default n_name = "Natsuko"
+default y_name = "Yuuri"
 
 # Poem Variables
 # This is how much each character likes your poem day by day
