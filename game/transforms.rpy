@@ -267,12 +267,12 @@ transform l11:
     leftin(640)
 
 # When MC opens his eyes to Sayori's face
-transform face(z=0.80, y=500):
+transform face(z=0.80, y=825):
     subpixel True
-    xcenter 640
-    yanchor 1.0 ypos 1.03
+    xcenter 890
+    yanchor 1.0 ypos 1.2
     yoffset y
-    zoom z*2.00
+    zoom z*2.40
 
 # Fade for a new CG
 transform cgfade:
@@ -306,7 +306,7 @@ transform n_cg2_zoom:
     subpixel True
     truecenter
     xoffset 0
-    easeout 0.20 zoom 2.5 xoffset 200
+    easeout 0.20 zoom 3.0 xoffset 200
 
 # Controls the default dissolve speed
 define dissolve = Dissolve(0.25)

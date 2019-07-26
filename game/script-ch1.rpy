@@ -1,4 +1,3 @@
-
 label ch1_main:
     scene bg club_day
     with dissolve_scene_half
@@ -34,23 +33,24 @@ label ch1_main:
     show natsuko 5h
     mc "You smell like cupcakes or something."
     mc "Do you have food?"
-    show natsuko at t33
+    show natsuko at t21
     #show yuuri at t33
-    show satori 3z at f32
+    show satori 3z at f22
     s "Ha! Told you she'd smell it as soon as she walks in!"
     s "She's got a nose like a bloodhound when it comes to food!"
     "Satori playfully leans on me, his arm draped over my shoulder."
-    show natsuko at f33
-    show satori at t32
+    show natsuko at f21
+    show satori at t22
     n 7q "Aw, man. I wanted it to be a surprise!"
     "Natsuko pouts."
+    show natsuko at t21
     mc "Trust me, I'm surprised."
     mc "Also, super hungry."
-    show natsuko at t33
-    show satori at f32
+    show natsuko at t21
+    show satori at f22
     s 7q "I better get the tray before she devours us all."
-    show natsuko at f33
-    show satori at t32
+    show natsuko at f21
+    show satori at t22
     n 6e "Hey, I brought them! I'll get them!"
     show natsuko zorder 1 at thide
     hide natsuko
@@ -60,32 +60,32 @@ label ch1_main:
     show yuuri at t31
     show yuuri zorder 1 at thide
     hide yuuri
-    pause 1.0
-    $ _history = False
-    "{nw}"
-    $ _history = True
-    show satori 1i at t11
-    "{fast}Satori suddenly leans into me and mutters into my ear."
+    show satori 1i at face with dissolve
+    "Satori suddenly leans into me and mutters into my ear."
     s "Stop sniffing the club members, you weirdo."
     "I give Satori a sniff and wrinkle my nose in distaste."
     mc "You need to wash your blazer."
     s 1aa "You need to wash your hair."
     "He gives my ponytail a gentle tug."
     mc "Hey!"
-    show satori 1b at t22
-    show natsuko 1z at f21
+    show natsuko 1z at t21
+    show satori at t22
+    show satori 1b
     "Natsuko sets the tray on the desk in front of me and dramatically peels back the tin foil."
+    show natsuko at f21
     n "Ta-da!"
+    show natsuko at t21
     mc "Whoa!"
     "I stare in awe as he reveals a dozen fresh cream-filled donuts."
     "The words Literature Club are written in chocolate icing on each donut."
     mc "Natsu, those look amazing!"
+    show natsuko 1z at f21
     n "Hehe! Well...I usually do stuff like this on days we get a new member..."
     n 3d "But, you came in so suddenly I didn't have a chance to."
     n 7z "So, I figured I'd do it today! Hurry up and take one!"
+    show natsuko 1z at t21
     "Satori and I each reach for one."
     show satori 1ac at f22
-    show natsuko 1z at t21
     s 4s "Mmm...these are awesome!"
     show satori 1b at t22
     "I rotate the donut in my hand, looking for the best angle to take a bite."
@@ -118,8 +118,9 @@ label ch1_main:
     "I awkwardly stare at him as I grab the other donut and slowly shove that one into my face."
     show natsuko at thide
     hide natsuko
-    show satori 1j at s11
+    show satori 1j at l11
     "Satori nudges me."
+    show satori at s11
     s "Stop...eating."
     "He whispers this to me while giving me an annoyed glare."
     mc "Dom'p fell me how to rive my ryfe..."
@@ -129,7 +130,7 @@ label ch1_main:
     show satori 1y at t11
     "Satori visibly tries to suppress the grin creeping across his face."
     "We both break at the same time and start giggling."
-    show satori 1s at t11
+    show satori 1s
     "I struggle to keep the cream from shooting out of my nose."
     "I swiftly grab a tissue from the teacher's desk to wipe the crumbs and cream from my mouth."
     mc "Don't make me laugh when my mouth is full, Satori!"
@@ -324,7 +325,7 @@ label ch1_end:
     y 1h "Which I haven't yet."
     y 1l "And [player] liked my poem too, by the way."
     y "She even said she was impressed by it."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     "Natsuko smirks and leans back in his chair, propping his feet up on the desk."
     show yuuri at t21
     show natsuko at f22
@@ -822,7 +823,7 @@ label ch1_end_sayori:
     show yuuri at t21
     show natsuko at f22
     n 7w "Yeah! Unless Satori wants to tell Yuuri what a stuck up jerk he's being!"
-    play music t7
+    play music t7b
     show yuuri at f21
     show natsuko at t22
     y 6h "He would never!"
@@ -832,10 +833,10 @@ label ch1_end_sayori:
     n 6f "Excuse me?"
     n "Are you listening to yourself right now?"
     n 5b "This is exactly why nobody likes—{nw}"
-    stop music
+    stop music fadeout 0.5
     show yuuri 6t at t31
     show natsuko 1c at t33
-    show satori at t32
+    show satori 1n at t32
     show bg club_day with vpunch
     mc "Alright, KNOCK IT OFF!"
     show yuuri at f31

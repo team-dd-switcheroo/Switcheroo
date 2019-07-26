@@ -109,6 +109,7 @@ define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg"
 define audio.t6s = "<loop 43.572>bgm/6s.ogg"
 define audio.t7 = "<loop 3.898>mod_assets/audio/poem_panic.mp3" #Poem Panic!
 define audio.t7a = "<loop 4.316 to 12.453>bgm/7.ogg"
+define audio.t7b = "<from 35.167 to 42.984 loop 35.169>mod_assets/audio/poem_panic.mp3"
 define audio.t7g = "<loop 31.880>bgm/7g.ogg"
 define audio.t8 = "<loop 8.324>mod_assets/audio/daijoubu.mp3" #Daijoubu
 define audio.t9 = "<loop 3.172>bgm/9.ogg"   #My Feelings
