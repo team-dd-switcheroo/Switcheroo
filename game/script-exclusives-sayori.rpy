@@ -494,14 +494,12 @@ label sayori_exclusive_2:
     s "You're still coming up with plans to get me out of the trouble you got me into in the first place."
     "I blush a little at the sentiment and the memories."
     mc "Satori..."
-    hide s_cg2_exp1
     show s_cg2_exp2 at cgfade
     s "I know it's sappy, but...I'm really glad we're still best friends."
     s "I hope nothing ever changes that, you know?"
     s "I don't want anything about our friendship to change."
     mc "Really? I'm the exact opposite."
     mc "I look forward to change."
-    hide s_cg2_exp2
     show s_cg2_exp3 at cgfade
     s "Huh? But, why?"
     mc "Because everything grows, Satori."
@@ -522,7 +520,6 @@ label sayori_exclusive_2:
     mc "It's not for them."
     mc "Some poems..."
     mc "Are just for you and me."
-    hide s_cg2_exp3
     show s_cg2_exp4 at cgfade
     "Satori suddenly looks at me in a way he never has before."
     "I smile and look away, but I can still feel his gaze linger."

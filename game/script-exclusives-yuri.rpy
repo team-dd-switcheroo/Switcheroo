@@ -561,7 +561,6 @@ label yuri_exclusive_2_ch3:
     show y_cg2_dust2 at cgfade
     "Without taking my eyes off the book, I part my lips slightly, preparing to ask him what he wants." 
     "Suddenly, Yuuri places the chocolate in my mouth." 
-    hide y_cg2_exp1
     show y_cg2_exp2 at cgfade
     "I clamp my lips over it automatically." 
     "My concentration breaks."
@@ -570,20 +569,16 @@ label yuri_exclusive_2_ch3:
     mc "Did... Did you just..."
     "I look over at Yuuri, desperate to confirm what just happened." 
     mc "Yuuri..."
-    hide y_cg2_exp2
     show y_cg2_exp3 at cgfade
     show y_cg2_dust3 at cgfade
     "Yuuri's face turns bright red."
-    hide y_cg2_exp3
     show y_cg2_exp4 at cgfade
     y "I'm sorry!"
-    hide y_cg2_exp4 
     show y_cg2_exp5 at cgfade
     y "I guess..." 
     y "I must have misinterpreted...why you didn't want to touch the chocolate..."
     y "I-I thought...you didn't want to smudge the pages..."
     "Perhaps I shouldn't show him the cheese-puff stains on the previous pages..."
-    hide y_cg2_exp5
     show y_cg2_exp6 at cgfade
     hide y_cg2_dust1
     y "I'm so sorry...I shouldn't have done that..."
@@ -601,7 +596,6 @@ label yuri_exclusive_2_ch3:
     y "It...it is very decadent, isn't it?"
     y "I'm...glad you're not angry with me."
     y "..."
-    hide y_cg2_exp6
     show y_cg2_exp7 at cgfade
     y "Would you...like another one?" 
     hide y_cg2_dust3
@@ -610,7 +604,6 @@ label yuri_exclusive_2_ch3:
     "I look up at him curiously."
     "My heart is pounding."
     "I watch as he reaches into the bag and pulls out another chocolate."
-    hide y_cg2_exp7 
     show y_cg2_exp8 at cgfade
     "He holds it between his fingers."  
     "Our eyes meet. Neither of us averts our gaze."

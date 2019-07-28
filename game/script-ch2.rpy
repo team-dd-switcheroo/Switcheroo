@@ -103,7 +103,7 @@ label ch2_main:
     "He looks at Satori for mercy."
     show satori 7f at f43
     s "We're starving, Nat. Where are they?"
-    show satori at t42
+    show satori at t43
     show natsuko 6m
     "Natsuko looks back at me, visibly sweating." 
     mc "Come on, dude. We're languishing here."
@@ -111,9 +111,9 @@ label ch2_main:
     "In sheer panic, Natsuko finally peers at Yuuri."
     show natsuko at f42
     n "Y-Yuuri...?"
-    show yuuri 3k at f44
-    show natsuko at t42
-    show satori 1b at t43
+    show yuuri 3k at f43
+    show natsuko at t31
+    show satori 1b at t32
     y "It would be best for you to relinquish the sweets, unless you wish for them to feast on you instead."
     show yuuri at thide
     hide yuuri
@@ -312,7 +312,7 @@ label ch2_main:
     show satori at f43
     s 4a "That's pretty cool!"
     s 4q "You should play for all of us sometime." 
-    show mateo at f41
+    show mateo at f44
     show satori at t43
     m 1w "..."
     show mateo at t44
@@ -324,6 +324,7 @@ label ch2_main:
     hide natsuko
     show satori at thide
     hide satori
+    show mateo at t11
     m 1x "I will soon, once I get a little better."
     "...What the hell is he looking at me for?"
     "I didn't even say anything."
@@ -809,7 +810,7 @@ label ch2_end:
     with wipeleft_scene
     $ ch2_winner = poemwinner[1].capitalize()
     if ch2_winner == "Sayori":
-        $ ch2_winner = "Yuuri"
+        $ ch2_winner = "Mateo"
     elif ch2_winner == "Natsuki":
         $ ch2_winner = "Natsuko"
     else:
@@ -829,7 +830,7 @@ label ch2_end:
     s 1i "You better hope they do."
     s 1k "Anyway, that's not what I was thinking about."
     s "I was...I was actually thinking about something from earlier." 
-    s 7h "So...let's just say that, one day, Yuuri asks to walk home with you..."
+    s 7h "So...let's just say that, one day, [ch2_winner] asks to walk home with you..."
     s "What would you do?"
     mc "...What?" 
     mc "Where'd that come from all of a sudden?"
@@ -839,8 +840,10 @@ label ch2_end:
         "Walk home with [ch2_winner].":
             if ch2_winner == "Natsuko":
                 call ch2_end_natsuki
-            else:
+            elif ch2_winner == "Yuuri":
                 call ch2_end_yuri
+            else:
+                call ch2_end_monika
         "Walk home with Satori.":
             mc "Satori...I wouldn't ditch you for anyone."
             s 1h "But...he's so charming."
@@ -856,6 +859,8 @@ label ch2_end:
             mc "I'd like to think I decide who deserves to walk home with me, thank you."
             mc "And I've already made up my mind."
             s 10y "Hehe...Yeah. I guess you're right..."
+            hide satori
+            with wipeleft
             "We split off at our junction."
             "I watch him leave and I'm left feeling awkward and concerned."
             "Why does it feel like Satori is starting to regret helping me?"
@@ -894,6 +899,8 @@ label ch2_end_yuri:
     mc "No one could possibly take your place."
     s 10y "Hehe...yeah."
     s 7y "If you say so..."
+    hide satori
+    with wipeleft
     "We split off at our junction."
     "I watch him leave and I'm left feeling awkward and concerned."
     "Why does it feel like Satori is starting to regret helping me?"
@@ -911,6 +918,46 @@ label ch2_end_natsuki:
     s 10d "He's pretty fun to be around, isn't he?"
     mc "Yes, very much so." 
     mc "Did you want a crack at him first?"
+    s 1i "Jeez, you know that's not what I mean."
+    mc "Why even speculate about something that's never going to happen?"
+    s 1e "Eh? What do you mean?"
+    s "Wasn't that our goal from day one?"
+    s "You pick your favorite member, and I help you win him over."
+    s "Remember?"
+    mc "Well...yeah..."
+    s 7d "Then, stop worrying."
+    s "We'll get him to start walking you home."
+    s 4k "It'll only be a matter of time until..."
+    mc "...Until what?"
+    s 1k "You know..."
+    s "Until you won't..."
+    s 1f "Need me anymore."
+    mc "Need you...?"
+    mc "Satori, that wasn't part of the plan!"
+    mc "You're just trying to hook me up with one of your friends."
+    mc "They're not meant to be a replacement for you."
+    mc "No one could possibly take your place."
+    s 10y "Hehe...yeah."
+    s 7y "If you say so..."
+    hide satori
+    with wipeleft
+    "We split off at our junction."
+    "I watch him leave and I'm left feeling awkward and concerned."
+    "Why does it feel like Satori is starting to regret helping me?"
+    "I hope it doesn't occupy his mind too much."
+    "I'd hate for him to make himself sad over it."
+    "The festival is only a few days away."
+    "Who knows what will happen in that time."
+    return
+
+label ch2_end_monika:
+    mc "Mateo, huh?"
+    mc "Well, he was abrasive at first..."
+    mc "But, the longer I'm in the club, the nicer he seems to be getting."
+    mc "I'm definitely curious to learn more about him."
+    s 7d "He...he sure is a smart and good looking guy, isn't he?"
+    mc "Hey, back off."
+    mc "I know you saw him first, but I call dibs on him."
     s 1i "Jeez, you know that's not what I mean."
     mc "Why even speculate about something that's never going to happen?"
     s 1e "Eh? What do you mean?"

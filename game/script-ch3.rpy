@@ -587,21 +587,36 @@ label ch3_end:
             call ch3_end_sayori
     scene bg residential_day
     with dissolve_scene_half
-    #currently yurri
-    "So, Yuuri will be coming over on Sunday." 
+    $ ch4_name = ch4_scene.capitalize()
+    if ch4_name == "Natsuki":
+        $ ch4_name = "Natsuko"
+    else:
+        $ ch4_name = "Yuuri"
+    "So, [ch4_name] will be coming over on Sunday." 
     "I'm oddly excited for this." 
     "Sure, I'd rather be helping out Satori, but still, my anxiety shoots through the roof." 
-    "I mean, I've gotten pretty used to handling Yuuri's timidness at this point." 
-    "And he did say he was looking forward to it." 
-    "Maybe some friendly banter will make him come out of his shell a little?" 
-    "I suddenly feel a knot it my stomach." 
-    "Why am I scared Satori will find out about this?" 
-    "I mean, I kid around, but we really aren't a couple or anything." 
-    "Besides, like Mateo said, this is all about the club." 
-    "I have nothing to worry about."
+    if ch4_scene == "natsuki":
+        "I mean, Natsuko and I both have the sense of humor of a 12 year old." 
+        "Plus he's pretty flirty, so he should be fun to banter with; no telling where that will lead." 
+        "Not to mention I'll be spending the entire day sampling his confections." 
+        "I suddenly feel a knot it my stomach." 
+        "Why am I scared Satori will find out about this?" 
+        "I mean, I kid around, but we really aren't a couple or anything." 
+        "Besides, like Mateo said, this is all about the club." 
+        "I have nothing to worry about." 
+    else:
+        "I mean, I've gotten pretty used to handling Yuuri's timidness at this point." 
+        "And he did say he was looking forward to it." 
+        "Maybe some friendly banter will make him come out of his shell a little?" 
+        "I suddenly feel a knot it my stomach." 
+        "Why am I scared Satori will find out about this?" 
+        "I mean, I kid around, but we really aren't a couple or anything." 
+        "Besides, like Mateo said, this is all about the club." 
+        "I have nothing to worry about."
     return
 
 label ch3_end_natsuki:
+    $ ch4_scene = "natsuki"
     show natsuko 1k
     show yuuri 6e
     show mateo 1d
@@ -742,6 +757,7 @@ label ch3_end_natsuki:
     return
 
 label ch3_end_yuri:
+    $ ch4_scene = "yuri"
     show natsuko 1k
     show yuuri 6e
     show mateo 1d
@@ -982,6 +998,7 @@ label ch3_end_monika:
     return
 
 label ch3_end_sayori:
+    $ help_sayori = True
     show natsuko 1k
     show yuuri 6e
     show mateo 1d

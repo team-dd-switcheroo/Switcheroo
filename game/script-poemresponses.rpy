@@ -169,7 +169,7 @@ label ch2_y_end:
     y 1u "Um...I was a little more daring with this one than yesterday's."
     mc "I can see that."
     mc "It's a lot more...uh...metaphorical."
-    if n_readpoem:
+    if n_readpoem and (n_poemappeal[0] >= 0 or n_poemappeal[1] >= 0):
         mc "In fact...I got that same message out of Natsu's poem today."
         show yuuri 1e
         mc "About being ridiculed for having strange hobbies."
@@ -373,7 +373,7 @@ label ch2_n_end:
     n "Right?"
     "I'm a little taken aback by Natsuko's message."
     "It's a lot deeper than I thought."
-    if y_readpoem:
+    if y_readpoem and (y_poemappeal[0] >= 0 or y_poemappeal[1] >= 0):
         "But after giving the poem one more look, I finally catch on."
         "It's actually a pretty good poem."
         n 7u "Hey [player], I do agree with you on one thing..."
@@ -1585,7 +1585,7 @@ label ch2_s_med:
     #     return
     ## This one is not as good as the last one
     else:
-        show satori 4q
+        show satori 4q at t11 zorder 2
         s "Ooh, I like this one, [player]!" 
         s "It has some nice feelings in it."
         mc "That's good to hear." 
@@ -1742,6 +1742,7 @@ label ch3_s_bad:
     $ currentname = "Yuuri"
     if n_poemappeal[2] > y_poemappeal[2]:
         $ currentname = "Natsuko"
+    show satori 1k at t11 zorder 2
     s "Hmm...it's nice, I guess."
     mc "Come on, dude." 
     mc "I can already tell you don't like it."
@@ -2270,31 +2271,56 @@ label ch3_y_med:
         return
     else:
         show yuuri 1b at t11
-        y 1a "Let's see what you've written for today."
-        y 1d "Hmm...well done, [player]. Your skills are already improving."
-        mc "You really think so?"
-        mc "Wow, thanks, Yuuri!"
-        mc "That means a lot coming from you!"
-        y 1c "Haha! It's nothing."
-        y 1b "I'm happy to inspire my fellow writers."
-        y "I know you're new to this..."
-        y "So, don't worry too much if it feels like you can't get your poem to feel perfect."
-        y "You needn't be afraid to be a little more daring."
-        mc "How can I do that?"
-        y 1i "Well...metaphors can go a long way."
-        mc "Coming up with clever or beautiful metaphors is super challenging for me."
-        y 1b "It doesn't have to be."
-        y 3b "Writing shouldn't be a robotic activity."
-        y 3m "The secret is to just let your mind wander through your feelings and write down the things you see and hear."
-        y "That's one way to truly enable your reader to see inside your mind."
-        y 1y "When you think about it, it's a very intimate exercise."
-        mc "I see."
-        mc "That's certainly an interesting technique!"
-        mc "Thank you for sharing that with me."
-        y 1d "I have an example of that, if you'd like to read it."
-        mc "Of course."
-        mc "Is this the poem you wrote for today?"
-        "Yuuri nods and hands me his poem."
+        y "Well done, [player]."
+        y 1a "You've definitely improved your writing over the course of these few days."
+        y "Has my advice been helpful to you?"
+        mc "Yeah, for sure!"
+        y 1c "I'm glad."
+        y "Sharing our writing like this is a lot more fun and rewarding than I anticipated."
+        y 1d "I need to remember to thank Mateo."
+        y 1u "I think we all felt a little awkward at first."
+        y 3b "But now, it seems like everyone is enjoying sharing their writing and seeing what others think."
+        mc "I agree."
+        mc "This isn't the dull spike to the forehead I thought it would be."
+        "At least I get to spend an hour after school every day hanging out with a room full of cute guys."
+        "That's my silver lining."
+        mc "It's actually fun trying something new and getting to know everyone through their writing."
+        y 1a "Well, you know how I like to say writing is a very personal way to get in touch with yourself?"
+        y "Let me ask you..."
+        y "Have you learned anything new about yourself, [player]?"
+        mc "I'm...I'm not sure..."
+        mc "I guess I haven't really stopped to think about it."
+        y 1c "You know, in the end, it doesn't even matter if you're a good writer or a bad writer."
+        y "The most important thing is exploring and discovering yourself."
+        mc "That's good to know."
+        mc "You know so much, I'm so afraid of disappointing you in some way or another."
+        mc "You're so sophisticated with your writing and have so much advice to share."
+        y 3q "Well, my opinions are just opinions."
+        "Yuuri thinks for a minute."
+        "He suddenly looks embarrassed."
+        y 6t "I do apologize if my opinion comes off as pretentious."
+        y "I haven't made you feel uncomfortable or intimidated, have I?"
+        y 6v "That would be awful if I did."
+        "Aw."
+        "He's so adorable when he thinks he did something wrong."
+        "Now I feel bad for my poor phrasing."
+        mc "You're fine, big guy!"
+        mc "I was just saying that I really respect your opinion."
+        mc "You're so knowledgeable."
+        mc "I've learned a lot from you."
+        y 6e "You have?"
+        y 6c "I'm so relieved to hear that."
+        y 1u "I'm sorry I jumped to that conclusion."
+        y 1t "I...I just don't want you to think I'm some condescending know-it-all."
+        mc "Ahaha! No!"
+        mc "Not at all!"
+        mc "I think you're really helpful and smart."
+        mc "I always learn something new from you."
+        y 1u "I'm glad."
+        y 1t "Please let me know if I ever come off as arrogant, or if I overstep my bounds."
+        mc "Hehe...I don't think that's ever gonna be a problem, Yuuri!"
+        mc "Anyway, ready to share your poem now?"
+        y 1s "Yes. Here you go."
         return
 
 label ch3_y_good:
@@ -2316,7 +2342,9 @@ label ch3_y_good:
     mc "I'm amazed at how you're so good at something you've never even shared with anyone before." 
     mc "It's a shame."
     y 1l "Well...perhaps, but...I didn't really have much of a choice."
+    stop music fadeout 2.0
     mc "What do you mean?"
+    play music t9
     y 6v "...[player]...during lunchtime...I eat by myself..."
     y 4t "Did you know that?" 
     y 6t "I transferred to this school over a year ago..." 
@@ -2427,7 +2455,7 @@ label ch3_m_start:
     show mateo 6b at t11
     m "Hi [player]~"
     m "Have you thought about what you want to submit to perform at the festival?"
-    if poemwinner[0] or poemwinner[1] == "sayori":
+    if poemwinner[1] == "sayori":
         mc "What? No..."
         mc "I'll think about that over the weekend."
         mc "Right now, I want to know what you found out about Satori."
@@ -2482,7 +2510,7 @@ label ch3_m_start:
         m 1e "Anyway, I'll share my poem with you now."
         mc "Erm...alright..."
         return
-    elif poemwinner[0] or poemwinner[1] == "yuri":
+    elif poemwinner[1] == "yuri":
         mc "No."
         mc "It's not exactly the first thing on my mind right now."
         m 4k "Well, really try to think about it and let me know as soon as you decide." 
@@ -2540,10 +2568,51 @@ label ch3_m_start:
         mc "Erm...alright..."
         return
     else:
-        m "This is a temporary placeholder till we get Nat's Poem Response here."
-        m "In the meantime check if the poem shows up and the end also."
-        mc "W-wha?"
-        m "Here you go!"
+        mc "No."
+        mc "It's not exactly the first thing on my mind right now."
+        m 4k "Well, really try to think about it and let me know as soon as you decide." 
+        m 6a "Anyway, let's take a look at today's poem."
+        "I let Mateo take the poem I'm holding."
+        m 6x "Ah, sticking with the Natsuko style once again, I see." 
+        m 1s "I guess we know what the first thing on your mind really is..."
+        mc "That's not really..."
+        m 1i "Oh, don't try to deny it." 
+        m "It's quite obvious." 
+        m 3ab "Spending every day with him in the club, pretending to like the manga he's into..." 
+        m 1y "You scared he's gonna hate you or something if you don't indulge his every whim?"
+        mc "Hey, lay off!" 
+        mc "He's not the type of person who hates anyone who doesn't give him what he wants." 
+        mc "I mean, sure, he's assertive, but he's not selfish!"
+        m 1aa "I should've known that someone who indulges him as much as you do would jump to his defense like that." 
+        m 1r "It's fine, but here's a little warning for you." 
+        m 3r "Stay on your toes." 
+        m 3i "Natsuko is kind of unpredictable." 
+        m "He never knows what he wants." 
+        m 1v "I mean, at barely 18, he is the youngest one here, after all." 
+        m 3t "Clearly, he's too immature to know how to properly handle his own feelings." 
+        m 1d "What I'm saying is..." 
+        m "If something bad happens, it could end up damaging the club too." 
+        m 1h "And I know you wouldn't want that to happen."
+        mc "Maybe you should worry less about Natsu and more about Satori." 
+        mc "Did you find out what was wrong with him?" 
+        m 1ab "Ah, yes."
+        m "The other important guy in your life."
+        m 1aa "You must care about him more than I realized."
+        m 1d "It's understandable."
+        m "Your history with him...that's what holds you two together."
+        m 3q "It's an important thing; history."
+        m 3r "It defines who we are and the relationships we develop with others."
+        "Mateo gives me a curious look."
+        m 1f "History with someone...defines how that person sees you."
+        m "And how you see them."
+        "I'm not sure what Mateo's getting at."
+        "But it's making me weirdly uncomfortable."
+        mc "Look, just tell me what you found out."
+        m 6r "To be honest, he didn't tell me why he's acting up."
+        m 6d "I still stick to my original theory on that."
+        m 4r "In any case, this really isn't the time to be talking about it."
+        m 1a "Anyway, I'll share my poem with you now, okay?"
+        mc "Erm...alright..."
         return
 
 label m_natsuki_1:
@@ -2680,10 +2749,13 @@ label m_yuri_1:
     return
 
 label m_natsuki_2:
-    m "This is a temporary placeholder till we get Nat's Poem Response here."
-    m "In the meantime check if the poem shows up and the end also."
-    mc "W-wha?"
-    m "Here you go!"
+    m 1a "Hi again, [player]." 
+    m 1v "I see you managed to tear yourself away from Natsuko for a few moments." 
+    m 1x "Glad to see you two are getting along so well."
+    m 1t "Anyway, since we've already gotten your poem out of the way, feel free to read mine." 
+    m 1b "I personally like the way it turned out." 
+    m "I'm sure you will, too."
+    "Yeah, right..."
     return
 
 label m_sayori_2:
