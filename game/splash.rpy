@@ -66,7 +66,7 @@ image menu_art_s:
     "/mod_assets/gui/menu_art_s.png"
     xcenter 510
     ycenter 500
-    zoom 0.68
+    zoom 0.88
     menu_art_move(0.68, 510, 0.68)
 
 image menu_art_m:

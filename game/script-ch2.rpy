@@ -111,9 +111,9 @@ label ch2_main:
     "In sheer panic, Natsuko finally peers at Yuuri."
     show natsuko at f42
     n "Y-Yuuri...?"
-    show yuuri 3k at f43
-    show natsuko at t31
-    show satori 1b at t32
+    show yuuri 3k at f44
+    show natsuko at t41
+    show satori 1b at t42
     y "It would be best for you to relinquish the sweets, unless you wish for them to feast on you instead."
     show yuuri at thide
     hide yuuri
@@ -979,6 +979,8 @@ label ch2_end_monika:
     mc "No one could possibly take your place."
     s 10y "Hehe...yeah."
     s 7y "If you say so..."
+    hide satori
+    with wipeleft
     "We split off at our junction."
     "I watch him leave and I'm left feeling awkward and concerned."
     "Why does it feel like Satori is starting to regret helping me?"
