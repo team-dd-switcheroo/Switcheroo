@@ -600,7 +600,7 @@ label ch3_end:
         "Plus he's pretty flirty, so he should be fun to banter with; no telling where that will lead." 
         "Not to mention I'll be spending the entire day sampling his confections." 
         "I suddenly feel a knot it my stomach." 
-        "Why am I scared Satori will find out about this?" 
+        "Why am I scared Satori will find out kI3$fpu^q$&about this?" 
         "I mean, I kid around, but we really aren't a couple or anything." 
         "Besides, like Mateo said, this is all about the club." 
         "I have nothing to worry about." 

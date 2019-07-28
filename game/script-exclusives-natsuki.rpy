@@ -459,8 +459,8 @@ label natsuki_exclusive_2:
     "I turn my head around a bit and look down."
     mc "...!"
     stop music fadeout 2.0
-    hide n_cg2_bg
     show natsuko_bg_cg2_exp1 at cgfade
+    hide n_cg2_bg
     "I see Natsuko - eyes wide, cheeks red, and mouth agape - looking right up my skirt!"
     mc "Guh!"
     "Crap!"
@@ -476,7 +476,6 @@ label natsuki_exclusive_2:
     n "Ack!"
     n "I'm sorry! I'm sorry! I'm sorry!"
     n "I won't look!"
-    hide natsuko_bg_cg2_exp1
     show natsuko_bg_cg2_exp2 at cgfade
     "Natsuko turns away and covers his face with both hands, letting go of the chair."
     "It instantly starts to swivel and roll."
@@ -487,7 +486,6 @@ label natsuki_exclusive_2:
     mc "Dude, just grab the chair!"
     n "I'm sorry!"
     n "I wanna help..."
-    hide natsuko_bg_cg2_exp2
     show natsuko_bg_cg2_exp3 at cgfade
     "He must've uncovered his eyes for a split second, because I hear him exclaim again."
     n "Oh, God!"
