@@ -1901,37 +1901,35 @@ label ch1_y_bad:
     "Huh."
     "Maybe I could learn something from that."
     y 6m "Alright... So..."
-    label ch1_y_shared:
-        y 4f "There are specific writing habits that are usually typical of new writers."
-        y 4h "Having been through that myself, I've learned how to pick up on them."
-        y 3k "See, new writers try to make their style more deliberate..."
-        y 3h "Often picking a subject matter different from the style and then just form-fitting them together."
-        y 1k "The end result is that both the style and the expressiveness are weakened."
-        "Once Yuuri finds his train of thought, his demeanor does a complete 180."
-        "His stammering disappears and he sounds more like a teacher than a student."
-        y 1f "Now this is not something you can be blamed for, of course."
-        y 3f "There are many techniques that can go into writing even a simple poem."
-        y 3k "Not just finding them and building them..."
-        y "But getting them to work together is probably the most challenging part."
-        y 3m "All of this comes with practice, learning from example and trying new things."
-        y 1a "It also helps that everyone else in the club gives you valuable feedback."
-        y 6h "Natsuko can be a bit biased though."
-        mc "Biased? How?"
-        y 6o "Ah..."
-        y 6g "Well..."
-        y 4j "I suppose you'll see what I mean, eventually."
-        mc "Alright..."
-        "That was weird."
-        "I wonder what he has against Natsuko?"
-        mc "So how about I check out your poem now?"
-        y 1c "Yes, of course!"
-        y 1d "I would love to share my thought process behind it."
-        "Yuuri smiles dreamily as he hands me his poem."
-        "He's actually really handsome when he smiles."
-        "He seems so serious all the time."
-        "I doubt he's this happy about anything very often."
-        $ yuuri_readearly = True
-        return
+    y 4f "There are specific writing habits that are usually typical of new writers."
+    y 4h "Having been through that myself, I've learned how to pick up on them."
+    y 3k "See, new writers try to make their style more deliberate..."
+    y 3h "Often picking a subject matter different from the style and then just form-fitting them together."
+    y 1k "The end result is that both the style and the expressiveness are weakened."
+    "Once Yuuri finds his train of thought, his demeanor does a complete 180."
+    "His stammering disappears and he sounds more like a teacher than a student."
+    y 1f "Now this is not something you can be blamed for, of course."
+    y 3f "There are many techniques that can go into writing even a simple poem."
+    y 3k "Not just finding them and building them..."
+    y "But getting them to work together is probably the most challenging part."
+    y 3m "All of this comes with practice, learning from example and trying new things."
+    y 1a "It also helps that everyone else in the club gives you valuable feedback."
+    y 6h "Natsuko can be a bit biased though."
+    mc "Biased? How?"
+    y 6o "Ah..."
+    y 6g "Well..."
+    y 4j "I suppose you'll see what I mean, eventually."
+    mc "Alright..."
+    "That was weird."
+    "I wonder what he has against Natsuko?"
+    mc "So how about I check out your poem now?"
+    y 1c "Yes, of course!"
+    y 1d "I would love to share my thought process behind it."
+    "Yuuri smiles dreamily as he hands me his poem."
+    "He's actually really handsome when he smiles."
+    "He seems so serious all the time."
+    "I doubt he's this happy about anything very often."
+    return
 
 label ch1_y_med:
     jump ch1_y_bad
@@ -2239,6 +2237,42 @@ label ch3_y_med:
     if y_poemappeal[0] < 0 and y_poemappeal[1] < 0:
         jump ch3_y_bad12_shared
     elif y_poemappeal[0] < 1 or y_poemappeal[1] < 1:
+        show yuuri 6h at t11 zorder 
+        y 6h "...I see." 
+        y "I think you're improving at writing in general, [player]." 
+        y "But I can't help but feel a little bit foolish."
+        mc "Huh? What for?"
+        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
+        mc "Yuuri, that's a little..."
+        y 6r "Please. You don't understand." 
+        y 4h "I've spent so much time worrying about what's better and what's worse..."
+        y "Not just with you." 
+        y "But with Natsuko and Satori."
+        y 6v "It's obvious now why no one has fun when talking to me." 
+        y 6h "And because of that...I'll just keep my mouth shut about your poem."
+        "He walks back to his desk. That's not the first time I've seen him do that."
+        mc "It's never as bad as you make it sound in your head." 
+        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
+        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
+        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
+        mc "Gotten used to what? Reading deeply into things?"
+        y 6w "Being disliked."
+        mc "Yuuri..."
+        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
+        "Yuuri turns away from me."
+        y 6n "You should go. Please. I want to do some thinking."
+        mc "Are you sure?"
+        show yuuri 6v
+        "Yuuri nods."
+        mc "Alright."
+        hide yuuri
+        "I leave Yuuri be." 
+        "Comforting or reassuring him is nearly impossible as it is." 
+        "So when he wants to be left alone, I think anything I say will only make things worse." 
+        "I feel bad, but I'll wait until he's feeling a bit better."
+        $ skip_poem = True
+        return
+    else:
         show yuuri 1b at t11
         y "Well done, [player]."
         y 1a "You've definitely improved your writing over the course of these few days."
@@ -2291,43 +2325,10 @@ label ch3_y_med:
         mc "Anyway, ready to share your poem now?"
         y 1s "Yes. Here you go."
         return
-    else:
-        y 6h "...I see." 
-        y "I think you're improving at writing in general, [player]." 
-        y "But I can't help but feel a little bit foolish."
-        mc "Huh? What for?"
-        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
-        mc "Yuuri, that's a little..."
-        y 6r "Please. You don't understand." 
-        y 4h "I've spent so much time worrying about what's better and what's worse..."
-        y "Not just with you." 
-        y "But with Natsuko and Satori."
-        y 6v "It's obvious now why no one has fun when talking to me." 
-        y 6h "And because of that...I'll just keep my mouth shut about your poem."
-        "He walks back to his desk. That's not the first time I've seen him do that."
-        mc "It's never as bad as you make it sound in your head." 
-        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
-        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
-        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
-        mc "Gotten used to what? Reading deeply into things?"
-        y 6w "Being disliked."
-        mc "Yuuri..."
-        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
-        "Yuuri turns away from me."
-        y 6n "You should go. Please. I want to do some thinking."
-        mc "Are you sure?"
-        show yuuri 6v
-        "Yuuri nods."
-        mc "Alright."
-        hide yuuri
-        "I leave Yuuri be." 
-        "Comforting or reassuring him is nearly impossible as it is." 
-        "So when he wants to be left alone, I think anything I say will only make things worse." 
-        "I feel bad, but I'll wait until he's feeling a bit better."
-        $ skip_poem = True
-        return
 
 label ch3_y_good:
+    if y_poemappeal[0] < 0 and y_poemappeal[1] < 0:
+        jump ch3_y_bad12_shared
     show yuuri 4b at t11
     y "[player]...your writing has only continued to improve these last few days." 
     y "Every poem you've showed me has been nothing short of spectacular." 
