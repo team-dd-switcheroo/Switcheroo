@@ -248,7 +248,7 @@ label ch3_y_end:
     y 4f "Well...actually...it's because of the poems Natsuko and I wrote yesterday."
     y "They ended up being very similar to each other."
     y 6a "So I wanted us to write about the same topic again."
-    y "1l To better compare the differences in our writing styles and thought processes, you know?"
+    y 1l "To better compare the differences in our writing styles and thought processes, you know?"
     if n_readpoem:
         if not n_read3:
             mc "I see..."
@@ -674,12 +674,14 @@ label ch2_m_end:
     m 1m "That's my advice for today!"
     m 1n "Thanks for listening!"
     "What the hell kind of{nw}"
+    $ _history_list[-1].what = "What the hell kind of"
     stop music fadeout 0.5
     show black onlayer front:
         alpha 0.0
         0.25
         linear 0.5 alpha 1.00
     "What the hell kind of Truman Show bullshit...{w=0.5}{nw}"
+    $ _history_list.pop()
     window hide(None)
     window auto
     hide black onlayer front
@@ -896,7 +898,7 @@ label ch2_n_med:
         "Whatever guilt I was feeling for eating all his cookies has completely dissipated."
         mc "Ah...well, at least it's not a total trainwreck, so that's good."
         mc "You don't offer any compliments but you sure do like to dish out the critique, don't you?"
-        n 3x "Haha! Well, that's what it means to be a pro!"
+        n 3y "Haha! Well, that's what it means to be a pro!"
         n "Every critique I offer is based on my own experiences as a writer."
         n 3d "Listen to my advice and maybe one day you'll be as good as I am!"
         "Did he just take my critique of him as a compliment?"
@@ -2133,31 +2135,33 @@ label ch2_y_good:
     #likes this one more than yesterday
     if y_poemappeal[0] < 1:
         show yuuri 1a at t11 zorder 2
-        y 1a "Let's see what you've written for today."
-        y 1d "Hmm...well done, [player]. Your skills are already improving."
-        mc "You really think so?"
-        mc "Wow, thanks, Yuuri!"
-        mc "That means a lot coming from you!"
-        y 1c "Haha! It's nothing."
-        y 1b "I'm happy to inspire my fellow writers."
-        y "I know you're new to this..."
-        y "So, don't worry too much if it feels like you can't get your poem to feel perfect."
-        y "You needn't be afraid to be a little more daring."
-        mc "How can I do that?"
-        y 1i "Well...metaphors can go a long way."
-        mc "Coming up with clever or beautiful metaphors is super challenging for me."
-        y 1b "It doesn't have to be."
-        y 3b "Writing shouldn't be a robotic activity."
-        y 3m "The secret is to just let your mind wander through your feelings and write down the things you see and hear."
-        y "That's one way to truly enable your reader to see inside your mind."
-        y 1y "When you think about it, it's a very intimate exercise."
-        mc "I see."
-        mc "That's certainly an interesting technique!"
-        mc "Thank you for sharing that with me."
-        y 1d "I have an example of that, if you'd like to read it."
-        mc "Of course."
-        mc "Is this the poem you wrote for today?"
-        "Yuuri nods and hands me his poem."
+        show yuuri 1b at t11
+        y "Well done, [player]."
+        y 1a "You've definitely improved your writing over the course of these few days."
+        y "Has my advice been helpful to you?"
+        mc "Yeah, for sure!"
+        y 1c "I'm glad."
+        y "Sharing our writing like this is a lot more fun and rewarding than I anticipated."
+        y 1d "I need to remember to thank Mateo."
+        y 1u "I think we all felt a little awkward at first."
+        y 3b "But now, it seems like everyone is enjoying sharing their writing and seeing what others think."
+        mc "I agree."
+        mc "This isn't the dull spike to the forehead I thought it would be."
+        "At least I get to spend an hour after school every day hanging out with a room full of cute guys."
+        "That's my silver lining."
+        mc "It's actually fun trying something new and getting to know everyone through their writing."
+        y 1a "Well, you know how I like to say writing is a very personal way to get in touch with yourself?"
+        y "Let me ask you..."
+        y "Have you learned anything new about yourself, [player]?"
+        mc "I'm...I'm not sure..."
+        mc "I guess I haven't really stopped to think about it."
+        y 1c "You know, in the end, it doesn't even matter if you're a good writer or a bad writer."
+        y "The most important thing is exploring and discovering yourself."
+        mc "That's good to know."
+        mc "You know so much, I'm so afraid of disappointing you in some way or another."
+        mc "You're so sophisticated with your writing and have so much advice to share."
+        y 3q "Well, my opinions are just opinions."
+        "Yuuri thinks for a minute."
         return
     #likes both poems a lot
     else:
@@ -2551,6 +2555,20 @@ label ch3_m_start:
         m "The other important guy in your life."
         m 1aa "You must care about him more than I realized."
         m 1d "It's understandable."
+        m "Your history with him...that's what holds you two together."
+        m 3q "It's an important thing; history."
+        m 3r "It defines who we are and the relationships we develop with others."
+        "Mateo gives me a curious look."
+        m 1f "History with someone...defines how that person sees you."
+        m "And how you see them."
+        "I'm not sure what Mateo's getting at."
+        "But it's making me weirdly uncomfortable."
+        mc "Look, just tell me what you found out."
+        m 6r "To be honest, he didn't tell me why he's acting up."
+        m 6d "I still stick to my original theory on that."
+        m 4r "In any case, this really isn't the time to be talking about it."
+        m 1a "Anyway, I'll share my poem with you now, okay?"
+        mc "Erm...alright..."
         return
     else:
         mc "No."
