@@ -253,6 +253,7 @@ label ch3_y_end:
         if not n_read3:
             mc "I see..."
             "I don't have much to contribute here since I didn't get to read Natsuko's poem."
+            return
     y 1ad "Anyway...it was my idea."
     "Pfft... Okay then."
     "It doesn't really matter to me whose idea it was."
@@ -437,7 +438,7 @@ label ch3_n_end:
         jump ch3_n_end_special
     call showpoem(poem_n3)
     show natsuko 5k at t11
-    n "Yeah...I felt like I kept writing about negative things, so I thought I'd writing about something nice for once."
+    n "Yeah...I felt like I kept writing about negative things, so I thought I'd try writing about something nice for once."
     n 1ap "Besides, the ocean is awesome!"
     n 1d "Kinda hard to write about anything negative about that."
     mc "Haha! I liked it a lot!"
@@ -761,7 +762,8 @@ label ch1_n_med:
     n 7q "It's not a bad poem."
     n "It's just that you're new to this, so I kinda figured your writing wouldn't evoke any emotions."
     n 7g "And it didn't, to be honest."
-    "I'm starting to see why Yuuri said Natsuko might be biased."
+    if y_readpoem:
+        "I'm starting to see why Yuuri said Natsuko might be biased."
     mc "Oh, I get it."
     mc "Not childish enough for your tastes, huh?"
     n 6b "Hey! This is a Literature Club, you know!"
@@ -856,7 +858,7 @@ label ch2_n_bad:
         n 7w "I personally prefer poems that don't feel like they're trying so hard." 
         n "It's so annoying when people try to sound fancy or think they can add more meaning just by using big complicated words." 
         n 7b "Just make it short, sweet and to the point."
-        n " Yuuri gets off on all that metaphorical garbage, but I can see right through it!" 
+        n "Yuuri gets off on all that metaphorical garbage, but I can see right through it!" 
         n 3w "Making your reader work so hard to find the deep meaning is just an excuse to have no meaning at all."
         mc "Well...that's one way to look at it. But everyone has their own opinion."
         n 3y "Well...there's my opinion...and there's the wrong opinion." 
@@ -927,7 +929,7 @@ label ch2_n_med:
         n 7w "I personally prefer poems that don't feel like they're trying so hard." 
         n "It's so annoying when people try to sound fancy or think they can add more meaning just by using big complicated words." 
         n 7b "Just make it short, sweet and to the point."
-        n " Yuuri gets off on all that metaphorical garbage, but I can see right through it!" 
+        n "Yuuri gets off on all that metaphorical garbage, but I can see right through it!" 
         n 3w "Making your reader work so hard to find the deep meaning is just an excuse to have no meaning at all."
         mc "Well...that's one way to look at it. But everyone has their own opinion."
         n 3y "Well...there's my opinion...and there's the wrong opinion." 
@@ -1015,19 +1017,19 @@ label ch2_n_good:
             show mateo 1d at f11
             m "Hey [player]...what's going on over here?"
             m "Natsuko sure left in a hurry."
-            m 2y "What'd you do to him?"
+            m 3y "What'd you do to him?"
             show mateo 1y at t11
             mc "Do? I didn't do anything."
-            show mateo 2r at f11
+            show mateo 4r at f11
             m "Are you sure you didn't do anything terrible?"
-            show mateo 2q at t11
+            show mateo 3q at t11
             mc "Pfft...what?"
             mc "What're you talking about?"
             mc "What do you think I could have possibly done to him?"
             show mateo 1p at f11
             m "I don't know."
-            m 2m "That's why I'm asking you."
-            m 2n "I just want to make sure you didn't do anything...bad."
+            m 3m "That's why I'm asking you."
+            m 3n "I just want to make sure you didn't do anything...bad."
             show mateo 1m at t11
             mc "Bad? Are you..."
             mc "You know what?"
@@ -1046,12 +1048,12 @@ label ch2_n_good:
             mc "Well, tell me who 'they' are and I'll molest them too."
             show mateo 1u at t11
             "Mateo laughs again."
-            show mateo 2v at f11
+            show mateo 4v at f11
             m "So touchy."
             m "Pun not intended."
-            m 2r "Tell me, am I safe in your presence?"
+            m 4r "Tell me, am I safe in your presence?"
             m "Or do you simply not have control over your own hands?"
-            show mateo 2q at t11
+            show mateo 4q at t11
             "My eyes widen when I spot my poem near Mateo's feet."
             "The last thing I need is for him to read it, especially right now."
             "I try to think of something fast."
@@ -1063,27 +1065,27 @@ label ch2_n_good:
             "Much to my embarrassment, Mateo indeed spots the poem on the floor and snatches it up."
             show mateo 1a at t11
             "He reads through it, a smug grin creeping across his face."
-            show mateo 2k at f11
+            show mateo 4k at f11
             m "How sweet."
             m "Wrote this for Natsuko, did you?"
-            m 2l "Perhaps I should call the authorities, after all..."
+            m 3l "Perhaps I should call the authorities, after all..."
             show mateo 1j at t11
             mc "Hey, he's of age!"
             mc "I-I mean..."
             "Oh, this is just fantastic."
             "Of all the things I could have said..."
             "Mateo just looks at me with that pretentious grin of his."
-            show mateo 2k at f11
+            show mateo 4k at f11
             m "Well, well, well..."
             m "Looks like someone's got a thing for strawberry shortcake..."
             show mateo 1j at t11
             "Something about his mocking tone makes me feel bad about it for some reason."
             "I turn away, my cheeks blazing."
-            show mateo 2t at f11
+            show mateo 4t at f11
             m "So...how do you think the little fella feels about you?"
             show mateo 1w at t11
             mc "..."
-            show mateo 2x at f11
+            show mateo 4x at f11
             m "Oh, don't bother answering."
             m "It's just something for you to think about."
             n "Hey!"
@@ -1243,7 +1245,9 @@ label ch3_n_good:
         n "Satori's writing is always so full of feeling."
         n 7u "And Mateo..." 
         n 7q "God only knows what his poems are about..." 
+        stop music fadeout 2.0
         n 7u "But they're still interesting."
+        play music t9
         n 7s "What's so good about mine?"
         mc "Natsu..."
         n 7av "What's so good about me?!"
@@ -1309,19 +1313,19 @@ label ch3_n_good:
         show natsuko 1a at t11
         n 5z "...Finally!"
         mc "Hm?"
-        n "This one; it's good! I was wondering how long it was going to take you!"
+        n 3l "This one; it's good! I was wondering how long it was going to take you!"
         mc "Alright!"
-        n "Yeah, seriously!" 
-        n "No need to take advice from anyone else. Especially Yuuri." 
-        n "Just keep writing poems like this, and that's all you need!"
+        n 1j "Yeah, seriously!" 
+        n 1y "No need to take advice from anyone else. Especially Yuuri." 
+        n 3 "Just keep writing poems like this, and that's all you need!"
         mc "...Is that the right way to do things, or is it just what you want?"
-        n "Hey! Remember, you're talking to a pro!" 
+        n 7w "Hey! Remember, you're talking to a pro!" 
         n "Don't you think you should trust my opinion the most?"
         mc "That depends...you're not just biased towards poems that are simple and youthful, right?"
-        n "Biased? Don't be ridiculous. My opinion is just the right one."
+        n 5c "Biased? Don't be ridiculous. My opinion is just the right one."
         "I wonder if Natsuko is aware of how he comes across to others?"
         mc "Fair enough. I'm glad you liked my poem either way."
-        n "I knew you'd finally understand. Keep writing like this and you'll be a pro, too! Anyway, here's the one I wrote."
+        n 3y "I knew you'd finally understand. Keep writing like this and you'll be a pro, too! Anyway, here's the one I wrote."
         return
 
 label ch1_s_bad:
@@ -1436,36 +1440,60 @@ label ch1_s_good:
     return
 
 label ch2_s_bad:
-    show satori 1s at t11 zorder 2
-    s "... Hahahaha!"
-    s "[player]..."
-    s 7l "You know I love you..."
-    s 10z "But this poem is really bad!"
-    mc "...!"
-    mc "What the actual hell, man?!"
-    mc "I mean...I love you too...but damn..."
-    s 1r "Haha! It's fine, it's fine." 
-    s 7x "It's your first time after all." 
-    s 10r "To be honest, I'm just happy that you actually wrote one." 
-    s 1d "It shows that you're taking this seriously."
-    mc "Of course."
-    mc "I may not be totally into it yet, but I'm still gonna put in some effort."
-    s 1q "Well it definitely shows."
-    s 1d "You didn't have to do this, you know."
-    s 1l "I mean...we both know why you decided to join."
-    s 7x "But it seems like you're really putting effort into writing..."
-    s 7d "And I appreciate that."
-    "It's true that I initially joined this club in the hopes of getting to know the others."
-    "But, I'd be lying if I said Satori had nothing to do with it."
-    "This club does mean a lot to him after all."
-    s 1d "And don't worry."
-    s 1y "I'll keep my word to help you impress whoever you're interested in."
-    s 1d "It'll be my way of thanking you."
-    mc "I'm gonna hold you to that."
-    s 1z "Haha, deal!"
-    s 1x "Anyway-- wanna read my poem now?"
-    s 10l "I'm, umm... not very good at this."
-    mc "I'll be the judge of that."
+    show satori 4q at t11 zorder 2
+    s "Ooh, I like this one, [player]!" 
+    s "It has some nice feelings in it."
+    mc "That's good to hear." 
+    mc "Is it better than yesterday's?"
+    s 9r "I dunno." 
+    s "I forgot what yesterday's was about."
+    mc "Well, that's super helpful." 
+    mc "At least I know my poetry leaves an everlasting impression."
+    s 10y "I'm not the best when it comes to figuring out if a poem is good or bad." 
+    s 7a "But that's why I go by my feelings." 
+    s "If it makes me feel things, than it must be a good poem."
+    mc "What kind of writing do you even like?"
+    s 9z "I dunno."
+    mc "Ah, okay." 
+    mc "Glad we cleared that up."
+    mc "You just have all the answers today, dontcha?"
+    s 1i "Why do you care all of a sudden?" 
+    s 1aq "You wanna write me a poem tomorrow?" 
+    s 1z "You're so sweet."
+    mc "Yes, that's exactly what I was getting at." 
+    mc "Hell, I'll write you a poem right now."
+    mc "Check this out.."
+    mc "'There once was a man named Enos...'"
+    s 7ac "Please don't finish that."
+    mc "Aw, c'mon."
+    mc "Are you telling me you already don't like it?"
+    s 1ab "You're so immature."
+    mc "See, this is why I don't write things for you."
+    mc "The next line was gonna be so epic..."
+    mc "Spoiler alert: I was gonna rhyme Enos with..."
+    s 5m "If I tell you what kind of poems I like, will you stop!?"
+    mc "...That's a fair trade."
+    s 1k "Well, let's see..." 
+    s 7x "I guess I like happy poems." 
+    s 4k "And sad poems." 
+    s 8a "A little bit of both." 
+    s 1b "There's a word for that. What was it..." 
+    s 4r "Bittersweet!" 
+    s 7x "Yeah. I like happy and sad." 
+    s 1q "Maybe a little rage thrown in for balance."
+    mc "That's cool." 
+    mc "Though, I can't really see you liking anything sad."
+    s 7c "Don't get me wrong." 
+    s "I prefer happy poems." 
+    s 7d "But, every so often, it's alright to feel sad." 
+    s 7q "It's almost cathartic." 
+    s 1x "I think it's important to be in touch with all of your feelings, including the negative ones." 
+    s "We need to be balanced, you know?"
+    mc "That's true." 
+    mc "And it's also kinda poetic."
+    s 1z "You think so?" 
+    s 10r "Haha, maybe I should write that down!" 
+    s 1d "You can read my poem now, okay?"
     return
 
 label ch2_s_med:
@@ -1496,14 +1524,14 @@ label ch2_s_med:
         mc "Yes, that's exactly what I was getting at." 
         mc "Hell, I'll write you a poem right now."
         mc "Check this out.."
-        mc "'There once was a man named Enus...'"
+        mc "'There once was a man named Enos...'"
         s 7ac "Please don't finish that."
         mc "Aw, c'mon."
         mc "Are you telling me you already don't like it?"
         s 1ab "You're so immature."
         mc "See, this is why I don't write things for you."
         mc "The next line was gonna be so epic..."
-        mc "Spoiler alert: I was gonna rhyme Enus with..."
+        mc "Spoiler alert: I was gonna rhyme Enos with..."
         s 5m "If I tell you what kind of poems I like, will you stop!?"
         mc "...That's a fair trade."
         s 1k "Well, let's see..." 
@@ -1805,7 +1833,6 @@ label ch3_s_good:
     "He seems much calmer."
     "Almost too calm."
     mc "Satori...are you alright?"
-    s 1g "Hm? Oh. Right."
     s 10k "Hm? Oh. Right."
     s "I'm...I'm sorry about yelling at you earlier."
     s 10e "I'm just a little moody today."
@@ -2497,7 +2524,7 @@ label ch3_m_start:
         m 1d "He was very happy when you joined the club."
         m 6r "To be honest, he didn't tell me why he's acting up."
         m 6d "I still stick to my original theory on that."
-        m 5r "In any case, this really isn't the time to be talking about it."
+        m 4r "In any case, this really isn't the time to be talking about it."
         m 1a "Anyway, let's take a look at today's poem."
         "I let Mateo take the poem I'm holding."
         m 1d "Hm..."
