@@ -293,98 +293,95 @@ label natsuki_exclusive_2:
     scene bg club_day
     with dissolve_scene_half
     play music t6 fadeout 1
-    show natsuko 1e at f11
+    show natsuko 1l at t11
     n "Hey!"
     n "Did you finish that manga last night?"
-    show natsuko 1g at f11
     mc "...What manga?"
-    n 1f "...What do you mean, 'what manga?'"
-    n "The manga we read together yesterday that I gave you to take home and finish."
+    n 1m "...What do you mean, 'what manga?'"
+    n 1c "The manga we read together yesterday that I gave you to take home and finish."
     "I shrug."
     mc "No idea what you're talking about."
-    show natsuko 1c at f11
     "The color drains from Natsuko's face."
-    n 1f "You know exactly what I'm talking about!!"
+    n 5p "You know exactly what I'm talking about!!"
     n "You took it home with you to read last night, now where is it?!"
     mc "Oh...that manga."
     mc "Right."
     mc "I accidentally dropped it in the toilet."
     mc "You can have it back, but it's kinda gross..."
-    n 1o "GGGgggaAAAaaaaAAAHHHhhh!!!"
-    n "Are you serious?!?!"
+    n 6v "GGGgggaAAAaaaaAAAHHHhhh!!!"
+    n 6o "Are you serious?!?!"
     "Unable to keep this up any longer, I finally break and start laughing."
     mc "Ahahahaha!"
     mc "Chill out!"
     mc "I'm only joking!"
-    show natsuko 1w at f11
+    show natsuko 5q
     "Natsuko gives a massive sigh when I pull the manga volume out of my bag, unharmed."
     "I smirk."
-    show natsuko 1x at f11
     mc "Whoa, time for us to hang ten, bruh."
     mc "Looks like that wave of relief is back!"
-    n 1r "Oh shut up, you troll!"
-    n "You almost gave me a heart attack!"
+    n 7r "Oh shut up, you troll!"
+    n 7i "You almost gave me a heart attack!"
     mc "Hey, that was a good one and you know it."
     mc "Admit it."
-    n 1e "Fine, fine."
-    n "It was a little funny."
-    n 1v "Now, give it back!"
+    n 5t "Fine, fine."
+    n 7y "It was a little funny."
+    n 7d "Now, give it back!"
     "He snatches it from me and promptly begins to inspect it."
     "He gives another sigh when he discovers it is in the same condition it was in when he gave it to me."
     mc "It's still in one piece."
     mc "I'm not careless, you know."
-    n 1g "I'm just making sure."
-    n "Can you blame me for being paranoid?"
+    n 1z "I'm just making sure."
+    n 1d "Can you blame me for being paranoid?"
     n "I don't just give people my comics every day."
-    n "Anyway...let's put this one back and grab the next one."
+    n 3y "Anyway...let's put this one back and grab the next one."
+
     show bg closet
-    with dissolve_scene_half
+    with wipeleft_scene
+    show natsuko 1z at t11 zorder 2
     "Natsuko and I head to the closet."
     n "I'm excited for you to tell me what you think so far."
-    n "Where'd this volume leave off again?"
+    n 1l "Where'd this volume leave off again?"
     n "I forgot..."
     mc "Right."
     mc "So, it left off where Mochi and Aki found..."
-    n "Son of a..."
-    show natsuko 1f at f11
-    n "Mateo, did you move my stuff again?"
-    show natsuko 1i at f11
+    n 5w "Son of a..."
+    n 5b "Mateo, did you move my stuff again?"
     "Natsuko's voice resonates out of the closet."
     "I peer inside."
     "All of his books are lined up on the top shelf."
-
+    show mateo 6d at f31 zorder 2
     m "I had to."
     m "The teacher got mad at me for taking up so much space in the closet."
     m "So I cleaned up a bit and moved some stuff around."
-    n 1w "Ah! I see!"
-    n 1x "And what part of your brain decided to take the shortest guy's stuff and put it on the freaking top shelf?!"
-    m "Oh, stop whining."
-    m "All of your crap is still there."
+    n 7y "Ah! I see!"
+    n 6o "And what part of your brain decided to take the shortest guy's stuff and put it on the freaking top shelf?!"
+    m 6aa "Oh, stop whining."
+    m 6i "All of your crap is still there."
     m "Just get it."
     show mateo at thide
     hide mateo
-    n 1v "Ugh..."
+    n 6x "Ugh..."
     "I look up."
     "The top shelf is far above Natsuko's head."
+    show natsuko 5g
     "Honestly, how does Mateo expect him to be able to reach?"
     "I watch as Natsuko makes a futile hop, trying to figure out how to reach it."
-    show natsuko 1i at f11
     "He finally turns to me."
-    n 3e "Will you please help me get these back down?"
+    n 5c "Will you please help me get these back down?"
     n "There's plenty of room on these shelves."
     show natsuko 1i at f11
     mc "Ah, sure."
     mc "There's a stool on the wall there."
     mc "We can use that."
     "Sure enough, there's a collapsible stool hanging on the closet wall."
-    n 2z "Perfect."
-    n 1l "I'll reach up there and pull them down."
-    n "Then I'll hand them to you, and you can put them on this lower shelf."
-    show natsuko 1j at f11
+    n 1a "Perfect."
+    n 3y "I'll reach up there and pull them down."
+    n 3l "Then I'll hand them to you, and you can put them on this lower shelf."
     mc "Wouldn't it be easier if I reached up there and handed them to you?"
-    n 1d "Nah, it's okay."
+    n 1z "Nah, it's okay."
     n "I can do it."
     hide natsuko
+    with wipeleft
     "Natsuko takes the stool from the wall and unfolds it, then he hops on."
     "It's wobbly due to its collapsible design."
     "I watch anxiously."
@@ -398,13 +395,13 @@ label natsuki_exclusive_2:
     "Thankfully, he was able to stay on his feet."
     "Having almost fell, he's clearly a bit shaken."
     "I slide the box on the lower shelf and turn to him."
-    show natsuko 1g at f11
     mc "You alright?"
-    n 1h "Uh...yeah."
-    n "So, you know that idea you had a few minutes ago that was perfect and actually made sense?"
-    n "Maybe we should just go with that."
-    n "Reach the bigger boxes for me?"
-    n "Pretty please?"
+    show natsuko 5t at t11
+    n "Uh...yeah."
+    n 1m "So, you know that idea you had a few minutes ago that was perfect and actually made sense?"
+    n 1ac "Maybe we should just go with that."
+    n 5aa "Reach the bigger boxes for me?"
+    n 5m "Pretty please?"
     "Aw."
     "Why does he have to be so cute and innocent looking?"
     "Well, he said please."
@@ -413,7 +410,7 @@ label natsuki_exclusive_2:
     mc "But I'm not standing on that stool."
     mc "I don't trust it."
     mc "I'm using a chair instead."
-    n 1e "But all the chairs in here have desks attached to them."
+    n 5n "But all the chairs in here have desks attached to them."
     n "You won't be able to fit one of those in the closet."
     mc "Hmm...Good point."
     mc "Let's see..."
@@ -421,23 +418,21 @@ label natsuki_exclusive_2:
     mc "Aha."
     "I spot a computer chair behind the teacher's desk."
     "I roll it on its wheels back to the closet."
-    n 1p "Ah...is that..."
-    n "Is that safe?"
+    n 5k "Ah...is that..."
+    n 5m "Is that safe?"
     n "It swivels and rolls."
-    n "You're gonna get hurt."
+    n 4k "You're gonna get hurt."
     mc "Not if you hold it steady."
     mc "C'mere."
-
-    scene natsuko_bg_cgbase2
-    with dissolve_cg
     "Natsuko comes over and grabs the back part of the chair, bracing it with his body weight."
     "I climb up on the seat and slowly stand, trying to keep my balance."
     "The chair only moves once under my weight, but Natsuko steadies it instantly."
-    n "I gotcha!"
+    n 1l "I gotcha!"
     mc "Great!"
     mc "We'll be able to do this in no time!"
-    n "...Y-yeah..."
-    show n_cg2_bg at cgfade
+    n 1ar "...Y-yeah..."
+    scene n_ch2_bg
+    with dissolve_cg
     "I reach up and grab the first box of comics."
     "It's not very heavy, so I'm able to bend down and slide it onto the lower shelf."
     "I wrap my arms around the bigger box."
@@ -456,11 +451,11 @@ label natsuki_exclusive_2:
     "The only thing I get from Natsuko is a weird sounding grunt."
     "What the hell is he even doing?"
     mc "Hey, Natsu!"
+    scene natsuko_bg_cgbase2
+    with dissolve_cg
     "I turn my head around a bit and look down."
     mc "...!"
     stop music fadeout 2.0
-    show natsuko_bg_cg2_exp1 at cgfade
-    hide n_cg2_bg
     "I see Natsuko - eyes wide, cheeks red, and mouth agape - looking right up my skirt!"
     mc "Guh!"
     "Crap!"
@@ -472,6 +467,7 @@ label natsuki_exclusive_2:
     mc "What do you think you're doing down there!?!"
     mc "Stop it!"
     play music t7
+    show natsuko_bg_cg2_exp1 at cgfade
     "Finally snapping out of it, Natsuko suddenly realizes what he's just been caught doing."
     n "Ack!"
     n "I'm sorry! I'm sorry! I'm sorry!"
@@ -488,6 +484,7 @@ label natsuki_exclusive_2:
     n "I wanna help..."
     show natsuko_bg_cg2_exp3 at cgfade
     "He must've uncovered his eyes for a split second, because I hear him exclaim again."
+    show natsuko_bg_cg2_exp2 at cgfade
     n "Oh, God!"
     n "I'm sorry!"
     n "I looked again!"
@@ -513,27 +510,30 @@ label natsuki_exclusive_2:
     scene bg closet
     with dissolve_cg
     play music t8
+    show natsuko 6v at face
+    with open_eyes
     "I sit up, pressing my arm down into what I think at first to be the floor beneath me."
     n "Ghk!"
     "I hear an exasperated grunt."
     "I look down to realize it's not the floor I'm sitting on."
+    show natsuko 6n
     "I glare at Natsuko momentarily before grabbing him by the lapels of his blazer and jerking his upper-half up off the ground."
-    show natsuko 3h at f11
     "He looks nervously into my eyes, his face still blazing red."
     mc "Natsu...when I tell you to grab the chair..."
     mc "YOU GRAB THE FRIGGIN' CHAIR!"
     "I shake him back and forth with each syllable."
-    n 3p "AH-ah-ACK!"
+    n 6v "AH-ah-ACK!"
     n "I'm sorry!"
     "He manages to whine pathetically between each shake."
     "I release my grip, dropping him back on the floor."
     "Then, I pound my fist into his chest."
-    n 3v "Oomph!"
+    n "Oomph!"
     mc "And that's for being a pervert!"
+    hide natsuko
+    with wipeleft
     "I place both hands on his chest and press my body weight against them, hoisting myself up."
     "Natsuko gives another groan as I step on him on my way to the nearest desk, where I drop myself in the seat."
-    scene bg club_day
-    show mateo 1g at f11
+    show mateo 6i at t11
     m "Everything alright over here?"
     m "I thought I heard something."
     mc "Everything is peachy keen!"
@@ -541,28 +541,32 @@ label natsuki_exclusive_2:
     "I stand up from the desk, even though my legs are now as wobbly as that stool."
     mc "Next time the teacher asks you to clean the closet, leave Natsu's stuff on the middle shelf from now on!"
     mc "Unless it's your desire to kill off your club members one by one!"
-    m 1q "Jeez."
-    m "You sure do like to exaggerate things, don't you, [player]?"
+    m 6m "Jeez."
+    m 6n "You sure do like to exaggerate things, don't you, [player]?"
+    m 6w "Don't you, [player]?"
     mc "Spoken like someone who didn't see me plummet face-first to the floor!"
-    show mateo 1c at f11
+    show mateo 1d
     "Mateo leans over and inspects my face very closely."
-    m 2n "Well, you certainly don't look like you've damaged that pretty little face of yours."
-    m 1j "So, why worry?"
-    "I blush intensely as Mateo gives an amused chuckle before returning to the front of the room."
+    m 1x "Well, you certainly don't look like you've damaged that pretty little face of yours."
+    m 1t "So, why worry?"
+    show mateo at thide
     hide mateo
+    "I blush intensely as Mateo gives an amused chuckle before returning to the front of the room."
     "The compliment catches me so off-guard that I forget to mention Natsuko's little stunt."
     "I look down at him."
-    show natsuko 1g at f11
+    show natsuko 1u at t11
     "He's still laying on his back on the floor, staring forlornly at the ceiling."
     "I gingerly approach him and kneel down."
-    show natsuko 1q at f11
     "He turns his head the other way."
-    n "Thanks."
+    n 1n "Thanks."
     n "For not telling Mateo, I mean."
-    n "I...I really am sorry, you know."
+    n 1m "I...I really am sorry, you know."
     mc "Yeah, well..."
     mc "You're lucky I didn't say anything."
     mc "You try to pull that crap again and I'll..."
+    show natsuko 5u
+    "Natsuko's face suddenly becomes indescribably sad." 
+    "My eyes travel in the direction he's looking and it immediately becomes clear why."
     stop music fadeout 2.0
     mc "Oh no!!"
     "I quickly reach over and pick up one of the books that's scattered on the floor."
@@ -570,9 +574,8 @@ label natsuki_exclusive_2:
     "I desperately try to smooth it out."
     mc "Crap...it must've landed on the page!"
     "I try a bit more to fix the crease, but I can't get it out."
-    show natsuko 1a at f11
     "Suddenly, Natsuko reaches over and takes my wrist gently."
-    n 1aa "Hey..."
+    n 5n "Hey..."
     play music t9
     n "It's okay."
     n "Don't worry about it."
@@ -581,23 +584,24 @@ label natsuki_exclusive_2:
     mc "But...it's..."
     mc "Your childhood."
     "He chuckles sadly and looks down."
-    n 1d "Yeah, well..."
-    n 3ac "I never said it was the best childhood..."
+    n "Yeah, well..."
+    n 5q "I never said it was the best childhood..."
     "He seems so distant all of a sudden."
     mc "Natsu..."
     mc "This isn't about the manga, is it?"
-    n "..."
+    n 5u "..."
     "Still on the floor, he curls up on his side and turns away from me completely."
     mc "Anything I could do to help?"
     "Natsuko shakes his head."
     mc "Do you want to talk about it?"
-    n 3q "..."
+    n 7s "..."
     n "Every day..."
     n "It's just...the same thing."
     n "I just..."
     n "I just wanna come to the club and..."
-    n "...I just wanna be..."
-    show natsuko 1u at f11
+    n 7u "...I just wanna be..."
+    hide natsuko
+    with dissolve
     "He falls silent."
     "I stare helplessly."
     "Whatever anger I was feeling regarding his little peep-show has dissipated."
@@ -611,26 +615,30 @@ label natsuki_exclusive_2:
     mc "Maybe that'll help make your day a little better."
     "I start collecting the books and putting them with their respective sets."
     "As I reach for one, Natsuko reaches out and gently takes it first."
-    n 3t "You're..."
+    show natsuko 5m at t11
+    n "You're..."
     n "You're really nice to me..."
-    n "Thank you for that."
-    n "I...I'm not used to someone being nice to me."
-    n "I...I appreciate it."
+    n 5n "Thank you for that."
+    n 5u "I...I'm not used to someone being nice to me."
+    n 5ad "I...I appreciate it."
     mc "I have a lot of respect for you."
     mc "Remember, there's no height limit on being a cool and interesting person."
-    show natsuko 3af at f11
+    show natsuko 5c
     "Natsuko smiles sadly."
     "I don't know what might have happened to him today, but helping boost his self esteem is the least I can do."
+    hide natsuko
+    with wipeleft
     "The next couple of minutes are quiet as we begin to gather the scattered books."
     "We place them in the correct order."
     "We hoist the box together and set it on a shelf Natsuko can comfortably reach."
     "I get up the courage to stand on the wobbly stool and get the rest of the boxes down."
     mc "Alright. That should do it."
     "I hop off the stool."
-    n 1a "Thanks again, [player]."
+    show natsuko 7aa at t11
+    n "Thanks again, [player]."
     mc "Any time."
     "Natsuko is holding the volume I set aside."
-    n 1ah "Shall we?"
+    n 7j "Shall we?"
     "He smiles a little."
     "Looks like he's starting to cheer up already."
     mc "Alright, I'm ready."
@@ -643,4 +651,16 @@ label natsuki_exclusive_2:
     "He's surprisingly sharp, making note of a lot of subtle repeated jokes and background elements."
     "In the end, I'm pretty impressed with how well everything ties up in this story, despite Natsuko saying the story doesn't hold up."
     "I guess he has good taste after all."
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+    scene bg closet
+    with wipeleft_scene
+    "After some time, Mateo gets our attention as usual and it's time to share poems again."
+    mc "Guess I'll be holding onto this for now."
+    show natsuko 1j at t11
+    n "Yep!" 
+    n 1z "And hey, you sound more enthusiastic this time!"
+    mc "Well...I'm starting to get into it."
+    n 1ap "I knew you would!"
+    show natsuko at thide
+    hide natsuko
+    "I return to my seat and put the book in my bag."
+    return
