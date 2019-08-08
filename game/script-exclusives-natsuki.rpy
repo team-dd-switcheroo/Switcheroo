@@ -334,11 +334,10 @@ label natsuki_exclusive_2:
     n 1d "Can you blame me for being paranoid?"
     n "I don't just give people my comics every day."
     n 3y "Anyway...let's put this one back and grab the next one."
-
+    "Natsuko and I head to the closet."
     show bg closet
     with wipeleft_scene
     show natsuko 1z at t11 zorder 2
-    "Natsuko and I head to the closet."
     n "I'm excited for you to tell me what you think so far."
     n 1l "Where'd this volume leave off again?"
     n "I forgot..."
@@ -348,7 +347,7 @@ label natsuki_exclusive_2:
     n 5b "Mateo, did you move my stuff again?"
     "Natsuko's voice resonates out of the closet."
     "I peer inside."
-    "All of his books are lined up on the top shelf."
+    "All of Natsuko's books are lined up on the top shelf."
     show mateo 6d at f31 zorder 2
     m "I had to."
     m "The teacher got mad at me for taking up so much space in the closet."
@@ -373,16 +372,17 @@ label natsuki_exclusive_2:
     mc "Ah, sure."
     mc "There's a stool on the wall there."
     mc "We can use that."
-    "Sure enough, there's a collapsible stool hanging on the closet wall."
+    "There's a collapsible stool hanging on the wall in the closet."
     n 1a "Perfect."
     n 3y "I'll reach up there and pull them down."
-    n 3l "Then I'll hand them to you, and you can put them on this lower shelf."
+    n 3l "Then I'll hand them to you and you can put them on this lower shelf."
     mc "Wouldn't it be easier if I reached up there and handed them to you?"
     n 1z "Nah, it's okay."
     n "I can do it."
     hide natsuko
     with wipeleft
-    "Natsuko takes the stool from the wall and unfolds it, then he hops on."
+    "Natsuko takes the stool from the wall and unfolds it." 
+    "He hops on."
     "It's wobbly due to its collapsible design."
     "I watch anxiously."
     "I'm not much taller than him but I could definitely reach the boxes more easily."
@@ -407,6 +407,7 @@ label natsuki_exclusive_2:
     "Well, he said please."
     "I smile and nod."
     mc "Of course."
+    show natsuko 1z
     mc "But I'm not standing on that stool."
     mc "I don't trust it."
     mc "I'm using a chair instead."
@@ -456,11 +457,11 @@ label natsuki_exclusive_2:
     "I turn my head around a bit and look down."
     mc "...!"
     stop music fadeout 2.0
-    "I see Natsuko - eyes wide, cheeks red, and mouth agape - looking right up my skirt!"
+    "I see Natsuko-- eyes wide, cheeks red and mouth agape--- looking right up my skirt!" 
     mc "Guh!"
     "Crap!"
     "I forgot I was still in school uniform!"
-    "And while I usually keep my blazer tied around my waist as a 'shield', a teacher scolded me today and I was forced to wear it normally."
+    "And while I usually keep my blazer tied around my waist as a 'shield', it must've come untied at some point, because I suddenly feel very exposed."
     "There's no doubt, he can see everything!"
     "I'd have never asked him to do this if I had remembered just what the hell I was wearing."
     mc "Hey, hey, hey!!!"
@@ -506,12 +507,16 @@ label natsuki_exclusive_2:
     $ pause(0.20)
     stop music
     play sound "mod_assets/audio/fall3.wav"
-    "I slowly come to my senses."
+    "The full force of my body throws Natsuko to the ground." 
+    "A whole bunch of books pelt us in the face and head." 
+    "I try to shield the back of my head with my hands." 
+    "Ugh...my body definitely felt that one."
     scene bg closet
     with dissolve_cg
-    play music t8
+    "I slowly come to my senses."
     show natsuko 6v at face
     with open_eyes
+    play music t8
     "I sit up, pressing my arm down into what I think at first to be the floor beneath me."
     n "Ghk!"
     "I hear an exasperated grunt."
@@ -523,7 +528,7 @@ label natsuki_exclusive_2:
     mc "YOU GRAB THE FRIGGIN' CHAIR!"
     "I shake him back and forth with each syllable."
     n 6v "AH-ah-ACK!"
-    n "I'm sorry!"
+    n "I'm s-sorry!"
     "He manages to whine pathetically between each shake."
     "I release my grip, dropping him back on the floor."
     "Then, I pound my fist into his chest."
@@ -542,7 +547,7 @@ label natsuki_exclusive_2:
     mc "Next time the teacher asks you to clean the closet, leave Natsu's stuff on the middle shelf from now on!"
     mc "Unless it's your desire to kill off your club members one by one!"
     m 6m "Jeez."
-    m 6n "You sure do like to exaggerate things, don't you, [player]?"
+    m 6n "You sure do like to exaggerate things."
     m 6w "Don't you, [player]?"
     mc "Spoken like someone who didn't see me plummet face-first to the floor!"
     show mateo 1d
@@ -563,7 +568,8 @@ label natsuki_exclusive_2:
     n 1m "I...I really am sorry, you know."
     mc "Yeah, well..."
     mc "You're lucky I didn't say anything."
-    mc "You try to pull that crap again and I'll..."
+    mc "Even though it was kinda my fault."
+    mc "But if you try to pull that crap again, I'll..."
     show natsuko 5u
     "Natsuko's face suddenly becomes indescribably sad." 
     "My eyes travel in the direction he's looking and it immediately becomes clear why."
@@ -572,7 +578,7 @@ label natsuki_exclusive_2:
     "I quickly reach over and pick up one of the books that's scattered on the floor."
     "There's a long diagonal crease on one of the pages."
     "I desperately try to smooth it out."
-    mc "Crap...it must've landed on the page!"
+    mc "Crap...I must've landed on the page!"
     "I try a bit more to fix the crease, but I can't get it out."
     "Suddenly, Natsuko reaches over and takes my wrist gently."
     n 5n "Hey..."
@@ -605,8 +611,8 @@ label natsuki_exclusive_2:
     "He falls silent."
     "I stare helplessly."
     "Whatever anger I was feeling regarding his little peep-show has dissipated."
-    "I want to talk to him about whatever problems he may be having..."
-    "But I can't pry very well if he's not ready to open up."
+    "I want to talk to him about whatever problems he may be having."
+    "But I can't very well pry if he's not ready to open up."
     "I decide to do the only thing I can right now."
     mc "Well...I'll get these comics and manga organized and moved for you."
     "I grab Volume 2 of Kaptain Kid and set it aside."
@@ -646,7 +652,7 @@ label natsuki_exclusive_2:
     with wipeleft_scene
     stop music fadeout 2.0
     play music t8
-    "We sit in the same spot as last time, and I open the second volume."
+    "We sit in the same spot as last time and I open the second volume."
     "Natsuko's mood continues to improve as he laughs and points things out to me."
     "He's surprisingly sharp, making note of a lot of subtle repeated jokes and background elements."
     "In the end, I'm pretty impressed with how well everything ties up in this story, despite Natsuko saying the story doesn't hold up."
