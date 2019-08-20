@@ -267,12 +267,12 @@ transform l11:
     leftin(640)
 
 # When MC opens his eyes to Sayori's face
-transform face(z=0.80, y=825):
+transform face(z=0.80, y=600):
     subpixel True
-    xcenter 890
+    xcenter 640
     yanchor 1.0 ypos 1.2
     yoffset y
-    zoom z*2.40
+    zoom z*2.00
 
 # Fade for a new CG
 transform cgfade:

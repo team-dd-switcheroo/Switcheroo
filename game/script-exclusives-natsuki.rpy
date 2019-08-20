@@ -291,7 +291,7 @@ label natsuki_exclusive_1:
 
 label natsuki_exclusive_2:
     scene bg club_day
-    with dissolve_scene_half
+    with wipeleft_screen
     play music t6 fadeout 1
     show natsuko 1l at t11
     n "Hey!"
@@ -401,7 +401,7 @@ label natsuki_exclusive_2:
     n 1m "So, you know that idea you had a few minutes ago that was perfect and actually made sense?"
     n 1ac "Maybe we should just go with that."
     n 5aa "Reach the bigger boxes for me?"
-    n 5m "Pretty please?"
+    n 5ay "Pretty please?"
     "Aw."
     "Why does he have to be so cute and innocent looking?"
     "Well, he said please."
@@ -432,7 +432,7 @@ label natsuki_exclusive_2:
     mc "Great!"
     mc "We'll be able to do this in no time!"
     n 1ar "...Y-yeah..."
-    scene n_ch2_bg
+    scene n_cg2_bg
     with dissolve_cg
     "I reach up and grab the first box of comics."
     "It's not very heavy, so I'm able to bend down and slide it onto the lower shelf."
@@ -474,6 +474,7 @@ label natsuki_exclusive_2:
     n "I'm sorry! I'm sorry! I'm sorry!"
     n "I won't look!"
     show natsuko_bg_cg2_exp2 at cgfade
+    hide natsuko_bg_cg2_exp1
     "Natsuko turns away and covers his face with both hands, letting go of the chair."
     "It instantly starts to swivel and roll."
     mc "KYA!"
@@ -484,8 +485,10 @@ label natsuki_exclusive_2:
     n "I'm sorry!"
     n "I wanna help..."
     show natsuko_bg_cg2_exp3 at cgfade
+    hide natsuko_bg_cg2_exp2
     "He must've uncovered his eyes for a split second, because I hear him exclaim again."
     show natsuko_bg_cg2_exp2 at cgfade
+    hide natsuko_bg_cg2_exp3
     n "Oh, God!"
     n "I'm sorry!"
     n "I looked again!"
@@ -496,6 +499,8 @@ label natsuki_exclusive_2:
     "He can't bring himself to open his eyes long enough to stop it from moving."
     mc "AAAaaaaHHHhhhh!"
     n "[player]!"
+    show natsuko_bg_cg2_exp1 at cgfade 
+    hide natsuko_bg_cg2_exp2
     n "I've got you!"
     "The chair finally rolls out from under me."
     "Frantically, Natsuko tries to catch me."
@@ -629,7 +634,7 @@ label natsuki_exclusive_2:
     n 5ad "I...I appreciate it."
     mc "I have a lot of respect for you."
     mc "Remember, there's no height limit on being a cool and interesting person."
-    show natsuko 5c
+    show natsuko 5at
     "Natsuko smiles sadly."
     "I don't know what might have happened to him today, but helping boost his self esteem is the least I can do."
     hide natsuko
@@ -657,7 +662,7 @@ label natsuki_exclusive_2:
     "He's surprisingly sharp, making note of a lot of subtle repeated jokes and background elements."
     "In the end, I'm pretty impressed with how well everything ties up in this story, despite Natsuko saying the story doesn't hold up."
     "I guess he has good taste after all."
-    scene bg closet
+    scene bg club_day
     with wipeleft_scene
     "After some time, Mateo gets our attention as usual and it's time to share poems again."
     mc "Guess I'll be holding onto this for now."

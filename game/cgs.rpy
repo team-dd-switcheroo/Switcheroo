@@ -7,7 +7,7 @@
 
 ## Yuri Chocolate CG
 
-# Feeding Yuri Chocolate
+# Feeding Yuuri Chocolate
 # This is the slowly fading background
 image y_cg2_bg:
     "mod_assets/images/cg/y_cg2_bg1.png"
@@ -217,7 +217,7 @@ image n_rects3:
     pos (764, 490)
     size (30, 20)
 
-# Natsuki Closet CG
+# Natsuko Closet CG
 
 # Closet Background
 image n_cg2_bg:
