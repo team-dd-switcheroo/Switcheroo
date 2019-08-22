@@ -2264,7 +2264,7 @@ label ch3_y_med:
     if y_poemappeal[0] < 0 and y_poemappeal[1] < 0:
         jump ch3_y_bad12_shared
     elif y_poemappeal[0] < 1 or y_poemappeal[1] < 1:
-        show yuuri 6h at t11 zorder 
+        show yuuri 6h at t11 zorder 2
         y 6h "...I see." 
         y "I think you're improving at writing in general, [player]." 
         y "But I can't help but feel a little bit foolish."

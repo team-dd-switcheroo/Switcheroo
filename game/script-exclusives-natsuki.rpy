@@ -291,7 +291,7 @@ label natsuki_exclusive_1:
 
 label natsuki_exclusive_2:
     scene bg club_day
-    with wipeleft_screen
+    with wipeleft_scene
     play music t6 fadeout 1
     show natsuko 1l at t11
     n "Hey!"
