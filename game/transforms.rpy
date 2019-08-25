@@ -267,7 +267,15 @@ transform l11:
     leftin(640)
 
 # When MC opens his eyes to Sayori's face
-transform face(z=0.80, y=600):
+transform sface(z=0.80, y=600):
+    subpixel True
+    xcenter 640
+    yanchor 1.0 ypos 1.2
+    yoffset y
+    zoom z*2.00
+
+# Nat Version of Face
+transform nface(z=0.80, y=425):
     subpixel True
     xcenter 640
     yanchor 1.0 ypos 1.2

@@ -58,16 +58,16 @@ image menu_art_n:
     "/mod_assets/gui/menu_art_n.png"
     xcenter 750
     ycenter 385
-    zoom 0.58
-    menu_art_move(0.58, 750, 0.58)
+    zoom 0.50
+    menu_art_move(0.50, 750, 0.50)
 
 image menu_art_s:
     subpixel True
     "/mod_assets/gui/menu_art_s.png"
     xcenter 510
     ycenter 500
-    zoom 0.88
-    menu_art_move(0.68, 510, 0.68)
+    zoom 0.75
+    menu_art_move(0.75, 510, 0.75)
 
 image menu_art_m:
     subpixel True

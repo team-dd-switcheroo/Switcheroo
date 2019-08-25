@@ -642,7 +642,7 @@ label ch2_m_end:
     call showpoem(poem_m2)
     show mateo 1a
     "What the...?"
-    if y_readpoem:
+    if y_readpoem and (y_poemappeal[1] >= 0):
         "And I thought Yuuri's poem was weird."
     mc "It's, uh...even more abstract than your last one, huh?"
     m 1d "Are you not a fan of that style?"
@@ -674,18 +674,9 @@ label ch2_m_end:
     m 1l "...Ahaha!"
     m 1m "That's my advice for today!"
     m 1n "Thanks for listening!"
-    "What the hell kind of{nw}"
+    "What the hell kind of Truman Show bullsh{nw}"
     $ _history_list[-1].what = "What the hell kind of"
-    stop music fadeout 0.5
-    show black onlayer front:
-        alpha 0.0
-        0.25
-        linear 0.5 alpha 1.00
-    "What the hell kind of Truman Show bullshit...{w=0.5}{nw}"
     $ _history_list.pop()
-    window hide(None)
-    window auto
-    hide black onlayer front
     return
 label ch3_m_end:
     call showpoem(poem_m3)
@@ -1042,7 +1033,7 @@ label ch2_n_good:
             mc "No telling who my next victim will be!"
             show mateo 1l at t11
             "Mateo chuckles a bit."
-            show mateo 2x at f11
+            show mateo 1x at f11
             m "You know, they say sarcasm is a sign of a weak mind."
             show mateo 1w at t11
             mc "Well, tell me who 'they' are and I'll molest them too."
@@ -1064,6 +1055,7 @@ label ch2_n_good:
             "He must've seen me briefly look down at the poem."
             "Much to my embarrassment, Mateo indeed spots the poem on the floor and snatches it up."
             show mateo 1a at t11
+            $ n_poemearly = True
             "He reads through it, a smug grin creeping across his face."
             show mateo 4k at f11
             m "How sweet."
@@ -2464,24 +2456,33 @@ label ch1_m_start:
 label ch2_m_start:
     show mateo 1b at t11 zorder 2
     m "Hi again, [player]."
-    m "How's the writing going?"
-    mc "It's...ah..."
-    mc "It's going fine."
-    m 1k "Good. You're applying yourself."
-    m 1b "That's what matters."
-    mc "I'm trying."
-    m 6x "Let's see if trying is paying off."
-    m "Show me what you wrote for today."
-    mc "Sure. Here you go."
-    "I hand Mateo my poem."
-    $ nextscene = "m_" + poemwinner[1] + "_" + str(eval(poemwinner[1][0] + "_appeal"))
-    call expression nextscene
+    if n_poemearly:
+        $ n_poemearly = False
+        m 1v "I see you managed to tear yourself away from Natsuko for a few moments." 
+        m 1x "Glad to see you two are getting along so well."
+        m 1t "Anyway, since we've already gotten your poem out of the way, feel free to read mine." 
+        m 1b "I personally like the way it turned out." 
+        m "I'm sure you will, too."
+        "Yeah, right..."
+        return
+    else:    
+        m "How's the writing going?"
+        mc "It's...ah..."
+        mc "It's going fine."
+        m 1k "Good. You're applying yourself."
+        m 1b "That's what matters."
+        mc "I'm trying."
+        m 6x "Let's see if trying is paying off."
+        m "Show me what you wrote for today."
+        mc "Sure. Here you go."
+        "I hand Mateo my poem."
+        $ nextscene = "m_" + poemwinner[1] + "_" + str(eval(poemwinner[1][0] + "_appeal"))
+        call expression nextscene
 
-    m 6b "Anyway... are you ready to read my poem now?"
-    m 1b "I'm quite proud of how this one turned out."
-    mc "Sure, let's take a look."
-    return
-
+        m 6b "Anyway... are you ready to read my poem now?"
+        m 1b "I'm quite proud of how this one turned out."
+        mc "Sure, let's take a look."
+        return
     
 label ch3_m_start:
     show mateo 6b at t11

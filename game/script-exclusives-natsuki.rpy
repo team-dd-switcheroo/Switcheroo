@@ -517,10 +517,9 @@ label natsuki_exclusive_2:
     "I try to shield the back of my head with my hands." 
     "Ugh...my body definitely felt that one."
     scene bg closet
+    show natsuko 6v at nface
     with dissolve_cg
     "I slowly come to my senses."
-    show natsuko 6v at face
-    with open_eyes
     play music t8
     "I sit up, pressing my arm down into what I think at first to be the floor beneath me."
     n "Ghk!"
