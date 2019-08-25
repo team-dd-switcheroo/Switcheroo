@@ -1033,7 +1033,7 @@ label ch2_n_good:
             mc "No telling who my next victim will be!"
             show mateo 1l at t11
             "Mateo chuckles a bit."
-            show mateo 1x at f11
+            show mateo 6x at f11
             m "You know, they say sarcasm is a sign of a weak mind."
             show mateo 1w at t11
             mc "Well, tell me who 'they' are and I'll molest them too."
