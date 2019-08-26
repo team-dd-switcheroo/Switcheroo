@@ -693,7 +693,7 @@ label ch2_end:
     n "I wouldn't have wanted to read mine at all if we had to follow Mateo."
     show natsuko at t41
     show mateo at f42
-    m 1ad "How do you feel about having to do this in front of a group of strangers, Natsuko?"
+    m 1d "How do you feel about having to do this in front of a group of strangers, Natsuko?"
     show natsuko at f41
     show mateo at t42
     n 1q "Well...I think it'll be way easier than doing it in front of you guys."

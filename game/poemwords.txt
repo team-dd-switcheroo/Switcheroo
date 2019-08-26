@@ -272,4 +272,3 @@ moon,1,1,3
 vampire,1,1,3
 violet,1,2,3 
 arousal,2,2,3
-aristocrat,2,2,3
