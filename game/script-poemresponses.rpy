@@ -2059,7 +2059,7 @@ label ch2_y_bad:
         y 3j "It's important to find inspiration in everyone's styles."
         "I can tell he's less enthused about this poem."
         mc "So, if you had to compare it to yesterday's..."
-        y 6r "Yesterday's was a masterpiece! "
+        y 6r "Yesterday's was a masterpiece!"
         y 6p "..."
         "Yuuri blushes and swiftly turns away."
         y 6o "I-I'm sorry. This poem is good too... It's just..."
@@ -2083,7 +2083,6 @@ label ch2_y_bad:
         return
 
 label ch2_y_med:
-    #likes this one more than yesterday's, or the same amount
     if y_poemappeal[0] <= 0:
         show yuuri 1a at t11 zorder 2
         y 1a "Let's see what you've written for today."
@@ -2112,10 +2111,7 @@ label ch2_y_med:
         mc "Is this the poem you wrote for today?"
         "Yuuri nods and hands me his poem."
         return
-
-    #likes this one less
     else:
-        show yuuri 1a at t11 zorder 2
         y "Ah, is it my turn? Let's see how it compares to yesterday's..." 
         y 1u "Hm. I see." 
         y 1s "It's a bit different. I respect you for trying different things, [player]." 
@@ -2125,7 +2121,7 @@ label ch2_y_med:
         y 3j "It's important to find inspiration in everyone's styles."
         "I can tell he's less enthused about this poem."
         mc "So, if you had to compare it to yesterday's..."
-        y 6r "Yesterday's was a masterpiece! "
+        y 6r "Yesterday's was a masterpiece!"
         y 6p "..."
         "Yuuri blushes and swiftly turns away."
         y 6o "I-I'm sorry. This poem is good too... It's just..."
@@ -2151,7 +2147,6 @@ label ch2_y_med:
 label ch2_y_good:
     #likes this one more than yesterday
     if y_poemappeal[0] < 1:
-        show yuuri 1a at t11 zorder 2
         show yuuri 1b at t11
         y "Well done, [player]."
         y 1a "You've definitely improved your writing over the course of these few days."
