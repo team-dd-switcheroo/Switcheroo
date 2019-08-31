@@ -40,7 +40,7 @@ label sayori_exclusive_1:
     "I wonder what it'd be like to see the world through his eyes?..."
     scene bg club_day with open_eyes
     mc "Gah---!"
-    show satori 4aa at face
+    show satori 4aa at sface
     "I open my eyes to see Satori's face filling my vision."
     "I nearly fall out of my chair."
     show satori at h11

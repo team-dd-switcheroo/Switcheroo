@@ -60,7 +60,7 @@ label ch1_main:
     show yuuri at t31
     show yuuri zorder 1 at thide
     hide yuuri
-    show satori 1i at face with dissolve
+    show satori 1i at sface with dissolve
     "Satori suddenly leans into me and mutters into my ear."
     s "Stop sniffing the club members, you weirdo."
     "I give Satori a sniff and wrinkle my nose in distaste."
