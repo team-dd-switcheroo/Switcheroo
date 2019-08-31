@@ -674,8 +674,8 @@ label ch2_m_end:
     m 1l "...Ahaha!"
     m 1m "That's my advice for today!"
     m 1n "Thanks for listening!"
-    "What the hell kind of Truman Show bullsh{nw}"
-    $ _history_list[-1].what = "What the hell kind of"
+    "What the hell kind of Truman Show bulls-{nw}"
+    $ _history_list[-1].what = "What the hell kind of advice was that?"
     $ _history_list.pop()
     return
 label ch3_m_end:
