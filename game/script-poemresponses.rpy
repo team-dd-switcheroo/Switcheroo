@@ -2216,47 +2216,7 @@ label ch3_y_bad:
             "Maybe he'll approach me when he's feeling more confident."
             $ skip_poem = True
             return
-    else:
-        y 6h "...I see." 
-        y "I think you're improving at writing in general, [player]." 
-        y "But I can't help but feel a little bit foolish."
-        mc "Huh? What for?"
-        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
-        mc "Yuuri, that's a little..."
-        y 6r "Please. You don't understand." 
-        y 4h "I've spent so much time worrying about what's better and what's worse..."
-        y "Not just with you." 
-        y "But with Natsuko and Satori."
-        y 6v "It's obvious now why no one has fun when talking to me." 
-        y 6h "And because of that...I'll just keep my mouth shut about your poem."
-        "He walks back to his desk. That's not the first time I've seen him do that."
-        mc "It's never as bad as you make it sound in your head." 
-        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
-        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
-        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
-        mc "Gotten used to what? Reading deeply into things?"
-        y 6w "Being disliked."
-        mc "Yuuri..."
-        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
-        "Yuuri turns away from me."
-        y 6n "You should go. Please. I want to do some thinking."
-        mc "Are you sure?"
-        show yuuri 6v
-        "Yuuri nods."
-        mc "Alright."
-        hide yuuri
-        "I leave Yuuri be." 
-        "Comforting or reassuring him is nearly impossible as it is." 
-        "So when he wants to be left alone, I think anything I say will only make things worse." 
-        "I feel bad, but I'll wait until he's feeling a bit better."
-        $ skip_poem = True
-        return
-
-label ch3_y_med:
-    if y_poemappeal[0] < 0 and y_poemappeal[1] < 0:
-        jump ch3_y_bad12_shared
-    elif y_poemappeal[0] < 1 or y_poemappeal[1] < 1:
-        show yuuri 6h at t11 zorder 2
+    elif y_poemappeal[1] < 0 or y_poemappeal[0] < 0:
         y 6h "...I see." 
         y "I think you're improving at writing in general, [player]." 
         y "But I can't help but feel a little bit foolish."
@@ -2343,6 +2303,99 @@ label ch3_y_med:
         mc "Hehe...I don't think that's ever gonna be a problem, Yuuri!"
         mc "Anyway, ready to share your poem now?"
         y 1s "Yes. Here you go."
+        return
+
+label ch3_y_med:
+    if y_poemappeal[0] < 0 and y_poemappeal[1] < 0:
+        jump ch3_y_bad12_shared
+    elif y_poemappeal[0] < 1 or y_poemappeal[1] < 1:
+        show yuuri 1b at t11
+        y "Well done, [player]."
+        y 1a "You've definitely improved your writing over the course of these few days."
+        y "Has my advice been helpful to you?"
+        mc "Yeah, for sure!"
+        y 1c "I'm glad."
+        y "Sharing our writing like this is a lot more fun and rewarding than I anticipated."
+        y 1d "I need to remember to thank Mateo."
+        y 1u "I think we all felt a little awkward at first."
+        y 3b "But now, it seems like everyone is enjoying sharing their writing and seeing what others think."
+        mc "I agree."
+        mc "This isn't the dull spike to the forehead I thought it would be."
+        "At least I get to spend an hour after school every day hanging out with a room full of cute guys."
+        "That's my silver lining."
+        mc "It's actually fun trying something new and getting to know everyone through their writing."
+        y 1a "Well, you know how I like to say writing is a very personal way to get in touch with yourself?"
+        y "Let me ask you..."
+        y "Have you learned anything new about yourself, [player]?"
+        mc "I'm...I'm not sure..."
+        mc "I guess I haven't really stopped to think about it."
+        y 1c "You know, in the end, it doesn't even matter if you're a good writer or a bad writer."
+        y "The most important thing is exploring and discovering yourself."
+        mc "That's good to know."
+        mc "You know so much, I'm so afraid of disappointing you in some way or another."
+        mc "You're so sophisticated with your writing and have so much advice to share."
+        y 3q "Well, my opinions are just opinions."
+        "Yuuri thinks for a minute."
+        "He suddenly looks embarrassed."
+        y 6t "I do apologize if my opinion comes off as pretentious."
+        y "I haven't made you feel uncomfortable or intimidated, have I?"
+        y 6v "That would be awful if I did."
+        "Aw."
+        "He's so adorable when he thinks he did something wrong."
+        "Now I feel bad for my poor phrasing."
+        mc "You're fine, big guy!"
+        mc "I was just saying that I really respect your opinion."
+        mc "You're so knowledgeable."
+        mc "I've learned a lot from you."
+        y 6e "You have?"
+        y 6c "I'm so relieved to hear that."
+        y 1u "I'm sorry I jumped to that conclusion."
+        y 1t "I...I just don't want you to think I'm some condescending know-it-all."
+        mc "Ahaha! No!"
+        mc "Not at all!"
+        mc "I think you're really helpful and smart."
+        mc "I always learn something new from you."
+        y 1u "I'm glad."
+        y 1t "Please let me know if I ever come off as arrogant, or if I overstep my bounds."
+        mc "Hehe...I don't think that's ever gonna be a problem, Yuuri!"
+        mc "Anyway, ready to share your poem now?"
+        y 1s "Yes. Here you go."
+        return
+    else:
+        show yuuri 6h at t11 zorder 2
+        y 6h "...I see." 
+        y "I think you're improving at writing in general, [player]." 
+        y "But I can't help but feel a little bit foolish."
+        mc "Huh? What for?"
+        y 4t "It's just...I kept trying to offer advice...when it should have been clear to me that you prefer a different writing style. I probably just sounded arrogant. I'm so sorry."
+        mc "Yuuri, that's a little..."
+        y 6r "Please. You don't understand." 
+        y 4h "I've spent so much time worrying about what's better and what's worse..."
+        y "Not just with you." 
+        y "But with Natsuko and Satori."
+        y 6v "It's obvious now why no one has fun when talking to me." 
+        y 6h "And because of that...I'll just keep my mouth shut about your poem."
+        "He walks back to his desk. That's not the first time I've seen him do that."
+        mc "It's never as bad as you make it sound in your head." 
+        mc "I think if people didn't like talking to you, it would be a lot more obvious." 
+        mc "I know you like to read deeply into things. But some things are just worth taking at face value."
+        y 6t "I've just...gotten so used to it...that it's hard for me to comprehend any other possibility."
+        mc "Gotten used to what? Reading deeply into things?"
+        y 6w "Being disliked."
+        mc "Yuuri..."
+        y 6o "What am I saying? I'm sorry. I never meant to bring this up."
+        "Yuuri turns away from me."
+        y 6n "You should go. Please. I want to do some thinking."
+        mc "Are you sure?"
+        show yuuri 6v
+        "Yuuri nods."
+        mc "Alright."
+        hide yuuri
+        "I leave Yuuri be." 
+        "Comforting or reassuring him is nearly impossible as it is." 
+        "So when he wants to be left alone, I think anything I say will only make things worse." 
+        "I feel bad, but I'll wait until he's feeling a bit better."
+        $ skip_poem = True
         return
 
 label ch3_y_good:

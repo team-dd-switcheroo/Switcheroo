@@ -991,7 +991,7 @@ label ch3_end_monika:
         m "Do you have a preference, [player]?"
         "Natsuko.":
             call ch3_end_natsuki
-        "Yurri.":
+        "Yuuri.":
             call ch3_end_yuri
         "Satori..." if help_sayori == None:
             call ch3_end_sayori
@@ -1018,7 +1018,7 @@ label ch3_end_sayori:
         m "Just think of the club, okay?"
         "Natsuko.":
             call ch3_end_natsuki
-        "Yurri.":
+        "Yuuri.":
             call ch3_end_yuri
         "Mateo." if help_monika == None:
             call ch3_end_monika
