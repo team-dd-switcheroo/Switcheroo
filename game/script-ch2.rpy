@@ -362,6 +362,8 @@ label ch2_main:
 
 label ch2_end:
     stop music fadeout 2.0
+    scene bg club_day
+    with wipeleft_scene
     play music t3
     show mateo 6b at t11
     m "Alright, guys!"
