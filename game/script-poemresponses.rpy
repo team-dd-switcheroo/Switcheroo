@@ -833,6 +833,8 @@ label ch2_n_bad:
             n 7b "I'll be over here writing real poetry." 
             n "Hit me up when you're ready to take this seriously." 
             n 7y "Buh-bye now."
+            show natsuko at thide
+            hide natsuko
             "With that, Natsuko dismisses me." 
             "Whatever." 
             "At least he's not the one I was trying to impress in the first place."
