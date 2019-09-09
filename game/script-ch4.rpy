@@ -266,11 +266,12 @@ label ch4_main:
     s 11ad "I don't need THAT stuff."
     mc "They wouldn't have prescribed it if you didn't need it, Satori."
     s 15ah "Well I don't need it, alright?"
-    hide_satori
+    hide satori
+    with wipeleft
     "He snaps as he crosses his arms and leans against the wall, his back turned."
     s "I'm not taking it. Period."
     "I sigh and stand up." 
-    show satori at 11ad at t11
+    show satori 11ad at t11
     "I walk to the center of the room and stand near him."
     mc "You really need to reconsider that decision."
     s 17i "Yeah? And what makes you so sure of that?"
