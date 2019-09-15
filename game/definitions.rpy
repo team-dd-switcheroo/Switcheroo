@@ -3077,3 +3077,5 @@ default sayori_confess = True
 # We read Natsuki's third poem in Chapter 23
 default natsuki_23 = None
 
+default persistent.efuse = False
+

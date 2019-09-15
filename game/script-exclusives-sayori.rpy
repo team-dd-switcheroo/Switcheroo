@@ -201,6 +201,8 @@ label sayori_exclusive_1:
     mc "Yeah...likewise..."
     "I fail to sound enthusiastic as Satori jogs to his desk to retrieve his poem."
     show satori behind mateo at thide
+    $ persistent.clear[6] = True
+    $ renpy.save_persistent()
     return
 
 label sayori_exclusive_2:
@@ -597,4 +599,6 @@ label sayori_exclusive_2:
     show mateo 6b at t11 zorder 2
     m "Alright, guys! Are you ready to share your poems?"
     mc "Guess I should go grab mine."
+    $ persistent.clear[7] = True
+    $ renpy.save_persistent()
     return

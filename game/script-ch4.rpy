@@ -636,6 +636,13 @@ label ch4_end_yes:
     "If he takes my advice, I should notice any changes in his behavior by tomorrow." 
     "I hope he'll be back to his normal, cheerful self by then."
     "Either way, I'm willing to do whatever it takes to give Satori a happy life with me."
+    $ persistent.clear[8] = True
+    $ renpy.save_persistent()
+    # $ if all(clear for clear in persistent.clear): persistent.clearall = True
+    # if persistent.clearall:
+    #     $ persistent.efuse = True
+    # else:
+    #     $ persistent.efuse = False
     return
 
 label ch4_end_no:
@@ -1261,6 +1268,8 @@ label ch4_exclusive_natsuki:
     hide satori
     "Satori hurries past me." 
     "I struggle to keep up as we slip back into the house and head upstairs."
+    $ persistent.clear[4] = True
+    $ renpy.save_persistent()
     return
 
 label ch4_exclusive_yuri:
@@ -1937,4 +1946,6 @@ label ch4_exclusive_yuri:
     hide satori
     "Satori hurries past me." 
     "I struggle to keep up as we slip back into the house and head upstairs."
+    $ persistent.clear[5] = True
+    $ renpy.save_persistent()
     return

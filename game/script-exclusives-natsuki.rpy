@@ -287,6 +287,8 @@ label natsuki_exclusive_1:
     "But I suppose it's a necessary sacrifice to make in exchange for seeing Natsuko's enthusiastic face."
     "I stand up and return to where I left my stuff."
     "I slip the book into my bag."
+    $ persistent.clear[0] = True
+    $ renpy.save_persistent()
     return
 
 label natsuki_exclusive_2:
@@ -673,4 +675,6 @@ label natsuki_exclusive_2:
     show natsuko at thide
     hide natsuko
     "I return to my seat and put the book in my bag."
+    $ persistent.clear[1] = True
+    $ renpy.save_persistent()
     return

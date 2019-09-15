@@ -10,8 +10,5 @@ label ch5_main:
     mc 3f "I mean...how can you choose a favorite unless you get to know all of them?" 
     mc 5j "And I'm not just saying that because I like to flirt with them!"
     mc 2f "Okay, maybe a little, haha!"
-    $ persistent.playthrough = 1
-    mc 4h "Oh before you go..."
-    mc "Try loading a save from the menu once this ends."
     mc "Thanks for playing! We'll see you again soon!"
     return

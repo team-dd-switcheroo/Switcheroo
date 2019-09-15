@@ -279,6 +279,8 @@ label yuri_exclusive_1:
     hide yuuri
     "I stand up."
     "I make a mental note of where I left off in the book (which I will absolutely forget later) and slip it back into my bag."
+    $ persistent.clear[2] = True
+    $ renpy.save_persistent()
     return
 
 label yuri_exclusive_2:
@@ -644,4 +646,6 @@ label yuri_exclusive_2_ch3:
     "I get the feeling this is something neither of us will have the courage to bring up any time soon..."
     "I thrust my hand into the bag and pull out 4 more chocolates, stuffing them into my mouth in sheer frustration..."
     "...and also because I have no self control."
+    $ persistent.clear[3] = True
+    $ renpy.save_persistent()
     return
