@@ -234,22 +234,19 @@ image natsuko_bg_cg2_exp2:
 image natsuko_bg_cg2_exp3:
     "mod_assets/images/cg/natsuko_bg_cg2_exp3.png"
 
-# Natsuki Wall CG
-# Base Image with Background and Natsuki
+# Natsuko Wall CG
+# Cake on Face
 image n_cg3_base:
-    "images/cg/n_cg3_base.png"
-# Cake on Finger
-image n_cg3_cake:
-    "images/cg/n_cg3_cake.png"
-
-# Expressions
-
-# Laughing Natsuki
+    "mod_assets/images/cg/natsuko weekend_cg1.png"
+# Embaressed
 image n_cg3_exp1:
-    "images/cg/n_cg3_exp1.png"
-# Embarrassed Natsuki
+    "mod_assets/images/cg/natsuko weekend_cg2.png"
+# Smirk
 image n_cg3_exp2:
-    "images/cg/n_cg3_exp2.png"
+    "mod_assets/images/cg/natsuko weekend_cg3.png"
+# ...Thirsty?
+image n_cg3_exp3:
+    "mod_assets/images/cg/natsuko weekend_cg4.png"
 
 # Yuuri Readtime CG
 
@@ -279,13 +276,12 @@ image y_cg1_exp4:
 image y_cg1_exp5:
     "mod_assets/images/cg/yuuri_cg5.png"
 
-# Yuri MC Room CG
+# Yuuri MC Room CG
 image y_cg3_base:
-    "images/cg/y_cg3_base.png"
+    "mod_assets/images/cg/y_cg3_base.png"
 
-# Eyes Closed Yuri
 image y_cg3_exp1:
-    "images/cg/y_cg3_exp1.png"
+    "mod_assets/images/cg/y_cg3a_base.png"
 
 # Satori Blazer CG
 image s_cg1_base:
@@ -322,9 +318,15 @@ image s_cg2_exp3:
 image s_cg2_exp4:
     "mod_assets/images/cg/s_cg2_exp4.png"
 
-# Sayori Hug CG
-image s_cg3:
-    "images/cg/s_cg3.png"
+# Satori Hug CG
+image s_cg3_base:
+    "mod_assets/images/cg/satori weekend cg1.png"
+image s_cg3_exp1:
+    "mod_assets/images/cg/satori weekend cg2.png"
+image s_cg3_exp2:
+    "mod_assets/images/cg/satori weekend cg3.png"
+image s_cg3_exp3:
+    "mod_assets/images/cg/satori weekend cg4.png"
 
 # Sayori Suicide CG
 
