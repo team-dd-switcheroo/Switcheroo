@@ -717,6 +717,7 @@ label ch4_end_no:
     return
 
 label ch4_exclusive_natsuki:
+    stop music fadeout 2.0
     scene bg residential_day
     with wipeleft_scene
     play audio t6
@@ -833,7 +834,7 @@ label ch4_exclusive_natsuki:
     with wipeleft_scene
     "Before long, the entire kitchen is a mess." 
     "Spoons, dirty bowls, flour, spilled liquid and plastic bags are strewn about every counter top." 
-    "Of course, about 99% of the mess was made by me." 
+    "Of course, about 99\% of the mess was made by me." 
     "Turns out, I suck at baking and have exhausted Natsuko at every turn." 
     "The mixer wasn't big enough to mix all the batter at once, so we had to to do it several times." 
     "I've had my hand slapped with a wooden spoon at least two dozen times so far for trying to dip my finger in just about every bowl I can reach." 
@@ -968,12 +969,12 @@ label ch4_exclusive_natsuki:
     n "Once we put those donuts in the oven..." 
     n "..." 
     show n_cg3_exp3 at cgfade
-    n "We'll have, like, a good 12 minutes to do <i>whatever</i> you want."
+    n "We'll have, like, a good 12 minutes to do {i]whatever{/i} you want."
     mc "..."
     "Wait...what?"
     "Did he just..."
     "I stare at him in shocked silence."
-    "Okay...<i>I'm</i> not even sure what's going on right now." 
+    "Okay...{i}I'm{/i} not even sure what's going on right now." 
     "I mean, Natsuko has always been pretty forward, but this..."
     "I don't know how to respond to this."
     "My breathing becomes shallow and suddenly, I'm feeling a bit dizzy." 
@@ -1214,14 +1215,15 @@ label ch4_exclusive_natsuki:
     show natsuko at t11
     "Natsuko suddenly jumps back."
     n 12p "S-Satori!"
-    show satori 11i at t11
+    show natsuko at t21
+    show satori 11i at t22
     mc "...!"
     s 11j "Hey, [player]." 
     s 11at "Hey, Nat." 
     s 11i "What are you guys up to?"
     mc "Uh...nothing." 
     mc "We finished working for today and Natsu was just leaving."
-    show natsuko 12r at t11
+    show natsuko 12r at t21
     s 11au "He is?" 
     s 11at "Bummer. Sorry I didn't come sooner." 
     s "We could've all hung out."
@@ -1234,13 +1236,13 @@ label ch4_exclusive_natsuki:
     s 11at "So I guess we'll see you at the festival, yeah?"
     "I can't help but notice Satori is acting passive-aggressively forceful." 
     "Is he trying to drive Natsuko away?" 
-    show natsuko 10u at t11
+    show natsuko 10u at t21
     "Natsuko seems to pick up on it too." 
     "He looks at me briefly."
     n 10n "Yeah, well..." 
     n "I guess I'll see you tomorrow, then--..."
     s 11ac "Goodbye, Nat."
-    show natsuko 10m at t11
+    show natsuko 10m at t21
     "Satori cuts him short, staring Natsuko in the eye in an uncomfortably domineering way." 
     show natsuko at thide
     hide natsuko
@@ -1273,6 +1275,7 @@ label ch4_exclusive_natsuki:
     return
 
 label ch4_exclusive_yuri:
+    stop music fadeout 2.0
     scene bg residential_day
     with wipeleft_scene
     play audio t6
@@ -1744,7 +1747,7 @@ label ch4_exclusive_yuri:
     "..."
     "Wait...does that mean the paint he splattered on me is toxic?"
     "I don't have much time to question it as he begins gently dabbing my face with his end of the towel."
-    show y_cg3_base
+    scene y_cg3_base
     with dissolve_cg
     mc "Ah!"
     y "Is everything alright?"
@@ -1889,7 +1892,8 @@ label ch4_exclusive_yuri:
     "I don't have much time to think it over as Yuuri suddenly jumps back."
     y "S-Satori!"
     mc "Eh?"
-    show satori 11i at t11
+    show yuuri at t21
+    show satori 11i at t22
     s 11j "Hey, [player]." 
     s 11at "Hey, Yuuri." 
     s 11i "What are you guys up to?"
@@ -1906,12 +1910,12 @@ label ch4_exclusive_yuri:
     s 11at "So I guess we'll see you at the festival, yeah?"
     "I can't help but notice Satori is acting passive-aggressively forceful." 
     "Is he trying to drive Yuuri away?"
-    show yuuri 10o at t11 
+    show yuuri 10o at t21 
     "Yuuri seems to pick up on it too. He looks at me briefly."
     y 10j "Yes, well..." 
     y 10s "I'll see you tomorrow then--..."
     s 11ac "Goodbye, Yuuri."
-    show yuuri 10v at t11
+    show yuuri 10v at t21
     "Satori cuts him short, staring Yuuri in the eye in an uncomfortably domineering way." 
     show yuuri at thide
     hide yuuri
