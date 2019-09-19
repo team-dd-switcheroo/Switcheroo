@@ -42,12 +42,14 @@ init python:
     def restore_all_characters():
         try: renpy.file("../characters/mateo.chr")
         except: open(config.basedir + "/characters/mateo.chr", "wb").write(renpy.file("mateo.chr").read())
-        try: renpy.file("../characters/natsuki.chr")
+        try: renpy.file("../characters/natsuko.chr")
         except: open(config.basedir + "/characters/natsuko.chr", "wb").write(renpy.file("natsuko.chr").read())
-        try: renpy.file("../characters/yuri.chr")
+        try: renpy.file("../characters/yuuri.chr")
         except: open(config.basedir + "/characters/yuuri.chr", "wb").write(renpy.file("yuuri.chr").read())
-        try: renpy.file("../characters/sayori.chr")
+        try: renpy.file("../characters/satori.chr")
         except: open(config.basedir + "/characters/satori.chr", "wb").write(renpy.file("satori.chr").read())
+        try: renpy.file("../characters/femc.chr")
+        except: open(config.basedir + "/characters/femc.chr", "wb").write(renpy.file("femc.chr").read())
     
     # Restores Characters if their playthough matches current run.
     def restore_relevant_characters():
