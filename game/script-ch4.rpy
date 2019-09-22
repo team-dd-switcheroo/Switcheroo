@@ -466,7 +466,7 @@ label ch4_end:
     mc "Satori, don't say things like that!"
     s 13w "I can't help it, [player]!" 
     s 13an "The truth is..." 
-    s 13v "I...I love you." 
+    s 13v "I'm in love with you." 
     mc "..."
     s "Those are my true feelings." 
     s 15v "I've always loved you."
@@ -718,9 +718,9 @@ label ch4_end_no:
 
 label ch4_exclusive_natsuki:
     stop music fadeout 2.0
-    scene bg residential_day
+    scene bg house
     with wipeleft_scene
-    play audio t6
+    play music t6
     "I exit Satori's house." 
     "On the way home, I still find myself feeling uneasy." 
     "I try to focus my thoughts on Natsuko, convincing myself that tomorrow will be a better day for everyone, including Satori." 
@@ -969,7 +969,7 @@ label ch4_exclusive_natsuki:
     n "Once we put those donuts in the oven..." 
     n "..." 
     show n_cg3_exp3 at cgfade
-    n "We'll have, like, a good 12 minutes to do {i]whatever{/i} you want."
+    n "We'll have, like, a good 12 minutes to do {i}whatever{/i} you want."
     mc "..."
     "Wait...what?"
     "Did he just..."
@@ -1246,10 +1246,12 @@ label ch4_exclusive_natsuki:
     "Satori cuts him short, staring Natsuko in the eye in an uncomfortably domineering way." 
     show natsuko at thide
     hide natsuko
+    stop music fadeout 2.0
     "Natsuko nods obediently, gathers his bags and the Tupperware of donuts, then hurries off with his head down." 
     "What..." 
     "The hell..." 
-    "Was that about?" 
+    "Was that about?"
+    play music t6
     show satori 11g at t11
     "Satori suddenly turns to me and his expression instantly softens."
     mc "Satori...I, uh..."
@@ -1278,7 +1280,7 @@ label ch4_exclusive_yuri:
     stop music fadeout 2.0
     scene bg residential_day
     with wipeleft_scene
-    play audio t6
+    play music t6
     "I exit Satori's house." 
     "On the way home, I still find myself feeling uneasy." 
     "I try to focus my thoughts on Yuuri, convincing myself that tomorrow will be a better day for everyone, including Satori." 
@@ -1919,11 +1921,13 @@ label ch4_exclusive_yuri:
     "Satori cuts him short, staring Yuuri in the eye in an uncomfortably domineering way." 
     show yuuri at thide
     hide yuuri
+    stop music fadeout 2.0
     "Yuuri nods then hurries off with his head down." 
     "What..." 
     "The hell..." 
     "Was that about?" 
     show satori 11g at t11
+    play music t6
     "Satori suddenly turns to me and his expression instantly softens." 
     s "Hey."
     mc "Um...hey..."
