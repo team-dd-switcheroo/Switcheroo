@@ -471,7 +471,7 @@ label ch4_end:
     s "Those are my true feelings." 
     s 15v "I've always loved you."
     s 11aw "And...starting last year..."
-    s 11v "I realized...I'm in love with you." 
+    s 11v "I realized...I'm {i}in{/i} love with you." 
     s "I mean..."
     s 17v "We've been saying it to each other for years." 
     s "But I don't just say it to you because it's a thing to say."
