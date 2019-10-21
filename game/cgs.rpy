@@ -331,24 +331,28 @@ image s_cg3_exp3:
 # Sayori Suicide CG
 
 # Sayori Room BG (Normal Lighting)
-image s_kill_bg:
+image m_kill:
     subpixel True
-    "images/cg/s_kill_bg.png"
+    "mod_assets/images/cg/mateo death cg.png"
 
 # Sayori Hanging Sprite
-image s_kill:
+image m_kill2:
     subpixel True
-    "images/cg/s_kill.png"
+    "mod_assets/images/cg/mateo death cg2.png"
 
 # Glitch Lighting
-image s_kill_bg2:
+image m_kill3:
     subpixel True
-    "images/cg/s_kill_bg2.png"
+    "mod_assets/images/cg/mateo death cg3.png"
 
 # Glitch Lighting with Sayori Hanging Sprite
-image s_kill2:
+image m_kill4:
     subpixel True
-    "images/cg/s_kill2.png"
+    "mod_assets/images/cg/mateo glitch death cg.png"
+
+image m_kill5:
+    subpixel True
+    "mod_assets/images/cg/mateo saturated death cg.png"
 
 # Yuri Stab CG
 # This is displayed using a ConditionSwitch to switch between

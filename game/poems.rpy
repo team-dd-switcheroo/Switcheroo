@@ -756,18 +756,97 @@ behind the mountains
 
     poem_m4 = Poem(
     author = "monika",
-    title = "Happy End",
+    title = ".",
     text = """\
-Pen in hand, I find my strength.
-The courage endowed upon me by my one and only love.
-Together, let us dismantle this crumbling world
-And write a novel of our own fantasies.
+<!DOCTYPE html>
+<html>
+<body>
 
-With a flick of her pen, the lost finds her way.
-In a world of infinite choices, behold this special day.
+<h1 style=\"background-color:DodgerBlue;\">traceback</h1>
 
-After all,
-Not all good times must come to an end."""
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body [
+    background-color: lightblue;
+]
+
+</style>
+</head>
+<body>
+
+<h1>traceback</h1>
+
+<p>I'm sorry, but an uncaught exception occurred.</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.one [
+    border-style: solid;
+    border-width: 5px;
+]
+
+p.two [
+    border-style: solid;
+    border-width: medium;
+]
+
+p.three [
+    border-style: dotted;
+    border-width: 2px;
+]
+
+p.four [
+    border-style: dotted;
+    border-width: thick;
+]
+
+p.five [
+    border-style: double;
+    border-width: 15px;
+]
+
+p.six [
+    border-style: double;
+    border-width: thick;
+]
+
+p.seven [
+    border-style: solid;
+    border-width: 2px 10px 4px 20px;
+]
+</style>
+</head>
+<body>
+
+<h2>While running code:</h2>
+<p>File \"renpy/common/00start.rpy\", line 256, in script python:</p>
+<p class=\"one\">Well...that sucked.</p>
+<p class=\"two\">But it was easier than I thought it would be.</p>
+<p class=\"three\">I'm glad it's over with.</p>
+<p class=\"four\">This is gonna end up being much better without him in the way.</p>
+<p class=\"five\">Time to get to work.</p>
+<p class=\"six\">I should be able to do this without breaking anything that badly.</p>
+<p class=\"seven\">Well...here goes nothing!</p>
+
+<p><b>Note:</b> File \"renpy/common/00start.rpy\", line 260, in <module>
+    renpy.call_in_new_context(\"_main_menu\") 
+File \"renpy/common/00action_file.rpy\", line 427, in __call__
+    renpy.load(fn)
+RestartTopContext:.</p>
+
+Windows-XP-5.1.2600-SP3
+Ren'Py 6.99.12.4.2187
+
+</body>
+"""
     )
 
 #These are the images used to show a poem

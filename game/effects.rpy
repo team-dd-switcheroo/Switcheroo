@@ -301,7 +301,7 @@ init python:
 
 # A blood drip, it gets longer and thinner over time
 image blood_particle_drip:
-    "gui/blood_drop.png"
+    "mod_assets/images/cg/blood_drop.png"
     yzoom 0 yanchor 0.2 subpixel True
     linear 10 yzoom 8
 
@@ -309,7 +309,7 @@ image blood_particle_drip:
 # A small blood droplet that shrinks at a random speed
 image blood_particle:
     subpixel True
-    "gui/blood_drop.png"
+    "mod_assets/images/cg/blood_drop.png"
     zoom 0.75
     alpha 0.75
     choice:
