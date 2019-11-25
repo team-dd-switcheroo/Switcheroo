@@ -328,7 +328,7 @@ image s_cg3_exp2:
 image s_cg3_exp3:
     "mod_assets/images/cg/satori weekend cg4.png"
 
-# Sayori Suicide CG
+# Mateo Suicide CG
 
 # Sayori Room BG (Normal Lighting)
 image m_kill:
@@ -353,6 +353,67 @@ image m_kill4:
 image m_kill5:
     subpixel True
     "mod_assets/images/cg/mateo saturated death cg.png"
+
+# The One and Only Mateo CG I think
+image m_cg1_base:
+    "mod_assets/images/cg/mateo_cg1.png"
+
+image m_cg1_exp1:
+    "mod_assets/images/cg/mateo_cg2.png"
+
+image m_cg1_exp2:
+    "mod_assets/images/cg/mateo_cg3.png"
+
+image m_cg1_exp3:
+    "mod_assets/images/cg/mateo_cg4.png"
+
+image m_cg1_exp4:
+    "mod_assets/images/cg/mateo_cg5.png"
+
+image m_cg1_exp5:
+    "mod_assets/images/cg/mateo_cg6.png"
+
+image m_cg1_exp6:
+    "mod_assets/images/cg/mateo_cg7.png"
+
+image m_cg1_exp7:
+    "mod_assets/images/cg/mateo_cg8.png"
+
+image m_cg1_exp8:
+    "mod_assets/images/cg/mateo_cg9.png"
+
+image m_cg1_exp9:
+    "mod_assets/images/cg/mateo_cg10.png"
+
+# The actual death sequence
+image s_kill:
+    subpixel True
+    "mod_assets/images/cg/satori_death_cg.png"
+
+# Sayori Hanging Sprite
+image s_kill2:
+    subpixel True
+    "mod_assets/images/cg/satori_death_cg2.png"
+
+image s_kill3:
+    subpixel True
+    "mod_assets/images/cg/satori_death_cg3.png"
+
+image s_kill4:
+    subpixel True
+    "mod_assets/images/cg/satori_death_cg3_noise.png"
+
+image s_kill5:
+    subpixel True
+    "mod_assets/images/cg/satori_glitch1.png"
+    
+image s_kill6:
+    subpixel True
+    "mod_assets/images/cg/satori_glitch2.png"
+
+image s_kill7:
+    subpixel True
+    "mod_assets/images/cg/satori_saturated_death_cg.png"
 
 # Yuri Stab CG
 # This is displayed using a ConditionSwitch to switch between

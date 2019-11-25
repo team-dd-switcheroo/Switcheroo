@@ -638,11 +638,6 @@ label ch4_end_yes:
     "Either way, I'm willing to do whatever it takes to give Satori a happy life with me."
     $ persistent.clear[8] = True
     $ renpy.save_persistent()
-    # $ if all(clear for clear in persistent.clear): persistent.clearall = True
-    # if persistent.clearall:
-    #     $ persistent.efuse = True
-    # else:
-    #     $ persistent.efuse = False
     return
 
 label ch4_end_no:

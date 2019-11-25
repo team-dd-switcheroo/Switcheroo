@@ -56,7 +56,7 @@ label start:
         #     try: renpy.file(config.basedir + "/hxppy thxughts.png")
         #     except: open(config.basedir + "/hxppy thxughts.png", "wb").write(renpy.file("hxppy thxughts.png").read())
         $ chapter = 5
-        call ch5_main
+        call ch5_policy
 
         call endgame
         
@@ -75,3 +75,12 @@ label endgame(pause_length=4.0):
     pause pause_length
     $ quick_menu = True
     return
+
+label ch5_policy:
+    $ if all(clear for clear in persistent.clear): persistent.clearall = True
+    if persistent.clearall:
+        call ch5_main_special
+    else:
+        call ch5_main
+    return
+    

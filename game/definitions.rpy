@@ -151,6 +151,7 @@ image bg class_day = "bg/class.png" # The classroom BG
 image bg corridor = "bg/corridor.png" # The hallway BG
 image bg corridor2 = "mod_assets/images/bg/corridor2.png" # The hallway BG
 image bg club_day = "bg/club.png" # The club BG
+image bg club2_day = "mod_assets/images/bg/clubroom2.png" # Start of DDLC BG
 image bg club_day2: # Glitched Club BG
     choice:
         "bg club_day"
@@ -3434,7 +3435,7 @@ default persistent.ghost_menu = None
 default persistent.seen_ghost_menu = None
 default seen_eyes_this_chapter = False
 default persistent.anticheat = 0
-default persistent.clear = [False, False, False, False, False, False, False, False, False, False]
+default persistent.clear = [False, False, False, False, False, False, False, False, False]
 default persistent.special_poems = None
 default persistent.clearall = None
 default persistent.menu_bg_m = None
