@@ -1,3 +1,4 @@
 *.rpyc
 game/cache/*
 *.rpa
+Thumbs.db
