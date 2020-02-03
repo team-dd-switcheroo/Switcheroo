@@ -34,7 +34,7 @@ label ch21_main:
     u "Only way to know for sure is to test her out..."
     python:
         try: renpy.file(config.basedir + "/game/shut_up.txt")
-        except: open(config.basedir + "/game/shut_up.txt", "wb").write(renpy.file("shut_up.txt").read())+
+        except: open(config.basedir + "/game/shut_up.txt", "wb").write(renpy.file("shut_up.txt").read())
     scene bg residential_day
     with dissolve_scene_full
     $ style.say_window = style.window_monika
@@ -177,7 +177,7 @@ label ch21_main:
     "Natsu approaches a wooden door that has had the paint stripped away." 
     "It's the only door without a small window on it."
     "I follow as Natsu swings open the classroom door with a sickening creak."
-    play music #main music glitch
+    play music t2 #main music glitch
     scene bg clubroom
     with wipeleft_scene
     scene bg club2_act2_glitch3

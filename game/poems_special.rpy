@@ -28,14 +28,14 @@ image poem_end = ConditionSwitch(
 label poem_special_ar:
     $ quick_menu = False
     play sound page_turn
-    call showpoem(poem_ar) with Dissolve(1.0)
+    call showpoem(poem_ar)
     $ pause()
     $ quick_menu = True
     return
 label poem_special_an:
     $ quick_menu = False
     play sound page_turn
-    call showpoem(poem_an) with Dissolve(1.0)
+    call showpoem(poem_an)
     $ pause()
     $ quick_menu = True
     return
