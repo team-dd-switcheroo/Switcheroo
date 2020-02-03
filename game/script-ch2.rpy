@@ -812,7 +812,7 @@ label ch2_end:
     with wipeleft_scene
     $ ch2_winner = poemwinner[1].capitalize()
     if ch2_winner == "Sayori":
-        $ ch2_winner = "Mateo"
+        $ ch2_winner = "Yuuri"
     elif ch2_winner == "Natsuki":
         $ ch2_winner = "Natsuko"
     else:

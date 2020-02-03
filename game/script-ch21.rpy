@@ -65,7 +65,7 @@ label ch21_main:
     with wipeleft_scene
     u "Hey!"
     scene bg class2_act2
-    #play sound light_switch
+    play sound light_switch
     mc "Huh?"
     show natsuko 1l at t11
     $ n_name = "Boy 1"

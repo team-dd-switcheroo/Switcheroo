@@ -2531,10 +2531,6 @@ label ch2_m_start:
         "I hand Mateo my poem."
         $ nextscene = "m_" + poemwinner[1] + "_" + str(eval(poemwinner[1][0] + "_appeal"))
         call expression nextscene
-
-        m 6b "Anyway... are you ready to read my poem now?"
-        m 1b "I'm quite proud of how this one turned out."
-        mc "Sure, let's take a look."
         return
     
 label ch3_m_start:
@@ -2913,5 +2909,8 @@ label m_yuri_2:
     "He kind of whispers that last part." 
     "What a colossal jerk." 
     mc "Funny stuff."
-    m 1k "Ha! I thought so." 
+    m 1k "Ha! I thought so."
+    m 6b "Anyway... are you ready to read my poem now?"
+    m 1b "I'm quite proud of how this one turned out."
+    mc "Sure, let's take a look."
     return
