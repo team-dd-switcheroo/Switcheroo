@@ -182,6 +182,18 @@ image bg club_desks = "mod_assets/images/bg/club_desks.png"
 image bg Fmbedroom = "mod_assets/images/bg/femc_bedroom.png"
 image bg Fmbedroom2 = "mod_assets/images/bg/femc_bedroom2.png"
 
+# Act 2 Assets Per Day
+image bg class_act2 = "mod_assets/bg/class_act2.png"
+image bg class2_act2 = "mod_assets/bg/class2_act2.png"
+image bg act2_corridor = "mod_assets/bg/act2_corridor.png"
+image bg act2_stairs = "mod_assets/bg/act2_stairs.png"
+image bg act2_corridor2 = "mod_assets/bg/act2_corridor2.png"
+image bg club2_act2_glitch3 = "mod_assets/bg/club2_act2_glitch3.png"
+image bg club2_act2_glitch2 = "mod_assets/bg/club2_act2_glitch2.png"
+image bg club2_act2_glitch = "mod_assets/bg/club2_act2_glitch.png"
+image bg club_act2 = "mod_assets/bg/club_act2.png"
+image bg club_desks_act2 = "mod_assets/bg/club_desks_act2.png"
+
 image glitch_color:
     ytile 3
     zoom 2.5

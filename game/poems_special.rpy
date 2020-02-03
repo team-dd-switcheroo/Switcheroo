@@ -3,7 +3,7 @@
 # This defines the special poems that the player might be shown to the player
 # Only three poems are ever shown to the player, at random
 
-image poem_special1 = "poem_special/poem_special1.png" # Hxppy Thoughts
+image poem_specialar = "poem_special/poem_special1.png" # Hxppy Thoughts
 image poem_special2 = "poem_special/poem_special2.png" # Can You Hear Me?
 image poem_special3 = "poem_special/poem_special3.png" # Nothing is Real
 image poem_special4 = "poem_special/poem_special4.png" # Cutting Memento
@@ -25,19 +25,18 @@ image poem_end = ConditionSwitch(
     "True", "poem_special/poem_end.png")
 
 # All of these define a label for showing a poem
-label poem_special_1:
+label poem_special_ar:
     $ quick_menu = False
     play sound page_turn
-    show poem_special1 with Dissolve(1.0)
+    call showpoem(poem_ar) with Dissolve(1.0)
     $ pause()
     $ quick_menu = True
     return
-label poem_special_2:
+label poem_special_an:
     $ quick_menu = False
     play sound page_turn
-    show poem_special2 with Dissolve(1.0)
+    call showpoem(poem_an) with Dissolve(1.0)
     $ pause()
-    play sound "sfx/giggle.ogg"
     $ quick_menu = True
     return
 label poem_special_3:
