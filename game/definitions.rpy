@@ -85,8 +85,9 @@ init python:
 # <loop 22.073> - tells Ren'Py to loop the song at that time interval
 # "bgm/1.ogg" - location of your music
 define audio.t1 = "<to 138.026 loop 15.396 to 138.026>mod_assets/audio/main_theme.mp3" #Title theme
+define audio.t3g = "<to 138.026 loop 15.396 to 136.719>mod_assets/audio/main_theme.mp3" #Title theme wobbly section
 define audio.t2 = "<to 156.290 loop 0.026 to 78.290>mod_assets/audio/ohayou_satori.mp3" #Ohayou Satori!
-define audio.t2g = "bgm/2g.ogg" #Ohayou Satori! Wobbly Section
+define audio.t2g = "<to 156.290 loop 0.026 to 76.505>mod_assets/audio/ohayou_satori_glitch.mp3" #Ohayou Satori! Wobbly Section
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg" #Ohayou Satori! Rapid Glitch
 define audio.t2g3 = "<loop 4.492>bgm/2g2.ogg" #Ohayou Satori! Gradual Pitch Increase
 define audio.t3 = "<loop 0.027 to 56.024>mod_assets/audio/in_game_main_theme.mp3"   #Main theme (in-game theme)
@@ -135,6 +136,7 @@ define audio.door_knock = "mod_assets/audio/door_knock.wav"
 define audio.bap_half = "mod_assets/audio/bap_half.mp3"
 define audio.bap_full = "mod_assets/audio/bap_full.mp3"
 define audio.fire_alarm = "<loop 0>mod_assets/audio/fire_alarm.mp3"
+#define audio.light_switch = "mod_assets/audio/light_switch.mp3"
 
 # Backgrounds
 image black = "#000000"

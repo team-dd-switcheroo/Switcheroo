@@ -38,6 +38,7 @@ label ch21_main:
     scene bg residential_day
     with dissolve_scene_full
     $ style.say_window = style.window_monika
+    play music t2g
     call updateconsole("","New script file installed")
     "It's an ordinary school day, like any other."
     "Mornings are usually the worst, being surrounded by couples and friend groups walking to school together."
@@ -64,7 +65,7 @@ label ch21_main:
     with wipeleft_scene
     u "Hey!"
     scene bg class2_act2
-    play sound light_switch
+    #play sound light_switch
     mc "Huh?"
     show natsuko 1l at t11
     $ n_name = "Boy 1"
@@ -166,8 +167,8 @@ label ch21_main:
     n "Nah...people don't like coming up here because of the rumors."
     $ style.say_window = style.window_monika
     mc "...rumors?"
-    mc "What rumors?"
     $ style.say_window = style.window
+    mc "What rumors?"
     n 3d "Anyway...the clubroom is in here."
     $ style.say_window = style.window_monika
     mc "Okay, then."
@@ -177,7 +178,7 @@ label ch21_main:
     "Natsu approaches a wooden door that has had the paint stripped away." 
     "It's the only door without a small window on it."
     "I follow as Natsu swings open the classroom door with a sickening creak."
-    play music t2 #main music glitch
+    play music t3g #main music glitch
     scene bg clubroom
     with wipeleft_scene
     scene bg club2_act2_glitch3
