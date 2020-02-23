@@ -276,6 +276,32 @@ image y_cg1_exp4:
 image y_cg1_exp5:
     "mod_assets/images/cg/yuuri_cg5.png"
 
+# Act 2
+
+# Side-eye at MC/Camera
+image y_act2_day1_cg1:
+    "mod_assets/images/cg/y_act2_day1_cg1.png"
+
+# Smiling
+image y_act2_day1_cg2:
+    "mod_assets/images/cg/y_act2_day1_cg2.png"
+
+# Uh... Worried Yuuri
+image y_act2_day1_cg3:
+    "mod_assets/images/cg/y_act2_day1_cg3.png"
+
+# Ooh? Huh?
+image y_act2_day1_cg4:
+    "mod_assets/images/cg/y_act2_day1_cg4.png"
+
+# Blush Yuuri
+image y_act2_day1_cg5:
+    "mod_assets/images/cg/y_act2_day1_cg5.png"
+
+# Hide Blush Yuuri
+image y_act2_day1_cg6:
+    "mod_assets/images/cg/y_act2_day1_cg6.png"
+
 # Yuuri MC Room CG
 image y_cg3_base:
     "mod_assets/images/cg/y_cg3_base.png"

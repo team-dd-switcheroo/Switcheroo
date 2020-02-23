@@ -418,6 +418,38 @@ I'm up now.
 Time for breakfast."""
     )
 
+    poem_s21 = Poem(
+    author = "sayori",
+    title = "Insomnia",
+    text = """\
+It's way past dinner time
+Yet way too early for breakfast
+Not that it matters.
+I'm not hungry anyway
+I sit alone in the twilight 
+Tired and restless and empty
+There are no stars tonight.
+They're all hiding.
+Mother Moon must be out searching for her children.
+Because she's absent from the sky as well.
+Go to sleep?
+I wish.
+My mind won't settle down.
+I just want to dive into a sea of sleep 
+Where I can comfortably drown
+But I'm scared that I'll never wake up
+Forever trapped in an endless dream
+No one is there to help me
+No one is there to hear my screams
+What's the point in complaining, though?
+You don't care.
+I don't care.
+
+
+
+I'm not even supposed to be here."""
+    )
+
     poem_s2 = Poem(
     author = "sayori",
     title = "Sad Thoughts",

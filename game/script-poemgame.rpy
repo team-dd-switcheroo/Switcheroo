@@ -186,11 +186,11 @@ label poem(transition=True):
         if persistent.playthrough == 0:
             show s_sticker at sticker_left # Show's Sayori Chibi in Act 1
         show n_sticker at sticker_mid
-        if persistent.playthrough == 2 and chapter == 2:
+        if persistent.playthrough == 1 and chapter == 2:
             show y_sticker_cut at sticker_right
         else:
             show y_sticker at sticker_right
-        if persistent.playthrough == 2 and chapter == 2:
+        if persistent.playthrough == 1 and chapter == 2:
             show m_sticker at sticker_m_glitch
     if transition:
         with dissolve_scene_full
@@ -231,7 +231,7 @@ label poem(transition=True):
         # Main loop for drawing and selecting words
         while True:
             ystart = 160
-            if persistent.playthrough == 2 and chapter == 2:
+            if persistent.playthrough == 1 and chapter == 2:
                 pstring = "" # Broken progress for the last poem of Act 2
                 for i in range(progress):
                     pstring += "1"
@@ -252,7 +252,7 @@ label poem(transition=True):
                             elif random.randint(0, 4) == 0:
                                 s[k] = random.choice(nonunicode)
                         word = PoemWord("".join(s), 0, 0, 0, False)
-                    elif persistent.playthrough == 2 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
+                    elif persistent.playthrough == 1 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
                         word = PoemWord(glitchtext(80), 0, 0, 0, True) #1/400th chance for a glitched word in Chapter 2
                     else:
                         # Pick a word from the word list, without replacement
@@ -280,12 +280,12 @@ label poem(transition=True):
                         if t.yPoint >= 3:
                             renpy.show("y_sticker hop")
                     else:
-                        if persistent.playthrough == 2 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop")
+                        if persistent.playthrough == 1 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop")
                         elif t.nPoint > t.yPoint: renpy.show("n_sticker hop")
-                        elif persistent.playthrough == 2 and not persistent.seen_sticker and random.randint(0,100) == 0:
+                        elif persistent.playthrough == 1 and not persistent.seen_sticker and random.randint(0,100) == 0:
                             renpy.show("y_sticker hopg") # 1/100th chance for creepy yuri sticker in Act 2
                             persistent.seen_sticker = True
-                        elif persistent.playthrough == 2 and chapter == 2: renpy.show("y_sticker_cut hop")
+                        elif persistent.playthrough == 1 and chapter == 2: renpy.show("y_sticker_cut hop")
                         else: renpy.show("y_sticker hop")
             else:
                 r = random.randint(0, 10)
@@ -332,7 +332,16 @@ label poem(transition=True):
         # Poem winner always has a appeal of 1
         exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
 
+        if persistent.playthrough == 1: # Only Yuuri's path is done, so this bit of code forces the player onto it for error avoidance
+            s_poemappeal[chapter] = 0
+            n_poemappeal[chapter] = -1
+            y_poemappeal[chapter] = 1
+            y_appeal = 1
+            n_appeal = 0
+            s_appeal = 0
+
     #1/6th chance that we'll see the creepy Happy Thoughts picture after the game in Act 2
+    # NOTE: This won't actually appear since the playthrough variable for Act 2 is currently set to 1, and I don't know if this should appear in the mod
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
         $ seen_eyes_this_chapter = True
         $ quick_menu = False
