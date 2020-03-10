@@ -307,14 +307,14 @@ init python:
             renpy.image("satori 16"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1bl.png", (0, 0), "mod_assets/images/satori/2br.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
             renpy.image("satori 17"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/4bl.png", (0, 0), "mod_assets/images/satori/1br.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
             renpy.image("satori 18"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1bl.png", (0, 0), "mod_assets/images/satori/3br.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 19"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1cl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 20"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/4cl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 21"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/2cl.png", (0, 0), "mod_assets/images/satori/2cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 22"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/3cl.png", (0, 0), "mod_assets/images/satori/3cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 23"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/2cl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 24"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1cl.png", (0, 0), "mod_assets/images/satori/2cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 25"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/3cl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
-            renpy.image("satori 26"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1cl.png", (0, 0), "mod_assets/images/satori/3cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 19"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1bl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 20"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/4bl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 21"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/2bl.png", (0, 0), "mod_assets/images/satori/2cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 22"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/3bl.png", (0, 0), "mod_assets/images/satori/3cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 23"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/2bl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 24"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1bl.png", (0, 0), "mod_assets/images/satori/2cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 25"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/3bl.png", (0, 0), "mod_assets/images/satori/1cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
+            renpy.image("satori 26"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/satori/1bl.png", (0, 0), "mod_assets/images/satori/3cr.png", (0, 0), "mod_assets/images/satori/"+face+".png"))
 
     def DefineImagesNatsuko(faces):
         for i in faces:
