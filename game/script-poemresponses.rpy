@@ -2016,7 +2016,6 @@ label ch2_y_bad:
     #Dislikes both poems
     if y_poemappeal[0] < 0:
         show yuuri 7v at t11 zorder 2
-        y "CH1 Poem Appeal [y_poemappeal[0]]"
         y "...Um...are you still upset with me?"
         mc "Upset?"
         mc "Upset over what?"

@@ -23,8 +23,8 @@ label start:
     $ config.allow_skipping = True
 
     if persistent.playthrough == 0:
-
-        $ persistent.playthrough = 1
+        call cgtest
+        #$ persistent.playthrough = 1
 
         # $ chapter = 0
         # call ch0_main

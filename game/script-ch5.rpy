@@ -304,11 +304,11 @@ label ch5_main:
     window auto
     play music td
     show m_kill
-    show blood_eye zorder 3:
+    show blood_eye2 zorder 3:
         pos (758,516) zoom 2.5
     show m_kill as s_kill_bg at s_kill_bg_start
     $ pause(3.75)
-    hide blood_eye
+    hide blood_eye2
     show m_kill5 as s_kill
     $ pause(0.01)
     show m_kill4
@@ -579,7 +579,7 @@ label ch5_main_special:
     "I can't tell if he's looking at me..."
     "Or beyond me."
     "Either way is strange since we're the only ones in the class room."
-    m ai "Well...as alone as we can be..."
+    m 6ai "Well...as alone as we can be..."
     "I don't know why, but something about the way he said that sends a shiver down my spine."
     "Is...is there someone else here that I can't see?"
     "Hmm..."

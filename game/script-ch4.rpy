@@ -1194,7 +1194,7 @@ label ch4_exclusive_natsuki:
     n "I really didn't want to." 
     n "I would stay here all day if I could." 
     n "I feel the same way as you..."
-    show natsuko 12e at nface
+    show natsuko 12aae at nface
     "Natsuko steps closer." 
     "I may call him \"Shorty\" but in reality, we're almost the same height." 
     "At this point, his face has gotten very close to mine." 
@@ -1246,7 +1246,6 @@ label ch4_exclusive_natsuki:
     "What..." 
     "The hell..." 
     "Was that about?"
-    play music t6
     show satori 11g at t11
     "Satori suddenly turns to me and his expression instantly softens."
     mc "Satori...I, uh..."
@@ -1922,7 +1921,6 @@ label ch4_exclusive_yuri:
     "The hell..." 
     "Was that about?" 
     show satori 11g at t11
-    play music t6
     "Satori suddenly turns to me and his expression instantly softens." 
     s "Hey."
     mc "Um...hey..."

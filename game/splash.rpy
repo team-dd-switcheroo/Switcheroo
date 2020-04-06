@@ -119,6 +119,14 @@ image menu_art_s_glitch:
     zoom 0.68
     menu_art_move(.8, 470, .8)
 
+image menu_art_m_glitch:
+    subpixel True
+    "mod_assets/GUI/m_menu_sprite_ghost.png"
+    xcenter 470
+    ycenter 600
+    zoom 0.68
+    menu_art_move(.8, 470, .8)
+
 image menu_nav:
     "/mod_assets/gui/main_menu.png"
     menu_nav_move

@@ -857,7 +857,7 @@ label ch2_end:
             mc "And I'm not gonna take something that's our thing and do it with someone else."
             mc "I'm a better friend than that. Give me a little more credit."
             s 1y "You're silly, [player]."
-            s "Yuuri would deserve it if he wanted it, so..."
+            s "[ch2_winner] would deserve it if he wanted it, so..."
             mc "I'd like to think I decide who deserves to walk home with me, thank you."
             mc "And I've already made up my mind."
             s 10y "Hehe...Yeah. I guess you're right..."
