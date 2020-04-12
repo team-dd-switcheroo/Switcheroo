@@ -7,7 +7,7 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
 # Change this to True to enable Developer Mode
-define config.developer = True
+define config.developer = False
 
 python early:
     import singleton
@@ -190,9 +190,9 @@ image bg class2_act2 = "mod_assets/images/bg/class2_act2.png"
 image bg act2_corridor = "mod_assets/images/bg/act2_corridor.png"
 image bg act2_stairs = "mod_assets/images/bg/act2_stairs.png"
 image bg act2_corridor2 = "mod_assets/images/bg/act2_corridor2.png"
-image bg club2_act2_glitch3 = "mod_assets/images/bg/club2_act2_glitch3.png"
-image bg club2_act2_glitch2 = "mod_assets/images/bg/club2_act2_glitch2.png"
-image bg club2_act2_glitch = "mod_assets/images/bg/club2_act2_glitch.png"
+image bg club_act2_glitch3 = "mod_assets/images/bg/club_act2_glitch3.png"
+image bg club_act2_glitch2 = "mod_assets/images/bg/club_act2_glitch2.png"
+image bg club_act2_glitch = "mod_assets/images/bg/club_act2_glitch.png"
 image bg club_act2 = "mod_assets/images/bg/club_act2.png"
 image bg club_desks_act2 = "mod_assets/images/bg/club_desks_act2.png"
 

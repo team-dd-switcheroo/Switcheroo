@@ -295,7 +295,7 @@ label ch5_main:
     "I shrug."
     "Might as well leave the pamphlets in the room so Mateo can just fix and reprint them when he gets here."
     "Holding the heavy bag against my chest, I push open the door..."
-    # $ persistent.playthrough = 1
+    $ persistent.playthrough = 1
     # $ persistent.anticheat = renpy.random.randint(100000, 999999)
     # $ renpy.save_persistent()
     # $ delete_character("satori")
@@ -823,6 +823,11 @@ label ch5_main_special:
     "But I have no other choice." 
     "I gently open the door."
     mc "{cps=30}.......Sato--{/cps}{nw}"
+    $ persistent.playthrough = 1
+    # $ persistent.anticheat = renpy.random.randint(100000, 999999)
+    # $ renpy.save_persistent()
+    # $ delete_character("satori")
+    # $ in_sayori_kill = True
     play music td
     show s_kill
     show s_kill as s_kill_bg at s_kill_bg_start

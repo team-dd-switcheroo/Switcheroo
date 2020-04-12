@@ -24,7 +24,6 @@ label start:
 
     if persistent.playthrough == 0:
         call cgtest
-        #$ persistent.playthrough = 1
 
         # $ chapter = 0
         # call ch0_main
@@ -57,6 +56,8 @@ label start:
         #     except: open(config.basedir + "/hxppy thxughts.png", "wb").write(renpy.file("hxppy thxughts.png").read())
         # $ chapter = 5
         # call ch5_policy
+
+        call endgame
         
         return
 

@@ -181,7 +181,7 @@ label ch20_main:
     play music t3g #main music glitch
     scene bg club_day
     with wipeleft_scene
-    scene bg club2_act2_glitch3
+    scene bg club_act2_glitch3
     $ pause(0.01)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"

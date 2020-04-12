@@ -9,14 +9,14 @@
 
 # Feeding Yuuri Chocolate
 # This is the slowly fading background
-image y_cg2_bg:
-    "mod_assets/images/cg/y_cg2_bg1.png"
-    6.0
-    "mod_assets/images/cg/y_cg2_bg2.png" with Dissolve(1)
-    2
-    "mod_assets/images/cg/y_cg2_bg1.png" with Dissolve(1)
-    1
-    repeat
+# image y_cg2_bg:
+#     "mod_assets/images/cg/y_cg2_bg1.png"
+#     6.0
+#     "mod_assets/images/cg/y_cg2_bg2.png" with Dissolve(1)
+#     2
+#     "mod_assets/images/cg/y_cg2_bg1.png" with Dissolve(1)
+#     1
+#     repeat
 
 #Yuri's Face
 image y_cg2_base:

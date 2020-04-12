@@ -136,7 +136,8 @@ label ch21_end:
     stop music fadeout 2
     "Natsuko smirks and leans back in his chair, propping his feet up on the desk."
     n 1y "Oh? I didn't realize you were so invested in impressing our new member, Yuuri!"
-    play music t7a
+    play music t7
+    #play music t7a
     y 7n "---!" 
     y "I-I..." 
     y "You're just..."
@@ -162,7 +163,7 @@ label ch21_end:
     show satori at thide
     hide satori
 
-    queue music t7g
+    #queue music t7
     $ timeleft = 19.559 - get_pos()
     show noise zorder 3 at noisefade(25 + timeleft)
     show vignette as flicker zorder 4 at vignetteflicker(timeleft)
@@ -280,7 +281,8 @@ label ch21_end:
     hide vignette
     hide flicker
     hide screen choice
-    play music t7b
+    #play music t7b
+    play music t7
     show yuuri 6n
     show natsuko 6o
     "Suddenly, Yuuri turns towards me as if he just noticed I was sitting there."
