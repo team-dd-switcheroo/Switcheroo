@@ -202,6 +202,26 @@ image n_cg1_exp3:
 # Glitched Natsuki CG
 image n_cg1b = LiveComposite((1280,720), (0,0), "images/cg/n_cg1b.png", (882,325), "n_rects1", (732,400), "n_rects2", (850,475), "n_rects3")
 
+## Natsuko Reading Fiction Act 2
+
+image n_act2_cg1_bg:
+    "mod_assets/images/cg/n_cg1_bg_act2.png"
+
+image n_act2_cg1_exp1:
+    "mod_assets/images/cg/nat act11 day1 cg1.png"
+
+image n_act2_cg1_exp2:
+    "mod_assets/images/cg/nat act11 day1 cg2.png"
+
+image n_act2_cg1_exp3:
+    "mod_assets/images/cg/nat act11 day1 cg3.png"
+
+image n_act2_cg1_exp4:
+    "mod_assets/images/cg/nat act11 day1 cg4.png"
+
+image n_act2_cg1_exp5:
+    "mod_assets/images/cg/nat act11 day1 cg5.png"
+
 image n_rects1:
     RectCluster(Solid("#000"), 12, 30, 30).sm
     pos (899, 350)

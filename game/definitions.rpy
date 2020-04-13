@@ -137,6 +137,9 @@ define audio.bap_half = "mod_assets/audio/bap_half.mp3"
 define audio.bap_full = "mod_assets/audio/bap_full.mp3"
 define audio.fire_alarm = "<loop 0>mod_assets/audio/fire_alarm.mp3"
 define audio.light_switch = "mod_assets/audio/light_switch.wav"
+define audio.breathing_audio = "mod_assets/audio/creepy_breathing.mp3"
+define audio.giggle_audio = "mod_assets/audio/creepy_giggle.mp3"
+define audio.shrieking_audio = "mod_assets/audio/shrieking.wav"
 
 # Backgrounds
 image black = "#000000"
@@ -195,6 +198,14 @@ image bg club_act2_glitch2 = "mod_assets/images/bg/club_act2_glitch2.png"
 image bg club_act2_glitch = "mod_assets/images/bg/club_act2_glitch.png"
 image bg club_act2 = "mod_assets/images/bg/club_act2.png"
 image bg club_desks_act2 = "mod_assets/images/bg/club_desks_act2.png"
+image bg club_act2_dark = "mod_assets/images/bg/club_act2_dark.png"
+image bg club_act2_ghost_yuri1 = "mod_assets/images/bg/club_act2_ghost_yuri1.png"
+image bg club_act2_ghost_yuri2 = "mod_assets/images/bg/club_act2_ghost_yuri2.png"
+image bg club_act2_ghost_yuri3 = "mod_assets/images/bg/club_act2_ghost_yuri3.png"
+image bg club_act2_ghost_yuri4 = "mod_assets/images/bg/club_act2_ghost_yuri4.png"
+image bg club2_act2 = "mod_assets/images/bg/club2_act2.png"
+image bg club2_act2_bloodwall = "mod_assets/images/bg/club2_act2_bloodwall.png"
+image bg closet_act2 = "mod_assets/images/bg/closet_act2.png"
 
 image glitch_color:
     ytile 3
@@ -387,8 +398,9 @@ image satori glitch:
 
 # natsuko
 
-image natsuko scream = im.Composite((960, 960), (0, 0), "mod_assets/images/natsuko/1l.png", (0, 0), "mod_assets/images/natsuko/1r.png", (0, 0), "mod_assets/images/natsuko/scream.png")
-
+image natsuko scream = im.Composite((960, 960), (0, 0), "mod_assets/images/natsuko/3l.png", (0, 0), "mod_assets/images/natsuko/2r.png", (0, 0), "mod_assets/images/natsuko/scream.png")
+image natsuko glitcha = im.Composite((960, 960), (0, 0),"mod_assets/images/natsuko/natsuko_ghost_glitch.png")
+image natsuko glitchb = im.Composite((960, 960), (0, 0),"mod_assets/images/natsuko/natsuko_ghost_glitch2.png")
 image natsuko glitch:
     "mod_assets/images/natsuko/glitch1.png"
     pause 0.1

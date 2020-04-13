@@ -1,8 +1,8 @@
 
 label ch21_main:
+    stop music fadeout 2.0
     scene bg club_act2
     with dissolve_scene_half 
-
     play music t3
     show satori 1aac at t11
     s "Huh. You came back..."
@@ -162,14 +162,12 @@ label ch21_end:
     ny "MIND YOUR FUCKING BUSINESS!"
     show satori at thide
     hide satori
-
     #queue music t7
     $ timeleft = 19.559 - get_pos()
     show noise zorder 3 at noisefade(25 + timeleft)
     show vignette as flicker zorder 4 at vignetteflicker(timeleft)
     show vignette zorder 4 at vignettefade(timeleft)
     show layer master at layerflicker(timeleft)
-
     y 6r "Taking out your own insecurities on others like that...you really do act as young as you look, Natsuko!"
     n 6p "Me? Look who's talking, you pretentious dick-bag!"
     y "Pretentious?"
@@ -195,11 +193,10 @@ label ch21_end:
     y 7o "He just wants to make me look bad!" 
     n 7b "That's not true! He started it!"
     mc "..."
-    "WHAT THE HELL IS HAPPENING?{nw}"
-    "WHY DOES IT FEEL LIKE I'VE DONE THIS BEFORE?!{nw}"
-    "WHY DON'T I HAVE ANY CONTROL OVER WHAT I SAY OR DO?!{nw}"
-    "HOW COME SATORI DOESN'T REMEMBER ME?!{nw}"
-
+    "{cps=*2}WHAT THE HELL IS HAPPENING?{/cps}{nw}"
+    "{cps=*2}WHY DOES IT FEEL LIKE I'VE DONE THIS BEFORE?!{/cps}{nw}"
+    "{cps=*2}WHY DON'T I HAVE ANY CONTROL OVER WHAT I SAY OR DO?!{/cps}{nw}"
+    "{cps=*2}HOW COME SATORI DOESN'T REMEMBER ME?!{/cps}{nw}"
     $ menu_clicked = 0
     window hide(None)
     label ch21_end_menu:
@@ -262,20 +259,22 @@ label ch21_end:
     s "Hey, [player]..."
     show satori 1aaa onlayer front at i11
     $ renpy.display_menu(items=[('Natsuko.', True), ('Yuuri.', True)], interact=False, screen='choice')
-    m "I'm gonna go\nget a drink from\nthe vending machine..."
+    s "I'm gonna go\nget a drink from\nthe vending machine..."
     show satori 7aae onlayer front at i11
     $ renpy.display_menu(items=[('Natsuko.', True), ('Yuuri.', True)], interact=False, screen='choice')
-    m "You've got this,\nright?"
+    s "You've got this,\nright?"
     show satori onlayer front at thide
     hide satori onlayer front
-
-
-    #rewind_
-
-
+    "{cps=*2}HOW COME SATORI DOESN'T REMEMBER ME?!{/cps}{nw}"
+    "{cps=*2}WHY DON'T I HAVE ANY CONTROL OVER WHAT I SAY OR DO?!{/cps}{nw}"
+    "{cps=*2}WHY DOES IT FEEL LIKE I'VE DONE THIS BEFORE?!{/cps}{nw}"
+    "{cps=*2}WHAT THE HELL IS HAPPENING?{/cps}{nw}"
+    mc "{cps=*2}...{/cps}{nw}"
+    n 7b "{cps=*2}That's not true! He started it!{/cps}{nw}"
+    y 7o "{cps=*2}He just wants to make me look bad!{/cps}{nw}" 
+    y "{cps=*2}He-he's lying!{/cps}{nw}"
+    y 7p "{cps=*2}[player]!{/cps}{nw}"
     #resume_fight
-
-
     $ quick_menu = True
     hide noise
     hide vignette

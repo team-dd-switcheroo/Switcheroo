@@ -85,8 +85,6 @@ label poemresponse2_sayori:
         call expression nextscene
     return
 
-
-
 label ch21_s_start:
     show satori 7aac at t11
     s "So, [player]...having fun so far?"
@@ -129,13 +127,11 @@ label ch21_s_start:
     "I look away, embarrassed." 
     s 1aap "Well, whatever."
     s "Here's my poem."
-
     return
 
 label ch21_s_end:
     call showpoem(poem_s21)
-
-    show satori 1aac
+    show satori 1aac at t11
     s "So...what do you think?"
     $ style.say_window = style.window_monika
     mc "Um...It's very... freeform, if that's what you call it."
@@ -206,10 +202,7 @@ label ch21_s_end:
     s 4aah "Next time you write a poem, don't suck at it."
     s 7aac "That's my advice for today!"
     s 4aao "Now, get out of my face."
-
     return
-
-
 
 label ch21_y_good:
     show yuuri 1a at t11
@@ -259,8 +252,7 @@ label ch21_y_good:
 
 label ch21_y_end:
     call showpoem(poem_y1)
-
-    show yuuri 1a
+    show yuuri 1a at t11
     y "What are your thoughts?"
     mc "I really liked it."
     mc "I like the imagery and the atmosphere of it all."
@@ -281,8 +273,6 @@ label ch21_y_end:
     y 1d "I hope so." 
 
     return
-
-
 
 label ch21_n_bad:
     show natsuko 1g at t11
@@ -330,4 +320,73 @@ label ch21_n_end:
     "I'm not sure what he meant by that."
     "But if Natsuko is feeling proud, then I won't take that away from him."
 
+    return
+
+label ch21_n_good:
+    show natsuko 1a at t11
+    n 5k "..."
+    mc "..."
+    n 5h "What's with this?"
+    mc "...What do you mean?"
+    n 1d "Don't play dumb now." 
+    n 3y "This wasn't written by an amateur." 
+    n "It's too good." 
+    mc "Well, I appreciate that, but I wrote this myself." 
+    mc "And it's my first time writing a poem." 
+    "Unbelieving, Natsuko looks over my poem again." 
+    "He stares at me with a suspicious expression."
+    n 7a "Alright, then...beginner's luck." 
+    n 7d "Let's see if you can do it again tomorrow."
+    n 3l "Anyway, you can read my poem now."
+    n 1z "You might learn something from it."
+    return
+
+label ch21_y_bad:
+    show yuuri 1g at t11
+    y "...Hmm..."
+    "Yuuri stares at the poem." 
+    "A minute passes." 
+    "More than enough time for him to finish reading."
+    mc "Um..."
+    y 7n "--Oh!" 
+    y 7o "Ah... I'm sorry." 
+    y 7t "I promise I'm not ignoring you..."
+    mc "It's fine."
+    mc "Take your time." 
+    mc "Don't force yourself."
+    y 6h "I just..." 
+    y "I need some time to put my thoughts into words."
+    y 6g "Hold on..." 
+    y 6l "Alright."
+    y 1f "Is this your first time writing a poem?" 
+    mc "Uh, yeah. Yeah it is. It shows, right?"
+    y 1g "Yes, I'm afraid it does."
+    mc "Ah. So it's that bad huh?"
+    y 6v "No, no."
+    y 1v "It's not 'bad'...it's just..."
+    show yuuri 6g at t11
+    "Yuuri furrows his brows and bites down on his thumb, deep in thought once again." 
+    y 6m "Alright... So..."
+    y 4f "There are specific writing habits that are usually typical of new writers."
+    y 4h "Having been through that myself, I've learned how to pick up on them."
+    y 3k "See, new writers try to make their style more deliberate..."
+    y 3h "Often picking a subject matter different from the style and then just form-fitting them  together."
+    y 1k "The end result is that both the style and the expressiveness are weakened."
+    "Once Yuuri finds his train of thought, his demeanor does a complete 180." 
+    "His stammering disappears and he sounds more like a teacher than a student."
+    y 1f "Now this is not something you can be blamed for, of course."
+    y 3f "There are many techniques that can go into writing even a simple poem."
+    y 3k "Not just finding them and building them..."
+    y "But getting them to work together is probably the most challenging part."
+    y 3m "All of this comes with practice, learning from example and trying new things."
+    y 1a "It also helps that everyone else in the club gives you valuable feedback."
+    y 6h "Natsuko can be a bit biased though."
+    mc "Biased? How?"
+    y 6o "Ah..." 
+    y 6g "Well..."
+    y 4j "I suppose you'll see what I mean, eventually."
+    mc "Alright..."
+    mc "So how about I check out your poem now?" 
+    y 1c "Yes, of course!"
+    y 1d "I would love to share my thought process behind it."
     return
