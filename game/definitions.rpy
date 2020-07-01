@@ -206,6 +206,7 @@ image bg club_act2_ghost_yuri4 = "mod_assets/images/bg/club_act2_ghost_yuri4.png
 image bg club2_act2 = "mod_assets/images/bg/club2_act2.png"
 image bg club2_act2_bloodwall = "mod_assets/images/bg/club2_act2_bloodwall.png"
 image bg closet_act2 = "mod_assets/images/bg/closet_act2.png"
+image bg residential_act2 = "mod_assets/images/bg/residential_act2.png"
 
 image glitch_color:
     ytile 3

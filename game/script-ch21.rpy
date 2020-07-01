@@ -1,4 +1,9 @@
 
+init python:
+    def auto_hist(w):
+        while w != w:
+            _history_list.pop()
+
 label ch21_main:
     stop music fadeout 2.0
     scene bg club_act2
@@ -9,6 +14,7 @@ label ch21_main:
     $ style.say_window = style.window_monika
     mc "Yep."   
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "I told you I'm serious about this."
     mc "It might be a little strange for me, but at least I keep my word."
     show satori at thide
@@ -58,6 +64,7 @@ label ch21_main:
     $ style.say_window = style.window_monika
     y 1s "Discuss it..."
     $ style.say_window = style.window
+    $ _history_list.pop()
     y 1ar "If you wanted."
     "He smiles amorously."
     "I sigh."
@@ -193,6 +200,7 @@ label ch21_end:
     y 7o "He just wants to make me look bad!" 
     n 7b "That's not true! He started it!"
     mc "..."
+    $ style.say_dialogue = style.edited
     "{cps=*2}WHAT THE HELL IS HAPPENING?{/cps}{nw}"
     "{cps=*2}WHY DOES IT FEEL LIKE I'VE DONE THIS BEFORE?!{/cps}{nw}"
     "{cps=*2}WHY DON'T I HAVE ANY CONTROL OVER WHAT I SAY OR DO?!{/cps}{nw}"
@@ -284,6 +292,8 @@ label ch21_end:
     play music t7
     show yuuri 6n
     show natsuko 6o
+    $ style.say_dialogue = style.normal
+    $ auto_hist(13)
     "Suddenly, Yuuri turns towards me as if he just noticed I was sitting there."
     y 7p "[player]!"
     y "He-he's lying!"
@@ -310,11 +320,13 @@ label ch21_end:
     $ style.say_window = style.window_monika
     "Natsuko is so much smaller than Yuuri..."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "Hm..."
     "Maybe it's best for me to not witness that fight."
     $ style.say_window = style.window_monika
     "I decide to leave and wait outside, hoping for the best."
     $ style.say_window = style.window
+    $ _history_list.pop()
 
     stop music fadeout 2
     scene bg act2_corridor
@@ -329,6 +341,7 @@ label ch21_end:
     s "Why would I do that?"
     mc "Well...because...it's your job as President to diffuse any conflicts between club members."
     $ style.say_window = style.window
+    $ _history_list.pop()
     s 10aav "{i}Yawn.{/i}"
     s 1aao "Oh, please."
     s "I'm not gonna waste my time worrying about that crap until we get an actual room downstairs."
@@ -365,6 +378,7 @@ label ch21_end:
     "Or threatened to do to him."
     n 5n "I'm sorry I yelled at you, too, [player]."
     $ style.say_window = style.window
+    $ _history_list.pop()
     n "I shouldn't have done that..."
     n 5s "I don't know what's wrong with me today..."
     n 7u "Maybe it's...this room."
@@ -372,16 +386,19 @@ label ch21_end:
     $ style.say_window = style.window_monika
     n 7m "It feels so...angry in here..."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "I shiver a little."
     $ style.say_window = style.window_monika
     "I try to focus on the club and its members..."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "But there's a creepiness about this place."
     "Natsuko mentioned something about rumors yesterday that I haven't been able to get out of my head."
     $ style.say_window = style.window_monika
     "Part of me is curious to hear these rumors."
     "Another part of me, however..."
     $ style.say_window = style.window
+    $ _history_list.pop()
     show satori 7aao at t31
     s "Don't blame the room for your freak-out."
     show natsuko 7s
@@ -399,6 +416,7 @@ label ch21_end:
     $ style.say_window = style.window_monika
     s 7aav "Anyway, the club meeting is over."
     $ style.say_window = style.window
+    $ _history_list.pop()
     s 1aai "Both of you, scram."
     s "I've been wanting to be left alone all day."
     "Natsuko briefly looks at me like he wants to say something, but quickly changes his mind."
@@ -411,14 +429,17 @@ label ch21_end:
     $ style.say_window = style.window_monika
     "STOP.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "..."
     $ style.say_window = style.window_monika
     "I SAID STOP!!!{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     "I stop at the threshold for some reason."
     $ style.say_window = style.window_monika
     "WE HAVE TO TRY TO TALK TO HIM.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     "..."
     "..."
     $ style.say_window = style.window_monika
@@ -430,6 +451,7 @@ label ch21_end:
     hide screen tear
     "I turn to look at Satori."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "I'm not sure why, but I feel compelled to talk to him."
     "We probably should address his responsibilities as club President."
     mc "Satori..."
@@ -438,15 +460,18 @@ label ch21_end:
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "..."
     mc "...About the fight..."
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "I hate to say this...but you really should..."
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "...Remember me."
     s 1aam "...?"
     s 3aah "What?"
@@ -454,20 +479,24 @@ label ch21_end:
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "...Remember me."
     s 1aai "What on earth are you talking about?"
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "I mean...regardless of what room we're in, it's still your job to..."
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "...Remember me."
     mc "You have to..."
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "...Remember me."
     s 7aam "[player]...what's wrong with you???"
     mc "I don't mean to overstep my bounds, here..."
@@ -475,6 +504,7 @@ label ch21_end:
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "...Remember me."
     "He looks distressed all of a sudden..."
     s 1aax "Y-you're crazy..."
@@ -485,16 +515,19 @@ label ch21_end:
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME."
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "...Remember me!"
     s 1aay "..."
     mc "Do you hear me, Satori?"
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME."
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "Satori, remember me."
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "Satori, remember me."
     mc "Satori, remember me."
     mc "Satori, remember me."
@@ -520,16 +553,20 @@ label ch21_end:
     stop sound
     hide screen tear
     $ style.say_window = style.window
+    $ _history_list.pop()
+    mc "From Hanaka: In this section IDK which is caged_wolf or jjj so I made a rough guess to the example code you asked for."
+    mc "Let me know if it's not right. Check the game folder for this or report exceptions as always."
 
+    call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
+    if _return:
+        python:
+            try: renpy.file(config.basedir + "/game/caged_wolf.png")
+            except: open(config.basedir + "/game/mod_assets/images/poem_special/poem_special8_both.png", "wb").write(renpy.file("caged_wolf.png").read())
+        scene black with Dissolve(1.0)
+    else:
+        python:
+            try: renpy.file(config.basedir + "/game/jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.png")
+            except: open(config.basedir + "/game/mod_assets/images/poem_special/special_poem7_both.png", "wb").write(renpy.file("jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.png").read())
+        scene black with Dissolve(1.0)
+    
     return
-
-    #menu_poem_game
-
-
-
-
-    #poem_caged_wolf appears in game files
-
-    #_else_
-
-    #poem_jjjjjjjjjjjjjjjjjjjjjjjjjjjjj appears in game files

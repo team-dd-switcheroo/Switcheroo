@@ -18,6 +18,7 @@ label ch20_main:
     stop sound
     hide screen tear
     call hideconsole
+    scene black
     u "Whoops..."
     u "That wasn't right..."
     u "Man...I can't separate her from her memory without compromising her..."
@@ -41,9 +42,12 @@ label ch20_main:
     $ style.say_window = style.window_monika
     play music t2g
     call updateconsole("","New script file installed")
+    $ pause(0.25)
+    call hideconsole
     "It's an ordinary school day, like any other."
     "Mornings are usually the worst, being surrounded by couples and friend groups walking to school together."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "Meanwhile, I've always walked to school alone."
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -53,6 +57,7 @@ label ch20_main:
     $ style.say_window = style.window_monika
     "I always tell myself it's about time I meet some boys or something like that..."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "But I have no motivation to join any clubs."
     "I get detention too often anyway."
     "I'd never be able to attend club meetings with my record..."
@@ -139,6 +144,7 @@ label ch20_main:
     scene black
     with dissolve_scene_full
     $ style.say_window = style.window
+    $ _history_list.pop()
     "I timidly start going up the stairs, shutting the door behind me."
     "The hallway is incredibly narrow and dark."
     "There's no light anywhere."
@@ -169,11 +175,13 @@ label ch20_main:
     $ style.say_window = style.window_monika
     mc "...rumors?"
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "What rumors?"
     n 3d "Anyway...the clubroom is in here."
     $ style.say_window = style.window_monika
     mc "Okay, then."
     $ style.say_window = style.window
+    $ _history_list.pop()
     hide natsuko
     with dissolve
     "Natsu approaches a wooden door that has had the paint stripped away." 
@@ -186,24 +194,24 @@ label ch20_main:
     $ pause(0.01)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.2)
+    $ pause(0.1)
     stop sound
     hide screen tear
     scene bg club_act2_glitch2
     $ pause(0.01)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.2)
+    $ pause(0.1)
     stop sound
     hide screen tear
     scene bg club_act2_glitch
     $ pause(0.01)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    $ pause(0.2)
+    $ pause(0.1)
     stop sound
     hide screen tear
-    #screen_pop to be asked
+    $ _history_list.pop()
     scene bg club_act2
     show natsuko 5d at t31
     n "I'm back, guys!"
@@ -215,6 +223,7 @@ label ch20_main:
     s "Oh, great. A girl."
     s 7aao "Let the nagging begin."
     $ style.say_window = style.window_monika
+    $ style.say_dialogue = style.edited
     "{cps=150}SATORI!!!{/cps}{nw}"
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -223,6 +232,8 @@ label ch20_main:
     hide screen tear
     show satori 1aai
     $ style.say_window = style.window
+    $ style.say_dialogue = style.normal
+    $ _history_list.pop()
     n 7b "Satori, shut up."
     n "She was helping me with the supplies because you're useless."
     "All words escape me in this situation..."
@@ -257,8 +268,11 @@ label ch20_main:
     #glitch_head1
     s 1aak "Surely you have somewhere else to be right now..."
     $ style.say_window = style.window_monika
+    $ style.say_dialogue = style.edited
     "{cps=150}WHAT'S WRONG WITH YOU, SATORI!?{/cps}{nw}"
     $ style.say_window = style.window
+    $ style.say_dialogue = style.normal
+    $ _history_list.pop()
     mc "Actually, I was also invited to have a couple donuts."
     s 4aap "Is that so?"
     show natsuko 7c at t31
@@ -275,25 +289,29 @@ label ch20_main:
     "Satori shoots me one last contemptuous glare before taking a seat."
     "I wonder why he's so mad at me. I don't even know him."
     $ style.say_window = style.window_monika
+    $ style.say_dialogue = style.edited
     "{cps=150}THAT'S BULLSHIT! LET ME OUT OF HERE!!!!{/cps}{nw}"
-    $ style.say_window = style.window_monika
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
     $ pause(0.2)
     stop sound
     hide screen tear
     $ style.say_window = style.window
+    $ style.say_dialogue = style.normal
+    $ _history_list.pop()
     n 5a "You can just ignore him when he gets too moody."
     n "He's like that a lot."
     "Natsuko whispers this in my ear."
     n 3l "C'mon. The donuts are over here."
     show yuuri 1a at t11
     y "And while we're at it, how about I make some tea as well?"
+    hide yuuri
+    with dissolve
+    hide natsuko
+    with dissolve
     show bg club_desks_act2
     with wipeleft_scene
     "The guys have a few desks arranged to form a table."
-    show yuuri at thide
-    hide yuuri
     "Yuuri walks to the corner of the room and opens the closet."
     "Meanwhile, Satori and Natsuko sit across from each other."
     "Still feeling awkward around Satori, I take a seat next to Natsuko."
@@ -318,7 +336,7 @@ label ch20_main:
     s "Well, it's not exactly easy to try and convince people that literature is fun and worthwhile."
     n 5k "That's right. It's why we're looking forward to the festival."
     n 3k "It's gonna be our only chance to try and grow this club before we graduate. Right, Satori?"
-    s 1aat "I guess."
+    s 1aao "I guess."
     "Satori reluctantly agrees."
     "Such different guys, all interested in the same goal."
     "It must've been hard for them to start this club."
@@ -336,10 +354,12 @@ label ch20_main:
     $ style.say_window = style.window_monika
     "I'm kind of annoyed by Satori's attitude."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "I can't stand being talked down to."
     $ style.say_window = style.window_monika
     "But at the same time, I don't want to get Natsuko in trouble for inviting me here in the first place."
     $ style.say_window = style.window
+    $ _history_list.pop()
     "Satori may be a bit of a jerk, but he seems pretty passionate about literature."
     "I respect that."
     mc "Well, I'm not currently in any clubs."
@@ -354,8 +374,9 @@ label ch20_main:
     $ style.say_window = style.window_monika
     mc "Thanks, Satori."
     $ style.say_window = style.window
+    $ _history_list.pop()
     mc "I'll pay attention and take this meeting seriously."
-    s 7aat "Whatever..."
+    s 7aao "Whatever..."
     show yuuri 6a at t31
     show satori 1aan at t11
     "Yuuri returns with the tea set and places a cup in front of each of us."
@@ -393,6 +414,7 @@ label ch20_main:
     $ style.say_window = style.window_monika
     mc "And for your information, some games can tell one hell of a story."
     $ style.say_window = style.window
+    $ _history_list.pop()
     y 3j "Well, if a story makes me think or takes me to another world, then I really can't put it down, regardless of the genre."
     y 1a "What about you, [player]?"
     y "What do you like to read?" 
@@ -454,6 +476,7 @@ label ch20_main:
     show satori 3aao at t31
     s "Well, Yuuri, it sounds like maybe you should set an example for Natsuko and share your own poetry."
     s 1aai "That way, he'll be comfortable enough to share his." 
+    show yuuri 7ag at t11
     "Yuuri also blushes and turns away."
     mc "Looks like Yuuri feels the same way about sharing poems as Natsu."
     "We sit in silence for a moment."
@@ -527,7 +550,7 @@ label ch20_main:
     y 1y "You really did scare me for a moment..."
     s 7aas "Well, at least you didn't just come for the donuts."
     s 4aae "We can become an official club now."
-    s 1aat "So, thanks, I guess." 
+    s 1aao "So, thanks, I guess." 
     mc "Happy to help."
     s 4aaa "I suppose we can end this meeting on a good note."
     s 1aac "Remember tonight's assignment."
@@ -559,14 +582,22 @@ label ch20_main:
     show natsuko 1l at t11
     n "Alright! Thanks again, [player]."
     n 5z "You're a real life-saver! See you tomorrow!"
-    scene bg residential_day
+    scene bg residential_act2
     with dissolve_scene_full
     "With that, I depart the clubroom and make my way home."
     "The whole way, my mind wanders back and forth between the three guys:"
+    show natsuko 1a at t31
+    show yuuri 1ar at t32
+    show satori 1aac at t33
     "Natsuko, Yuuri, and even Satori."
     $ style.say_window = style.window_monika
+    hide natsuko
+    hide yuuri
+    hide satori
+    with dissolve
     "Will I really be happy spending every day after school in a literature club?"
     $ style.say_window = style.window
+    $ _history_list.pop()
     "Perhaps I'll have the chance to grow closer to one of these guys..."
     "Alright!"
     "I'll just need to make the most of my circumstances and I'm sure good fortune will find me."
@@ -577,7 +608,7 @@ label ch20_main:
     with dissolve_scene_full
     call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
     if _return:
-        call expression "poem_special_ar"
+        call expression "poem_special_arm"
         scene black with Dissolve(1.0)
     else:
         call expression "poem_special_an"
