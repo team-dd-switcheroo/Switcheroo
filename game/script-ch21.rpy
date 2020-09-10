@@ -1,9 +1,4 @@
 
-init python:
-    def auto_hist(w):
-        while w != w:
-            _history_list.pop()
-
 label ch21_main:
     stop music fadeout 2.0
     scene bg club_act2
@@ -11,10 +6,14 @@ label ch21_main:
     play music t3
     show satori 1aac at t11
     s "Huh. You came back..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     mc "Yep."   
     $ style.say_window = style.window
-    $ _history_list.pop()
     mc "I told you I'm serious about this."
     mc "It might be a little strange for me, but at least I keep my word."
     show satori at thide
@@ -61,10 +60,14 @@ label ch21_main:
     y 1j "I was hoping after you finished it..."
     y 1i "We could..."
     y 1u "You know..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     y 1s "Discuss it..."
     $ style.say_window = style.window
-    $ _history_list.pop()
     y 1ar "If you wanted."
     "He smiles amorously."
     "I sigh."
@@ -317,16 +320,24 @@ label ch21_end:
     n 6p "PLEASE LEAVE NOW!"
     "Natsuko is furious."
     "I'm nervous about leaving them alone."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "Natsuko is so much smaller than Yuuri..."
     $ style.say_window = style.window
-    $ _history_list.pop()
     "Hm..."
     "Maybe it's best for me to not witness that fight."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "I decide to leave and wait outside, hoping for the best."
     $ style.say_window = style.window
-    $ _history_list.pop()
 
     stop music fadeout 2
     scene bg act2_corridor
@@ -335,13 +346,32 @@ label ch21_end:
     show satori 7aau at t11
     s "So...are they still fighting?"
     "Satori casually takes a sip of apple juice."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "I'm a little shocked by how calmly he's reacting to this."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     mc "Satori, don't you think you should stop them?"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     s "Why would I do that?"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     mc "Well...because...it's your job as President to diffuse any conflicts between club members."
     $ style.say_window = style.window
-    $ _history_list.pop()
     s 10aav "{i}Yawn.{/i}"
     s 1aao "Oh, please."
     s "I'm not gonna waste my time worrying about that crap until we get an actual room downstairs."
@@ -374,31 +404,57 @@ label ch21_end:
     n 5m "But I swear, I would never actually do it..."
     mc "I believe you."
     "I have no idea what Natsuko might have said to Yuuri."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "Or threatened to do to him."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     n 5n "I'm sorry I yelled at you, too, [player]."
     $ style.say_window = style.window
-    $ _history_list.pop()
     n "I shouldn't have done that..."
     n 5s "I don't know what's wrong with me today..."
     n 7u "Maybe it's...this room."
     mc "This room?"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     n 7m "It feels so...angry in here..."
     $ style.say_window = style.window
-    $ _history_list.pop()
     "I shiver a little."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "I try to focus on the club and its members..."
     $ style.say_window = style.window
-    $ _history_list.pop()
     "But there's a creepiness about this place."
     "Natsuko mentioned something about rumors yesterday that I haven't been able to get out of my head."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "Part of me is curious to hear these rumors."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     "Another part of me, however..."
     $ style.say_window = style.window
-    $ _history_list.pop()
     show satori 7aao at t31
     s "Don't blame the room for your freak-out."
     show natsuko 7s
@@ -413,10 +469,14 @@ label ch21_end:
     n 7q "Yeah, I won't remember a thing."
     "Natsuko says this sarcastically, rolling his eyes."
     s 1aag "I wasn't talking to you..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     s 7aav "Anyway, the club meeting is over."
     $ style.say_window = style.window
-    $ _history_list.pop()
     s 1aai "Both of you, scram."
     s "I've been wanting to be left alone all day."
     "Natsuko briefly looks at me like he wants to say something, but quickly changes his mind."
@@ -426,22 +486,42 @@ label ch21_end:
     hide satori
     "He stoically grabs his stuff and heads for the door."
     "I start to follow."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "STOP.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "I SAID STOP!!!{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     "I stop at the threshold for some reason."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "WE HAVE TO TRY TO TALK TO HIM.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     "..."
     "..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "JUST DO IT.{nw}"
     show screen tear(20, 0.1, 0.1, 0, 40)
@@ -451,23 +531,37 @@ label ch21_end:
     hide screen tear
     "I turn to look at Satori."
     $ style.say_window = style.window
-    $ _history_list.pop()
     "I'm not sure why, but I feel compelled to talk to him."
     "We probably should address his responsibilities as club President."
     mc "Satori..."
     show satori 1aag at t11
     s "Hm? Why are you still here?"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "..."
     mc "...About the fight..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "I hate to say this...but you really should..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
@@ -476,23 +570,43 @@ label ch21_end:
     s 1aam "...?"
     s 3aah "What?"
     mc "I just...I think the club would really benefit if you would just..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "...Remember me."
     s 1aai "What on earth are you talking about?"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "I mean...regardless of what room we're in, it's still your job to..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "...Remember me."
     mc "You have to..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
@@ -501,6 +615,11 @@ label ch21_end:
     s 7aam "[player]...what's wrong with you???"
     mc "I don't mean to overstep my bounds, here..."
     mc "I just want you to..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
@@ -512,6 +631,11 @@ label ch21_end:
     mc "It's not as difficult as you're making it out to be!"
     mc "Please, Satori..."
     mc "Just..."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME."
     $ style.say_window = style.window
@@ -519,11 +643,21 @@ label ch21_end:
     mc "...Remember me!"
     s 1aay "..."
     mc "Do you hear me, Satori?"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME."
     $ style.say_window = style.window
     $ _history_list.pop()
     mc "Satori, remember me."
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     "SATORI. REMEMBER ME.{nw}"
     $ style.say_window = style.window
@@ -546,6 +680,11 @@ label ch21_end:
     mc "SATORI, REMEMBER ME!!!!!"
     $ gtext = glitchtext(100)
     mc "[gtext]"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
     $ style.say_window = style.window_monika
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -554,6 +693,7 @@ label ch21_end:
     hide screen tear
     $ style.say_window = style.window
     $ _history_list.pop()
+    $ pause(5.0)
     mc "From Hanaka: In this section IDK which is caged_wolf or jjj so I made a rough guess to the example code you asked for."
     mc "Let me know if it's not right. Check the game folder for this or report exceptions as always."
 
