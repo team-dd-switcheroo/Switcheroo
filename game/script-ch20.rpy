@@ -34,9 +34,9 @@ label ch20_main:
     u "Alright. Well, it may not be perfect, but it should work for now."
     u "At least I hope so."
     u "Only way to know for sure is to test her out..."
-    # python:
-    #     try: renpy.file(config.basedir + "/game/shut_up.txt")
-    #     except: open(config.basedir + "/game/shut_up.txt", "wb").write(renpy.file("shut_up.txt").read())
+    python:
+        try: renpy.file(config.basedir + "/shut_up.txt")
+        except: open(config.basedir + "/shut_up.txt", "wb").write(renpy.file("shut_up.txt").read())
     scene bg residential_day
     with dissolve_scene_full
     play music t2g

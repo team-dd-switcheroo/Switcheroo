@@ -694,19 +694,17 @@ label ch21_end:
     $ style.say_window = style.window
     $ _history_list.pop()
     $ pause(5.0)
-    mc "From Hanaka: In this section IDK which is caged_wolf or jjj so I made a rough guess to the example code you asked for."
-    mc "Let me know if it's not right. Check the game folder for this or report exceptions as always."
 
     call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
     if _return:
         python:
-            try: renpy.file(config.basedir + "/game/caged_wolf.png")
-            except: open(config.basedir + "/game/mod_assets/images/poem_special/poem_special8_both.png", "wb").write(renpy.file("caged_wolf.png").read())
+            try: renpy.file(config.basedir + "/caged_wolf.txt")
+            except: open(config.basedir + "/caged_wolf.txt", "wb").write(renpy.file("caged_wolf.txt").read())
         scene black with Dissolve(1.0)
     else:
         python:
-            try: renpy.file(config.basedir + "/game/jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.png")
-            except: open(config.basedir + "/game/mod_assets/images/poem_special/special_poem7_both.png", "wb").write(renpy.file("jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.png").read())
+            try: renpy.file(config.basedir + "/jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.png")
+            except: open(config.basedir + "/jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.txt", "wb").write(renpy.file("jjjjjjjjjjjjjjjjjjjjjjjjjjjjj.png").read())
         scene black with Dissolve(1.0)
     
     return
