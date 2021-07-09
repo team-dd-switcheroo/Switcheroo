@@ -25,7 +25,7 @@ label ch20_main:
     u "..."
     u "..."
     u "Let me try this..."
-    call updateconsole ("pip install femc_mute_program", "Successfully installed femc_mute_program-1.0")
+    call updateconsole ("pip install femc_mute_program", "Successfully installed femc_mute_program-1.0") # This clips out of the console!
     u "Ooh, that worked! Okay..."
     u "Now if I just..."
     call updateconsole ("pip install autopilot", "Successfully installed autopilot-1.0")
@@ -87,7 +87,7 @@ label ch20_main:
     show natsuko 1l at t11
     $ n_name = "Boy 1"
     n "Hi there!"
-    mc "Uh...Hi."
+    mc "Uh... Hi."
     "I don't recognize this guy, but his small stature makes me think he might be a first-year."
     "Whoever he is, he's kinda cute."
     mc "Are you looking for something?"
@@ -105,7 +105,7 @@ label ch20_main:
     "But just before he gets there, he stumbles, dropping everything."
     n 6x "Oh, come on!"
     "I immediately jump to my feet and run to help him."
-    n 1c "Man...it's not gonna be very fun to try and get this stuff back to the club."
+    n 1c "Man... it's not gonna be very fun to try and get this stuff back to the club."
     n 5as "I appreciate you helping me pick everything up, though."
     mc "No problem."
     mc "Where's your clubroom anyway?"
@@ -153,6 +153,10 @@ label ch20_main:
     $ style.say_window = style.window_monika
     mc "Of course."
     $ style.say_window = style.window
+    show natsuko at thide
+    hide natsuko
+    show black
+    with dissolve
     "I timidly start going up the stairs, shutting the door behind me."
     "The hallway is incredibly narrow and dark."
     "There's no light anywhere."
@@ -165,9 +169,10 @@ label ch20_main:
     n "But no one ever comes up here anyway."
     n "Besides, it's only temporary until a classroom downstairs becomes available."
     "I follow quietly, feeling uneasy."
-    show bg act2_corridor2
-    with dissolve_scene_full
     "Finally, we reach the top of the stairs."
+    show bg act2_corridor2
+    hide black
+    with dissolve_scene
     "I peer over the top of Natsu's head."
     "The corridor is dark and colorless."
     "The only real light source up here is a single blinking iridescent bulb; the illumination being so dull, it's only noticeable from the top of the stairs."
@@ -301,8 +306,8 @@ label ch20_main:
     $ pause(0.2)
     stop sound
     hide screen tear
-    mc "Actually, I was also invited to have a couple donuts."
     $ style.say_dialogue = style.normal
+    mc "Actually, I was also invited to have a couple donuts."
     s 4aap "Is that so?"
     show natsuko 7c at t31
     "Satori briefly glares at Natsuko."
@@ -330,9 +335,8 @@ label ch20_main:
     $ pause(0.2)
     stop sound
     hide screen tear
-    $ style.say_window = style.window
-    n 5a "You can just ignore him when he gets too moody."
     $ style.say_dialogue = style.normal
+    n 5a "You can just ignore him when he gets too moody."
     n "He's like that a lot."
     "Natsuko whispers this in my ear."
     n 3l "C'mon. The donuts are over here."
@@ -515,10 +519,10 @@ label ch20_main:
     mc "I think it's super impressive."
     mc "I'd love to read your poetry sometime."
     "Natsuko blushes and averts his eyes."
-    show natsuko at thide
-    hide natsuko
     n 7q "I-I don't know..."
     mc "Hm...not a very confident writer yet?"
+    show natsuko at thide
+    hide natsuko
     show yuuri 4h at t11
     y "Actually, I understand Natsuko's reluctance."
     y "Sharing one's writing takes more than just confidence."
@@ -533,6 +537,7 @@ label ch20_main:
     mc "Looks like Yuuri feels the same way about sharing poems as Natsu."
     "We sit in silence for a moment."
     s 5aak "I have an idea."
+    show satori 3aao at t31
     show yuuri 6e at t33
     show natsuko 5k at t32
     "Yuuri and Natsuko look quizzically at Satori."
@@ -659,7 +664,6 @@ label ch20_main:
     "Alright!"
     "I'll just need to make the most of my circumstances and I'm sure good fortune will find me."
     "And I guess that starts with writing a poem tonight..."
-
     stop music fadeout 1.0
     scene black
     with dissolve_scene_full

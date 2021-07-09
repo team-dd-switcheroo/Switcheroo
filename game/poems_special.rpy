@@ -105,4 +105,18 @@ label poem_special_11:
     $ pause()
     $ quick_menu = True
     return
+label poem_special_arm:
+    $ quick_menu = False
+    play sound page_turn
+    show poem_special_arm with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return
+label poem_special_an:
+    $ quick_menu = False
+    play sound page_turn
+    show poem_special_an with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
