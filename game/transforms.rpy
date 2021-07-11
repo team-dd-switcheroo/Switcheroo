@@ -290,6 +290,37 @@ transform yface(z=0.80, y=600):
     yoffset y
     zoom z*2.00
 
+# Heartbeat when FeMC is with yuuri in the closet
+transform heartbeat:
+    heartbeat2(1)
+
+transform heartbeat2(m):
+    truecenter
+    parallel:
+        0.144
+        zoom 1.00 + 0.07 * m
+        easein 0.250 zoom 1.00 + 0.04 * m
+        easeout 0.269 zoom 1.00 + 0.07 * m
+        zoom 1.00
+        1.479
+        repeat
+    parallel:
+        easeout_bounce 0.3 xalign 0.5 + 0.02 * m
+        easeout_bounce 0.3 xalign 0.5 - 0.02 * m
+        repeat
+
+# Close up yuuri face
+transform m_yface(z=0.80, y=600):
+    subpixel True
+    parallel:
+        ease 0.5 xcenter 640
+    parallel:
+        ease 0.5 yanchor 1.0 ypos 1.2
+    parallel:
+        ease 0.5 yoffset y
+    parallel:
+        ease 0.5 zoom (z*2.00)
+
 # Fade for a new CG
 transform cgfade:
     on show:

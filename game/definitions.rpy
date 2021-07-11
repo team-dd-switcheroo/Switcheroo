@@ -142,6 +142,7 @@ define audio.breathing_audio = "mod_assets/audio/creepy_breathing.ogg"
 define audio.giggle_audio = "mod_assets/audio/creepy_giggle.ogg"
 define audio.shrieking_audio = "mod_assets/audio/shrieking.ogg"
 define audio.scatter_books = "mod_assets/audio/scatter_books.ogg"
+define audio.growing_fire = "<loop 0>mod_assets/audio/growing_fire.ogg"
 
 # Backgrounds
 image black = "#000000"
@@ -290,6 +291,21 @@ image glitch_color2:
         alpha 0.7
         linear 0.45 alpha 0
 
+
+image c_veins:
+    "mod_assets/images/bg/veinmask.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask1.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask2.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask3.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask4.png"
+    pause 0.2
+    
+    repeat
+
 # Character Definitions
 
 # This is where the characters bodies and faces are defined.
@@ -419,6 +435,8 @@ image natsuko ghost_glitch:
     0.1
     "natsuko 7g"
 
+image natsuko fight = "mod_assets/images/natsuko/n_fight.png"
+
 # yuuri
 
 image yuuri glitch:
@@ -428,6 +446,8 @@ image yuuri glitch:
     pause 0.1
     "mod_assets/images/yuuri/glitch3.png"
     repeat
+
+image yuuri fight = "mod_assets/images/yuuri/y_fight.png"
 
 # Mateo the Douchebag
 

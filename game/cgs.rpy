@@ -322,6 +322,12 @@ image y_act2_day1_cg5:
 image y_act2_day1_cg6:
     "mod_assets/images/cg/y_act2_day1_cg6.png"
 
+# CGs for act2 day2 yuuri
+# If it's not init it doest work so pls don't change
+init python:    
+    for i in range(1,17):
+        renpy.image("yuuri_day2_act2_cg{}".format(i),"mod_assets/images/cg/yuuri_day2_act2_cg{}.png".format(i))
+
 # Yuuri MC Room CG
 image y_cg3_base:
     "mod_assets/images/cg/y_cg3_base.png"
