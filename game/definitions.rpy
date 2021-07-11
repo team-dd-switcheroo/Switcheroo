@@ -7,7 +7,7 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
 # Change this to True to enable Developer Mode
-define config.developer = False
+define config.developer = "Auto"  # Or True
 
 python early:
     import singleton
@@ -84,19 +84,19 @@ init python:
 # t1 - tells Ren'Py the label of the music/sound file
 # <loop 22.073> - tells Ren'Py to loop the song at that time interval
 # "bgm/1.ogg" - location of your music
-define audio.t1 = "<to 138.026 loop 15.396 to 138.026>mod_assets/audio/main_theme.mp3" #Title theme
-define audio.t1g = "<to 138.026 loop 15.396 to 136.719>mod_assets/audio/main_theme.mp3" #Title theme wobbly section
-define audio.t2 = "<to 156.290 loop 0.026 to 78.290>mod_assets/audio/ohayou_satori.mp3" #Ohayou Satori!
+define audio.t1 = "<to 138.026 loop 15.396 to 138.026>mod_assets/audio/main_theme.ogg" #Title theme
+define audio.t1g = "<to 138.026 loop 15.396 to 136.719>mod_assets/audio/main_theme.ogg" #Title theme wobbly section
+define audio.t2 = "<to 156.290 loop 0.026 to 78.290>mod_assets/audio/ohayou_satori.ogg" #Ohayou Satori!
 define audio.t2g = "<to 156.290 loop 0.026 to 76.505>mod_assets/audio/ohayou_satori_glitch.ogg" #Ohayou Satori! Wobbly Section
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg" #Ohayou Satori! Rapid Glitch
 define audio.t2g3 = "<loop 4.492>bgm/2g2.ogg" #Ohayou Satori! Gradual Pitch Increase
-define audio.t3 = "<loop 0.027 to 56.024>mod_assets/audio/in_game_main_theme.mp3"   #Main theme (in-game theme)
+define audio.t3 = "<loop 0.027 to 56.024>mod_assets/audio/in_game_main_theme.ogg"   #Main theme (in-game theme)
 define audio.t3g = "<loop 0 to 56.655>mod_assets/audio/in_game_main_theme_glitch.ogg"
 define audio.t3g2 = "<from 15.255 loop 4.618>bgm/3.ogg" 
 define audio.t3g3 = "<loop 4.618>bgm/3g2.ogg"
-define audio.t4 = "<loop 57.630>mod_assets/audio/poem_game.mp3"  #Poemgame
+define audio.t4 = "<loop 57.630>mod_assets/audio/poem_game.ogg"  #Poemgame
 define audio.t4g = "<loop 1.000>bgm/4g.ogg" #Static and Error
-define audio.t5 = "<loop 7.444>mod_assets/audio/okay_everyone.mp3"   #Okay Everyone!
+define audio.t5 = "<loop 7.444>mod_assets/audio/okay_everyone.ogg"   #Okay Everyone!
 
 # Doki Poem Theme
 define audio.tmateo = "<loop 4.444>bgm/5_monika.ogg" #Okay Everyone! (Mateo)
@@ -106,15 +106,16 @@ define audio.tyuuri = "<loop 4.444>bgm/5_yuri.ogg" #Okay Everyone! (Yuuri)
 
 define audio.t5b = "<loop 4.444>bgm/5.ogg"
 define audio.t5c = "<loop 4.444>bgm/5.ogg"
-define audio.t6 = "<loop 4.414>mod_assets/audio/play_with_me.mp3" #Play With Me
+define audio.t6 = "<loop 4.414>mod_assets/audio/play_with_me.ogg" #Play With Me
+define audio.t6_2 = "<loop 4.414>mod_assets/audio/play_with_me_2.ogg" #Play with me 2
 define audio.t6g = "<loop 10.893>bgm/6g.ogg"
 define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg"
 define audio.t6s = "<loop 43.572>bgm/6s.ogg"
-define audio.t7 = "<loop 3.898>mod_assets/audio/poem_panic.mp3" #Poem Panic!
-define audio.t7a = "<loop 11.761 to 19.559>mod_assets/audio/poem_panic.mp3"
-define audio.t7b = "<from 35.167 to 42.984 loop 35.169>mod_assets/audio/poem_panic.mp3"
+define audio.t7 = "<loop 3.898>mod_assets/audio/poem_panic.ogg" #Poem Panic!
+define audio.t7a = "<loop 11.761 to 19.559>mod_assets/audio/poem_panic.ogg"
+define audio.t7b = "<from 35.167 to 42.984 loop 35.169>mod_assets/audio/poem_panic.ogg"
 define audio.t7g = "<loop 46.055>mod_assets/audio/poem_panic_glitch.ogg"
-define audio.t8 = "<loop 8.324>mod_assets/audio/daijoubu.mp3" #Daijoubu
+define audio.t8 = "<loop 8.324>mod_assets/audio/daijoubu.ogg" #Daijoubu
 define audio.t9 = "<loop 3.172>bgm/9.ogg"   #My Feelings
 define audio.t9g = "<loop 1.532>bgm/9g.ogg" #207% speed (My Feelings)
 define audio.t10 = "<loop 5.861>bgm/10.ogg"   #Confession
@@ -132,14 +133,15 @@ define audio.hb = "<loop 0>bgm/heartbeat.ogg"
 define audio.closet_open = "sfx/closet-open.ogg"
 define audio.closet_close = "sfx/closet-close.ogg"
 define audio.page_turn = "sfx/pageflip.ogg"
-define audio.door_knock = "mod_assets/audio/door_knock.wav"
-define audio.bap_half = "mod_assets/audio/bap_half.mp3"
-define audio.bap_full = "mod_assets/audio/bap_full.mp3"
-define audio.fire_alarm = "<loop 0>mod_assets/audio/fire_alarm.mp3"
-define audio.light_switch = "mod_assets/audio/light_switch.wav"
-define audio.breathing_audio = "mod_assets/audio/creepy_breathing.mp3"
-define audio.giggle_audio = "mod_assets/audio/creepy_giggle.mp3"
-define audio.shrieking_audio = "mod_assets/audio/shrieking.wav"
+define audio.door_knock = "mod_assets/audio/door_knock.ogg"
+define audio.bap_half = "mod_assets/audio/bap_half.ogg"
+define audio.bap_full = "mod_assets/audio/bap_full.ogg"
+define audio.fire_alarm = "<loop 0>mod_assets/audio/fire_alarm.ogg"
+define audio.light_switch = "mod_assets/audio/light_switch.ogg"
+define audio.breathing_audio = "mod_assets/audio/creepy_breathing.ogg"
+define audio.giggle_audio = "mod_assets/audio/creepy_giggle.ogg"
+define audio.shrieking_audio = "mod_assets/audio/shrieking.ogg"
+define audio.scatter_books = "mod_assets/audio/scatter_books.ogg"
 
 # Backgrounds
 image black = "#000000"
@@ -382,9 +384,9 @@ init python:
             renpy.image("mateo 7"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/mateo/4.png", (-30, 14), "mod_assets/images/mateo/"+face+".png"))
 
     DefineImagesSatori(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aaa","aab","aac","aad","aae","aaf","aag","aah","aai","aaj","aak","aal","aam","aan","aao","aap","aaq","aar","aas","aat","aau","aav","aaw","aax","aay","aaz"])
-    DefineImagesNatsuko(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aae"])
-    DefineImagesYuuri(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","y1","y2","y3","y4","y5","y6","y7","y8"])
-    DefineImagesMateo(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az"])
+    DefineImagesNatsuko(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aae","aab","aac","aad"])
+    DefineImagesYuuri(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","y1","y2","y3","y4","y5","y6","y7","y8","aaa","aab","aac","aad","aae","aaf","aag","aah","aai","aaj","aak","aal","aam","aan","aao","aap","aaq","aar","aas","aat","aau","aav","aaw","aax","aay","aaz","at","au","av","aw","ax","ay","az","yandere10","yandere11","yandere12","yandere13","yandere14","yandere15","yandere16","yandere17","yandere18","yandere19","yandere20"])
+    DefineImagesMateo(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aaa","aab","aac","aad"])
 
 # Sayori's Definitions
 

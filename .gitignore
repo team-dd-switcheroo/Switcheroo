@@ -1,4 +1,7 @@
 *.rpyc
 game/cache/*
+game/saves/*
 *.rpa
 Thumbs.db
+log.txt
+traceback.txt

@@ -124,7 +124,7 @@ label ch2_main:
     s 5h "Nat...feed us..."
     show natsuko 6v at f42
     scene bg club_day
-    play sound "mod_assets/audio/stomp.mp3"
+    play sound "mod_assets/audio/stomp.ogg"
     show white zorder 4:
         alpha 0.6
         linear 0.25 alpha 0.0

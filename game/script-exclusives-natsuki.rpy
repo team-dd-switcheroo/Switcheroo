@@ -513,7 +513,7 @@ label natsuki_exclusive_2:
         linear 0.10 alpha 1
     $ pause(0.20)
     stop music
-    play sound "mod_assets/audio/fall3.wav"
+    play sound "mod_assets/audio/fall3.ogg"
     "The full force of my body throws Natsuko to the ground." 
     "A whole bunch of books pelt us in the face and head." 
     "I try to shield the back of my head with my hands." 

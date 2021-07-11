@@ -39,7 +39,7 @@ label ch0_main:
     scene bg kitchen
     show black zorder 2
     with dissolve_scene_full
-    play sound "mod_assets/audio/fall3.wav" #call variable
+    play sound "mod_assets/audio/fall3.ogg" #call variable
     "Before I know it, we collide and crash down the stairs."
     "Our book bags spill papers and books everywhere."
     "I land on top of Satori's back."
