@@ -480,7 +480,7 @@ screen navigation():
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
-            timer 1.75 action Start("autoload_yurikill")
+            timer 1.75 action Start("autoload_yuurikill")
 
 
 style navigation_button is gui_button
@@ -798,9 +798,9 @@ screen load():
 
 init python:
     def FileActionMod(name, page=None, **kwargs):
-        if persistent.playthrough == 1 and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
-            return Show(screen="dialog", message="Nice try, but there's no turning back now...", ok_action=Hide("dialog"))
-        elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
+        # if persistent.playthrough == 1 and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):            Why is this here?
+        #     return Show(screen="dialog", message="Nice try, but there's no turning back now...", ok_action=Hide("dialog"))
+        if persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
             return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
         else:
             return FileAction(name)

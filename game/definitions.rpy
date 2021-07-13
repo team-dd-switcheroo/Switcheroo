@@ -96,7 +96,9 @@ define audio.t3g2 = "<from 15.255 loop 4.618>bgm/3.ogg"
 define audio.t3g3 = "<loop 4.618>bgm/3g2.ogg"
 define audio.t4 = "<loop 57.630>mod_assets/audio/poem_game.ogg"  #Poemgame
 define audio.t4g = "<loop 1.000>bgm/4g.ogg" #Static and Error
-define audio.t5 = "<loop 7.444>mod_assets/audio/okay_everyone.ogg"   #Okay Everyone!
+define audio.t5 = "<loop 7.444>mod_assets/audio/okay_everyone.ogg" 
+define audio.t5_2 = "<loop 7.444>mod_assets/audio/okay_everyone_2.ogg"  #Okay Everyone!
+
 
 # Doki Poem Theme
 define audio.tmateo = "<loop 4.444>bgm/5_monika.ogg" #Okay Everyone! (Mateo)
@@ -108,6 +110,7 @@ define audio.t5b = "<loop 4.444>bgm/5.ogg"
 define audio.t5c = "<loop 4.444>bgm/5.ogg"
 define audio.t6 = "<loop 4.414>mod_assets/audio/play_with_me.ogg" #Play With Me
 define audio.t6_2 = "<loop 4.414>mod_assets/audio/play_with_me_2.ogg" #Play with me 2
+define audio.t6_2f = "<loop 4.414>mod_assets/audio/play_with_me_2_fast.ogg" #Play with me 2 sped-up 1.5 times
 define audio.t6g = "<loop 10.893>bgm/6g.ogg"
 define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg"
 define audio.t6s = "<loop 43.572>bgm/6s.ogg"
@@ -119,7 +122,7 @@ define audio.t8 = "<loop 8.324>mod_assets/audio/daijoubu.ogg" #Daijoubu
 define audio.t9 = "<loop 3.172>bgm/9.ogg"   #My Feelings
 define audio.t9g = "<loop 1.532>bgm/9g.ogg" #207% speed (My Feelings)
 define audio.t10 = "<loop 5.861>bgm/10.ogg"   #Confession
-define audio.t10y = "<loop 0>bgm/10-yuuri.ogg" #Yuri Confession
+define audio.t10y = "<loop 0>mod_assets/audio/my_confession_2.ogg" #Yuri Confession
 define audio.td = "<loop 36.782>bgm/d.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg" # Just Monika. - Just Monika.
@@ -142,6 +145,10 @@ define audio.breathing_audio = "mod_assets/audio/creepy_breathing.ogg"
 define audio.giggle_audio = "mod_assets/audio/creepy_giggle.ogg"
 define audio.shrieking_audio = "mod_assets/audio/shrieking.ogg"
 define audio.scatter_books = "mod_assets/audio/scatter_books.ogg"
+define audio.growing_fire = "<loop 0>mod_assets/audio/growing_fire.ogg"
+define audio.tearing_flesh = "mod_assets/audio/tearing_flesh.ogg"
+define audio.stab = "<from 4 to 5>sfx/stab.ogg"
+define audio.fall = "sfx/fall.ogg"
 
 # Backgrounds
 image black = "#000000"
@@ -209,6 +216,38 @@ image bg club2_act2 = "mod_assets/images/bg/club2_act2.png"
 image bg club2_act2_bloodwall = "mod_assets/images/bg/club2_act2_bloodwall.png"
 image bg closet_act2 = "mod_assets/images/bg/closet_act2.png"
 image bg residential_act2 = "mod_assets/images/bg/residential_act2.png"
+
+image splash_glitch_alt:
+
+    parallel:
+        choice:
+            "mod_assets/images/cg/splash-glitch.png"
+        choice:
+            "mod_assets/images/cg/splash-glitch2.png"
+    choice:
+        pause 0.07
+    choice:
+        pause 0.1
+    choice:
+        0.003
+    choice:
+        0.3
+
+    repeat
+
+# Yuri ghost with transparency
+image yuri_ghost_img = "mod_assets/images/bg/club_act2_ghost_yuri_trns.png"
+image yuri_ghost_bg = "mod_assets/images/bg/club_act2_ghost_yuri2_trns.png"
+
+screen yuri_ghost:
+    zorder 200
+    add "yuri_ghost_img" at slow_appear
+
+
+transform slow_appear:
+    alpha 0.0
+    easeout 30 alpha 1.0
+
 
 image glitch_color:
     ytile 3
@@ -289,6 +328,37 @@ image glitch_color2:
     parallel:
         alpha 0.7
         linear 0.45 alpha 0
+
+image flames:
+    "mod_assets/images/yuuri_fire/Fire_1.png"
+    0.3
+    "mod_assets/images/yuuri_fire/Fire_2.png"
+    0.3
+    "mod_assets/images/yuuri_fire/Fire_3.png"
+    0.3
+    "mod_assets/images/yuuri_fire/Fire_4.png"
+    0.3
+    "mod_assets/images/yuuri_fire/Fire_5.png"
+    0.3
+    "mod_assets/images/yuuri_fire/Fire_6.png"
+    0.3
+    "mod_assets/images/yuuri_fire/Fire_7.png"
+    0.3
+    repeat
+
+image flames_mask:
+    "mod_assets/images/bg/veinmask.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask1.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask2.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask3.png"
+    pause 0.2
+    "mod_assets/images/bg/veinmask4.png"
+    pause 0.2
+    
+    repeat
 
 # Character Definitions
 
@@ -384,7 +454,7 @@ init python:
             renpy.image("mateo 7"+i,im.Composite((960, 960), (0, 0), "mod_assets/images/mateo/4.png", (-30, 14), "mod_assets/images/mateo/"+face+".png"))
 
     DefineImagesSatori(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aaa","aab","aac","aad","aae","aaf","aag","aah","aai","aaj","aak","aal","aam","aan","aao","aap","aaq","aar","aas","aat","aau","aav","aaw","aax","aay","aaz"])
-    DefineImagesNatsuko(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aae","aab","aac","aad"])
+    DefineImagesNatsuko(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aaa", "aae","aab","aac","aad"])
     DefineImagesYuuri(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","y1","y2","y3","y4","y5","y6","y7","y8","aaa","aab","aac","aad","aae","aaf","aag","aah","aai","aaj","aak","aal","aam","aan","aao","aap","aaq","aar","aas","aat","aau","aav","aaw","aax","aay","aaz","at","au","av","aw","ax","ay","az","yandere10","yandere11","yandere12","yandere13","yandere14","yandere15","yandere16","yandere17","yandere18","yandere19","yandere20"])
     DefineImagesMateo(["","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq","ar","as","at","au","av","aw","ax","ay","az","aaa","aab","aac","aad"])
 
@@ -402,6 +472,8 @@ image satori glitch:
 # natsuko
 
 image natsuko scream = im.Composite((960, 960), (0, 0), "mod_assets/images/natsuko/3l.png", (0, 0), "mod_assets/images/natsuko/2r.png", (0, 0), "mod_assets/images/natsuko/scream.png")
+image natsuko scream_blood1 = im.Composite((960, 960), (0, 0), "mod_assets/images/natsuko/3l.png", (0, 0), "mod_assets/images/natsuko/2r.png", (0, 0), "mod_assets/images/natsuko/scream_blood.png")
+image natsuko scream_blood2 = im.Composite((960, 960), (0, 0), "mod_assets/images/natsuko/3l.png", (0, 0), "mod_assets/images/natsuko/2r.png", (0, 0), "mod_assets/images/natsuko/scream_blood2.png")
 image natsuko glitcha = im.Composite((960, 960), (0, 0),"mod_assets/images/natsuko/natsuko_ghost_glitch.png")
 image natsuko glitchb = im.Composite((960, 960), (0, 0),"mod_assets/images/natsuko/natsuko_ghost_glitch2.png")
 image natsuko glitch:
@@ -419,6 +491,59 @@ image natsuko ghost_glitch:
     0.1
     "natsuko 7g"
 
+image natsuko fight = "mod_assets/images/natsuko/n_fight.png"
+
+    ##############################################
+    ############ Natsuko fucking dies ############
+    ##############################################
+
+
+image bleed:
+    "mod_assets/images/natsuko_death/bleed_1.png"
+    0.07
+    "mod_assets/images/natsuko_death/bleed_2.png"
+    0.07
+    "mod_assets/images/natsuko_death/bleed_3.png"
+    0.07
+    "mod_assets/images/natsuko_death/bleed_4.png"
+    0.07
+    "mod_assets/images/natsuko_death/bleed_5.png"
+    0.07
+    "mod_assets/images/natsuko_death/bleed_6.png"
+    0.07
+    repeat
+
+image natsuko_drip:
+    "mod_assets/images/natsuko_death/drip_1.png"
+    0.07
+    "mod_assets/images/natsuko_death/drip_2.png"
+    0.07
+    "mod_assets/images/natsuko_death/drip_3.png"
+    0.07
+    "mod_assets/images/natsuko_death/drip_4.png"
+    0.07
+    repeat
+
+
+image natsuko_stabby:
+    "mod_assets/images/natsuko_death/stab_1.png"
+    0.07
+    "mod_assets/images/natsuko_death/stab_2.png"
+    0.07
+    "mod_assets/images/natsuko_death/stab_3.png"
+    0.07
+    "mod_assets/images/natsuko_death/stab_4.png"
+    0.07
+    "mod_assets/images/natsuko_death/stab_5.png"
+    0.07
+    alpha 0
+
+
+image satori kill1 = "mod_assets/images/natsuko_death/s_kill1.png"
+image satori kill2 = "mod_assets/images/natsuko_death/s_kill2.png"
+
+image natsuko death1 = "mod_assets/images/natsuko_death/nat_death_sprite1.png"
+image natsuko death2 = "mod_assets/images/natsuko_death/nat_death_sprite2.png"
 # yuuri
 
 image yuuri glitch:
@@ -428,6 +553,35 @@ image yuuri glitch:
     pause 0.1
     "mod_assets/images/yuuri/glitch3.png"
     repeat
+
+image yuuri fight = "mod_assets/images/yuuri/y_fight.png"
+image yuuri crazy = "mod_assets/images/yuuri/eyes_full2.png"
+
+image yuuri glitch:
+    parallel:
+        choice:
+            "mod_assets/images/yuuri/yuuri_glitch.png"
+        choice:
+            "mod_assets/images/yuuri/yuuri_glitch2.png"
+    pause 0.2
+    repeat
+
+image yuuri ligther:
+    "mod_assets/images/yuuri_fire/yuuri_lighter.png"
+    1
+    "mod_assets/images/yuuri_fire/yuuri_lighter_flame1.png"
+    0.3
+    block:
+        "mod_assets/images/yuuri_fire/yuuri_lighter_flame2.png"
+        0.3
+        "mod_assets/images/yuuri_fire/yuuri_lighter_flame3.png"
+        0.3
+        "mod_assets/images/yuuri_fire/yuuri_lighter_flame4.png"
+        0.3
+        repeat
+
+image giga_yuuri = "mod_assets/images/yuuri/giga_yuuri.png"
+
 
 # Mateo the Douchebag
 
@@ -518,7 +672,7 @@ define _dismiss_pause = config.developer
 default persistent.playername = ""
 default player = persistent.playername
 default persistent.playthrough = 0
-default persistent.yuri_kill = 0
+default persistent.yuuri_kill = 0
 default persistent.seen_eyes = None
 default persistent.seen_sticker = None
 default persistent.ghost_menu = None
@@ -610,3 +764,4 @@ default natsuki_23 = None
 
 default persistent.efuse = False
 
+default played_sound = False # For the flesh eating sound

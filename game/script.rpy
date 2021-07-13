@@ -74,9 +74,19 @@ label start:
         call poemresponse2_start
         call ch21_end
 
-        call endgame
+        $ chapter = 2
+        call ch22_main
+        call poem_show
+        call ch22_end
+        call yuuri_confession
+        call yuuri_death
+
+        # call endgame
 
         return
+
+    if persistent.playthrough == 2:
+        jump ch30_main
     
 label endgame(pause_length=4.0):
     $ quick_menu = False

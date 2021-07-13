@@ -290,6 +290,69 @@ transform yface(z=0.80, y=600):
     yoffset y
     zoom z*2.00
 
+# Heartbeat when FeMC is with yuuri in the closet
+transform heartbeat:
+    heartbeat2(1)
+
+transform heartbeat2(m):
+    truecenter
+    parallel:
+        0.144
+        zoom 1.00 + 0.07 * m
+        easein 0.250 zoom 1.00 + 0.04 * m
+        easeout 0.269 zoom 1.00 + 0.07 * m
+        zoom 1.00
+        1.479
+        repeat
+    parallel:
+        easeout_bounce 0.3 xalign 0.5 + 0.02 * m
+        easeout_bounce 0.3 xalign 0.5 - 0.02 * m
+        repeat
+
+# Close up yuuri face
+transform m_yface(z=0.80, y=600):
+    subpixel True
+    parallel:
+        ease 0.5 xcenter 640
+    parallel:
+        ease 0.5 yanchor 1.0 ypos 1.2
+    parallel:
+        ease 0.5 yoffset y
+    parallel:
+        ease 0.5 zoom (z*2.00)
+
+
+transform jmp_scare:
+    truecenter
+    3
+    parallel:
+        easeout 1 zoom 4.5 yoffset 400
+    parallel:
+        ease 0.025 xoffset -20
+        ease 0.025 xoffset 20
+        repeat
+    0.25
+transform og_jmp_scare:
+    parallel:
+        easeout 0.25 zoom 4.5 yoffset 1200
+    parallel:
+        ease 0.025 xoffset -20
+        ease 0.025 xoffset 20
+        repeat
+    0.25
+
+transform og_jmp_scare_y:
+    parallel:
+        easeout 1 zoom 4.5 yoffset 2500
+    parallel:
+        ease 0.025 xoffset -20
+        ease 0.025 xoffset 20
+        repeat
+
+
+transform dunk: #Makes someone fall like Yuri after she stabs herself
+    easeout_cubic 0.5 yoffset 700
+
 # Fade for a new CG
 transform cgfade:
     on show:
@@ -424,6 +487,9 @@ transform noisefade(t=0):
     alpha 0.0
     t
     linear 5.0 alpha 0.40
+
+transform noisefadein(a=0,t=0):
+    linear t alpha a
 
 # Vignette around the edge of the screen
 image vignette:

@@ -448,6 +448,31 @@ label splashscreen:
     $ config.allow_skipping = True
     return
 
+
+
+label glitched_splashscreen:
+
+    # Team Salvato/Splash Message
+
+    $ config.allow_skipping = False
+
+    show white
+    $ splash_message = glitchtext(24)
+    $ config.main_menu_music = audio.t1
+    $ renpy.music.play(config.main_menu_music)
+    $ starttime = datetime.datetime.now()
+    show splash_glitch_alt with Dissolve(0.4, alpha=True)
+    $ pause(2.4 - (datetime.datetime.now() - starttime).total_seconds())
+    hide splash_glitch_alt with Dissolve(max(0, 2.8 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+    show splash_warning "[splash_message]" with Dissolve(max(0, 3.2 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+    $ pause(4.8 - (datetime.datetime.now() - starttime).total_seconds())
+    hide splash_warning #with Dissolve(max(0, 5.2 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+    $ pause(5.2 - (datetime.datetime.now() - starttime).total_seconds())
+    $ config.allow_skipping = True
+
+    stop music
+    jump ch30_main
+
 # Warning Screen
 label warningscreen:
     hide intro
@@ -485,6 +510,30 @@ label autoload:
         _in_replay = None
 
     $ renpy.pop_call()
+    jump expression persistent.autoload
+
+
+label autoload_yuurikill:
+    if persistent.yuuri_kill >= 1380:
+        $ persistent.yuuri_kill = 1440
+    elif persistent.yuuri_kill >= 1180:
+        $ persistent.yuuri_kill = 1380
+    elif persistent.yuuri_kill >= 1120:
+        $ persistent.yuuri_kill = 1180
+    elif persistent.yuuri_kill >= 920:
+        $ persistent.yuuri_kill = 1120
+    elif persistent.yuuri_kill >= 720:
+        $ persistent.yuuri_kill = 920
+    elif persistent.yuuri_kill >= 660:
+        $ persistent.yuuri_kill = 720
+    elif persistent.yuuri_kill >= 460:
+        $ persistent.yuuri_kill = 660
+    elif persistent.yuuri_kill >= 260:
+        $ persistent.yuuri_kill = 460
+    elif persistent.yuuri_kill >= 200:
+        $ persistent.yuuri_kill = 260
+    else:
+        $ persistent.yuuri_kill = 200
     jump expression persistent.autoload
 
 label before_main_menu:

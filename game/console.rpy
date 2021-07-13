@@ -9,7 +9,7 @@
 image console_bg:
     "#333"
     topleft
-    alpha 0.75 size (480,180)
+    alpha 0.75 size (600,180)
 
 # Font for the console
 style console_text:

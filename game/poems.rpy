@@ -201,6 +201,11 @@ Shooting pain assaults my mind along with my thoughts. This is disgusting. Absol
 The lust continues to linger through my veins. An ache in my muscles stems from the \
 unreleased tension experienced by my entire body. Her Third Eye is drawing me closer."""
     )
+    
+    poem_empty = Poem(
+        author = "Yuri",
+        title = "",
+        text = "")
 
     poem_n1 = Poem(
     author = "natsuki",
@@ -370,26 +375,27 @@ Me."""
     author = "natsuki",
     title = "",
     text = """\
-I don't know how else to bring this up. But there's been something I've been worried about. \
-Yuri has been acting kind of strange lately. You've only been here a few days, so you may \
-not know what I mean. But she's not normally like this. She's always been quiet and polite \
-and attentive...things like that.
+I don't know how else to bring this up. \
+I tried rehearsing it out loud but it sounds too crazy to say to your face and writing it down feels less insane. \
+Anyway, you and I both know there's something wrong with this room, \
+Satori may be oblivious to it, but I know Yuuri feels it too and, for some reason, you seem to feel it the most. \
 
-Okay... This is really embarrassing, but I'm forcing myself to suck it up. The truth is, I'm REALLY \
-worried about her. But if I try talking to her, she'll just get mad at me again. I don't \
-know what to do. I think you're the only person that she'll listen to. I don't know why. \
-But please try to do something. Maybe you can convince her to talk to a therapist.
+Okay, this is going to sound really, really bizarre.... but try to bear with me.
 
-I've always wanted to try being better friends with Yuri, and it really hurts me to see \
-this happening. I know I'm going to hate myself later for admitting that, but right now \
-I don't care. I just feel so helpless. So please see if you can do something to help. \
-I don't want anything bad to happen to her. I'll make you cupcakes if I have to. Just please \
-try to do something.
+I don't think this room exists.
+I mean, we're standing in it, obviously, but I think there's more to it than that.
+I'm not sure if it's a vortex to a different reality or what, but that's the only way I can describe it.
+Who knows... maybe in its own reality a girl really did kill herself up here and still haunts it.
+But I know it wasn't a girl in this school because no one else has heard this rumor.
+I'm pretty sure the only reason we know about it is because we're in here, and maybe the ghost wants us to know about it.
 
-As for Monika... I don't know why, but she's been really dismissive about this. It's like she just wants us \
-to ignore it. So I'm mad at her right now, and that's why I'm coming to you about this. \
-DON'T LET HER KNOW I WROTE THIS!!!! Just pretend like I gave you a really good poem, okay? \
-I'm counting on you. Thanks for reading."""
+We need to get everyone out of here before it's too late. This room is gonna make us kill each other if we don't leave now. 
+Satori and Yuuri will just yell at me if I try to tell them. And I don't think the room will let us leave if it knows
+we're aware of what's going on. 
+Please help me come up with a way to get everyone out without telling them the truth.
+DON'T LET THEM KNOW I WROTE THIS!!!
+Just pretend like I gave you a really good poem, okay? I'm counting on you. Thanks for reading.
+"""
     )
 
     poem_s1 = Poem(
