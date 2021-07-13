@@ -480,7 +480,7 @@ screen navigation():
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
         else:
-            timer 1.75 action Start("autoload_yurikill")
+            timer 1.75 action Start("autoload_yuurikill")
 
 
 style navigation_button is gui_button

@@ -76,8 +76,12 @@ label start:
 
         $ chapter = 2
         call ch22_main
+        call poem_show
+        call ch22_end
+        call yuuri_confession
+        call yuuri_death
 
-        call endgame
+        # call endgame
 
         return
 

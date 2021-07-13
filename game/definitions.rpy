@@ -217,6 +217,24 @@ image bg club2_act2_bloodwall = "mod_assets/images/bg/club2_act2_bloodwall.png"
 image bg closet_act2 = "mod_assets/images/bg/closet_act2.png"
 image bg residential_act2 = "mod_assets/images/bg/residential_act2.png"
 
+image splash_glitch_alt:
+
+    parallel:
+        choice:
+            "mod_assets/images/cg/splash-glitch.png"
+        choice:
+            "mod_assets/images/cg/splash-glitch2.png"
+    choice:
+        pause 0.07
+    choice:
+        pause 0.1
+    choice:
+        0.003
+    choice:
+        0.3
+
+    repeat
+
 # Yuri ghost with transparency
 image yuri_ghost_img = "mod_assets/images/bg/club_act2_ghost_yuri_trns.png"
 image yuri_ghost_bg = "mod_assets/images/bg/club_act2_ghost_yuri2_trns.png"

@@ -264,3 +264,571 @@ label yuri_exclusive2_1:
     $ y_ranaway = True
 
     return
+
+
+label yuri_exclusive2_2:
+
+
+    scene bg club2_act2
+    with wipeleft
+
+    # play music t6_2 fadein 2.0
+
+
+    show yuuri 1aag at t11
+    y "Actually, I have a request." 
+    y "Do you mind if I make some tea first?"
+    mc "..."
+    mc "Maybe later."
+    mc "I'd like to start reading now, if you don't mind."
+    y 1aaf "Ah..."
+    y 1aal "Very well."
+    y 3aar "In that case, where would you like to read today, [player]?"
+    mc "I don't mind sitting on the floor again."
+    y 1aaw "As you wish."
+    show yuuri at thide
+    hide yuuri
+    "Like yesterday, Yuuri and I take a seat on the floor."
+    "Within moments, we're both engrossed in the story."
+
+
+
+    scene yuuri_day2_act2_cg1
+    with dissolve_cg
+
+
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "I smile to myself a little and Yuuri notices."
+    y "You seem to be in a good mood today."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "It's just nice...you know...to have the room to ourselves."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "Yuuri smiles at me in return."
+    show yuuri_day2_act2_cg16 at cgfade
+    y "Yes...it is nice, isn't it?"
+    mc "I'm just trying to enjoy it while it lasts."
+    $ style.say_window = style.window
+    # textbox_glitch
+    show yuuri_day2_act2_cg1 at cgfade
+    mc "Actually...I was doing a bit of thinking..."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "I want to try expressing myself a little bit more."
+    $ style.say_window = style.window
+    # textbox_glitch
+    show yuuri_day2_act2_cg11 at cgfade
+    y "Something tells me that won't be very hard for you to do."
+    mc "Well, it's easier for me when it's you who's around..."
+    show yuuri_day2_act2_cg2 at cgfade
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    show yuuri_day2_act2_cg3 at cgfade
+    y "Ah..."
+    show yuuri_day2_act2_cg12 at cgfade
+    y "That's..."
+    show yuuri_day2_act2_cg11 at cgfade
+    y "I'm...glad you feel that way, [player]."
+    y "I like to see you happy."
+    mc "You worry about my happiness..."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "That's so endearing."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    show yuuri_day2_act2_cg3 at cgfade
+    y "..."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "..."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    show yuuri_day2_act2_cg4 at cgfade
+    y "Haven't we had this conversation before...but, switched up?"
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Yeah, you're feeling this weird deja vu too, right?"
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "We sit quietly for a moment, equally confused."
+    show yuuri_day2_act2_cg3 at cgfade
+    "A breeze causes the tree branches outside to slam against the window, making me a jump a little."
+    $ style.say_window = style.window
+    # textbox_glitch
+    "...And I suddenly remember just how creepy this room really is." #{bold}
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "Why did I even come back here?"
+    $ style.say_window = style.window
+    # textbox_glitch
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    stop music fadeout 1.0
+    "My head has been so fuzzy lately, I don't know what I'm doing anymore."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "I think I need some fresh air."
+    $ style.say_window = style.window
+    # textbox_glitch
+    "I go to stand up, holding onto Yuuri's arm to steady myself."
+    show yuuri_day2_act2_cg7 at cgfade
+    y "Khhhhh--!"
+    "Yuuri inhales sharply, as though he's in pain."
+
+
+    scene bg club2_act2
+    with dissolve_scene
+
+    show yuuri 7aaa at t11
+    "I immediately release his arm and jump to my feet, startled."
+    mc "Oh!"
+    mc "I'm sorry! Are you okay?"
+    y 7aao "I-I'm fine!"
+    y 7aap "D-don't worry about it!"
+    show yuuri 7aam
+    "He anxiously rubs his arm, where I grabbed him."
+    "I can't understand how my weight could have hurt him..."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "..."
+    $ style.say_window = style.window
+    # textbox_glitch
+    "I suddenly remember what Natsuko told me yesterday."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "About Yuuri burning himself."
+    $ style.say_window = style.window
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    "I didn't think much of the accusation at the time, but now..."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Yuuri..."
+    mc "Can..."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "Can I see your arms?"
+    $ style.say_window = style.window
+    # textbox_glitch
+    show yuuri 7yandere20
+    show yuuri 7aao
+    "He gives me a worried look before abruptly looking away."
+    y 7aan "W-why that all of a sudden?"
+    mc "Just let me..."
+    show yuuri 7aao
+    "I reach for his sleeves but he quickly retracts."
+    y "N-no!"
+    y 6aai "You can't!"
+    mc "Why not?"
+    y 6aam "Because..."
+    y 4aam "I would hate for you to think I'm weird just after we started spending time together..."
+    y 6ay "I mean..."
+    y 1ax "You've already seen how I can't control myself when I get too excited about something."
+    y 1aam "I don't want you to know about the... other unusual things about me."
+    y 3aam "After all, expressing those things so soon after meeting someone is usually seen as inappropriate... or unlikable."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "What kind of things?"
+    $ style.say_window = style.window
+    # textbox_glitch
+    y 1aal "My obsession...with certain hobbies."
+    mc "Yuuri..."
+    y 6yandere13 "My obsession... is fire."
+    y 4ax "It sounds strange, but you wouldn't understand if you've never seen how beautiful it can be."
+    y 4aag "I... I even have a collection of lighters."
+    y 1aaj "I've gotten them all from various artisans."
+    y "I make sure to give them all their fair share of use."
+    y 1aag "I don't want them to get lonely or anything..."
+    y 1aak "Nobody deserves to be lonely..."
+    mc "So... you just like looking at the fire?"
+    y 7aao "I..."
+    "Yuuri looks away."
+    y 6aay "I think that's... personal information that I'd rather not share."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    # screen_glitch
+    show yuuri 7aao
+    "I suddenly slam my palms on a desk."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Look, if you're hurting yourself, you better not be doing it because of me!" #[bold]
+    y 7aam "...!"
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    # screen_glitch
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    "..."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Yuuri... I'm so sorry!"
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "I didn't mean to snap like that..."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "It's just..."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "It's this damn room."
+    $ style.say_window = style.window
+    # textbox_glitch
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    $ quick_menu = False
+    mc "My heart goes crazy every time I come here."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+
+    $ config.allow_skipping = False
+    play music hb
+    show layer master at heartbeat
+
+    show vignette zorder 100:
+        alpha 0.0
+        linear 3.0 alpha 0.75
+
+
+    mc "Like it's going to rip out of my chest."
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    show yuri_ghost_bg
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "It overwhelms me with energy and emotions that just come exploding out."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "It's been making me say and do weird things."
+    $ style.say_window = style.window
+    # textbox_glitch
+    $ style.say_dialogue = style.edited
+    mc "I'm not crazy, right?" #{bold} [
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    show yuuri 7aaf
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "Please tell me I'm not!"
+    $ style.say_window = style.window
+    # textbox_glitch
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    mc "I just want to get out of here."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    # screen_glitch
+    mc "All of us need to get out of here."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "We need to leave now."
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    hide yuri_ghost_bg
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "If we wait... it might not let us leave."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Yuuri, every second I'm in here makes me want to stab myself in the throat!"
+    show yuuri 7aam
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+
+    # ghost_yuri [layering begins slowly]
+    show screen yuri_ghost
+    mc "I'm not joking!"
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Actually, I have an idea."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "We'll go to my house!"
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    $ style.say_window = style.window
+    # textbox_glitch
+    show yuuri 7aaf
+    mc "All of us..."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "We'll hide in my room."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "It won't be able to get us in there."
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "We'll all just stay in my room and play video games."
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "Every day."
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    # screen_fade -----------------------------------------------------
+
+
+    mc "That's all we need."
+    show black onlayer screens zorder 1:
+        alpha 0.06
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "In fact..."
+    show black onlayer screens zorder 1:
+        alpha 0.12
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "Let's all quit the Literature Club!"
+    show black onlayer screens zorder 1:
+        alpha 0.18
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "There's no need to be anywhere near this evil room."
+    show black onlayer screens zorder 1:
+        alpha 0.24
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "We just need to stick together."
+    show black onlayer screens zorder 1:
+        alpha 0.30
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "All of us."
+    show black onlayer screens zorder 1:
+        alpha 0.36
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    # screen snow effect
+    show noise zorder 3 at noise_alpha:
+    mc "Doesn't that sound perfect?"
+    show black onlayer screens zorder 1:
+        alpha 0.42
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "This way, we'll all be safe."
+    show black onlayer screens zorder 1:
+        alpha 0.48
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "That's why I was meant to join the club in the first place, isn't it?"
+    show black onlayer screens zorder 1:
+        alpha 0.54
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "It was fate."
+    show black onlayer screens zorder 1:
+        alpha 0.60
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "I'm meant to save you all."
+    show black onlayer screens zorder 1:
+        alpha 0.66
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "It'll be the happy ending we all want." 
+    show black onlayer screens zorder 1:
+        alpha 0.72
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    mc "So let's go!" 
+    show black onlayer screens zorder 1:
+        alpha 0.78
+    # screen_glitch
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    $ style.say_window = style.window
+    # textbox_glitch
+    mc "We have to, or it'll kill us all!"  # {fast}
+    show black onlayer screens zorder 1:
+        alpha 0.84
+    # textbox_glitch
+    $ style.say_window = style.window_monika
+    $ gtext = glitchtext(40)
+    mc "[gtext]" # {bold} ]  {fast}
+    show black onlayer screens zorder 1:
+        alpha 0.90
+        linear 0.1 alpha 1
+    $ style.say_dialogue = style.normal
+    show layer master
+    stop music
+    hide vignette
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+    hide black onlayer screens
+    show black
+    hide noise
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+    # Show ghost yuuri
+
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.2)
+    stop sound
+    hide screen tear
+
+
+    # show black_bg with ghost_yuri
+    # ghost_yuuri_screen_rush with audio_scream
+
+    window hide
+    hide black onlayer screens
+    hide screen yuri_ghost
+    show yuri_ghost_img at jmp_scare
+    $ renpy.pause(3, hard=True)
+    play sound shrieking_audio
+    $ renpy.pause(1,hard=True)
+    hide yuri_ghost_img
+
+    # scene black
+    # with dissolve_scene_full
+    # black_screen
+    $ renpy.pause(3.0, hard=True)
+    $ consolehistory = []
+    call updateconsole("", "")
+    # show command box
+    $ renpy.pause(0.5, hard=True)
+    call updateconsole("pip upgrade autopilot", "Successfully installed autopilot-4.0")
+    # femc_autopilot_v4.0_successfully_installed
+    $ renpy.pause(0.5,hard=True)
+    call hideconsole
+
+    $ config.allow_skipping = True
+
+
+    # special_poem_unlocked
+    call screen confirm("You have unlocked a special poem.\nWould you like to read it?", Return(True), Return(False))
+
+    if _return:
+        call expression "poem_special_a4m"   # Anything for mother
+        scene black with Dissolve(1.0)
+    else:
+        call expression "poem_special_dyr_y" # Yuuri's diary
+        scene black with Dissolve(1.0)
+    $ quick_menu = True
+
+    return
