@@ -466,23 +466,22 @@ image s_kill6:
 image s_kill7:
     subpixel True
     "mod_assets/images/cg/satori_saturated_death_cg.png"
-
-# Yuri Stab CG
-# This is displayed using a ConditionSwitch to switch between
-# different Yuri stab images
+# Yuuri death cg
 image y_kill = ConditionSwitch(
-    "persistent.yuri_kill >= 1380", "images/cg/y_kill/3a.png",
-    "persistent.yuri_kill >= 1180", "images/cg/y_kill/3c.png",
-    "persistent.yuri_kill >= 1120", "images/cg/y_kill/3b.png",
-    "persistent.yuri_kill >= 920", "images/cg/y_kill/3a.png",
-    "persistent.yuri_kill >= 720", "images/cg/y_kill/2c.png",
-    "persistent.yuri_kill >= 660", "images/cg/y_kill/2b.png",
-    "persistent.yuri_kill >= 460", "images/cg/y_kill/2a.png",
-    "persistent.yuri_kill >= 260", "images/cg/y_kill/1c.png",
-    "persistent.yuri_kill >= 200", "images/cg/y_kill/1b.png",
-    "True", "images/cg/y_kill/1a.png",
-
+    "persistent.yuuri_kill >= 1380", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_mon_day.png",
+    "persistent.yuuri_kill >= 1180", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sun_night.png",
+    "persistent.yuuri_kill >= 1120", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sun_eve.png",
+    "persistent.yuuri_kill >= 920", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sun_day.png",
+    "persistent.yuuri_kill >= 720", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sat_night.png",
+    "persistent.yuuri_kill >= 660", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sat_eve.png",
+    "persistent.yuuri_kill >= 460", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sat_day.png",
+    "persistent.yuuri_kill >= 260", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_fri_night.png",
+    "persistent.yuuri_kill >= 200", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_fri_eve.png",
+    "True", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_fri_day.png",
     )
+
+
+
 
 # Animations for Sayori Hanging CG
 transform s_kill_bg_start:

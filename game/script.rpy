@@ -74,9 +74,15 @@ label start:
         call poemresponse2_start
         call ch21_end
 
+        $ chapter = 2
+        call ch22_main
+
         call endgame
 
         return
+
+    if persistent.playthrough == 2:
+        jump ch30_main
     
 label endgame(pause_length=4.0):
     $ quick_menu = False

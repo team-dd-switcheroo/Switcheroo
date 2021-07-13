@@ -6,7 +6,8 @@
 image poem_special_arm = "mod_assets/images/poem_special/special_poem1_mat_run.png" # A Riddle (Mateo Edition)
 image poem_special_an = "mod_assets/images/poem_special/special_poem2_both.png" # A Nightmare
 image poem_special_a4m = "mod_assets/images/poem_special/poem_special5_both.png" # Anything for mother
-image poem_special_dyr = "mod_assets/images/poem_special/special_poem7_both.png" # FeMC's diary page
+image poem_special_dyr = "mod_assets/images/poem_special/special_poem7_both.png" # FeMC diary page
+image poem_special_dyr_y = "mod_assets/images/poem_special/poem_special6_both.png" # Yuuri diary page
 image poem_special3 = "poem_special/poem_special3.png" # Nothing is Real
 image poem_special4 = "poem_special/poem_special4.png" # Cutting Memento
 image poem_special5: # Stare at the dot/I love you
@@ -134,6 +135,13 @@ label poem_special_dyr:
     $ quick_menu = False
     play sound page_turn
     show poem_special_dyr with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return
+label poem_special_dyr_y:
+    $ quick_menu = False
+    play sound page_turn
+    show poem_special_dyr_y at truecenter with Dissolve(1.0)
     $ pause()
     $ quick_menu = True
     return

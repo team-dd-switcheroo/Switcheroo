@@ -321,6 +321,38 @@ transform m_yface(z=0.80, y=600):
     parallel:
         ease 0.5 zoom (z*2.00)
 
+
+transform jmp_scare:
+    truecenter
+    3
+    parallel:
+        easeout 1 zoom 4.5 yoffset 400
+    parallel:
+        ease 0.025 xoffset -20
+        ease 0.025 xoffset 20
+        repeat
+    0.25
+transform og_jmp_scare:
+    parallel:
+        easeout 0.25 zoom 4.5 yoffset 1200
+    parallel:
+        ease 0.025 xoffset -20
+        ease 0.025 xoffset 20
+        repeat
+    0.25
+
+transform og_jmp_scare_y:
+    parallel:
+        easeout 1 zoom 4.5 yoffset 2500
+    parallel:
+        ease 0.025 xoffset -20
+        ease 0.025 xoffset 20
+        repeat
+
+
+transform dunk: #Makes someone fall like Yuri after she stabs herself
+    easeout_cubic 0.5 yoffset 700
+
 # Fade for a new CG
 transform cgfade:
     on show:
@@ -455,6 +487,9 @@ transform noisefade(t=0):
     alpha 0.0
     t
     linear 5.0 alpha 0.40
+
+transform noisefadein(a=0,t=0):
+    linear t alpha a
 
 # Vignette around the edge of the screen
 image vignette:
