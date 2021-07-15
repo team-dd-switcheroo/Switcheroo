@@ -362,6 +362,17 @@ transform cgfade:
         alpha 1.0
         linear 0.5 alpha 0.0
 
+# The on hide messes with the masks in satvoid
+transform cgfade_s:
+    on show:
+        alpha 0.0
+        linear 0.5 alpha 1.0
+    on replace:
+        alpha 1.0
+    on replaced:
+        alpha 1.0
+        linear 0.5 alpha 0.0
+
 # A little wiggle for Natsuki in the closet
 transform n_cg2_wiggle:
     subpixel True

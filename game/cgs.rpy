@@ -466,7 +466,9 @@ image s_kill6:
 image s_kill7:
     subpixel True
     "mod_assets/images/cg/satori_saturated_death_cg.png"
+
 # Yuuri death cg
+
 image y_kill = ConditionSwitch(
     "persistent.yuuri_kill >= 1380", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_mon_day.png",
     "persistent.yuuri_kill >= 1180", "mod_assets/images/yuuri_deathcg/yuuri_deathcg_sun_night.png",
@@ -481,6 +483,14 @@ image y_kill = ConditionSwitch(
     )
 
 
+# Definitions for the Satori void scene (Better then defining 53 different images lol)
+
+init python:
+    for sat_filepath in renpy.list_files():         # Using renpy.list_files ensures that this also works when rpa'd
+        sat_file = sat_filepath.split("/")          # We get the directories by separating them from the file path
+        if "satori_void" in sat_file:               # If the directory "satori_void" is in the file path...
+            sat_image = sat_file[3].split(".")[0]   # ...We get the file without it's extension
+            renpy.image("sat "+sat_image,sat_filepath)     # And we define the image (With a prefix so they don't stack on eachother)
 
 
 # Animations for Sayori Hanging CG

@@ -87,6 +87,9 @@ label start:
 
     if persistent.playthrough == 2:
         jump ch30_main
+
+    if persistent.playthrough == 3:
+        jump ch40_main
     
 label endgame(pause_length=4.0):
     $ quick_menu = False
