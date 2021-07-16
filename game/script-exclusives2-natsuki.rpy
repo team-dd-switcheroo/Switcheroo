@@ -118,7 +118,7 @@ label natsuki_exclusive2_1:
     n "Like I could act like this at home."
     show n_act2_cg1_exp5 at cgfade
     hide n_act2_cg1_exp4
-    n "{cps=*2}MY MOM WOULD CUT MY [glitchtext] OFF IF I ACTED LIKE MYSELF IN FRONT OF HER.{/cps}{nw}"
+    n "{cps=2}MY MOM WOULD CUT MY [glitchtext] OFF IF I ACTED LIKE MYSELF IN FRONT OF HER.{/cps}{nw}"
     show n_act2_cg1_exp3 at cgfade
     hide n_act2_cg1_exp5
     n "I just can't be me around my mom."
@@ -547,7 +547,7 @@ label natsuki_exclusive2_2:
     "How am I supposed to focus on reading like this...?!"
     $ style.say_window = style.window
     # textbox_glitch
-    "How is HE supposed to focus on reading like this?{cps=*4}" # Fast
+    "{cps=4}How is HE supposed to focus on reading like this?{/cps}" # Fast
     # textbox_glitch
     $ style.say_window = style.window_monika
     "We both make an attempt to put on intense reading expressions."
