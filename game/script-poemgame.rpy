@@ -174,14 +174,17 @@ label poem(transition=True):
     stop music fadeout 2.0
 
     # These checks change the game for the gitched poem game in Act 3
-    if persistent.playthrough == 3:
+
+    # Changed all instances of persistent.playthrough == 3 to 2, since that's the number we use for act 3
+    if persistent.playthrough == 2:
         scene bg notebook-glitch
     else:
         scene bg notebook
     show screen quick_menu
     # Create the character stickers
-    if persistent.playthrough == 3:
-        show m_sticker at sticker_mid # Show's Monika Chibi in Act 3
+    if persistent.playthrough == 2:
+        # show s_sticker at sticker_mid # Show's Monika Chibi in Act 3
+        pass
     else:
         if persistent.playthrough == 0:
             show s_sticker at sticker_left # Show's Sayori Chibi in Act 1
@@ -194,7 +197,7 @@ label poem(transition=True):
             show m_sticker at sticker_m_glitch
     if transition:
         with dissolve_scene_full
-    if persistent.playthrough == 3:
+    if persistent.playthrough == 2:
         play music ghostmenu # Plays Glitched Music
     else:
         play music t4 # Dreams of Love and Literature
@@ -243,15 +246,15 @@ label poem(transition=True):
                 else: x = 680
                 ui.vbox()
                 for i in range(5):
-                    if persistent.playthrough == 3:
+                    if persistent.playthrough == 2:
                         # Only Monika Words
-                        s = list("Monika")
+                        wrd = list("Satori")    # The s = was replacing satori's character definition :P
                         for k in range(6):
                             if random.randint(0, 4) == 0:
-                                s[k] = ' '
+                                wrd[k] = ' '
                             elif random.randint(0, 4) == 0:
-                                s[k] = random.choice(nonunicode)
-                        word = PoemWord("".join(s), 0, 0, 0, False)
+                                wrd[k] = random.choice(nonunicode)
+                        word = PoemWord("".join(wrd), 0, 0, 0, False)
                     elif persistent.playthrough == 1 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
                         word = PoemWord(glitchtext(80), 0, 0, 0, True) #1/400th chance for a glitched word in Chapter 2
                     else:
@@ -269,7 +272,7 @@ label poem(transition=True):
                     renpy.scene()
                     renpy.show("white")
                     renpy.show("y_sticker glitch", at_list=[sticker_glitch])
-                elif persistent.playthrough != 3:
+                elif persistent.playthrough != 2:
                     renpy.play(gui.activate_sound)
                     # Hops the character who liked the word
                     if persistent.playthrough == 0:
@@ -342,24 +345,27 @@ label poem(transition=True):
 
     #1/6th chance that we'll see the creepy Happy Thoughts picture after the game in Act 2
     # NOTE: This won't actually appear since the playthrough variable for Act 2 is currently set to 1, and I don't know if this should appear in the mod
-    if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
-        $ seen_eyes_this_chapter = True
-        $ quick_menu = False
-        play sound "sfx/eyes.ogg"
-        $ persistent.seen_eyes = True
-        $ renpy.save_persistent()
-        stop music
-        scene black with None
-        show bg eyes_move
-        $ pause(1.2)
-        hide bg eyes_move
-        show bg eyes
-        $ pause(0.5)
-        hide bg eyes
-        show bg eyes_move
-        $ pause(1.25)
-        hide bg eyes with None
-        $ quick_menu = True
+    
+    # Commented this since it interferes with act 3, uncomment if needed
+
+    # if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
+    #     $ seen_eyes_this_chapter = True
+    #     $ quick_menu = False
+    #     play sound "sfx/eyes.ogg"
+    #     $ persistent.seen_eyes = True
+    #     $ renpy.save_persistent()
+    #     stop music
+    #     scene black with None
+    #     show bg eyes_move
+    #     $ pause(1.2)
+    #     hide bg eyes_move
+    #     show bg eyes
+    #     $ pause(0.5)
+    #     hide bg eyes
+    #     show bg eyes_move
+    #     $ pause(1.25)
+    #     hide bg eyes with None
+    #     $ quick_menu = True
     # Turns back on the UI options for reading portion
     $ config.allow_skipping = True
     $ allow_skipping = True

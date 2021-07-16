@@ -463,7 +463,7 @@ screen navigation():
                 textbutton _("End Replay") action EndReplay(confirm=True)
 
             elif not main_menu:
-                if persistent.playthrough != 3:
+                if persistent.playthrough != 2:
                     textbutton _("Main Menu") action MainMenu()
                 else:
                     textbutton _("Main Menu") action NullAction()
@@ -549,8 +549,8 @@ screen main_menu():
     else:
         if persistent.playthrough == 1 or persistent.playthrough == 2:
             add "menu_art_s"
-        else:
-            add "menu_art_s"
+        # else:
+        #     add "menu_art_s"
     add "menu_particles"
     if persistent.playthrough == 1:
         add "menu_art_m_glitch"
@@ -800,7 +800,7 @@ init python:
     def FileActionMod(name, page=None, **kwargs):
         # if persistent.playthrough == 1 and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):            Why is this here?
         #     return Show(screen="dialog", message="Nice try, but there's no turning back now...", ok_action=Hide("dialog"))
-        if persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
+        if persistent.playthrough == 2 and renpy.current_screen().screen_name[0] == "save":
             return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
         else:
             return FileAction(name)
@@ -1460,6 +1460,39 @@ screen confirm(message, yes_action, no_action):
                 textbutton _("Yes") action yes_action
                 textbutton _("No") action no_action
 
+
+screen confirm_sat(yes_action, no_action):
+
+    ## Ensure other screens do not get input while this screen is displayed.
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+            # if in_sayori_kill and message == layout.QUIT:
+            #     add "confirm_glitch" xalign 0.5
+
+            # else:
+            #     label _(message):
+            #         style "confirm_prompt"
+            #         xalign 0.5
+
+            hbox:
+                xalign 0.5
+                spacing 50
+
+                textbutton _("OK") action yes_action
+                textbutton _("I can't") action no_action
     ## Right-click and escape answer "no".
     #key "game_menu" action no_action
 
