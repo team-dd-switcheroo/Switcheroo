@@ -122,7 +122,7 @@ define audio.t8 = "<loop 8.324>mod_assets/audio/daijoubu.ogg" #Daijoubu
 define audio.t9 = "<loop 3.172>bgm/9.ogg"   #My Feelings
 define audio.t9g = "<loop 1.532>bgm/9g.ogg" #207% speed (My Feelings)
 define audio.t10 = "<loop 5.861>bgm/10.ogg"   #Confession
-define audio.t10y = "<loop 0>mod_assets/audio/my_confession_2.ogg" #Yuri Confession
+define audio.t10y = "<loop 0>mod_assets/audio/my_confession_2.ogg" #Yuuri Confession
 define audio.td = "<loop 36.782>bgm/d.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg" # Just Monika. - Just Monika.
@@ -656,6 +656,7 @@ image femc 5j = im.Composite((960, 960), (0, 0), "mod_assets/images/femc/3.png",
 ###### Character Variables ######
 # These configure the shortcuts for writing dialog for each character.
 define narrator = Character(ctc="ctc", ctc_position="fixed")
+define p = Character(ctc="ctc", what_prefix='"', what_suffix='"',ctc_position="fixed") # Player
 define mc = DynamicCharacter('player', image='femc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='satori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='mateo', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
@@ -765,3 +766,7 @@ default natsuki_23 = None
 default persistent.efuse = False
 
 default played_sound = False # For the flesh eating sound
+
+default persistent.context = None # For the satvoid scene, has to be persistent because no saves
+
+default persistent.deleted_satori = False

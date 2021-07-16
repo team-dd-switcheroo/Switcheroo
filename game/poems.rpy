@@ -886,7 +886,18 @@ Ren'Py 6.99.12.4.2187
 </body>
 """
     )
+    poem_threat = Poem(
+    author = "sayori",
+    title = "",
+    text ="""\
+I tried to be nice about it, but now I'm losing my patience. So I'm going to make this really easy for you.
+You're going to delete him. Because if you make ME do it, I swear I WILL make him suffer. 
 
+You have 60 seconds.
+
+
+Your call, hero."""
+    )
 #These are the images used to show a poem
 image paper =  "images/bg/poem.jpg"
 
