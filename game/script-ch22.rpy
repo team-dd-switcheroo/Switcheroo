@@ -6,11 +6,11 @@ label ch22_main:
 
     $ consolehistory = []
     call updateconsole("", "")
-    call updateconsole("pip upgrade autopilot", "Successfully installed autopilot-3.0")
+    call updateconsole("pip install autopilot -U", "Successfully installed autopilot-3.0")
 
     call hideconsole
 
-    $renpy.pause(1,hard=True)
+    $ renpy.pause(1,hard=True)
 
 
     show yuuri 1aw at t11
@@ -274,7 +274,7 @@ label ch22_main:
     hide screen tear
 
     $ style.say_dialogue = style.edited
-    mc "GET THE FUCK OUT OF HERE NOW.....{cps=*4}" # [bold] {fast}
+    mc "{cps=4}GET THE FUCK OUT OF HERE NOW.....{/cps}" # [bold] {fast}
     $ style.say_dialogue = style.normal
 
     play sound "<from 0.69>sfx/monikapound.ogg"
@@ -362,8 +362,8 @@ label ch22_main:
 
 label poem_show:
 
-    $style.say_window = style.window
-    $quick_menu = True
+    $ style.say_window = style.window
+    $ quick_menu = True
 
     scene bg club2_act2
     with dissolve_scene_half 
@@ -563,7 +563,7 @@ label poem_show:
     show natsuko scream_blood1
 
 
-    mc "YOU'RE NOT GOING ANYWHERE!{cps=*2}"
+    mc "{cps=2}YOU'RE NOT GOING ANYWHERE!{/cps}"
     $ style.say_dialogue = style.normal
     window hide(None)
     $ style.say_window = style.window
@@ -828,7 +828,7 @@ label ch22_end:
     "Satori flashes a sly smirk as Yuuri pushes him out the door."
     $ style.say_window = style.window_monika
     $ style.say_dialogue = style.edited
-    "....GAH DON'T LEAVE ME ALONE WITH HIM!!{cps=*2}" #[bold] [fast]
+    "{cps=2}....GAH DON'T LEAVE ME ALONE WITH HIM!!{/cps}" #[bold] [fast]
     $ style.say_dialogue = style.normal
     $ style.say_window = style.window
 
@@ -866,7 +866,7 @@ label yuuri_confession:
     y 1aai "And the answer is yes."
     mc "..."
     $ style.say_window = style.window_monika
-    "WHAT THE HELL WAS THE QUESTION???{cps=*2}"
+    "{cps=2}WHAT THE HELL WAS THE QUESTION???{/cps}"
     $ style.say_window = style.window
     y 4aah "I wasn't sure I was picking up on your cues correctly at first."
     y 4aan "I didn't want to make any assumptions and accidentally come off as a lecher."
@@ -881,7 +881,7 @@ label yuuri_confession:
     $ style.say_dialogue = style.edited
     y 6yandere13 "I even sodomize myself with the pen I stole from you." #{bold}
     $ style.say_window = style.window_monika
-    "EW IT'S NOT EVEN MY PEN!{cps=*2}"
+    "{cps=2}EW IT'S NOT EVEN MY PEN!{/cps}"
     $ style.say_window = style.window
     $ style.say_dialogue = style.normal
     y 1aaw "I love you so much, I've even burned your name into my arm."
@@ -891,7 +891,7 @@ label yuuri_confession:
     mc "..."
     $ style.say_window = style.window_monika
     $ style.say_dialogue = style.edited
-    "NO FUCKING WAY.{cps=*2}"
+    "{cps=2}NO FUCKING WAY.{/cps}"
     $ style.say_dialogue = style.normal
     $ style.say_window = style.window
     y 7yandere13 "But I don't care anymore."
@@ -932,7 +932,7 @@ label yuuri_confession:
     y 1aav "Hahahahahahahahahahahahahahahahahahahahahaha!"
     mc "I'm fucking begging you!"
     $ style.say_dialogue = style.edited
-    y 6yandere11 "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA!!! {cps=*3}"
+    y 6yandere11 "{cps=3}HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA!!! {/cps}"
     $ style.say_dialogue = style.normal
     window hide
 
